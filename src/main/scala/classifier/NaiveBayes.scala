@@ -5,7 +5,6 @@ import org.atilika.kuromoji._
 import scala.collection.mutable.ListBuffer
 import tokenfactory.kuro
 
-
 object Tes extends App{
   val t=NaiveBayes.time _
   val f=NaiveBayes.examine _  //オブジェクトのメソッドは関数ではないので関数化するには　メソッド名+ _　 
@@ -21,7 +20,7 @@ object Tes extends App{
  
 }
 object NaiveBayes{	
-  //並列コレクション化した方が効率上がるかもparメソッドの活用。
+  //並列コレクション化した方が効率上がるかもparメソッドの活用=>並列化によるオーバーヘッドが大きいため現状では使わないほうがいい。
   var data:ListBuffer[(Boolean,String)]
 		  =ListBuffer((true,"成功"),(false,"失敗"))
 		  //元の値達は学習データ。data,Sdata,Fdataはmutable。falseの学習データには失敗しか入ってないけどtrueの方に可愛と成功が入ってる。これによって失敗という単語の重みは成功や可愛という単語よりも大きくなる。故に可愛いと失敗が１語づつのStringを調査するときは失敗に傾く。
@@ -54,7 +53,7 @@ object NaiveBayes{
   def Swp=WordPro(Swords,numTokenS)
   def Fwp=WordPro(Fwords,numTokenF)
   
-  def allyudo(proList:List[Double]):Double=proList.reduce((a,b)=>{println("a : "+a+", b : "+b);a+b}) //本来a*bだがlogの計算なのでa+b；log(a*b)=loga+logb
+  def allyudo(proList:List[Double]):Double=proList.reduce((a,b)=>{println("a : "+a+", b : "+b);a+b}) //本来a*bだがlogの計算なのでa+b；log(a*b)=log(a)+log(b)
     
   def time(f:String=>Unit,post:String)={
     val start=System.currentTimeMillis
@@ -62,35 +61,27 @@ object NaiveBayes{
     val end=System.currentTimeMillis
     println("it takes "+(end-start))
   }
-  
+
   def examine(post:String):Unit={
+	  //長いpostだと桁数漏れを起こす=>各尤度と事前確率に対してlogを取る
 	    
     val Snow=(true,post)
     Snow+=:Sdata
     val Fnow=(false,post)
     Fnow+=:Fdata
     //両方にadd
-    println("成功事例 : "+Sdata)
-    println("失敗事例 : "+Fdata)
     
     val dic=getToken(post).map(x=>x.getBaseForm).toSet.toList  //postの重複のなトークンリスト
-    println("重複しない単語リスト : "+dic)
     
     val yudoSList=dic.map(x=>Swp(x))
-    println("成功時各尤度log : "+yudoSList)
     val yudoFList=dic.map(x=>Fwp(x))
-    println("失敗時各尤度log : "+yudoFList)
-
-    println("成功事前確率log : "+preS)
-    println("失敗事前確率log : "+preF)
     
-    println("Saftlog start")
+    println("SaftLog start")
     val Saft=allyudo(yudoSList)*preS
-    println("Faftlog start")
+    println("FaftLog start")
     val Faft=allyudo(yudoFList)*preF
-    
-    println("成功事後確率log : "+Saft+" <=> 失敗事後確率log : "+Faft)
-    //長いpostだと桁数漏れを起こす=>各尤度と事前確率でlogを取る
+ 
+    summary
     
     if(Saft>Faft){
     		println("成功するでしょう") 
@@ -103,5 +94,16 @@ object NaiveBayes{
     		Fnow+=:data
     } 
     
-  }
+    def summary={
+    		println("成功事例 : "+Sdata)
+    		println("失敗事例 : "+Fdata)
+    		println("重複しない単語リスト : "+dic)   
+    		println("成功時各尤度log : "+yudoSList)
+    		println("失敗時各尤度log : "+yudoFList)
+    		println("成功事前確率log : "+preS)
+    		println("失敗事前確率log : "+preF)
+    		println("成功事後確率log : "+Saft+" <=> 失敗事後確率log : "+Faft)
+     }
+
+   }
 }
