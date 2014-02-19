@@ -38,3 +38,14 @@ test
 run
 eclipse
 run
+1
+run
+2
+run
+clean
+reload
+update
+reload
+test
+eclipse
+run

@@ -1,8 +1,10 @@
 package classifier
 
+import scala.math._
 import org.atilika.kuromoji._
 import scala.collection.mutable.ListBuffer
 import tokenfactory.kuro
+
 
 object Tes extends App{
   val t=NaiveBayes.time _
@@ -27,8 +29,9 @@ object NaiveBayes{
   var Sdata=data.filter(x=>x._1==true)  //成功data。mutable
   var Fdata=data.filter(x=>x._1==false) //失敗data。mutable
   
-  def preS:BigDecimal=(Sdata.length-1).toDouble/data.length	//examineでSdataには最初に調べる項目が追加されるがdata自体には関数の最後に追加される。それによって成功事例がおおく見積もられるのを防ぐためにSdataに-1をしてる
-  def preF=1-preS
+  def preS:Double=log((Sdata.length-1).toDouble/data.length)	//examineでSdataには最初に調べる項目が追加されるがdata自体には関数の最後に追加される。それによって成功事例がおおく見積もられるのを防ぐためにSdataに-1をしてる
+  def preF=log((Fdata.length-1).toDouble/data.length)
+    //log(1-preS)	
   //成功、失敗それぞれの事前確率。examineの中で使う。ただし追加したpostが影響しないようにvalを使おうと思ったけどdata数とSdata数との関係が崩れるからやめた
   
   def getString(alldata:ListBuffer[(Boolean,String)])=alldata.map(x=>x._2).mkString
@@ -40,18 +43,18 @@ object NaiveBayes{
   def tokenFdata=getToken(stringFdata)		//失敗例のトークンリスト
   
   def getnum(tokens:Stream[Token])=tokens.length
-  def numTokenS:BigDecimal=getnum(tokenSdata)
-  def numTokenF:BigDecimal=getnum(tokenFdata)
+  def numTokenS:Double=getnum(tokenSdata)
+  def numTokenF:Double=getnum(tokenFdata)
   
   def getwords(tokens:Stream[Token]):List[String]=tokens.map(x=>x.getBaseForm).toList //後でListはStreamに直す
   def Swords=getwords(tokenSdata)
   def Fwords=getwords(tokenFdata)
   
-  def WordPro(words:List[String],num:BigDecimal):Map[String,BigDecimal]=words.groupBy(x=>x).map(x=>(x._1,x._2.length/num))
+  def WordPro(words:List[String],num:Double):Map[String,Double]=words.groupBy(x=>x).map(x=>(x._1,log(x._2.length/num)))   //logを挟む；出現頻度/単語の数
   def Swp=WordPro(Swords,numTokenS)
   def Fwp=WordPro(Fwords,numTokenF)
   
-  def allyudo(proList:List[BigDecimal]):BigDecimal=proList.reduce((a,b)=>{println("a : "+a+", b : "+b);a*b}) 
+  def allyudo(proList:List[Double]):Double=proList.reduce((a,b)=>{println("a : "+a+", b : "+b);a+b}) //本来a*bだがlogの計算なのでa+b；log(a*b)=loga+logb
     
   def time(f:String=>Unit,post:String)={
     val start=System.currentTimeMillis
@@ -59,6 +62,7 @@ object NaiveBayes{
     val end=System.currentTimeMillis
     println("it takes "+(end-start))
   }
+  
   def examine(post:String):Unit={
 	    
     val Snow=(true,post)
@@ -73,19 +77,20 @@ object NaiveBayes{
     println("重複しない単語リスト : "+dic)
     
     val yudoSList=dic.map(x=>Swp(x))
-    println("成功時各尤度 : "+yudoSList)
+    println("成功時各尤度log : "+yudoSList)
     val yudoFList=dic.map(x=>Fwp(x))
-    println("失敗時各尤度 : "+yudoFList)
+    println("失敗時各尤度log : "+yudoFList)
 
-    println("成功事前確率 : "+preS)
-    println("失敗事前確率 : "+preF)
-    println("Saft start")
+    println("成功事前確率log : "+preS)
+    println("失敗事前確率log : "+preF)
     
+    println("Saftlog start")
     val Saft=allyudo(yudoSList)*preS
-    println("Faft start")
+    println("Faftlog start")
     val Faft=allyudo(yudoFList)*preF
-    println("成功事後確率 : "+Saft+" <=> 失敗事後確率 : "+Faft)
-    //長いpostだと桁数漏れを起こす=>BigDecimalを使う
+    
+    println("成功事後確率log : "+Saft+" <=> 失敗事後確率log : "+Faft)
+    //長いpostだと桁数漏れを起こす=>各尤度と事前確率でlogを取る
     
     if(Saft>Faft){
     		println("成功するでしょう") 
