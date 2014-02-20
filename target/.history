@@ -49,3 +49,14 @@ reload
 test
 eclipse
 run
+~compile
+run
+~compile
+package
+tasks
+package
+test
+run
+show compile:dependency-classpath 
+show test:dependency-classpath 
+clean
