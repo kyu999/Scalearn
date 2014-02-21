@@ -10,5 +10,6 @@ trait Basic{
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
 	def sd(dv2:Stream[Double]):Double=math.sqrt(dv2.reduce((a,b)=>a+b)/(dv2.length-1))	
 	//√分散＝標準偏差
-
+	
+	def mkLine=println("-------------------------------------------------------------")
 }
