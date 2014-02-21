@@ -1,12 +1,16 @@
 package datastore
 
-class Data(x:Stream[Double]) extends Basic{
-	val dev1=dev(x,ave(x))
-    val sdX=sd(devto2(dev1))
+class data(x:Stream[Double]) extends Basic{
+    val raw=x 
+	val dv=deviation(x,mean(x))
+    val sd=stdevi(devito2(dv))
 	def summary(x:Stream[Double])={ 
-	    Stream("X; "+x,"mean -> "+ave(x),"deviation -> "+dev1,
-	        "standard deviation -> "+sdX).foreach(println)
+	    Stream("X; "+raw,"mean -> "+mean(x),"deviation -> "+dv,
+	        "standard deviation -> "+sd).foreach(println)
 	    mkLine
 	}
 	summary(x)
+}
+object data{
+  def apply(x:Stream[Double])=new data(x)
 }

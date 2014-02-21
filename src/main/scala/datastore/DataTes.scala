@@ -7,10 +7,12 @@ object DataTes extends App{
   val a=(1 to 1000).map(in=>nextDouble).toStream
   val b=(1 to 1000).map(in=>nextDouble).toStream
   
+  data(x)
+  dataset(x,y)
   
-  val SingleData=new Data(x)
-  val MultiData=new Dataset(x,y)
-  val EnorData=new Dataset(a,b)
+
+//  val EnorData=Dataset(a,b)
+ 
   
   
   

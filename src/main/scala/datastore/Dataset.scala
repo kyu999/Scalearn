@@ -1,25 +1,26 @@
 package datastore
 
-class Dataset(x:Stream[Double],y:Stream[Double]) extends Basic with Correlation{
-	    
-	val xdev=dev(x,ave(x))
-	val ydev=dev(y,ave(y))
-	val sdX=sd(devto2(xdev))
-	val sdY=sd(devto2(ydev))
-	
-	val covXY=cov(zipdev(xdev,ydev))
-	val pearson=pear(covXY,sdX,sdY)	
-	val spcor=spearman(difsqured(labeling(x),labeling(y)))
+class dataset(rawX:Stream[Double],rawY:Stream[Double]) extends Basic with Correlation{
+
+    val x=data(rawX)
+	val y=data(rawY)
+	 
+	val cov=covariance(zipdevi(x.dv,y.dv))
+	val pear=pearson(cov,x.sd,y.sd)	
+	val spcor=spearman(difsqured(labeling(x.raw),labeling(y.raw)))
 	
     def summary={
-		val xsum=Stream("X; "+x,"mean -> "+ave(x),"deviation -> "+xdev,"standard deviation -> "+sdX)
-		val ysum=Stream("","Y; "+y,"mean -> "+ave(y),"deviation -> "+ydev,"standard deviation -> "+sdY)
-		val sumxy=Stream("","covariance -> "+covXY,"peason's correlation -> "+pearson,"spearman's correlation -> "+spcor)
+		val xsum=Stream("X; "+x.raw,"mean -> "+mean(x.raw),"deviation -> "+x.dv,"standard deviation -> "+x.sd)
+		val ysum=Stream("","Y; "+y.raw,"mean -> "+mean(y.raw),"deviation -> "+y.dv,"standard deviation -> "+y.sd)
+		val sumxy=Stream("","covariance -> "+cov,"peason's correlation -> "+pear,"spearman's correlation -> "+spcor)
 		Stream(xsum,ysum,sumxy).foreach(x=>x.foreach(println))
 		mkLine
 	}
-	
 	summary	//コンストラクタ
-
-	
 }
+
+//コンパニオンオブジェクトを作成。applyでファクトリメソッドを定義しているのでnewが不要になる
+object dataset{
+  def apply(rawX:Stream[Double],rawY:Stream[Double])=new dataset(rawX,rawY)
+}
+

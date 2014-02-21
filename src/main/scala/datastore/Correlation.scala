@@ -1,11 +1,11 @@
 package datastore
 
 trait Correlation {
-	def zipdev(dev1:Stream[Double],dev2:Stream[Double]):Stream[(Double,Double)]=dev1.zip(dev2)
+	def zipdevi(dev1:Stream[Double],dev2:Stream[Double]):Stream[(Double,Double)]=dev1.zip(dev2)
 	//2つのデータセットの偏差をTuple化
-	def cov(zipdata:Stream[(Double,Double)]):Double=zipdata.map(x=>x._1*x._2).reduce((a,b)=>a+b)/(zipdata.length-1) 
+	def covariance(zipdata:Stream[(Double,Double)]):Double=zipdata.map(x=>x._1*x._2).reduce((a,b)=>a+b)/(zipdata.length-1) 
 	//2つのデータセット共分散(=対応するXとYの偏差の積の平均）
-	def pear(covari:Double,variX:Double,variY:Double):Double=covari/(variX*variY)
+	def pearson(covari:Double,variX:Double,variY:Double):Double=covari/(variX*variY)
 	//２つのデータセットのピアソン相関関係
  	
 	
