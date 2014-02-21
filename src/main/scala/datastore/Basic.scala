@@ -1,7 +1,7 @@
 package datastore
 
 trait Basic{ 
-	def mean(data:Vector[Double]):Double=data.reduce((a,b)=>a+b)/data.length
+	def meanf(data:Vector[Double]):Double=data.reduce((a,b)=>a+b)/data.length
 	//平均
 	def deviation(data:Vector[Double],average:Double):Vector[Double]=data.map(x=>x-average)
 	//各偏差

@@ -13,6 +13,7 @@ object Suppliers extends Table[(Int, String, String, String, 		String, String)](
   def zip = column[String]("ZIP")
   // 全てのテーブルではテーブルの型パラメタと同じタイプの射影*を定義する必要がある．
   def * = id ~ name ~ street ~ city ~ state ~ zip
+  
 }
 
 // COFFEESテーブルの定義
@@ -27,13 +28,13 @@ object Coffees extends Table[(String, Int, Double, Int, Int)]("COFFEES") {
   def supplier = foreignKey("SUP_FK", supID, Suppliers)(_.id)
 }
 
-class slickfirst{
+object slickfirst extends App{
 //Session scopeから外れているからinsert等は使えない 
 //  def goin(content:String)=Coffees.insert((content,         101, 7.99, 0, 0))
-    
     Database.forURL("jdbc:h2:mem:test1", driver = "org.h2.Driver") withSession {
 	// Create the tables, including primary and foreign keys
-	(Suppliers.ddl ++ Coffees.ddl).create
+    (Suppliers.ddl ++ Coffees.ddl).create
+	
     
 	// Insert some suppliers
 	Suppliers.insert(101, "Acme, Inc.",      "99 Market Street", "Groundsville", "CA", "95199")
@@ -48,17 +49,19 @@ class slickfirst{
 			("Colombian_Decaf",   101, 8.99, 0, 0),
 			("French_Roast_Decaf", 49, 9.99, 0, 0)
 			)
+		
+		val co=Query(Coffees)
+		val su=Query(Suppliers)
+		// Iterate through all coffees and output them
+		co.foreach { case (name, supID, price, sales, total) =>
+		println("  " + name + "\t" + supID + "\t" + price + "\t" + sales + "\t" + total)
+		}
 
-// Iterate through all coffees and output them
-Query(Coffees) foreach { case (name, supID, price, sales, total) =>
-  println("  " + name + "\t" + supID + "\t" + price + "\t" + sales + "\t" + total)
-}
-
-println(" id , name , street , city , state , zip")
-Query(Suppliers) foreach{case (id,name,street,city,state,zip)=>
-  println(" "+id+"\t"+name+"\t"+street+"\t"+city+"\t"+state+"\t"+zip)
-}
-
+		println(" id , name , street , city , state , zip")
+		su.foreach{case (id,name,street,city,state,zip)=>
+		println(" "+id+"\t"+name+"\t"+street+"\t"+city+"\t"+state+"\t"+zip)
+		}
+		
 
 	}
 }
