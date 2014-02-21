@@ -62,3 +62,4 @@ show test:dependency-classpath
 clean
 reload
 update
+clean
