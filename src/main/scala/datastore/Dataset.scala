@@ -1,26 +1,28 @@
 package datastore
 
-class dataset(rawX:Vector[Double],rawY:Vector[Double]) extends Basic with Correlation{
+class dataset(rawX:Seq[Double],rawY:Seq[Double]) extends Basic with Correlation{
 
     val x=data(rawX)			//raw->dataインスタンス作成
 	val y=data(rawY)
 	 
-	val cov=covariance(zipdevi(x.dv,y.dv))
-	val pear=pearson(cov,x.sd,y.sd)	
-	val spcor=spearman(difsqured(labeling(x.raw),labeling(y.raw)))
+	lazy val cov=covariance(zipdevi(x.dv,y.dv))
+	lazy val pear=pearson(cov,x.sd,y.sd)	
+	lazy val spcor=spearman(difsqured(labeling(x.raw),labeling(y.raw)))
+	
+	//データが多い時のために遅延評価に。
 	
     def summary={
-		val xsum=Vector("X; "+x.raw,"mean -> "+x.mean,"deviation -> "+x.dv,"standard deviation -> "+x.sd)
-		val ysum=Vector("","Y; "+y.raw,"mean -> "+y.mean,"deviation -> "+y.dv,"standard deviation -> "+y.sd)
-		val sumxy=Vector("","covariance -> "+cov,"peason's correlation -> "+pear,"spearman's correlation -> "+spcor)
-		Vector(xsum,ysum,sumxy).foreach(x=>x.foreach(println))
+		val xsum=Seq("X; "+x.raw,"mean -> "+x.mean,"deviation -> "+x.dv,"standard deviation -> "+x.sd)
+		val ysum=Seq("","Y; "+y.raw,"mean -> "+y.mean,"deviation -> "+y.dv,"standard deviation -> "+y.sd)
+		val sumxy=Seq("","covariance -> "+cov,"peason's correlation -> "+pear,"spearman's correlation -> "+spcor)
+		Seq(xsum,ysum,sumxy).foreach(x=>x.foreach(println))
 		mkLine
 	}
-	summary	//コンストラクタ
+	//summary	//コンストラクタ
 }
 
 //コンパニオンオブジェクトを作成。applyでファクトリメソッドを定義しているのでnewが不要になる
 object dataset{
-  def apply(rawX:Vector[Double],rawY:Vector[Double])=new dataset(rawX,rawY)
+  def apply(rawX:Seq[Double],rawY:Seq[Double])=new dataset(rawX,rawY)
 }
 

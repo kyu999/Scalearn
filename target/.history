@@ -76,3 +76,6 @@ clean
 reload
 update
 run
+test
+~compile
+test
