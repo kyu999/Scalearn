@@ -1,4 +1,4 @@
 [0m[[0minfo[0m] [0m[32mDatates:[0m[0m
 [0m[[0minfo[0m] [0m[32m- data class : mean & sd[0m[0m
 [0m[[0minfo[0m] [0m[32m- dataset class : cov , pear , spear[0m[0m
-[0m[[0minfo[0m] [0m[32m- time series function[0m[0m
+[0m[[0minfo[0m] [0m[32m- time series trait : autocovariance , autocorrelation[0m[0m

@@ -1,10 +1,10 @@
 package datastore
 
 trait TimeSeries extends Basic{
-	def autocovaiance(raw:Seq[Double],lag:Int):Double={
+	def autocovariance(raw:Seq[Double],lag:Int):Double={
 	  lazy val mean=meanf(raw)
 	  lazy val lag_raw=raw.drop(lag)
-	  if(raw.length-1<=lag) 0  
+	  if(raw.length<=lag) 0  
 	  else lag_raw.zip(raw).map{x=>(x._1-mean)*(x._2-mean)}.reduce{(a,b)=>a+b}/raw.length
 	  }
 	/*
@@ -14,7 +14,13 @@ trait TimeSeries extends Basic{
 	*/
 		
 	
-//	def autocorrelation()
+	def autocorrelation(raw:Seq[Double]):IndexedSeq[Double]={
+	  val r0=autocovariance(raw,0)
+	  if (raw.length<20) (0 to raw.length).map(x=>autocovariance(raw,x)/r0)
+	  else (0 to 20).map(x=>autocovariance(raw,x)/r0)
+	}
+	//acf=r(h)/r(0)
+	
 //	def detrending()
 //	def differencing()
 }

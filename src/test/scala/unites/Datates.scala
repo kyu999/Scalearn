@@ -12,16 +12,18 @@ class Datates extends FunSuite {
 	implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 	//===の誤算範囲を上書き設定。小数点三桁以下まで許可
     
-    val x=Seq(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
-    val y=Seq(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
-    val z=Seq(1.0,2,5,4,3)
+    val x=List(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
+    val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
+    val z=Stream(1.0,2,5,4,3)
     val a=(1 to 10000).map(in=>nextDouble).toSeq
     val b=(1 to 10000).map(in=>nextDouble).toSeq
+    val c=(1 to 30).map(in=>in.toDouble).toSeq
     
     val d1=data(x)
     val d2=data(y)
     val d3=dataset(x,y)
     val ts1=data(z)
+    val ts2=data(c)
     
 
     test("data class : mean & sd"){ 
@@ -33,13 +35,20 @@ class Datates extends FunSuite {
 	}
     
     test("dataset class : cov , pear , spear"){
-//      assert(d3.cov===(-154.901)," -> cov")
-//      assert(d3.pear===(-0.941)," -> pear")
-//      assert(d3.spcor===(-0.896)," -> spear") 
+      assert(d3.cov===(-154.901)," -> cov")
+      assert(d3.pear===(-0.941)," -> pear")
+      assert(d3.spcor===(-0.896)," -> spear") 
     }
     
-    test("time series function"){
-      assert(0==0)
-      println("autocov"+ts1.autocovaiance(ts1.raw, 9)) //テスト書く。
+    test("time series trait : autocovariance , autocorrelation"){
+      assert(ts1.autocovariance(ts1.raw, -1)===2.0,"autocov:lag=-1; of course, this is only for weired input") 
+      assert(ts1.autocovariance(ts1.raw, 0)===2.0,"autocov:lag=0") 
+      assert(ts1.autocovariance(ts1.raw, 1)===0.4,"autocov:lag=1") 
+      assert(ts1.autocovariance(ts1.raw, 2)===(-1.0),"autocov:lag=2") 
+      assert(ts1.autocovariance(ts1.raw, 3)===(-0.4),"autocov:lag=3") 
+      assert(ts1.autocovariance(ts1.raw, 5)===0.0,"autocov:lag=4") 
+      assert(ts1.acf===Vector(1.0, 0.2, -0.5, -0.2, 0.0, 0.0),"acf fail")
+      assert(d1.acf===Vector(1.0, -0.29351153863941176, -0.20777412939925083, 0.3973546686398743, -0.43199371040096196, 0.13956435277251078, 0.12747074873976785, -0.27500809323405634, 0.22011746751144617, -0.014054479026962028, -0.22090366739120382, 0.04450353789945891, 0.018748554779632807, -0.004513712250844008, 0.0)
+    		  		,"acf fail")    	  
     }
 }
