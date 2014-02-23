@@ -1,8 +1,8 @@
 package unites
 import org.scalatest.FunSuite	//継承するFunSuiteトレイト
-import datastore._
+import datafactory._
 import scala.util.Random.nextDouble
-import org.scalautils.Equality
+//import org.scalautils.Equality
 
 import org.scalautils.TolerantNumerics._
 //Doubleの丸め誤差の許可範囲設定のためのやつ
@@ -22,33 +22,48 @@ class Datates extends FunSuite {
     val d1=data(x)
     val d2=data(y)
     val d3=dataset(x,y)
-    val ts1=data(z)
-    val ts2=data(c)
     
-
-    test("data class : mean & sd"){ 
+    test("data class : mean"){ 
 	  assert(2.0009===2.0)	//===を使えば小数点三桁以下までの誤差は認めてくれる。
 	  assert(d1.mean===43.714," -> mean")
-	  assert(d1.sd===18.424," -> sd")
 	  assert(d2.mean===46.571," ->mean")
-	  assert(d2.sd===8.933," ->sd")
 	}
+    test("data class : sd"){ 
+	  assert(d1.sd===18.424," -> sd")
+	  assert(d2.sd===8.933," ->sd")
+	}	
     
-    test("dataset class : cov , pear , spear"){
+    test("dataset class : cov"){
       assert(d3.cov===(-154.901)," -> cov")
+    }
+    test("dataset class : pear"){
       assert(d3.pear===(-0.941)," -> pear")
+    }
+    test("dataset class : spear"){
       assert(d3.spcor===(-0.896)," -> spear") 
     }
     
-    test("time series trait : autocovariance , autocorrelation"){
+    val ts1=data(z)
+    val ts2=data(c)
+     
+    test("time series trait : autocovariance"){
       assert(ts1.autocovariance(ts1.raw, -1)===2.0,"autocov:lag=-1; of course, this is only for weired input") 
       assert(ts1.autocovariance(ts1.raw, 0)===2.0,"autocov:lag=0") 
       assert(ts1.autocovariance(ts1.raw, 1)===0.4,"autocov:lag=1") 
       assert(ts1.autocovariance(ts1.raw, 2)===(-1.0),"autocov:lag=2") 
       assert(ts1.autocovariance(ts1.raw, 3)===(-0.4),"autocov:lag=3") 
       assert(ts1.autocovariance(ts1.raw, 5)===0.0,"autocov:lag=4") 
+    }
+    test("time series trait : autocorrelation"){
       assert(ts1.acf===Vector(1.0, 0.2, -0.5, -0.2, 0.0, 0.0),"acf fail")
       assert(d1.acf===Vector(1.0, -0.29351153863941176, -0.20777412939925083, 0.3973546686398743, -0.43199371040096196, 0.13956435277251078, 0.12747074873976785, -0.27500809323405634, 0.22011746751144617, -0.014054479026962028, -0.22090366739120382, 0.04450353789945891, 0.018748554779632807, -0.004513712250844008, 0.0)
-    		  		,"acf fail")    	  
+    		  		,"acf fail")   
     }
+    
+    test("operation : ++ "){
+        assert((data(a)++data(b)).x.raw===dataset(a,b).x.raw)
+        assert((data(a)++data(b)).y.raw===dataset(a,b).y.raw)
+       
+    }
+
 }

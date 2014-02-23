@@ -1,4 +1,9 @@
 [0m[[0minfo[0m] [0m[32mDatates:[0m[0m
-[0m[[0minfo[0m] [0m[32m- data class : mean & sd[0m[0m
-[0m[[0minfo[0m] [0m[32m- dataset class : cov , pear , spear[0m[0m
-[0m[[0minfo[0m] [0m[32m- time series trait : autocovariance , autocorrelation[0m[0m
+[0m[[0minfo[0m] [0m[32m- data class : mean[0m[0m
+[0m[[0minfo[0m] [0m[32m- data class : sd[0m[0m
+[0m[[0minfo[0m] [0m[32m- dataset class : cov[0m[0m
+[0m[[0minfo[0m] [0m[32m- dataset class : pear[0m[0m
+[0m[[0minfo[0m] [0m[32m- dataset class : spear[0m[0m
+[0m[[0minfo[0m] [0m[32m- time series trait : autocovariance[0m[0m
+[0m[[0minfo[0m] [0m[32m- time series trait : autocorrelation[0m[0m
+[0m[[0minfo[0m] [0m[32m- operation : ++ [0m[0m
