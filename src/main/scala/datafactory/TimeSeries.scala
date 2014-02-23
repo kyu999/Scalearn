@@ -1,6 +1,6 @@
 package datafactory
 
-trait TimeSeries extends Basic{
+trait TimeSeries extends Descritive{
 	def autocovariance(raw:Seq[Double],lag:Int):Double={
 	  lazy val mean=meanf(raw)
 	  lazy val lag_raw=raw.drop(lag)

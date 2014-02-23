@@ -1,6 +1,6 @@
 package datafactory
 
-class data(x:Seq[Double]) extends Basic with TimeSeries{
+class data(x:Seq[Double]) extends Descritive with TimeSeries{
     val raw=x 
     val mean=meanf(x)
 	val dv=deviation(x,mean)

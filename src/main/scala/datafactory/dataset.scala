@@ -1,6 +1,7 @@
 package datafactory
 
-class dataset(rawX:Seq[Double],rawY:Seq[Double]) extends Basic with Correlation{
+class dataset(rawX:Seq[Double],rawY:Seq[Double]) extends Descritive 
+			with Inference with Bayes with TimeSeries with Multivariate{
 
     val x=data(rawX)			//raw->dataインスタンス作成
 	val y=data(rawY)

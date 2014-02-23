@@ -2,6 +2,8 @@ StatsBox
 ========
 
 The goal of this project is to implement software which enable us to analyze data immidiately
-not only for data-analyst but also for everyone related to that data.
+not only for professional data-analyst but also for all scala developers dealing with data
 
-#ユーザーが直接使用するようなメソッドやクラスは小文字で短くわかりやすく。それ以外のクラスは大文字でわかりやすく。メソッドは小文字で長め。
+user's methods & classes: plain, short, small-letters
+other methods : descritive, long, small-letters
+other classes : plain, short, capitalize the head

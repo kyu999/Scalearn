@@ -3,13 +3,12 @@ import org.scalatest.FunSuite	//継承するFunSuiteトレイト
 import datafactory._
 import scala.util.Random.nextDouble
 //import org.scalautils.Equality
-
 import org.scalautils.TolerantNumerics._
 //Doubleの丸め誤差の許可範囲設定のためのやつ
 
 class Datates extends FunSuite {
-   
-	implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
+
+    implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 	//===の誤算範囲を上書き設定。小数点三桁以下まで許可
     
     val x=List(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
@@ -20,6 +19,7 @@ class Datates extends FunSuite {
     val c=(1 to 30).map(in=>in.toDouble).toSeq
     
     val d1=data(x)
+   
     val d2=data(y)
     val d3=dataset(x,y)
     
@@ -62,8 +62,7 @@ class Datates extends FunSuite {
     
     test("operation : ++ "){
         assert((data(a)++data(b)).x.raw===dataset(a,b).x.raw)
-        assert((data(a)++data(b)).y.raw===dataset(a,b).y.raw)
-       
+        assert((data(a)++data(b)).y.raw===dataset(a,b).y.raw)  
     }
 
 }
