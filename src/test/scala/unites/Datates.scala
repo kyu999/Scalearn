@@ -19,10 +19,10 @@ class Datates extends FunSuite {
     val c=(1 to 30).map(in=>in.toDouble).toSeq
     
     val d1=data(x)
-   
     val d2=data(y)
     val d3=dataset(x,y)
-    
+    val d4=dataset(x,y,List(3,4,5,6))
+
     test("data class : mean"){ 
 	  assert(2.0009===2.0)	//===を使えば小数点三桁以下までの誤差は認めてくれる。
 	  assert(d1.mean===43.714," -> mean")
@@ -34,13 +34,13 @@ class Datates extends FunSuite {
 	}	
     
     test("dataset class : cov"){
-      assert(d3.cov===(-154.901)," -> cov")
+      assert(d3.covar(0)===(-154.901)," -> cov")
     }
     test("dataset class : pear"){
-      assert(d3.pear===(-0.941)," -> pear")
+      assert(d3.pears(0)===(-0.941)," -> pear")
     }
     test("dataset class : spear"){
-      assert(d3.spcor===(-0.896)," -> spear") 
+      assert(d3.spears(0)===(-0.896)," -> spear") 
     }
     
     val ts1=data(z)
@@ -58,11 +58,7 @@ class Datates extends FunSuite {
       assert(ts1.acf===Vector(1.0, 0.2, -0.5, -0.2, 0.0, 0.0),"acf fail")
       assert(d1.acf===Vector(1.0, -0.29351153863941176, -0.20777412939925083, 0.3973546686398743, -0.43199371040096196, 0.13956435277251078, 0.12747074873976785, -0.27500809323405634, 0.22011746751144617, -0.014054479026962028, -0.22090366739120382, 0.04450353789945891, 0.018748554779632807, -0.004513712250844008, 0.0)
     		  		,"acf fail")   
+ 
+    d4.summary
     }
-    
-    test("operation : ++ "){
-        assert((data(a)++data(b)).x.raw===dataset(a,b).x.raw)
-        assert((data(a)++data(b)).y.raw===dataset(a,b).y.raw)  
-    }
-
 }

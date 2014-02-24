@@ -9,6 +9,7 @@ trait Descritive{
 	def devito2(devdata:Seq[Double]):Seq[Double]=devdata.map(x=>(math.pow(x,2))) 
 	//各偏差の２乗
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
+	
 	def stdevi(dv2:Seq[Double]):Double=math.sqrt(dv2.reduce((a,b)=>a+b)/(dv2.length-1))	
 	//√分散＝標準偏差
 	
@@ -17,7 +18,7 @@ trait Descritive{
 	//2つのデータセットの偏差をTuple化
 	def covariance(zipdata:Seq[(Double,Double)]):Double=zipdata.map(x=>x._1*x._2).reduce((a,b)=>a+b)/(zipdata.length-1) 
 	//2つのデータセット共分散(=対応するXとYの偏差の積の平均）
-	def pearson(covari:Double,variX:Double,variY:Double):Double=covari/(variX*variY)
+	def pearson(covari:Double,sdX:Double,sdY:Double):Double=covari/(sdX*sdY)
 	//２つのデータセットのピアソン相関関係
  	
 	
