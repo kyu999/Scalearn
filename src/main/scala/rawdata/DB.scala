@@ -1,3 +1,4 @@
+package rawdata;
 import scala.slick.driver.H2Driver.simple._
 import Database.threadLocalSession
 

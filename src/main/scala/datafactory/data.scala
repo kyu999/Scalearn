@@ -1,8 +1,8 @@
 package datafactory
 
 class data(x:Seq[Double]) extends Descritive with TimeSeries{
-  //Descriptive
-    var name="data"		//mutable
+//Descriptive
+    var name:Any="data"		//mutable
       
     val raw:Seq[Double]=x 
     val mean=meanf(x)
@@ -10,18 +10,20 @@ class data(x:Seq[Double]) extends Descritive with TimeSeries{
     val sd=stdevi(devito2(dv))
     
     
-  //TimeSeries
+//TimeSeries
     lazy val acf=autocorrelation(x)
-  //Operation
+
+//Operation
     def ::(component:data)=dataset(x,component.raw)
     
 	def summary={ 
-	    Seq("X; "+raw,"mean -> "+mean,"deviation -> "+dv,
+	    Seq(name+" : "+raw,"mean -> "+mean,"deviation -> "+dv,
 	        "standard deviation -> "+sd).foreach(println)
 	    mkLine
 	}
-//	summary(x)
 }
+
+//コンパニオンオブジェクト
 object data{
   def apply(x:Seq[Double])=new data(x)
 }
