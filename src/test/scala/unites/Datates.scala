@@ -5,12 +5,12 @@ import scala.util.Random.nextDouble
 //import org.scalautils.Equality
 import org.scalautils.TolerantNumerics._
 //Doubleの丸め誤差の許可範囲設定のためのやつ
+import Converter._
 
 class Datates extends FunSuite {
 
     implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 	//===の誤算範囲を上書き設定。小数点三桁以下まで許可
-    import Converter._
     List(1,2,3,4,5.9).toda.summary
     Seq(Seq(1,2.0),Seq(3,4.9)).tods
     val x=List(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
