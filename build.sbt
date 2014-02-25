@@ -1,4 +1,4 @@
-name := "StatsBox"
+name := "Scalearn"
 
 version := "0.13.1"
 
