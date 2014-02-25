@@ -10,7 +10,9 @@ class Datates extends FunSuite {
 
     implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 	//===の誤算範囲を上書き設定。小数点三桁以下まで許可
-    
+    import Converter._
+    List(1,2,3,4,5.9).toda.summary
+    Seq(Seq(1,2.0),Seq(3,4.9)).tods
     val x=List(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
     val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
     val z=Stream(1.0,2,5,4,3)
@@ -18,9 +20,9 @@ class Datates extends FunSuite {
     val b=(1 to 10000).map(in=>nextDouble).toSeq
     val c=(1 to 30).map(in=>in.toDouble).toSeq
     
-    val d1=data(x)
+    val d1=x.toda
     val d2=data(y)
-    val d3=dataset(x,y)
+    val d3=Stream(x,y).tods
     val d4=dataset(x,y,List(3,4,5,6))
 
     test("data class : mean"){ 

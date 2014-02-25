@@ -4,7 +4,7 @@ class data(x:Seq[Double]) extends Descritive with TimeSeries{
   //Descriptive
     var name="data"		//mutable
       
-    val raw=x 
+    val raw:Seq[Double]=x 
     val mean=meanf(x)
 	val dv=deviation(x,mean)
     val sd=stdevi(devito2(dv))
@@ -15,7 +15,7 @@ class data(x:Seq[Double]) extends Descritive with TimeSeries{
   //Operation
     def ::(component:data)=dataset(x,component.raw)
     
-	def summary(x:Seq[Double])={ 
+	def summary={ 
 	    Seq("X; "+raw,"mean -> "+mean,"deviation -> "+dv,
 	        "standard deviation -> "+sd).foreach(println)
 	    mkLine
