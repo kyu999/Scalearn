@@ -1,5 +1,5 @@
 package datafactory
-
+import Converter._
 class data(x:Seq[Double]) extends Descritive with TimeSeries{
 //Descriptive
     var name:Any="data"		//mutable
@@ -8,7 +8,8 @@ class data(x:Seq[Double]) extends Descritive with TimeSeries{
     val mean=meanf(x)
 	val dv=deviation(x,mean)
     val sd=stdevi(devito2(dv))
-    
+    lazy val reg=dataset((1 to x.length).map(a=>a.toDouble),x).reg(0)
+    //x軸は時間軸。
     
 //TimeSeries
     lazy val acf=autocorrelation(x)

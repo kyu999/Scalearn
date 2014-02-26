@@ -5,7 +5,7 @@ object Converter {
 	implicit def tods(in:Seq[Seq[Double]]):ConvertDataset=new ConvertDataset(in)
 }
 class ConvertData(in:Seq[Double]){
-  def toda=new data(in.map(_.toDouble))
+  def toda=data(in.map(_.toDouble))
 }
 class ConvertDataset(in:Seq[Seq[Double]]){
   def tods=new dataset(in.map(_.map(_.toDouble)))
@@ -19,5 +19,6 @@ class ConvertDataset(in:Seq[Seq[Double]]){
   ->ConvertDataのtodaメソッドが呼び出される
   ※使用するにはConverterオブジェクトをimportするだけ。ぶっちゃけコンパニオンオブジェクトを使用して
   newなしでdata,datasetインスタンス作成できるからあとは好みの問題。
-* 
-*/
+  ちなみにConvertDataseクラスのtodsメソッドでdatasetのインスタンス作成にnewを使っているのは引数が可変長引数の関係で
+  マッチしないから直接datasetクラスを作成している
+  */

@@ -23,7 +23,7 @@ class Datates extends FunSuite {
     val d3=Stream(x,y).tods
     val d4=dataset(x,y,List(3,4,5,6))
     val enor1=dataset(a,b,a,b)
-
+    
     test("data class : mean"){ 
 	  assert(2.0009===2.0)	//===を使えば小数点三桁以下までの誤差は認めてくれる。
 	  assert(d1.mean===43.714," -> mean")
@@ -33,6 +33,9 @@ class Datates extends FunSuite {
 	  assert(d1.sd===18.424," -> sd")
 	  assert(d2.sd===8.933," ->sd")
 	}	
+    test("data class : regression"){
+//    	  assert(d1.reg(10)===46.0)
+    }
     
     test("dataset class : cov"){
       assert(d3.covar(0)===(-154.901)," -> cov")
@@ -43,6 +46,10 @@ class Datates extends FunSuite {
     test("dataset class : spear"){
       assert(d3.spears(0)===(-0.896)," -> spear") 
     }
+    test("dataset class : regression"){
+//      assert(d3.reg(0)(10)===115)
+    }
+
     
     val ts1=data(z)
     val ts2=data(c)
@@ -61,8 +68,10 @@ class Datates extends FunSuite {
     		  		,"acf fail")
     
     d4.naming("you are the winner!!","Don't get lost","I wanna be like him","This does not appear")
-    d4.summary
+//    d4.summary
     enor1.naming("rand1","rand2","rand3","rand4")
-    enor1.summary
+//    enor1.summary
+//    val regline=List(1,2,5,4,3.0).toda.reg
+//    println(regline(10))
     }
 }

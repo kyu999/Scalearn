@@ -40,6 +40,25 @@ trait Descritive{
 	  peasonは外れ値の影響を受けやすいのと、厳密には正規分布のデータが対象のパラメトリックな手法
 	  * 
 	  */
-
+	
+	def regression(corr:Double,xsd:Double,ysd:Double,xmean:Double,ymean:Double):(Double=>Double)={
+	  val slope=corr*(xsd/ysd)
+	  println("slope is "+slope)
+	  val intercept=ymean-slope*xmean
+	  println("intercept is "+intercept)
+	  val f={(input:Double)=>slope*input+intercept}
+	  f
+	}
+	def regression(X:data,Y:data)={
+	  val set=dataset(X.raw,Y.raw)
+	  val slope=set.pears(0)*(X.sd/Y.sd)
+	  println("slope is "+slope)
+	  val intercept=Y.mean-slope*X.mean
+	  println("intercept is "+intercept)
+	  val f={(input:Double)=>slope*input+intercept}
+	  f
+	}
+	//この定義の仕方は使い勝手が悪いから考え直す必要あり。また計算方法が簡易式だからか誤差が生じる。
+	//回帰直線の傾き；相関係数/(Xの標準偏差＊Yの標準偏差)
 	def mkLine=println("-------------------------------------------------------------")
 }
