@@ -5,11 +5,12 @@ object Converter {
 	implicit def tods(in:Seq[Seq[Double]]):ConvertDataset=new ConvertDataset(in)
 }
 class ConvertData(in:Seq[Double]){
-  def toda=data(in.map(_.toDouble))
+  def toda=data(in)
 }
 class ConvertDataset(in:Seq[Seq[Double]]){
   def tods=new dataset(in.map(_.map(_.toDouble)))
 }
+//  def tods=new dataset(in.map(_.map(_.toDouble)))
 
 /*暗黙の型変換用オブジェ＆クラス
   Seqに本来ないメソッドtoda,todsが呼び出される

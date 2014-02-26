@@ -11,13 +11,14 @@ class Datates extends FunSuite {
 
     implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 	//===の誤算範囲を上書き設定。小数点三桁以下まで許可
+    
     val x=List(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
     val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
     val z=Stream(1.0,2,5,4,3)
     val a=(1 to 10000).map(in=>nextDouble).toSeq
     val b=(1 to 10000).map(in=>nextDouble).toSeq
     val c=(1 to 30).map(in=>in.toDouble).toSeq
-    
+  // List(1).toda
     val d1=x.toda
     val d2=data(y)
     val d3=Stream(x,y).tods
@@ -47,7 +48,7 @@ class Datates extends FunSuite {
       assert(d3.spears(0)===(-0.896)," -> spear") 
     }
     test("dataset class : regression"){
-//      assert(d3.reg(0)(10)===115)
+      assert(dataset(y,x).reg(0)(10)===114.701)
     }
 
     

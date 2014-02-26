@@ -42,7 +42,7 @@ trait Descritive{
 	  */
 	
 	def regression(corr:Double,xsd:Double,ysd:Double,xmean:Double,ymean:Double):(Double=>Double)={
-	  val slope=corr*(xsd/ysd)
+	  val slope=corr*(ysd/xsd)
 	  println("slope is "+slope)
 	  val intercept=ymean-slope*xmean
 	  println("intercept is "+intercept)
@@ -53,7 +53,7 @@ trait Descritive{
 	  val set=dataset(X.raw,Y.raw)
 	  val slope=set.pears(0)*(X.sd/Y.sd)
 	  println("slope is "+slope)
-	  val intercept=Y.mean-slope*X.mean
+	  val intercept=Y.mean-slope*X.mean	//ここが原因
 	  println("intercept is "+intercept)
 	  val f={(input:Double)=>slope*input+intercept}
 	  f
