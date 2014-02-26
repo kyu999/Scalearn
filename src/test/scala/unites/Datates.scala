@@ -11,7 +11,7 @@ class Datates extends FunSuite {
 
     implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 	//===の誤算範囲を上書き設定。小数点三桁以下まで許可
-    
+
     val x=List(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
     val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
     val z=Stream(1.0,2,5,4,3)
@@ -67,12 +67,11 @@ class Datates extends FunSuite {
       assert(ts1.acf===Vector(1.0, 0.2, -0.5, -0.2, 0.0, 0.0),"acf fail")
       assert(d1.acf===Vector(1.0, -0.29351153863941176, -0.20777412939925083, 0.3973546686398743, -0.43199371040096196, 0.13956435277251078, 0.12747074873976785, -0.27500809323405634, 0.22011746751144617, -0.014054479026962028, -0.22090366739120382, 0.04450353789945891, 0.018748554779632807, -0.004513712250844008, 0.0)
     		  		,"acf fail")
-    
-    d4.naming("you are the winner!!","Don't get lost","I wanna be like him","This does not appear")
-//    d4.summary
-    enor1.naming("rand1","rand2","rand3","rand4")
-//    enor1.summary
-//    val regline=List(1,2,5,4,3.0).toda.reg
-//    println(regline(10))
     }
+    
+    test("side effect"){
+      d4.naming("you are the winner!!","Don't get lost","I wanna be like him","This does not appear")
+      d4.summary
+    }
+      
 }

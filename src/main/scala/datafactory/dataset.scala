@@ -15,14 +15,21 @@ class dataset(raw:Seq[Seq[Double]]) extends Descritive
     lazy val covar=combi.map{a=>covariance(zipdevi(a(0).dv,a(1).dv))}.toVector
 	
     lazy val pears=combi.map{a=>
+       if(a(0).n != a(1).n) {println("You can't compare different length variable");-10000}
+       else{
 	   pearson(
 	       covariance(
 	           zipdevi(a(0).dv,a(1).dv) )
 	           ,a(0).sd,a(1).sd)
+       }
 	   }.toVector
 	
-	lazy val spears=combi.map{a=>spearman(difsqured(labeling(a(0).raw,a(1).raw)))}
-	  
+	lazy val spears=combi.map{a=>
+	  if(a(0).n != a(1).n){println("You can't compare different length variable");-10000}
+	  else{
+	      spearman(difsqured(labeling(a(0).raw,a(1).raw)))
+	     }
+	  }
 	   
 	lazy val reg=combi.zip(pears).map{a=>regression(a._2,a._1(0).sd,a._1(1).sd,a._1(0).mean,a._1(1).mean)}
 	//regressionの引数は順に、相関係数、XのSD,YのSD、Xの平均、Yの平均
@@ -35,6 +42,9 @@ class dataset(raw:Seq[Seq[Double]]) extends Descritive
         println("name list : ")
         datalist.foreach(x=>println(x.name))
 		mkLine
+		println("length of each")
+        datalist.foreach(a=>println(a.n))
+        mkLine
 		println("mean : ")
 		mean.foreach(println)
 		mkLine

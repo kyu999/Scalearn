@@ -4,6 +4,7 @@ class data(x:Seq[Double]) extends Descritive with TimeSeries{
 //Descriptive
     var name:Any="data"		//mutable
       
+    val n=x.length
     val raw:Seq[Double]=x 
     val mean=meanf(x)
 	val dv=deviation(x,mean)

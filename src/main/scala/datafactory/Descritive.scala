@@ -23,12 +23,12 @@ trait Descritive{
  	
 	
 	def labeling(rawX:Seq[Double],rawY:Seq[Double])={
-	  val unzipped=rawX.zip(rawY).unzip
-	  val placeX=unzipped._1.sorted.zipWithIndex.toMap
-	  val placeY=unzipped._2.sorted.zipWithIndex.toMap
-	  val rankedX=unzipped._1.map{a=>placeX(a)}
-	  val rankedY=unzipped._2.map{a=>placeY(a)}
-	  rankedX.zip(rankedY)
+	      if (rawX.length != rawY.length) println("You can't compare different length of variable")
+		  val placeX=rawX.sorted.zipWithIndex.toMap
+		  val placeY=rawY.sorted.zipWithIndex.toMap
+	      val rankedX=rawX.map{a=>placeX(a)}
+	      val rankedY=rawY.map{a=>placeY(a)}
+	      rankedX.zip(rankedY)	    
 	}
 	
 	

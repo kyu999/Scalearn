@@ -133,3 +133,5 @@ clean
 reload
 update
 test
+package
+test
