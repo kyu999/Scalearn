@@ -49,16 +49,7 @@ trait Descritive{
 	  val f={(input:Double)=>slope*input+intercept}
 	  f
 	}
-	def regression(X:data,Y:data)={
-	  val set=dataset(X.raw,Y.raw)
-	  val slope=set.pears(0)*(X.sd/Y.sd)
-	  println("slope is "+slope)
-	  val intercept=Y.mean-slope*X.mean	//ここが原因
-	  println("intercept is "+intercept)
-	  val f={(input:Double)=>slope*input+intercept}
-	  f
-	}
-	//この定義の仕方は使い勝手が悪いから考え直す必要あり。また計算方法が簡易式だからか誤差が生じる。
-	//回帰直線の傾き；相関係数/(Xの標準偏差＊Yの標準偏差)
+	//この定義の仕方は使い勝手が悪いから考え直す必要あり。
+	//回帰直線の傾き；相関係数/(Yの標準偏差＊Xの標準偏差)
 	def mkLine=println("-------------------------------------------------------------")
 }
