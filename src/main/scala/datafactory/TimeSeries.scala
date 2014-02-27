@@ -25,6 +25,16 @@ trait TimeSeries extends Descritive{
 	}
 	//acf=r(h)/r(0)
 	
-//	def detrending(ra:Seq[Double])=regression()
-//	def differencing()
+	def detrending(x:Seq[Double],raw:Seq[Double],xregline:(Double=>Double)):Seq[Double]=residual(x,raw,xregline)
+	
+	def differencing(raw:Seq[Double]):Seq[Double]={
+		val zipped=raw.tail.zip(raw.init)
+		zipped.map(a=>a._1-a._2)
+	}
+	/*
+	 t	1  2  3  4  5  6 
+	Xt  5  8  6  9 10  11
+   Xt-1    5  8  6  9  10  11
+   ΔXt     3  -2 3  1   1
+	 */
 }

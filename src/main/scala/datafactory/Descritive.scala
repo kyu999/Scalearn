@@ -46,12 +46,20 @@ trait Descritive{
 	
 	def regression(corr:Double,xsd:Double,ysd:Double,xmean:Double,ymean:Double):(Double,Double)={
 	  val slope=corr*(ysd/xsd)
-	  println("slope is "+slope)
+//	  println("slope is "+slope)
 	  val intercept=ymean-slope*xmean
-	  println("intercept is "+intercept)
+//	  println("intercept is "+intercept)
 	  (slope,intercept)
 	}
 	//この定義の仕方は使い勝手が悪いから考え直す必要あり。
 	//回帰直線の傾き；相関係数/(Yの標準偏差＊Xの標準偏差)
+	
+	def XtoYregline(slope:Double,intercept:Double):Double=>Double={(x:Double)=>slope*x+intercept}
+	def YtoXregline(slope:Double,intercept:Double):Double=>Double={(y:Double)=>(y-intercept)/slope}
+
+	def residual(x:Seq[Double],raw:Seq[Double],xregline:(Double=>Double)):Seq[Double]=x.zip(raw).map{a=>
+	  a._2-xregline(a._1)
+	  }
+
 	def mkLine=println("-------------------------------------------------------------")
 }

@@ -14,11 +14,18 @@ class data(x:Seq[Double]) extends Descritive{
 	
     val sd=stdevi(devito2(dv))
     
+    lazy val time:IndexedSeq[Double]=(1 to x.length).map(a=>a.toDouble)
     
-    lazy val reg=dataset(this,(0 to x.length).map(a=>a.toDouble).toda).reg(0)		 //x軸は時間軸。
+    lazy val reg:(Double,Double)=dataset(time.toda,this).reg(0)		 //x軸が時間軸のケース。
     
+    lazy val xregline:Double=>Double = XtoYregline(reg._1,reg._2)
     
-//Operation
+    lazy val yregline:Double=>Double = YtoXregline(reg._1,reg._2)
+    
+    lazy val resi:Seq[Double]=residual(time,raw,xregline)
+
+    
+    //Operation-------------------------------------------
     
     def ts=tsdata(x)
     //時系列データ化
@@ -27,7 +34,7 @@ class data(x:Seq[Double]) extends Descritive{
     //２つのdataを１つのdatasetにする
     
 	def summary={ 
-	    Seq(name+" : "+raw,"mean -> "+mean,"deviation -> "+dv,
+	    Seq(name+" : "+raw,"length : "+n,"mean -> "+mean,"deviation -> "+dv,
 	        "standard deviation -> "+sd).foreach(println)
 	    mkLine
 	}

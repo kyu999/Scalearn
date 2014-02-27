@@ -18,7 +18,7 @@ class Datates extends FunSuite {
     val a=(1 to 10000).map(in=>nextDouble).toSeq
     val b=(1 to 10000).map(in=>nextDouble).toSeq
     val c=(1 to 30).map(in=>in.toDouble).toSeq
-  // List(1).toda
+  
     val d1=x.toda
     val d2=data(y)
     val d3=Stream(x,y).tods.ts		//通常のStreamをtodsでdataset化し、tsで時系列データ化
@@ -26,8 +26,7 @@ class Datates extends FunSuite {
     val d4=dataset(d1,d2,List(3,4,5,6.0).toda)	//rawかdataどちらかを突っ込めるようにしたい=>dataのみ許可
     val dataindataset=dataset(d1,d2)
     val cons=d1::d2
-    cons.summary
-    (d1::d2::d2).summary		
+    (d1::d2::d2)
     //こんな感じでcons(::)を使ってdatasetを作ることも可能。だが効率上あまり好ましくない。基本的にはdataset(d1,d2,d2)の方が良い
     
     test("data class : mean"){ 
@@ -78,7 +77,7 @@ class Datates extends FunSuite {
     
     test("side effect"){
       d4.naming("you are the winner!!","Don't get lost","I wanna be like him","This does not appear")
-      d4.summary
+//      d4.summary
     }
       
 }

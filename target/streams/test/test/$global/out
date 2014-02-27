@@ -1,8 +1,10 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(unites.Datates, org.scalatest.tools.Framework$$anon$1@44ece6a5, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 322 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 10[0m[0m
-[0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 10, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(unites.Datates, org.scalatest.tools.Framework$$anon$1@14948fd5, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(unites.TsTes, org.scalatest.tools.Framework$$anon$1@14948fd5, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 639 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 12[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 12, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	unites.Datates[0m
+[0m[[0mdebug[0m] [0m	unites.TsTes[0m

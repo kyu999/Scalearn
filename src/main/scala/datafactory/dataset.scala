@@ -15,13 +15,13 @@ class dataset(datalist:Seq[data]) extends Descritive
     lazy val covar=combi.map{a=>covariance(zipdevi(a(0).dv,a(1).dv))}.toVector
 	
     lazy val pears=combi.map{a=>
-       if(a(0).n != a(1).n) {println("You can't compare different length variable");-10000}
-       else{
+//       if(a(0).n != a(1).n) {println("You can't compare different length variable");-10000}
+//       else{
 	   pearson(
 	       covariance(
 	           zipdevi(a(0).dv,a(1).dv) )
 	           ,a(0).sd,a(1).sd)
-       }
+//       }
 	   }.toVector
 	
 	lazy val spears=combi.map{a=>
@@ -47,6 +47,7 @@ class dataset(datalist:Seq[data]) extends Descritive
 	//時系列データ化
 	
 	def naming(in:Seq[Any]*)=in.zip(datalist).foreach{a=>a._2.name=a._1}
+	//side effect
   
 	def ::(component:data)=new dataset(datalist:+component)
 	//コンパニオンオブジェクトのapplyメソッドの引数はdata*なのでこのままではエラーとなるから直接newでクラスを作ってる
