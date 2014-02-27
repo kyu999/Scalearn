@@ -25,6 +25,6 @@ trait TimeSeries extends Descritive{
 	}
 	//acf=r(h)/r(0)
 	
-//	def detrending()
+//	def detrending(ra:Seq[Double])=regression()
 //	def differencing()
 }

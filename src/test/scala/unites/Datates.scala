@@ -25,6 +25,10 @@ class Datates extends FunSuite {
     val enor1=List(a,b,a,b).tods
     val d4=dataset(d1,d2,List(3,4,5,6.0).toda)	//rawかdataどちらかを突っ込めるようにしたい=>dataのみ許可
     val dataindataset=dataset(d1,d2)
+    val cons=d1::d2
+    cons.summary
+    (d1::d2::d2).summary		
+    //こんな感じでcons(::)を使ってdatasetを作ることも可能。だが効率上あまり好ましくない。基本的にはdataset(d1,d2,d2)の方が良い
     
     test("data class : mean"){ 
 	  assert(2.0009===2.0)	//===を使えば小数点三桁以下までの誤差は認めてくれる。
@@ -49,7 +53,9 @@ class Datates extends FunSuite {
       assert(d3.spears(0)===(-0.896)," -> spear") 
     }
     test("dataset class : regression"){
-      assert(dataset(d2,d1).reg(0)(10)===114.701)
+      val target=dataset(d2,d1)
+      assert(target.xregline(0)(10)===114.701)
+      assert(target.yregline(0)(114.701)===10.000)
     }
 
     

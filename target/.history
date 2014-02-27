@@ -135,3 +135,6 @@ update
 test
 package
 test
+clean
+test
+console

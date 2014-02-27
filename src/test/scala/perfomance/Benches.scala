@@ -1,4 +1,4 @@
-package tes
+package perfomance
 
 class Benches{
     def stopWatch[A](name: String)(arg: => A): A = {
