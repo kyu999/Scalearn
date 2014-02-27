@@ -1,5 +1,5 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(unites.Datates, org.scalatest.tools.Framework$$anon$1@2b4e50ef, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 291 milliseconds.[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(unites.Datates, org.scalatest.tools.Framework$$anon$1@a8457f6, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 509 milliseconds.[0m[0m
 [0m[[0minfo[0m] [0m[36mTotal number of tests run: 10[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0minfo[0m] [0m[36mTests: succeeded 10, failed 0, canceled 0, ignored 0, pending 0[0m[0m

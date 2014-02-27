@@ -1,9 +1,9 @@
 package datafactory
 
-class dataset(raw:Seq[Seq[Double]]) extends Descritive 
-			with Inference with Bayes with TimeSeries with Multivariate{
+class dataset(datalist:Seq[data]) extends Descritive 
+			with Inference with Bayes with Multivariate{
     
-    val datalist:Seq[data]=raw.map(a=>data(a))
+    val raw=datalist.map(a=>a.raw)
 
     val mean=datalist.map(_.mean)
     
@@ -33,7 +33,13 @@ class dataset(raw:Seq[Seq[Double]]) extends Descritive
 	   
 	lazy val reg=combi.zip(pears).map{a=>regression(a._2,a._1(0).sd,a._1(1).sd,a._1(0).mean,a._1(1).mean)}
 	//regressionの引数は順に、相関係数、XのSD,YのSD、Xの平均、Yの平均
+
 	
+//Operation	
+	
+	
+	def ts=tsdataset(datalist)
+	//時系列データ化
 	
 	def naming(in:Seq[Any]*)=in.zip(datalist).foreach{a=>a._2.name=a._1}
 	
@@ -70,9 +76,17 @@ class dataset(raw:Seq[Seq[Double]]) extends Descritive
 //コンパニオンオブジェクトを作成。applyでファクトリメソッドを定義しているのでnewが不要になる
 object dataset{
   
-  def apply(raw:Seq[Double]*)=new dataset(raw)
-  
+  def apply(datas:data*):dataset=new dataset(datas)
+//  implicit def apply(in:data*)=new DaInDs(in)
 }
+
+/*
+class DaInDs(in:data*){
+  def apply=new dataset(in.map(_.raw))
+}
+* 
+*/
+
 
 //applyメソッドの引数は可変長引数Seq[Double]*にして、class定義の方ではSeq[Seq[Double]]としている。
 //こうすることでdata(x,y,z,a,b,c)みたいに書ける。

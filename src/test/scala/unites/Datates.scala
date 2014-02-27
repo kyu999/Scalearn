@@ -21,9 +21,10 @@ class Datates extends FunSuite {
   // List(1).toda
     val d1=x.toda
     val d2=data(y)
-    val d3=Stream(x,y).tods
-    val d4=dataset(x,y,List(3,4,5,6))
-    val enor1=dataset(a,b,a,b)
+    val d3=Stream(x,y).tods.ts		//通常のStreamをtodsでdataset化し、tsで時系列データ化
+    val enor1=List(a,b,a,b).tods
+    val d4=dataset(d1,d2,List(3,4,5,6.0).toda)	//rawかdataどちらかを突っ込めるようにしたい=>dataのみ許可
+    val dataindataset=dataset(d1,d2)
     
     test("data class : mean"){ 
 	  assert(2.0009===2.0)	//===を使えば小数点三桁以下までの誤差は認めてくれる。
@@ -48,7 +49,7 @@ class Datates extends FunSuite {
       assert(d3.spears(0)===(-0.896)," -> spear") 
     }
     test("dataset class : regression"){
-      assert(dataset(y,x).reg(0)(10)===114.701)
+      assert(dataset(d2,d1).reg(0)(10)===114.701)
     }
 
     
@@ -56,16 +57,16 @@ class Datates extends FunSuite {
     val ts2=data(c)
      
     test("time series trait : autocovariance"){
-      assert(ts1.autocovariance(ts1.raw, -1)===2.0,"autocov:lag=-1; of course, this is only for weired input") 
-      assert(ts1.autocovariance(ts1.raw, 0)===2.0,"autocov:lag=0") 
-      assert(ts1.autocovariance(ts1.raw, 1)===0.4,"autocov:lag=1") 
-      assert(ts1.autocovariance(ts1.raw, 2)===(-1.0),"autocov:lag=2") 
-      assert(ts1.autocovariance(ts1.raw, 3)===(-0.4),"autocov:lag=3") 
-      assert(ts1.autocovariance(ts1.raw, 5)===0.0,"autocov:lag=4") 
+      assert(ts1.ts.autocovariance(ts1.raw, -1)===2.0,"autocov:lag=-1; of course, this is only for weired input") 
+      assert(ts1.ts.autocovariance(ts1.raw, 0)===2.0,"autocov:lag=0") 
+      assert(ts1.ts.autocovariance(ts1.raw, 1)===0.4,"autocov:lag=1") 
+      assert(ts1.ts.autocovariance(ts1.raw, 2)===(-1.0),"autocov:lag=2") 
+      assert(ts1.ts.autocovariance(ts1.raw, 3)===(-0.4),"autocov:lag=3") 
+      assert(ts1.ts.autocovariance(ts1.raw, 5)===0.0,"autocov:lag=4") 
     }
     test("time series trait : autocorrelation"){
-      assert(ts1.acf===Vector(1.0, 0.2, -0.5, -0.2, 0.0, 0.0),"acf fail")
-      assert(d1.acf===Vector(1.0, -0.29351153863941176, -0.20777412939925083, 0.3973546686398743, -0.43199371040096196, 0.13956435277251078, 0.12747074873976785, -0.27500809323405634, 0.22011746751144617, -0.014054479026962028, -0.22090366739120382, 0.04450353789945891, 0.018748554779632807, -0.004513712250844008, 0.0)
+      assert(ts1.ts.acf===Vector(1.0, 0.2, -0.5, -0.2, 0.0, 0.0),"acf fail")
+      assert(d1.ts.acf===Vector(1.0, -0.29351153863941176, -0.20777412939925083, 0.3973546686398743, -0.43199371040096196, 0.13956435277251078, 0.12747074873976785, -0.27500809323405634, 0.22011746751144617, -0.014054479026962028, -0.22090366739120382, 0.04450353789945891, 0.018748554779632807, -0.004513712250844008, 0.0)
     		  		,"acf fail")
     }
     
