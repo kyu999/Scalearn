@@ -18,7 +18,6 @@ object testes extends App{
   val n=new normal(100,5)
   println(n.pdf(102))
   println(n.pdf(96))
-  val x:BigDecimal=10
 }
 
 //桁数漏れが起こる。=>対数とる？
