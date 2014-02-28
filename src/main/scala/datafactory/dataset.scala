@@ -2,9 +2,9 @@ package datafactory
 
 class dataset(datalist:Seq[data]) extends Descritive 
 			with Inference with Bayes with Multivariate{
-    
+		
     val raw=datalist.map(a=>a.raw)
-
+    
     val mean=datalist.map(_.mean)
     
     val sd=datalist.map(_.sd)
@@ -15,13 +15,13 @@ class dataset(datalist:Seq[data]) extends Descritive
     lazy val covar=combi.map{a=>covariance(zipdevi(a(0).dv,a(1).dv))}.toVector
 	
     lazy val pears=combi.map{a=>
-//       if(a(0).n != a(1).n) {println("You can't compare different length variable");-10000}
-//       else{
+       if(a(0).n != a(1).n) {println("You can't compare different length variable");-10000}
+       else{
 	   pearson(
 	       covariance(
 	           zipdevi(a(0).dv,a(1).dv) )
 	           ,a(0).sd,a(1).sd)
-//       }
+       }
 	   }.toVector
 	
 	lazy val spears=combi.map{a=>
@@ -30,6 +30,10 @@ class dataset(datalist:Seq[data]) extends Descritive
 	      spearman(difsqured(labeling(a(0).raw,a(1).raw)))
 	     }
 	  }
+
+	lazy val time:Seq[IndexedSeq[Double]]=raw.map{a=>(1 to a.length).map(_.toDouble)}
+	
+
 	   
 	lazy val reg=combi.zip(pears).map{a=>regression(a._2,a._1(0).sd,a._1(1).sd,a._1(0).mean,a._1(1).mean)}
 	//regressionの引数は順に、相関係数、XのSD,YのSD、Xの平均、Yの平均. output=(slope,intercept).
@@ -43,7 +47,7 @@ class dataset(datalist:Seq[data]) extends Descritive
 //Operation	
 	
 	
-	def ts=tsdataset(datalist)
+	def ts=new tsdataset(datalist.map(a=>a.ts))
 	//時系列データ化
 	
 	def naming(in:Seq[Any]*)=in.zip(datalist).foreach{a=>a._2.name=a._1}

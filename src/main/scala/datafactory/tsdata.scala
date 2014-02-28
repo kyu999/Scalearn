@@ -1,11 +1,12 @@
 package datafactory
 
-class tsdata(in:Seq[Double]) extends data(in) with TimeSeries{
+class tsdata(raw:Seq[Double]) extends data(raw) with TimeSeries{
 
-	lazy val acf=autocorrelation(in)
+	val acf=autocorrelation(raw)
+	val diff=differencing(raw)
 
 }
 
 object tsdata{
-  def apply(x:Seq[Double])=new tsdata(x)
+  def apply(raw:Double*)=new tsdata(raw)
 }

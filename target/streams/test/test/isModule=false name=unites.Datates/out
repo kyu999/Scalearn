@@ -1,11 +1,5 @@
-[0m[[0minfo[0m] [0m[32mDatates:[0m[0m
-[0m[[0minfo[0m] [0m[32m- data class : mean[0m[0m
-[0m[[0minfo[0m] [0m[32m- data class : sd[0m[0m
-[0m[[0minfo[0m] [0m[32m- data class : regression[0m[0m
-[0m[[0minfo[0m] [0m[32m- dataset class : cov[0m[0m
-[0m[[0minfo[0m] [0m[32m- dataset class : pear[0m[0m
-[0m[[0minfo[0m] [0m[32m- dataset class : spear[0m[0m
-[0m[[0minfo[0m] [0m[32m- dataset class : regression[0m[0m
-[0m[[0minfo[0m] [0m[32m- time series trait : autocovariance[0m[0m
-[0m[[0minfo[0m] [0m[32m- time series trait : autocorrelation[0m[0m
-[0m[[0minfo[0m] [0m[32m- side effect[0m[0m
+[0m[[0minfo[0m] [0m[32mDataTes:[0m[0m
+[0m[[0minfo[0m] [0m[32m- mean[0m[0m
+[0m[[0minfo[0m] [0m[32m- sd[0m[0m
+[0m[[0minfo[0m] [0m[32m- regression[0m[0m
+[0m[[0minfo[0m] [0m[32m- time[0m[0m

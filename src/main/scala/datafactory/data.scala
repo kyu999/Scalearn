@@ -27,7 +27,7 @@ class data(x:Seq[Double]) extends Descritive{
     
     //Operation-------------------------------------------
     
-    def ts=tsdata(x)
+    def ts=new tsdata(x)
     //時系列データ化
     
     def ::(component:data)=dataset(this,component)

@@ -1,10 +1,14 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(unites.Datates, org.scalatest.tools.Framework$$anon$1@14948fd5, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(unites.TsTes, org.scalatest.tools.Framework$$anon$1@14948fd5, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 639 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 12[0m[0m
-[0m[[0minfo[0m] [0m[36mSuites: completed 2, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 12, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(unites.DataTes, org.scalatest.tools.Framework$$anon$1@d933c46, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(unites.TsDatasetTes, org.scalatest.tools.Framework$$anon$1@d933c46, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(unites.DatasetTes, org.scalatest.tools.Framework$$anon$1@d933c46, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(unites.TsDataTes, org.scalatest.tools.Framework$$anon$1@d933c46, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 278 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 16[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 4, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 16, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
-[0m[[0mdebug[0m] [0m	unites.Datates[0m
-[0m[[0mdebug[0m] [0m	unites.TsTes[0m
+[0m[[0mdebug[0m] [0m	unites.DatasetTes[0m
+[0m[[0mdebug[0m] [0m	unites.DataTes[0m
+[0m[[0mdebug[0m] [0m	unites.TsDatasetTes[0m
+[0m[[0mdebug[0m] [0m	unites.TsDataTes[0m
