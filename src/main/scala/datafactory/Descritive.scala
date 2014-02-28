@@ -11,7 +11,7 @@ trait Descritive{
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
 	
 	def stdevi(dv2:Seq[Double]):Double=math.sqrt(dv2.reduce((a,b)=>a+b)/(dv2.length-1))	
-	//√分散＝標準偏差
+	//√分散＝標準偏差.ただしこれは不偏分散。通常標本分散は母集団分散よりも小さくなりがちなので標本抽出による偏りを是正するために-1している
 	
 	
 	def zipdevi(dev1:Seq[Double],dev2:Seq[Double]):Seq[(Double,Double)]=dev1.zip(dev2)
