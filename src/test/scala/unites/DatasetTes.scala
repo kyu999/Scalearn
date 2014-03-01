@@ -59,9 +59,19 @@ class DatasetTes extends FunSuite {
     }
     
     test("side effect"){
-      
+      val resolved=d4.resolve
       d4.naming("you are the winner!!","Don't get lost","I wanna be like him","This does not appear")
-//      d4.summary
+      assert(resolved(0).name=="you are the winner!!")
+      assert(resolved(1).name=="Don't get lost")
+      assert(resolved(2).name=="I wanna be like him")
+      
+    }
+    
+    test("basic operation"){
+      
+      (d1::d2).raw.zip(dataset(d1,d2).raw).foreach(a=>assert(a._1==a._2))
+      (d1::d2::s1).raw.zip(dataset(d1,d2,s1).raw).foreach(a=>assert(a._1===a._2))
+      
     }
     
 }

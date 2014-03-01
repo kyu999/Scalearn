@@ -25,6 +25,7 @@ trait TimeSeries extends Descritive{
 	}
 	//acf=r(h)/r(0)
 	
+	//偏自己相関実装予定
 	
 	def differencing(raw:Seq[Double]):Seq[Double]={
 		val zipped=raw.tail.zip(raw.init)

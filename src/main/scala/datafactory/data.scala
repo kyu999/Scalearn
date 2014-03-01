@@ -2,7 +2,9 @@ package datafactory
 import Converter._
 class data(x:Seq[Double]) extends Descritive{
 //Descriptive
-    var name:Any="data"		//mutable
+    var name:String="data"		//mutable
+      
+    var direction=true		//true=>縦、false=>横  ; mutable
       
     val n=x.length
     
@@ -18,11 +20,9 @@ class data(x:Seq[Double]) extends Descritive{
     
     lazy val reg:(Double,Double)=dataset(time.toda,this).reg(0)		 //x軸が時間軸のケース。
     
-    lazy val xregline:Double=>Double = XtoYregline(reg._1,reg._2)
-    
-    lazy val yregline:Double=>Double = YtoXregline(reg._1,reg._2)
-    
-    lazy val resi:Seq[Double]=residual(time,raw,xregline)
+    lazy val regline:Double=>Double = regressionline(reg._1,reg._2)
+        
+    lazy val resi:Seq[Double]=residual(time,raw,regline)
 
     
     //Operation-------------------------------------------
@@ -30,7 +30,7 @@ class data(x:Seq[Double]) extends Descritive{
     def ts=new tsdata(x)
     //時系列データ化
     
-    def ::(component:data)=dataset(this,component)
+    def ::(component:data)=dataset(component,this)
     //２つのdataを１つのdatasetにする
     
 	def summary={ 

@@ -3,7 +3,7 @@ package datafactory
 class dataset(datalist:Seq[data]) extends Descritive 
 			with Inference with Bayes with Multivariate{
 		
-    val raw=datalist.map(a=>a.raw)
+    val raw:Seq[Seq[Double]]=datalist.map(a=>a.raw)
     
     val mean=datalist.map(_.mean)
     
@@ -50,10 +50,16 @@ class dataset(datalist:Seq[data]) extends Descritive
 	def ts=new tsdataset(datalist.map(a=>a.ts))
 	//時系列データ化
 	
-	def naming(in:Seq[Any]*)=in.zip(datalist).foreach{a=>a._2.name=a._1}
+	def naming(in:String*)=in.zip(datalist).foreach{a=>a._2.name=a._1} 
 	//side effect
   
-	def ::(component:data)=new dataset(datalist:+component)
+	def resolve:Seq[data]=datalist
+	//datasetを分解しdataのsequenceを返す
+	
+	//def mat(direction)={データを行列に変換＝＝行列クラスのインスタンスを返す}
+	
+	def ::(component:data)=new dataset(component+:datalist)
+	//componentは末尾に追加される
 	//コンパニオンオブジェクトのapplyメソッドの引数はdata*なのでこのままではエラーとなるから直接newでクラスを作ってる
 	//既存のdatasetから新たなdataを１つ加えたdatasetを作る。効率に関して考える必要はある。複数追加する必要があるならdataset(....)を使うべき
 	

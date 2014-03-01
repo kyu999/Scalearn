@@ -16,7 +16,7 @@ trait Inference extends Descritive{
 	  
 	}
 	
-	def welch_t_test()
+//	def welch_t_test()
 	
 	//独立2群の検定
 //f examine

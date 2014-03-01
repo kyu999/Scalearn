@@ -4,7 +4,7 @@ class tsdata(raw:Seq[Double]) extends data(raw) with TimeSeries{
 
 	val acf=autocorrelation(raw)
 	val diff=differencing(raw)
-
+	//偏自己相関実装予定
 }
 
 object tsdata{
