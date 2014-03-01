@@ -2,10 +2,10 @@ package datafactory
 import Converter._
 class data(x:Seq[Double]) extends Descritive{
 //Descriptive
-    var name:String="data"		//mutable
-      
-    var direction=true		//true=>縦、false=>横  ; mutable
-      
+    var name:String="data"		
+           
+ //２つはmutable   
+    
     val n=x.length
     
     val raw:Seq[Double]=x 
@@ -32,7 +32,7 @@ class data(x:Seq[Double]) extends Descritive{
     
     def ::(component:data)=dataset(component,this)
     //２つのdataを１つのdatasetにする
-    
+        
 	def summary={ 
 	    Seq(name+" : "+raw,"length : "+n,"mean -> "+mean,"deviation -> "+dv,
 	        "standard deviation -> "+sd).foreach(println)
@@ -43,4 +43,5 @@ class data(x:Seq[Double]) extends Descritive{
 //コンパニオンオブジェクト
 object data{
   def apply(x:Seq[Double])=new data(x)
+  //方向を暗黙的引数として入れる必要あり
 }

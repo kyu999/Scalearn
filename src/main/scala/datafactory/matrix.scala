@@ -1,6 +1,7 @@
 package datafactory
 import Converter._
 class matrix(raw:Vector[Vector[Double]]) {
+  //matrixのサブクラスに列ベクトル、行ベクトルで構成されたそれぞれのmatrixがある
   //Vector[Vector[Double]]で実質実装。コンストラクタで各Vectorの要素数が同じかどうか確認する必要あり
   /*
    Vector{
@@ -16,8 +17,15 @@ class matrix(raw:Vector[Vector[Double]]) {
   */
 	val width=raw(0).length
 	val height=raw.length
+	def matcul(x:Vector[Vector[Double]],y:Vector[Vector[Double]])={
+	x.map{a=>println("a: "+a);y.map{b=>println("b : "+b+" ,helper(a,b) : "+helper(a,b));helper(a,b)}}
+	}
+	def helper(left:Seq[Double],right:Seq[Double])={
+	  left.zip(right).map(a=>a._1*a._2).reduce((a,b)=>a+b)
+	}
+	
 }
-
+/*
 object matrix{
   def apply(raw:Vector[Vector[Double]])={
     var rule=true
@@ -28,3 +36,4 @@ object matrix{
   }
   //もしも縦横が整っていないデータ群が来たらNoneしちゃうよ。
 }
+*/
