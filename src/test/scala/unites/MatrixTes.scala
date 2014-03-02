@@ -14,9 +14,9 @@ class BreMatrixTes extends FunSuite{
 
     test("preprocessing"){
 	  m1.matcul(r1, r2)
-	  println(m1.temp)
+//	  println(m1.temp)
 	  m1.matcul(r1,r3)
-	  m2.matcul(r4,m2.temp).foreach(println)
+//	  m2.matcul(r4,m2.temp).foreach(println)
 	  //10万要素だと7秒かかる。これいかに？
 	}
 }

@@ -51,6 +51,7 @@ class dataset(datalist:Vector[data]) extends Descritive
 	//時系列データ化
 	
 	def naming(in:String*)=in.zip(datalist).foreach{a=>a._2.name=a._1} 
+	def naming(in:Array[String])=in.zip(datalist).foreach{a=>a._2.name=a._1} 
 	//side effect
   
 	def resolve:Vector[data]=datalist

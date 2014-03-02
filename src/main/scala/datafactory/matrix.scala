@@ -21,7 +21,8 @@ temp=Vector{
     val temp:Vector[Vector[Double]]=(0 to width-1).map{a=>raw.map(b=>b(a))}.toVector
         
 	def matcul(x:Vector[Vector[Double]],y:Vector[Vector[Double]])={
-	x.map{a=>println("a: "+a);y.map{b=>println("b : "+b+" ,helper(a,b) : "+helper(a,b));helper(a,b)}}
+	x.map{a=>println("a: "+a);y.map{b=>helper(a,b)}}
+	//println("b : "+b+" ,helper(a,b) : "+helper(a,b));
 	}
     //Vectorじゃなきゃ遅すぎて駄目。
 	//縦ベクトルで構成のmatrix*横ベクトルで構成のmatrix同士じゃないと積が出来ない。
