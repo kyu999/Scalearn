@@ -14,7 +14,8 @@ object t {
     n!=>√(2*Pi*n)*pow(n,n)*pow(E,-n)
    */
   def pdf(n:Int,t:Double)={
-    val logged=log(gamma.pdf(n/2))-log(gamma.pdf((n-1)/2))-2*n*log(1+(pow(t,2)/(n-1)))
+	
+    val logged=log(gamma.factstir(n/2))-log(gamma.factstir((n-1)/2))-2*n*log(1+(pow(t,2)/(n-1)))
     println("t logged pdf"+logged)
     val ans=pow(E,logged)
     println("t ans pdf "+ans)
@@ -23,5 +24,8 @@ object t {
 }
 //正確性に著しく書けるのでどこか間違ってる可能性大。自然科学の統計学で勉強しよう。
 object ttes extends App{
-  t.pdf(120, 1.98)
+  t.pdf(49,2.0)
+  t.pdf(300, 1.967903)
+  //n=300ではうまく行ったのに対してn=50では明らかにおかしな値だったからfactorial関連でミスってる可能性大。
+  //factorialが分数には対処できないのでそこんとこかも。
 }

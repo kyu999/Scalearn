@@ -1,16 +1,16 @@
 package distribution
 import scala.math._
-object gamma {
+object gamma{
 	
-	def stirling(n:Int):Double={
-	  val logged=n*(log(n)-1)+(log(2*Pi*n))/2
-	  logged
-	}
-	//n>100くらいから近似でstirlingが使えるかな。n<100まではfactorialで。
+	def factstir(n:Int)=if(n<100) pow(E,logfactorial(n)) else pow(E,logstirling(n))
+		
+	def logstirling(n:Int):Double=n*(log(n)-1)+(log(2*Pi*n))/2
 	
-	def factorial(n:Double):Double={
+	//n>100くらいから近似でstirlingが使えるかな。n<100まではfactorialで。stirlingの近似式はΓ(n+1)==n!ではなくstir(n)==factorial(n)==n!である
+	
+	def logfactorial(n:Double):Double={
 	  if(n<=1) log(1)
-	  else log(n)+factorial(n-1)
+	  else log(n)+logfactorial(n-1)
 	}
 	//桁数漏れ対策でlogで計算.
 	
@@ -24,10 +24,12 @@ object gamma {
 }
 
 object gammates extends App{
-  println(gamma.stirling(50))
+  println(gamma.logstirling(50))
   println("factorial")
-  (0 to 10).map(a=>pow(E,gamma.factorial(a))).foreach(println)
+  (0 to 10).map(a=>pow(E,gamma.logfactorial(a))).foreach(println)
   println("stirling")
-  (0 to 10).map(a=>pow(E,gamma.stirling(a))).foreach(println)
-  println("correct : "+pow(E,363.7)+" , stirling : "+pow(E,gamma.stirling(100))+" , factorial : "+pow(E,gamma.factorial(100)))
+  (0 to 10).map(a=>pow(E,gamma.logstirling(a))).foreach(println)
+  println("correct : "+pow(E,363.7)+" , stirling : "+pow(E,gamma.logstirling(100))+" , factorial : "+pow(E,gamma.logfactorial(100)))
+  
+  
 }
