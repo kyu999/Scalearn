@@ -46,9 +46,7 @@ trait Descritive{
 	
 	def regression(corr:Double,xsd:Double,ysd:Double,xmean:Double,ymean:Double):(Double,Double)={
 	  val slope=corr*(ysd/xsd)
-//	  println("slope is "+slope)
 	  val intercept=ymean-slope*xmean
-//	  println("intercept is "+intercept)
 	  (slope,intercept)
 	}
 	//この定義の仕方は使い勝手が悪いから考え直す必要あり。

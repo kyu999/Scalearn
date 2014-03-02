@@ -41,7 +41,7 @@ class dataset(datalist:Seq[data]) extends Descritive
 	
 	lazy val xregline:Seq[Double=>Double]=reg.map(a=>{(x:Double)=>a._1*x+a._2})
 	lazy val yregline:Seq[Double=>Double]=reg.map(a=>{(y:Double)=>(y-a._2)/a._1})
-//共にregの値を基にした無名関数。xreglineはxを与えてyを得る。yreglineはその逆
+//共にregの値を基にした無名関数。xreglineはxを与えてyを得る。yreglineはその逆.x=>yは１つだけど　y=>xは複数になりうるから実装しない方が良いかも
 	
 	
 //Operation	
@@ -59,7 +59,7 @@ class dataset(datalist:Seq[data]) extends Descritive
 	//def mat(direction)={データを行列に変換＝＝行列クラスのインスタンスを返す}
 	
 	def ::(component:data)=new dataset(component+:datalist)
-	//componentは末尾に追加される
+	//componentは末尾に追加される。既存のdatasetに新たな要素を１つ加えたい場合に使ってください。複数追加は効率悪いです
 	//コンパニオンオブジェクトのapplyメソッドの引数はdata*なのでこのままではエラーとなるから直接newでクラスを作ってる
 	//既存のdatasetから新たなdataを１つ加えたdatasetを作る。効率に関して考える必要はある。複数追加する必要があるならdataset(....)を使うべき
 	
