@@ -1,6 +1,6 @@
 package datafactory
 import Converter._
-class data(x:Seq[Double]) extends Descritive{
+class data(x:Vector[Double]) extends Descritive{
 //Descriptive
     var name:String="data"		
            
@@ -8,7 +8,7 @@ class data(x:Seq[Double]) extends Descritive{
     
     val n=x.length
     
-    val raw:Seq[Double]=x 
+    val raw:Vector[Double]=x 
     
     val mean=meanf(x)
     
@@ -16,13 +16,13 @@ class data(x:Seq[Double]) extends Descritive{
 	
     val sd=stdevi(devito2(dv))
     
-    lazy val time:IndexedSeq[Double]=(1 to x.length).map(a=>a.toDouble)
+    lazy val time:Vector[Double]=(1 to x.length).map(a=>a.toDouble).toVector
     
     lazy val reg:(Double,Double)=dataset(time.toda,this).reg(0)		 //x軸が時間軸のケース。
     
     lazy val regline:Double=>Double = regressionline(reg._1,reg._2)
         
-    lazy val resi:Seq[Double]=residual(time,raw,regline)
+    lazy val resi:Vector[Double]=residual(time,raw,regline)
 
     
     //Operation-------------------------------------------
@@ -34,7 +34,7 @@ class data(x:Seq[Double]) extends Descritive{
     //２つのdataを１つのdatasetにする
         
 	def summary={ 
-	    Seq(name+" : "+raw,"length : "+n,"mean -> "+mean,"deviation -> "+dv,
+	    Vector(name+" : "+raw,"length : "+n,"mean -> "+mean,"deviation -> "+dv,
 	        "standard deviation -> "+sd).foreach(println)
 	    mkLine
 	}
@@ -42,6 +42,6 @@ class data(x:Seq[Double]) extends Descritive{
 
 //コンパニオンオブジェクト
 object data{
-  def apply(x:Seq[Double])=new data(x)
+  def apply(x:Vector[Double])=new data(x)
   //方向を暗黙的引数として入れる必要あり
 }

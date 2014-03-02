@@ -1,16 +1,16 @@
 package datafactory
 
-class dataset(datalist:Seq[data]) extends Descritive 
+class dataset(datalist:Vector[data]) extends Descritive 
 			with Inference with Bayes with Multivariate{
 		
-    val raw:Seq[Seq[Double]]=datalist.map(a=>a.raw)
+    val raw:Vector[Vector[Double]]=datalist.map(a=>a.raw)
     
     val mean=datalist.map(_.mean)
     
     val sd=datalist.map(_.sd)
     
     
-    lazy val combi:Seq[Seq[data]]=datalist.combinations(2).toVector
+    lazy val combi:Vector[Vector[data]]=datalist.combinations(2).toVector
 	
     lazy val covar=combi.map{a=>covariance(zipdevi(a(0).dv,a(1).dv))}.toVector
 	
@@ -31,7 +31,7 @@ class dataset(datalist:Seq[data]) extends Descritive
 	     }
 	  }
 
-	lazy val time:Seq[IndexedSeq[Double]]=raw.map{a=>(1 to a.length).map(_.toDouble)}
+	lazy val time:Vector[Vector[Double]]=raw.map{a=>(1 to a.length).map(_.toDouble).toVector}
 	
 
 	   
@@ -39,8 +39,8 @@ class dataset(datalist:Seq[data]) extends Descritive
 	//regressionの引数は順に、相関係数、XのSD,YのSD、Xの平均、Yの平均. output=(slope,intercept).
 	//計算にpearsonを使っているから異なる長さの変数には適用出来ない。注意して使うように。
 	
-	lazy val xregline:Seq[Double=>Double]=reg.map(a=>{(x:Double)=>a._1*x+a._2})
-	lazy val yregline:Seq[Double=>Double]=reg.map(a=>{(y:Double)=>(y-a._2)/a._1})
+	lazy val xregline:Vector[Double=>Double]=reg.map(a=>{(x:Double)=>a._1*x+a._2})
+	lazy val yregline:Vector[Double=>Double]=reg.map(a=>{(y:Double)=>(y-a._2)/a._1})
 //共にregの値を基にした無名関数。xreglineはxを与えてyを得る。yreglineはその逆.x=>yは１つだけど　y=>xは複数になりうるから実装しない方が良いかも
 	
 	
@@ -53,9 +53,10 @@ class dataset(datalist:Seq[data]) extends Descritive
 	def naming(in:String*)=in.zip(datalist).foreach{a=>a._2.name=a._1} 
 	//side effect
   
-	def resolve:Seq[data]=datalist
-	//datasetを分解しdataのsequenceを返す
+	def resolve:Vector[data]=datalist
+	//datasetを分解しdataのVectoruenceを返す
 	
+	def tomat=new matrix(raw)
 	//def mat(direction)={データを行列に変換＝＝行列クラスのインスタンスを返す}
 	
 	def ::(component:data)=new dataset(component+:datalist)
@@ -96,7 +97,7 @@ class dataset(datalist:Seq[data]) extends Descritive
 //コンパニオンオブジェクトを作成。applyでファクトリメソッドを定義しているのでnewが不要になる
 object dataset{
   
-  def apply(datas:data*):dataset=new dataset(datas)
+  def apply(datas:data*):dataset=new dataset(datas.toVector)
 //  implicit def apply(in:data*)=new DaInDs(in)
 }
 
@@ -108,5 +109,5 @@ class DaInDs(in:data*){
 */
 
 
-//applyメソッドの引数は可変長引数Seq[Double]*にして、class定義の方ではSeq[Seq[Double]]としている。
+//applyメソッドの引数は可変長引数Vector[Double]*にして、class定義の方ではVector[Vector[Double]]としている。
 //こうすることでdata(x,y,z,a,b,c)みたいに書ける。

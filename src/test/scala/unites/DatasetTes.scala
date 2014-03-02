@@ -11,10 +11,10 @@ class DatasetTes extends FunSuite {
   
   implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 
-    val x=List(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
+    val x=Vector(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
     val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
-    val a=(1 to 10000).map(in=>nextDouble).toSeq
-    val b=List(3,4,5,6.0)
+    val a=(1 to 10000).map(in=>nextDouble).toVector
+    val b=Vector(3,4,5,6.0)
 
     val d1=x.toda
     val d2=data(y)
@@ -53,7 +53,7 @@ class DatasetTes extends FunSuite {
 
     test("time"){
       
-      assert(d4.time===Seq(d1.time,d2.time,s1.time))
+      assert(d4.time===Vector(d1.time,d2.time,s1.time))
       
       
     }

@@ -3,7 +3,7 @@ package datafactory
 import scala.math._
 
 trait TimeSeries extends Descritive{
-	def autocovariance(raw:Seq[Double],lag:Int):Double={
+	def autocovariance(raw:Vector[Double],lag:Int):Double={
 	  lazy val mean=meanf(raw)
 	  lazy val lag_raw=raw.drop(lag)
 	  if(raw.length<=lag) 0  
@@ -20,17 +20,17 @@ trait TimeSeries extends Descritive{
 	*/
 		
 	
-	def autocorrelation(raw:Seq[Double]):(Double,IndexedSeq[Double])={
+	def autocorrelation(raw:Vector[Double]):(Double,Vector[Double])={
 	  val criteria=2/sqrt(raw.length)
 	  val r0=autocovariance(raw,0)
-	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>autocovariance(raw,x)/r0) )
-	  else (criteria, (0 to 20).map(x=>autocovariance(raw,x)/r0) )
+	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>autocovariance(raw,x)/r0).toVector )
+	  else (criteria, (0 to 20).map(x=>autocovariance(raw,x)/r0).toVector )
 	}
 	//acf=r(h)/r(0) , criteriaは有意かどうかのライン。Rの点線のとこ。
 	
 	//偏自己相関実装予定
 	
-	def differencing(raw:Seq[Double]):Seq[Double]={
+	def differencing(raw:Vector[Double]):Vector[Double]={
 		val zipped=raw.tail.zip(raw.init)
 		zipped.map(a=>a._1-a._2)
 	}

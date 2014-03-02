@@ -9,10 +9,10 @@ class TsDataTes extends FunSuite {
     
 	implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
     	 
-	val x=List(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
-    val z=Stream(1.0,2,5,4,3)
+	val x=Vector(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
+    val z=Vector(1.0,2,5,4,3)
  
-	val da1=List(5,8,6,9,10.0,11).toda.ts
+	val da1=Vector(5,8,6,9,10.0,11).toda.ts
     val d1=x.toda 
 	val ts1=data(z)
      

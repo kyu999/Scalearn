@@ -1,6 +1,6 @@
 package datafactory
 import Converter._
-class matrix(raw:Vector[Vector[Double]]) {
+class matrix(raw:Vector[Vector[Double]]){
   //matrixのサブクラスに列ベクトル、行ベクトルで構成されたそれぞれのmatrixがある
   //Vector[Vector[Double]]で実質実装。コンストラクタで各Vectorの要素数が同じかどうか確認する必要あり
   /*
@@ -25,7 +25,7 @@ temp=Vector{
 	}
     //Vectorじゃなきゃ遅すぎて駄目。
 	//縦ベクトルで構成のmatrix*横ベクトルで構成のmatrix同士じゃないと積が出来ない。
-	def helper(left:Seq[Double],right:Seq[Double])={
+	def helper(left:Vector[Double],right:Vector[Double])={
 	  left.zip(right).map(a=>a._1*a._2).reduce((a,b)=>a+b)
 	}
 	
