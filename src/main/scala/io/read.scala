@@ -20,13 +20,21 @@ object read {
 	  val resource=retrieving(path,header).map(_.split(","))
 	  if(header){
 	    val head=resource.head
-	    val content=resource.tail.map(_.map(_.toDouble).toVector).tods
-	    content.naming(head)
+	    val content=resource.tail.map(_.map(matching(_)).toVector)
+//	    content.naming(head)
 	    content
 	  }else{
-	    resource.tail.map(_.map(_.toDouble).toVector).tods
+	    resource.tail.map(_.map(a=>matching(a)).toVector)
 	  }
 	}
+	def matching(in:String)={
+	  try{
+	      in.toDouble
+	  }catch{
+	      case e: NumberFormatException => in  
+	  }
+	}
+	
 	
 	def table={
       

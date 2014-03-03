@@ -6,7 +6,7 @@ import org.scalatest.FunSuite
 
 class IoTes extends FunSuite{
 	test("read"){
-	  val r1=read.csv("resource/earthquake.csv")(false)
-//	  r1.raw.filter(a=>a(0)>1950).foreach(println)
+	  val r1=read.csv("resource/download.csv")(false)
+//	  r1(2).filter(_.toDouble>1)
 	}
 }

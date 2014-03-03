@@ -2,24 +2,35 @@ package math
 
 import datafactory._
 
-class m(raw:Vector[Vector[Double]]) extends Matrix{
-
+class m(in:Vector[Vector[Double]]) extends Matrix{
+	val width=in(0).length
+	//コンストラクタ
+    in.foreach(a=> if(a.length != width) throw new Exception("not arranged") )
+    
 //Entity
-    val x=raw
-	val width=raw(0).length
-	val height=raw.length
-    val helperT:Vector[Vector[Double]]=(0 to width-1).map{a=>raw.map(b=>b(a))}.toVector
+    val raw=in
+	val height=in.length
+    val helperT:Vector[Vector[Double]]=(0 to width-1).map{a=>in.map(b=>b(a))}.toVector
 
 //Operation
+    def +(component:m)=
+      	if( (width != component.width) || (height != component.height) ) throw new Exception("not arranged") 
+    		else new m(add(in,component.raw))
     
-    def *(component:m)=multiply(raw,component.helperT)
-    //可視化のためにこう書いているが本来はnew m(multiply(raw,component.helperT))のように新たなmatrixを返すようにする
-    def T=new m(helperT)
+    def -(component:m)=
+        if( (width != component.width) || (height != component.height) ) throw new Exception("not arranged") 
+        else new m(subtract(in,component.raw))
+    
+    def *(component:m)=
+      if( width != component.height) throw new Exception("not arranged")
+      else new m(multiply(in,component.helperT))
+    
+    def t=new m(helperT)
     
 }
 
 object m{
-  def apply(raw:Vector[Double]*)=new m(raw.toVector)
+  def apply(in:Vector[Double]*)=new m(in.toVector)
 }
 
 
