@@ -6,6 +6,7 @@ object Converter {
 	implicit def toda(in:Vector[Double]):ConvertData=new ConvertData(in)
 	implicit def tods(in:Vector[Vector[Double]]):ConvertDataset=new ConvertDataset(in)
 	implicit def tomat(in:Vector[Vector[Double]]):ConvertMatrix=new ConvertMatrix(in)
+	implicit def **(in:Int):ScaleCulMat=new ScaleCulMat(in)
 	
 }
 class ConvertData(in:Vector[Double]){
@@ -14,8 +15,13 @@ class ConvertData(in:Vector[Double]){
 class ConvertDataset(in:Vector[Vector[Double]]){
   def tods=new dataset(in.map(a=>data(a)))
 }
+
 class ConvertMatrix(in:Vector[Vector[Double]]){
   def tomat=new m(in)
+}
+
+class ScaleCulMat(in:Int){
+  def **(matrix:m)=matrix**(in)
 }
 
 /*暗黙の型変換用オブジェ＆クラス

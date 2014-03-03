@@ -24,6 +24,10 @@ class m(in:Vector[Vector[Double]]) extends Matrix{
     def *(component:m)=
       if( width != component.height) throw new Exception("not arranged")
       else new m(multiply(in,component.helperT))
+    //行列の積
+    
+    def **(component:Int)=new m(raw.map(a=>a.map(b=>b*component)))
+    //スカラー倍
     
     def t=new m(helperT)
     
