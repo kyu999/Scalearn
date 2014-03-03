@@ -1,5 +1,7 @@
 package datafactory
 
+import math._
+
 class dataset(datalist:Vector[data]) extends Descritive 
 			with Inference with Bayes with Multivariate{
 		
@@ -57,7 +59,7 @@ class dataset(datalist:Vector[data]) extends Descritive
 	def resolve:Vector[data]=datalist
 	//datasetを分解しdataのVectoruenceを返す
 	
-	def tomat=new matrix(raw)
+	def tomat=new m(raw)
 	//def mat(direction)={データを行列に変換＝＝行列クラスのインスタンスを返す}
 	
 	def ::(component:data)=new dataset(component+:datalist)

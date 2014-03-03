@@ -1,6 +1,28 @@
-package datafactory
-import Converter._
-class matrix(raw:Vector[Vector[Double]]){
+package math
+
+import datafactory._
+
+class m(raw:Vector[Vector[Double]]) extends Matrix{
+
+//Entity
+    val x=raw
+	val width=raw(0).length
+	val height=raw.length
+    val helperT:Vector[Vector[Double]]=(0 to width-1).map{a=>raw.map(b=>b(a))}.toVector
+
+//Operation
+    
+    def *(component:m)=multiply(raw,component.helperT)
+    //可視化のためにこう書いているが本来はnew m(multiply(raw,component.helperT))のように新たなmatrixを返すようにする
+    def T=new m(helperT)
+    
+}
+
+object m{
+  def apply(raw:Vector[Double]*)=new m(raw.toVector)
+}
+
+
   //matrixのサブクラスに列ベクトル、行ベクトルで構成されたそれぞれのmatrixがある
   //Vector[Vector[Double]]で実質実装。コンストラクタで各Vectorの要素数が同じかどうか確認する必要あり
   /*
@@ -16,21 +38,12 @@ temp=Vector{
    	  Vector(4,5,6)
    	  }　	となる。
   */
-	val width=raw(0).length
-	val height=raw.length
-    val temp:Vector[Vector[Double]]=(0 to width-1).map{a=>raw.map(b=>b(a))}.toVector
         
-	def matcul(x:Vector[Vector[Double]],y:Vector[Vector[Double]])={
-	x.map{a=>println("a: "+a);y.map{b=>helper(a,b)}}
+	//println("a: "+a);
 	//println("b : "+b+" ,helper(a,b) : "+helper(a,b));
-	}
     //Vectorじゃなきゃ遅すぎて駄目。
 	//縦ベクトルで構成のmatrix*横ベクトルで構成のmatrix同士じゃないと積が出来ない。
-	def helper(left:Vector[Double],right:Vector[Double])={
-	  left.zip(right).map(a=>a._1*a._2).reduce((a,b)=>a+b)
-	}
-	
-}
+
 /*
 object matrix{
   def apply(raw:Vector[Vector[Double]])={

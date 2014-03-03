@@ -1,7 +1,7 @@
 package tokenfactory
 
 import org.atilika.kuromoji._
-import scala.collection.JavaConversions._
+import scala.collection.convert.WrapAsScala._
 import scala.io.Source
 object  kuro{
 	

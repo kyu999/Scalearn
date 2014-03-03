@@ -1,8 +1,10 @@
 #Successful Tests
-#Sun Mar 02 16:18:01 ICT 2014
-unites.BreMatrixTes=1393751881933
-unites.IoTes=1393751881933
-unites.DataTes=1393751881965
-unites.TsDataTes=1393751881954
-unites.TsDatasetTes=1393751881961
-unites.DatasetTes=1393751881960
+#Mon Mar 03 11:46:47 ICT 2014
+unites.BreMatrixTes=1393753034215
+classifier.NaiveBayesTes=1393822006614
+unites.MatrixTes=1393822007626
+unites.IoTes=1393822006616
+unites.DataTes=1393822006609
+unites.TsDataTes=1393822006608
+unites.TsDatasetTes=1393822006630
+unites.DatasetTes=1393822006695
