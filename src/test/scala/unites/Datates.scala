@@ -1,5 +1,5 @@
 package unites
-import org.scalatest.FunSuite	//継承するFunSuiteトレイト
+import org.scalatest.FunSuite	
 import datafactory._
 import scala.util.Random.nextDouble
 //import org.scalautils.Equality
@@ -34,6 +34,7 @@ class DataTes extends FunSuite {
 	  assert(d2.sd===8.933," ->sd")
 	}	
     test("regression"){
+      println(d1.reg)
    	  assert(d1.regline(10)===46.208)
     }
     test("time"){
