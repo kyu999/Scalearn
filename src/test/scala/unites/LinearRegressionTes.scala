@@ -3,7 +3,8 @@ import org.scalatest.FunSuite
 import classifier._
 class LinearRegressionTes extends FunSuite{
 	val lr=new linreg
-	val raw=Vector(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
+	val raw=(1 to 100).map(_.toDouble).toVector
 	val x=(1 to raw.length).map(a=>a.toDouble).toVector
-	lr.BatchGradientDescent(x, raw, 0.000001)
+	lr.BatchGradientDescent(x, raw, 0.0001,20.8,100.9)
+	//θ0にあまりにも桁の違いすぎる値を入れると、iterateが間に合わずちゃんと収束しない。αが大きすぎても収束しない。αが小さすぎると時間がかかる
 }
