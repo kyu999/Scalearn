@@ -28,6 +28,19 @@ trait TimeSeries extends Descritive{
 	}
 	//acf=r(h)/r(0) , criteriaは有意かどうかのライン。Rの点線のとこ。
 	
+	def partialcov(raw:Vector[Double],lag:Int)={
+	  lazy val mean=meanf(raw)
+	  lazy val lag_raw=raw.drop(lag)
+	  if(raw.length<=lag) 0  
+	  else lag_raw.zip(raw).map{x=>(x._1-mean)*(x._2-mean)}.reduce{(a,b)=>a+b}/raw.length	  
+	}
+	
+	def partialacf(raw:Vector[Double])={
+	  val criteria=2/sqrt(raw.length)
+	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>autocovariance(raw,x)).toVector )
+	  else (criteria, (0 to 20).map(x=>x).toVector )
+	}
+	
 	//偏自己相関実装予定
 	
 	def differencing(raw:Vector[Double]):Vector[Double]={

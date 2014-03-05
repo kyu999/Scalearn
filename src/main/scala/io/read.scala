@@ -27,6 +27,7 @@ object read {
 	    resource.tail.map(_.map(a=>matching(a)).toVector)
 	  }
 	}
+	
 	def matching(in:String)={
 	  try{
 	      in.toDouble

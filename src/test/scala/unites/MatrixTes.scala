@@ -44,7 +44,7 @@ class MatrixTes extends FunSuite{
 	}
 	
     test("preprocessing"){	  
-	  (m2*m2.t).raw.foreach(println)
+//	  (m2*m2.t).raw.foreach(println)
 	  //100万要素だと7秒かかる。これいかに？
 	}
 }

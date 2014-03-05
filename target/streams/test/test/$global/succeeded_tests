@@ -1,11 +1,11 @@
 #Successful Tests
-#Tue Mar 04 11:47:49 ICT 2014
-unites.DataTes=1393908461847
-unites.IoTes=1393908461826
-unites.TsDatasetTes=1393908461857
-unites.DatasetTes=1393908461868
-unites.LinearRegressionTes=1393908469175
+#Tue Mar 04 18:49:30 ICT 2014
+unites.DataTes=1393933764683
+unites.IoTes=1393933764534
+unites.TsDatasetTes=1393933764553
+unites.DatasetTes=1393933764734
+unites.LinearRegressionTes=1393933770548
 unites.BreMatrixTes=1393753034215
-classifier.NaiveBayesTes=1393908461771
-unites.TsDataTes=1393908461870
-unites.MatrixTes=1393908461850
+classifier.NaiveBayesTes=1393933764454
+unites.TsDataTes=1393933764591
+unites.MatrixTes=1393933764604

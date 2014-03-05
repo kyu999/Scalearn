@@ -34,7 +34,6 @@ class DataTes extends FunSuite {
 	  assert(d2.sd===8.933," ->sd")
 	}	
     test("regression"){
-      println(d1.reg)
    	  assert(d1.regline(10)===46.208)
     }
     test("time"){

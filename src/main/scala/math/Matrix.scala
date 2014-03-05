@@ -1,5 +1,5 @@
 package math
-
+import scala.collection.mutable.ArrayBuffer
 trait Matrix {
   
 	def add(left:Vector[Vector[Double]],right:Vector[Vector[Double]])={
@@ -23,9 +23,57 @@ trait Matrix {
 		
 	    x.map{a=>y.map{b=>helper(a,b)}}
 	}
-		
-	def inverse(x:Vector[Vector[Double]])={
-	  //行列式を求めたりしなきゃあかん
+	
+	
+	def inverse(in:ArrayBuffer[ArrayBuffer[Double]])={
+	  var entity:ArrayBuffer[ArrayBuffer[Double]]=in
+	  val width=entity(0).length-1
+	  val height=entity.length-1
+	  //rowは縦の番号、colは横の番号
+	  var col=0
+	  var row=0
+	 
+	  //while 始まる
+	  var terminate=false
+	  
+	  while(!terminate){
+	    
+	    if(col>=width) terminate = !terminate	//次のループチェックで関数自体終了
+	    if(row > height) row=0; col=col+1 //もしありもしない段を見ていたらrowをリセットし１つ横の行へ。処理は続ける
+	     
+	    //実際の処理
+	    
+	    var check=true
+	    var lookcol=col
+	    	val subval=entity(row)(row)
+
+	    //col==rowのケースは最初にやらねばならぬ	  	    	  
+	    while(check){
+	    		
+	    			entity(row)(row)=entity(row)(row)/subval
+	    			lookcol=lookcol+1
+	          
+	    			if(lookcol>=width) check=false
+	      }
+	      	     
+	    while(check){
+	    		  
+	    			if(lookcol==row){ } //何もしない
+	    			
+	    			else{
+	    			  //実際の処理
+	    			}
+	    			lookcol=lookcol+1
+	    			if(lookcol>=width) check=false
+	    		}
+	      
+	    
+	    row=row+1
+	    //ループの最後に下の段へ移動
+	    
+	  }
+	  
+	  
 	}
 	
 	
