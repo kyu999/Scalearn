@@ -50,6 +50,14 @@ class TsDataTes extends FunSuite {
 	test("differencing"){
 	  
 	  assert(da1.differencing(da1.raw)===Seq(3,-2,3,1,1.0))
+
+	  
+	}
+	
+	test("partial auto correlation"){
+	  
+	  println(da1.acf)
+	  println(da1.pacf)
 	  
 	}
 }

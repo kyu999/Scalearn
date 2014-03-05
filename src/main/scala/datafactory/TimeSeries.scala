@@ -28,16 +28,65 @@ trait TimeSeries extends Descritive{
 	}
 	//acf=r(h)/r(0) , criteriaは有意かどうかのライン。Rの点線のとこ。
 	
-	def partialcov(raw:Vector[Double],lag:Int)={
-	  lazy val mean=meanf(raw)
-	  lazy val lag_raw=raw.drop(lag)
-	  if(raw.length<=lag) 0  
-	  else lag_raw.zip(raw).map{x=>(x._1-mean)*(x._2-mean)}.reduce{(a,b)=>a+b}/raw.length	  
+	def partialhelper(raw:Vector[Double],lag:Int)={
+
+	  if(raw.length<=lag) { 0 }
+	  
+	  else {
+	    
+	  val cut_raw=raw.dropRight(lag)
+	  val lag_raw=raw.drop(lag)
+	  val time=(1 to raw.length).map(a=>a.toDouble).toVector
+
+	  val cutmean=meanf(cut_raw)
+	  val lagmean=meanf(lag_raw)
+	  val timemean=meanf(time)
+	  
+	  val cutdevi=deviation(cut_raw,cutmean)
+	  val lagdevi=deviation(lag_raw,lagmean)
+	  val timedevi=deviation(time,timemean)
+
+	  val zipcut=timedevi.zip(cutdevi)
+	  val ziplag=timedevi.zip(lagdevi)
+	  
+	  val cutsd=stdevi(devito2(cutdevi))
+	  val lagsd=stdevi(devito2(lagdevi))
+	  val timesd=stdevi(devito2(timedevi))
+	  
+	  val cutpear=pearson(covariance(zipcut),timesd,cutsd)
+	  val lagpear=pearson(covariance(ziplag),timesd,lagsd)
+	  
+	  val cutreg=regression(cutpear,timesd,cutsd,timemean,cutmean)
+	  val lagreg=regression(lagpear,timesd,lagsd,timemean,lagmean)
+	  
+	  val cutregline=regressionline(cutreg._1,cutreg._2)
+	  val lagregline=regressionline(lagreg._1,lagreg._2)
+	  
+	  //残差ゲット
+	  
+	  val cutresi=residual(time,cut_raw,cutregline)
+	  val lagresi=residual(time,lag_raw,lagregline)
+	  
+	  val cutresimean=meanf(cutresi)
+	  val lagresimean=meanf(lagresi)
+	  
+	  val cutresidevi=deviation(cutresi,cutresimean)
+	  val lagresidevi=deviation(lagresi,lagresimean)
+	  val zippedresi=cutresidevi.zip(lagresidevi)
+	  
+	  val cutresisd=stdevi(devito2(cutresidevi))
+	  val lagresisd=stdevi(devito2(lagresidevi))
+	  
+	  val resultpearson=pearson(covariance(zippedresi),cutresisd,lagresisd)
+	  
+	  resultpearson
+	  
+	  	}
 	}
 	
 	def partialacf(raw:Vector[Double])={
 	  val criteria=2/sqrt(raw.length)
-	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>autocovariance(raw,x)).toVector )
+	  if (raw.length<20) (criteria, (0 to raw.length-1).map(x=>partialhelper(raw,x)).toVector )
 	  else (criteria, (0 to 20).map(x=>x).toVector )
 	}
 	
