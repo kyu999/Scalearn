@@ -185,3 +185,15 @@ last test:test
 test
 run
 test
+reload
+update
+reload
+update
+test
+clean
+reload
+update
+test
+reload
+update
+test

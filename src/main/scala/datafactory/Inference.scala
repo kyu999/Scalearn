@@ -1,7 +1,8 @@
 package datafactory
 import scala.math._
 trait Inference extends Descritive{
-	def paired_t_test(rawX:Vector[Double],rawY:Vector[Double]){
+
+  def paired_t_test(rawX:Vector[Double],rawY:Vector[Double]){
 	  val gap=rawX.zip(rawY).map(a=>a._1-a._2)
 	  val tval=meanf(gap)/(stdevi(gap)/sqrt(gap.length))
 	  //関連2群の検定

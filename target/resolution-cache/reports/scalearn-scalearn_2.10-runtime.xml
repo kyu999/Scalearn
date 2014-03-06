@@ -7,7 +7,7 @@
 		revision="0.13.1"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140302102739"/>
+		date="20140306165029"/>
 	<dependencies>
 		<module organisation="com.h2database" name="h2">
 			<revision name="1.3.166" status="release" pubdate="20120409015945" resolver="public" artresolver="public" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="4">

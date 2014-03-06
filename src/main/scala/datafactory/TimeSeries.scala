@@ -29,64 +29,44 @@ trait TimeSeries extends Descritive{
 	//acf=r(h)/r(0) , criteriaは有意かどうかのライン。Rの点線のとこ。
 	
 	def partialhelper(raw:Vector[Double],lag:Int)={
-
+	  
 	  if(raw.length<=lag) { 0 }
 	  
 	  else {
 	    
 	  val cut_raw=raw.dropRight(lag)
 	  val lag_raw=raw.drop(lag)
-	  val time=(1 to raw.length).map(a=>a.toDouble).toVector
+	  val time=(1 to cut_raw.length).map(a=>a.toDouble).toVector
+	  	  
+	  val cutreg=regRaw(time,cut_raw)
+	  val lagreg=regRaw(time,lag_raw)
+	  
+	  val cutresi=residual(time,cut_raw,regressionline(cutreg))
+	  val lagresi=residual(time,lag_raw,regressionline(lagreg))
+	  	
+	  /*
+	  println("-------------------------------")
+	  println("lag == "+lag)
+	  println("cut_raw"+" is "+cut_raw)
+	  println("lag_raw"+" is "+lag_raw)
+	  println("time"+time)
+	  println("cut_reg"+" is "+cutreg)
+	  println("lag_reg"+" is "+lagreg)
+	  println("cutresi"+" is "+cutresi)
+	  println("lagresi"+" is "+lagresi)
+	  println("result is "+	pearRaw(cutresi,lagresi))
+	  println("-------------------------------")
+	  * 
+	  */
 
-	  val cutmean=meanf(cut_raw)
-	  val lagmean=meanf(lag_raw)
-	  val timemean=meanf(time)
-	  
-	  val cutdevi=deviation(cut_raw,cutmean)
-	  val lagdevi=deviation(lag_raw,lagmean)
-	  val timedevi=deviation(time,timemean)
-
-	  val zipcut=timedevi.zip(cutdevi)
-	  val ziplag=timedevi.zip(lagdevi)
-	  
-	  val cutsd=stdevi(devito2(cutdevi))
-	  val lagsd=stdevi(devito2(lagdevi))
-	  val timesd=stdevi(devito2(timedevi))
-	  
-	  val cutpear=pearson(covariance(zipcut),timesd,cutsd)
-	  val lagpear=pearson(covariance(ziplag),timesd,lagsd)
-	  
-	  val cutreg=regression(cutpear,timesd,cutsd,timemean,cutmean)
-	  val lagreg=regression(lagpear,timesd,lagsd,timemean,lagmean)
-	  
-	  val cutregline=regressionline(cutreg._1,cutreg._2)
-	  val lagregline=regressionline(lagreg._1,lagreg._2)
-	  
-	  //残差ゲット
-	  
-	  val cutresi=residual(time,cut_raw,cutregline)
-	  val lagresi=residual(time,lag_raw,lagregline)
-	  
-	  val cutresimean=meanf(cutresi)
-	  val lagresimean=meanf(lagresi)
-	  
-	  val cutresidevi=deviation(cutresi,cutresimean)
-	  val lagresidevi=deviation(lagresi,lagresimean)
-	  val zippedresi=cutresidevi.zip(lagresidevi)
-	  
-	  val cutresisd=stdevi(devito2(cutresidevi))
-	  val lagresisd=stdevi(devito2(lagresidevi))
-	  
-	  val resultpearson=pearson(covariance(zippedresi),cutresisd,lagresisd)
-	  
-	  resultpearson
+	  pearRaw(cutresi,lagresi)
 	  
 	  	}
 	}
 	
 	def partialacf(raw:Vector[Double])={
 	  val criteria=2/sqrt(raw.length)
-	  if (raw.length<20) (criteria, (0 to raw.length-1).map(x=>partialhelper(raw,x)).toVector )
+	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>partialhelper(raw,x)).toVector )
 	  else (criteria, (0 to 20).map(x=>x).toVector )
 	}
 	

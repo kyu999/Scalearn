@@ -55,9 +55,8 @@ class TsDataTes extends FunSuite {
 	}
 	
 	test("partial auto correlation"){
-	  
-	  println(da1.acf)
-	  println(da1.pacf)
+//	  println("peason bug : "+ts1.pearRaw(Vector(1.0), Vector(2.0)))
+//	  println("pacf for ts1 : "+ts1.ts.pacf)
 	  
 	}
 }

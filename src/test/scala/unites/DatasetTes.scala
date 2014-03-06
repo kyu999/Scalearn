@@ -48,6 +48,7 @@ class DatasetTes extends FunSuite {
       val target=dataset(d2,d1)
       assert(target.xregline(0)(10)===114.701)
       assert(target.yregline(0)(114.701)===10.000)
+      assert(target.reg(0)==target.regRaw(target.raw(0),target.raw(1)))
       
     }
 

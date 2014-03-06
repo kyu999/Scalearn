@@ -16,11 +16,13 @@ class DataTes extends FunSuite {
     val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
     val z=Vector(1.0,2,5,4,3)
     val a=(1 to 10000).map(in=>nextDouble).toVector
+    val b=Vector(4.0,5,6,4,3,2,5,6,7,5,433,3,3,9,8,96,56,4,33,2)
   
     val d1=x.toda
     val d2=data(y)
     val d3=z.toda
     val d4=a.toda
+    val d5=b.toda
     
     //このDataTesとTsDataTesを重点的にすることが何より大事！！
     
@@ -35,6 +37,11 @@ class DataTes extends FunSuite {
 	}	
     test("regression"){
    	  assert(d1.regline(10)===46.208)
+   	  assert(d5.reg._1===1.947)
+   	  assert(d5.reg._2===14.252)
+    }
+    test("residual"){
+      assert(d5.resi===Vector(-12.2, -13.147368421052633, -14.094736842105263, -18.042105263157897, -20.989473684210527, -23.93684210526316, -22.88421052631579, -23.83157894736842, -24.778947368421054, -28.726315789473688, 397.3263157894737, -34.62105263157895, -36.56842105263158, -32.51578947368421, -35.463157894736845, 50.589473684210525, 8.642105263157887, -45.30526315789474, -18.252631578947373, -51.2))
     }
     test("time"){
       assert(d1.time===(1 to x.length))
