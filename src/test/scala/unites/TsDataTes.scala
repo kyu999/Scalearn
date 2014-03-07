@@ -24,7 +24,7 @@ class TsDataTes extends FunSuite {
       assert(ts1.ts.autocovariance(ts1.raw, 2)===(-1.0),"autocov:lag=2") 
       assert(ts1.ts.autocovariance(ts1.raw, 3)===(-0.4),"autocov:lag=3") 
       assert(ts1.ts.autocovariance(ts1.raw, 5)===0.0,"autocov:lag=4") 
-      
+      println(d1.ts.acov)
     }
 	
     test("autocorrelation"){
