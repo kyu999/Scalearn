@@ -7,7 +7,7 @@ import Converter._
 
 class TsDataTes extends FunSuite {
     
-	implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
+	implicit val doubleEquality = tolerantDoubleEquality(0.01)	  	
     	 
 	val x=Vector(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
     val z=Vector(1.0,2,5,4,3)
@@ -24,7 +24,8 @@ class TsDataTes extends FunSuite {
       assert(ts1.ts.autocovariance(ts1.raw, 2)===(-1.0),"autocov:lag=2") 
       assert(ts1.ts.autocovariance(ts1.raw, 3)===(-0.4),"autocov:lag=3") 
       assert(ts1.ts.autocovariance(ts1.raw, 5)===0.0,"autocov:lag=4") 
-      println(d1.ts.acov)
+      val zipped=d1.ts.acov.zip(Vector(315.20,-92.52,-65.49,125.25,-136.17,43.99,40.18,-86.68,69.38,-4.43,-69.63,14.03))
+      zipped.foreach(a=>assert(a._1===a._2))
     }
 	
     test("autocorrelation"){

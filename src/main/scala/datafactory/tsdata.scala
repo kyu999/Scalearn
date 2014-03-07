@@ -2,7 +2,7 @@ package datafactory
 
 class tsdata(raw:Vector[Double]) extends data(raw) with TimeSeries{
 
-	lazy val acov=(0 to raw.length).map(a=>autocovariance(raw,a))
+	lazy val acov=(0 to raw.length).map(a=>autocovariance(raw,a)).toVector
 	val acf=autocorrelation(raw)
 	lazy val pacf=partialacf(raw)
 	val diff=differencing(raw)
