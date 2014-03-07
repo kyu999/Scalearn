@@ -32,6 +32,8 @@ class dataset(datalist:Vector[data]) extends Descritive
 	      spearman(difsqured(labeling(a(0).raw,a(1).raw)))
 	     }
 	  }
+	   
+	lazy val eucli=combi.map(a=>euclidean(a(0).raw,a(1).raw))
 
 	lazy val time:Vector[Vector[Double]]=raw.map{a=>(1 to a.length).map(_.toDouble).toVector}
 	

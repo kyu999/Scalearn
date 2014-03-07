@@ -73,6 +73,11 @@ trait Descritive{
 	  * 
 	  */
 	
+	def euclidean(xraw:Vector[Double],yraw:Vector[Double])={
+	  val sum=xraw.zip(yraw).map(a=>pow(a._1-a._2,2)).reduce((a,b)=>a+b)
+	  1/(1+sqrt(sum))	//0で除算してエラーになるのを防ぐため。
+	}
+	
 	def regression(corr:Double,xsd:Double,ysd:Double,xmean:Double,ymean:Double):(Double,Double)={
 	  val slope=corr*(ysd/xsd)
 	  val intercept=ymean-slope*xmean
