@@ -10,7 +10,7 @@ class MatrixTes extends FunSuite{
 	val b=v(4,5,6.0)
 	val c=v(7,8,9.0)
 	
-	val v1=(1 to 10).map(_.toDouble).toVector
+	val v1=(1 to 2).map(_.toDouble).toVector
 	val m1=m(a,b,c)
 	
     val v2=v(v1,v1,v1,v1)
@@ -44,6 +44,13 @@ class MatrixTes extends FunSuite{
 	}
 	
     test("preprocessing"){	  
+      val mas1=new m((1 to 3).map(a=>v1).toVector)
+	  val v2=(1 to 4).map(_.toDouble).toVector
+      val mas2=new m((1 to 2).map(a=>v2).toVector)
+      val times=(mas1*mas2)
+      assert(times.width==4)
+      assert(times.height==3)
+//      (mas1*mas1.t).raw.foreach(println)
 //	  (m2*m2.t).raw.foreach(println)
 	  //100万要素だと7秒かかる。これいかに？
 	}

@@ -24,25 +24,30 @@ trait Descritive{
 	//２つのデータセットのピアソン相関関係
 	
 	def pearRaw(xraw:Vector[Double],yraw:Vector[Double])={
-	  if (xraw.length != yraw.length) 0
-	  else if(xraw.length<=1) 0
-	  else {val xmean=meanf(xraw)
-	  val ymean=meanf(yraw)
 	  
-	  val xdevi=deviation(xraw,xmean)
-	  val ydevi=deviation(yraw,ymean)
+	  if (xraw.length != yraw.length) throw new Exception("can't take dirrerent length of variable")
 	  
-	  val xdevi2=devito2(xdevi)
-	  val ydevi2=devito2(ydevi)
+	  else if(xraw.length<=1) { println("warn : need more than two elements for pearson. X :  "+xraw+" , Y : "+yraw) ; 0.0 }
 	  
-	  val xsd=stdevi(xdevi2)
-	  val ysd=stdevi(ydevi2)
+	  else {
+	    
+	    val xmean=meanf(xraw)
+	    	val ymean=meanf(yraw)
 	  
-	  val zipdevi=xdevi.zip(ydevi)
+	    	val xdevi=deviation(xraw,xmean)
+	    	val ydevi=deviation(yraw,ymean)
 	  
-	  val covar=covariance(zipdevi)
+	    	val xdevi2=devito2(xdevi)
+	    	val ydevi2=devito2(ydevi)
 	  
-	  pearson(covar,xsd,ysd)
+	    	val xsd=stdevi(xdevi2)
+	    	val ysd=stdevi(ydevi2)
+	  
+	    	val zipdevi=xdevi.zip(ydevi)
+	  
+	  	val covar=covariance(zipdevi)
+	  
+	  	pearson(covar,xsd,ysd)
 	  }
 	  
 	}
@@ -73,34 +78,36 @@ trait Descritive{
 	  val intercept=ymean-slope*xmean
 	  (slope,intercept)
 	}
-	//この定義の仕方は使い勝手が悪いから考え直す必要あり。
 	//回帰直線の傾き；相関係数/(Yの標準偏差＊Xの標準偏差)
 	
 	def regRaw(xraw:Vector[Double],yraw:Vector[Double])={
-	  if(xraw.length !=yraw.length) (0.0,0.0)
-	  else if(xraw.length<=1) (0.0,0.0)
+	  
+	  if(xraw.length !=yraw.length) throw new Exception("can't take dirrerent length of variable")
+	  
+	  else if(xraw.length<=1) { println("warn : need more than two elements for regression. X :  "+xraw+" , Y : "+yraw) ; (0.0,0.0) }
+	  
 	  else {
 	  
-	  val xmean=meanf(xraw)
+		val xmean=meanf(xraw)
 	  
-	  val ymean=meanf(yraw)
+		val ymean=meanf(yraw)
 	  
-	  val xdevi=deviation(xraw,xmean)
-	  val ydevi=deviation(yraw,ymean)
+		val xdevi=deviation(xraw,xmean)
+		val ydevi=deviation(yraw,ymean)
 	  
-	  val xdevi2=devito2(xdevi)
-	  val ydevi2=devito2(ydevi)
+		val xdevi2=devito2(xdevi)
+	  	val ydevi2=devito2(ydevi)
 	  
-	  val xsd=stdevi(xdevi2)
-	  val ysd=stdevi(ydevi2)
+	  	val xsd=stdevi(xdevi2)
+	  	val ysd=stdevi(ydevi2)
 	  
-	  val zipdevi=xdevi.zip(ydevi)
+	  	val zipdevi=xdevi.zip(ydevi)
 	  
-	  val covar=covariance(zipdevi)
+	  	val covar=covariance(zipdevi)
 	  
-	  val pear=pearson(covar,xsd,ysd)
+	  	val pear=pearson(covar,xsd,ysd)
 	  
-	  regression(pear,xsd,ysd,xmean,ymean)
+	  	regression(pear,xsd,ysd,xmean,ymean)
 	  
 	  }
 	  
@@ -108,9 +115,8 @@ trait Descritive{
 	
 	def regressionline(slope_intercept:(Double,Double)):Double=>Double={(x:Double)=>slope_intercept._1*x+slope_intercept._2}
 
-	def residual(x:Vector[Double],raw:Vector[Double],xregline:(Double=>Double)):Vector[Double]=x.zip(raw).map{a=>
-	  a._2-xregline(a._1)
-	  }
+	def residual(x:Vector[Double],raw:Vector[Double],xregline:(Double=>Double)):Vector[Double]=
+	  x.zip(raw).map{ a => a._2-xregline(a._1) }
 
 	def mkLine=println("-------------------------------------------------------------")
 }
