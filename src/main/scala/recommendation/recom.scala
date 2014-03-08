@@ -2,7 +2,6 @@ package recommendation
 
 import scala.math._
 import datafactory._
-import Converter._
 
 class recom {
   

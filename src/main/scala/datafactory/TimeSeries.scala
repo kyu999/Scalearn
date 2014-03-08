@@ -3,7 +3,7 @@ package datafactory
 import scala.math._
 
 trait TimeSeries extends Descritive{
-	def autocovariance(raw:Vector[Double],lag:Int):Double={
+	def autocovariance(raw:Seq[Double],lag:Int):Double={
 	  lazy val mean=meanf(raw)
 	  lazy val lag_raw=raw.drop(lag)
 	  if(raw.length<=lag) 0  
@@ -20,15 +20,15 @@ trait TimeSeries extends Descritive{
 	*/
 		
 	
-	def autocorrelation(raw:Vector[Double]):(Double,Vector[Double])={
+	def autocorrelation(raw:Seq[Double]):(Double,Seq[Double])={
 	  val criteria=2/sqrt(raw.length)
 	  val r0=autocovariance(raw,0)
-	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>autocovariance(raw,x)/r0).toVector )
-	  else (criteria, (0 to 20).map(x=>autocovariance(raw,x)/r0).toVector )
+	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>autocovariance(raw,x)/r0).toSeq )
+	  else (criteria, (0 to 20).map(x=>autocovariance(raw,x)/r0).toSeq )
 	}
 	//acf=r(h)/r(0) , criteriaは有意かどうかのライン。Rの点線のとこ。
 	
-	def partialhelper(raw:Vector[Double],lag:Int)={
+	def partialhelper(raw:Seq[Double],lag:Int)={
 	  
 	  if(raw.length<=lag) { 0 }
 	  
@@ -36,7 +36,7 @@ trait TimeSeries extends Descritive{
 	    
 	  val cut_raw=raw.dropRight(lag)
 	  val lag_raw=raw.drop(lag)
-	  val time=(1 to cut_raw.length).map(a=>a.toDouble).toVector
+	  val time=(1 to cut_raw.length).map(a=>a.toDouble).toSeq
 	  	  
 	  val cutreg=regRaw(time,cut_raw)
 	  val lagreg=regRaw(time,lag_raw)
@@ -64,15 +64,15 @@ trait TimeSeries extends Descritive{
 	  	}
 	}
 	
-	def partialacf(raw:Vector[Double])={
+	def partialacf(raw:Seq[Double])={
 	  val criteria=2/sqrt(raw.length)
-	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>partialhelper(raw,x)).toVector )
-	  else (criteria, (0 to 20).map(x=>x).toVector )
+	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>partialhelper(raw,x)).toSeq )
+	  else (criteria, (0 to 20).map(x=>x).toSeq )
 	}
 	
 	//偏自己相関実装予定
 	
-	def differencing(raw:Vector[Double]):Vector[Double]={
+	def differencing(raw:Seq[Double]):Seq[Double]={
 		val zipped=raw.tail.zip(raw.init)
 		zipped.map(a=>a._1-a._2)
 	}

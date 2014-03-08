@@ -5,6 +5,7 @@ import scala.Iterator._
 import datafactory._
 import Converter._
 
+
 object read {
   
     def retrieving(path:String,header:Boolean):Vector[String]={

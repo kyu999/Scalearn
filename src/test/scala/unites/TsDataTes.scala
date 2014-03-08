@@ -5,7 +5,7 @@ import scala.util.Random.nextDouble
 import org.scalautils.TolerantNumerics._
 import Converter._
 
-class TsDataTes extends FunSuite {
+class TsdaTes extends FunSuite {
     
 	implicit val doubleEquality = tolerantDoubleEquality(0.01)	  	
     	 
@@ -14,7 +14,7 @@ class TsDataTes extends FunSuite {
  
 	val da1=Vector(5,8,6,9,10.0,11).toda.ts
     val d1=x.toda 
-	val ts1=data(z)
+	val ts1=da(z)
      
     test("autocovariance"){
 	  
@@ -44,7 +44,7 @@ class TsDataTes extends FunSuite {
 	  assert(da1.resi(3)===(0.27619048))
 	  assert(da1.resi(4)===(0.16190476))
 	  assert(da1.resi(5)===(0.04761905))	      
-//how to examine collection data?
+//how to examine collection da?
 	  
     }
 
@@ -57,7 +57,7 @@ class TsDataTes extends FunSuite {
 	
 	test("partial auto correlation"){
 //	  println("peason bug : "+ts1.pearRaw(Vector(1.0), Vector(2.0)))
-	  println("pacf for ts1 : "+ts1.ts.pacf)
+//	  println("pacf for ts1 : "+ts1.ts.pacf)
 	  
 	}
 }

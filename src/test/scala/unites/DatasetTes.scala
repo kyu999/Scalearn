@@ -7,7 +7,7 @@ import org.scalautils.TolerantNumerics._
 import Converter._
 import scala.collection.mutable.ArrayBuffer
 
-class DatasetTes extends FunSuite {
+class dsTes extends FunSuite {
   
   implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 
@@ -17,10 +17,10 @@ class DatasetTes extends FunSuite {
     val b=Vector(3,4,5,6.0)
 
     val d1=x.toda
-    val d2=data(y)
+    val d2=da(y)
     val d3=Vector(x,y).tods		
     val s1=b.toda
-    val d4=dataset(d1,d2,s1) 
+    val d4=ds(d1,d2,s1) 
     val cons=(d1::d2::d2)
     val enor1=Vector(a,b,x,y).tods
 
@@ -45,7 +45,7 @@ class DatasetTes extends FunSuite {
     
     test("regression"){
       
-      val target=dataset(d2,d1)
+      val target=ds(d2,d1)
       assert(target.xregline(0)(10)===114.701)
       assert(target.yregline(0)(114.701)===10.000)
       assert(target.reg(0)==target.regRaw(target.raw(0),target.raw(1)))
@@ -70,8 +70,8 @@ class DatasetTes extends FunSuite {
     
     test("basic operation"){
       
-      (d1::d2).raw.zip(dataset(d1,d2).raw).foreach(a=>assert(a._1==a._2))
-      (d1::d2::s1).raw.zip(dataset(d1,d2,s1).raw).foreach(a=>assert(a._1===a._2))
+      (d1::d2).raw.zip(ds(d1,d2).raw).foreach(a=>assert(a._1==a._2))
+      (d1::d2::s1).raw.zip(ds(d1,d2,s1).raw).foreach(a=>assert(a._1===a._2))
       
     }
     

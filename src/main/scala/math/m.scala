@@ -14,15 +14,15 @@ class m(in:Vector[Vector[Double]]) extends Matrix{
 
 //Operation
     def +(component:m)=
-      	if( (width != component.width) || (height != component.height) ) throw new Exception("not arranged") 
+      	if( (width != component.width) || (height != component.height) ) throw new Exception("not formatted") 
     		else new m(add(in,component.raw))
     
     def -(component:m)=
-        if( (width != component.width) || (height != component.height) ) throw new Exception("not arranged") 
+        if( (width != component.width) || (height != component.height) ) throw new Exception("not formatted") 
         else new m(subtract(in,component.raw))
     
     def *(component:m)=
-      if( width != component.height) throw new Exception("not arranged")
+      if( width != component.height) throw new Exception("not formatted")
       else new m(multiply(in,component.helperT))
     //行列の積
     
@@ -30,7 +30,7 @@ class m(in:Vector[Vector[Double]]) extends Matrix{
     //スカラー倍
     
     def t=new m(helperT)
-    
+    //transpose
 }
 
 object m{

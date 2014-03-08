@@ -199,3 +199,14 @@ update
 test
 tse
 test
+reload
+update
+reload
+update
+clean
+teset
+test
+clean
+reload
+update
+test

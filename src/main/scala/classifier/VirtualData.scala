@@ -1,5 +1,7 @@
 package classifier
+ 
 import scala.collection.mutable.ListBuffer
+
 object VirtualData {
 	val datalist=ListBuffer((true,"成功"),(false,"失敗"))
 	val examlist=ListBuffer("失敗成功","彼は私に気があるのでしょうか？",

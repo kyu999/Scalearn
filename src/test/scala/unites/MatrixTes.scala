@@ -42,7 +42,7 @@ class MatrixTes extends FunSuite{
 	test("transepose"){
 	  assert( m1.t.raw == v(v(1,4,7),v(2,5,8),v(3,6,9)))
 	}
-	
+/*	
     test("preprocessing"){	  
       val mas1=new m((1 to 3).map(a=>v1).toVector)
 	  val v2=(1 to 4).map(_.toDouble).toVector
@@ -53,5 +53,7 @@ class MatrixTes extends FunSuite{
 //      (mas1*mas1.t).raw.foreach(println)
 //	  (m2*m2.t).raw.foreach(println)
 	  //100万要素だと7秒かかる。これいかに？
-	}
+	   * 
+	   */
+	//}
 }

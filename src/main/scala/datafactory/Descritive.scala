@@ -2,28 +2,28 @@ package datafactory
 import scala.math._
 trait Descritive{ 
   
-	def meanf(data:Vector[Double]):Double=data.reduce((a,b)=>a+b)/data.length
+	def meanf(raw:Seq[Double]):Double=raw.reduce((a,b)=>a+b)/raw.length
 	//平均
-	def deviation(data:Vector[Double],average:Double):Vector[Double]=data.map(x=>x-average)
+	def deviation(raw:Seq[Double],average:Double):Seq[Double]=raw.map(x=>x-average)
 	//各偏差
-	def devito2(devdata:Vector[Double]):Vector[Double]=devdata.map(x=>(pow(x,2))) 
+	def devito2(devraw:Seq[Double]):Seq[Double]=devraw.map(x=>(pow(x,2))) 
 	//各偏差の２乗
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
 	
-	def stdevi(dvsquared:Vector[Double]):Double=sqrt(dvsquared.reduce((a,b)=>a+b)/(dvsquared.length-1))	
+	def stdevi(dvsquared:Seq[Double]):Double=sqrt(dvsquared.reduce((a,b)=>a+b)/(dvsquared.length-1))	
 	//√分散＝標準偏差.ただしこれは不偏分散。通常標本分散は母集団分散よりも小さくなりがちなので標本抽出による偏りを是正するために-1している
 	
 	
-	def zipdevi(dev1:Vector[Double],dev2:Vector[Double]):Vector[(Double,Double)]=dev1.zip(dev2)
+	def zipdevi(dev1:Seq[Double],dev2:Seq[Double]):Seq[(Double,Double)]=dev1.zip(dev2)
 	//2つのデータセットの偏差をTuple化
 	
-	def covariance(zipdata:Vector[(Double,Double)]):Double=zipdata.map(x=>x._1*x._2).reduce((a,b)=>a+b)/(zipdata.length-1) 
+	def covariance(zipraw:Seq[(Double,Double)]):Double=zipraw.map(x=>x._1*x._2).reduce((a,b)=>a+b)/(zipraw.length-1) 
 	//2つのデータセット共分散(=対応するXとYの偏差の積の平均）
 	
 	def pearson(covari:Double,sdX:Double,sdY:Double):Double=covari/(sdX*sdY)
 	//２つのデータセットのピアソン相関関係
 	
-	def pearRaw(xraw:Vector[Double],yraw:Vector[Double])={
+	def pearRaw(xraw:Seq[Double],yraw:Seq[Double])={
 	  
 	  if (xraw.length != yraw.length) throw new Exception("can't take dirrerent length of variable")
 	  
@@ -53,7 +53,7 @@ trait Descritive{
 	}
 	 	
 	
-	def labeling(rawX:Vector[Double],rawY:Vector[Double])={
+	def labeling(rawX:Seq[Double],rawY:Seq[Double])={
 	      if (rawX.length != rawY.length) println("You can't compare different length of variable")
 		  val placeX=rawX.sorted.zipWithIndex.toMap
 		  val placeY=rawY.sorted.zipWithIndex.toMap
@@ -63,17 +63,17 @@ trait Descritive{
 	}
 	
 	
-	def difsqured(zippedlabel:Vector[(Int,Int)]):Vector[Double]=zippedlabel.map{x=>pow(x._1-x._2,2)}
+	def difsqured(zippedlabel:Seq[(Int,Int)]):Seq[Double]=zippedlabel.map{x=>pow(x._1-x._2,2)}
 	//2つのlabelデータをzip化して、対となる値の差をそれぞれ求めて２乗する
 	
-	def spearman(difsqudata:Vector[Double])=1-(6*difsqudata.reduce{(a,b)=>a+b})/(pow(difsqudata.length,3)-difsqudata.length)
+	def spearman(difsquared:Seq[Double])=1-(6*difsquared.reduce{(a,b)=>a+b})/(pow(difsquared.length,3)-difsquared.length)
 	/*スピアマンの順位相関係数。同じ順位の場合は昇順にしているため若干本来と違う。a:4.5,b:4.5 => a:4,b:4　にしてる。
   	  peason=covariance / (SD of X * SD of Y)
 	  peasonは外れ値の影響を受けやすいのと、厳密には正規分布のデータが対象のパラメトリックな手法
 	  * 
 	  */
 	
-	def euclidean(xraw:Vector[Double],yraw:Vector[Double])={
+	def euclidean(xraw:Seq[Double],yraw:Seq[Double])={
 	  val sum=xraw.zip(yraw).map(a=>pow(a._1-a._2,2)).reduce((a,b)=>a+b)
 	  1/(1+sqrt(sum))	//0で除算してエラーになるのを防ぐため。
 	}
@@ -85,7 +85,7 @@ trait Descritive{
 	}
 	//回帰直線の傾き；相関係数/(Yの標準偏差＊Xの標準偏差)
 	
-	def regRaw(xraw:Vector[Double],yraw:Vector[Double])={
+	def regRaw(xraw:Seq[Double],yraw:Seq[Double])={
 	  
 	  if(xraw.length !=yraw.length) throw new Exception("can't take dirrerent length of variable")
 	  
@@ -120,7 +120,7 @@ trait Descritive{
 	
 	def regressionline(slope_intercept:(Double,Double)):Double=>Double={(x:Double)=>slope_intercept._1*x+slope_intercept._2}
 
-	def residual(x:Vector[Double],raw:Vector[Double],xregline:(Double=>Double)):Vector[Double]=
+	def residual(x:Seq[Double],raw:Seq[Double],xregline:(Double=>Double)):Seq[Double]=
 	  x.zip(raw).map{ a => a._2-xregline(a._1) }
 
 	def mkLine=println("-------------------------------------------------------------")
