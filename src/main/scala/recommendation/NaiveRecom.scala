@@ -3,6 +3,7 @@ package recommendation
 import scala.math._
 import datafactory._
 import Converter._
+import scala.collection.mutable.ListBuffer
 
 object NaiveRecom {
   
@@ -27,6 +28,20 @@ object NaiveRecom {
  		"Jack Matthews"-> Map("Lady in the Water"-> 3.0, "Snakes on a Plane"-> 4.0,
  "The Night Listener"-> 3.0, "Superperson Returns"-> 5.0, "You, Me and Dupree"-> 3.5),
  		"Toby"-> Map("Snakes on a Plane"->4.5,"You, Me and Dupree"->1.0,"Superperson Returns"->4.0))
+ 		
+ 	//1. check whether item is in this list or not
+ 		//if true => ignore
+ 		//if false => take it
+ 	def itemlistup(prefs:Map[String,Map[String,Double]])={
+	  
+		var entity=ListBuffer("")
+		
+		prefs.foreach{in=>in._2.map{a=>
+		   if(!entity.contains(a._1)) a._1+=:entity
+		   }
+		}
+		entity-=""
+	}
  		
  	def euclisim(prefs:Map[String,Map[String,Double]],person1:String,person2:String)={
 		
@@ -83,6 +98,23 @@ object NaiveRecom {
 	  
 	  similar.sorted.reverse.take(n)
 	  
+	}
+	
+	def getRecommendations(prefs:Map[String,Map[String,Double]],person:String,similarity:(Map[String,Map[String,Double]],String,String)=>Double)={
+	  
+	  val items=itemlistup(prefs)
+	  
+	  val similar=prefs.keys.map{a=>(similarity(prefs,person,a),a) }.filter(b=>b._1>0 && b._2!=person)
+	  //各ユーザー間の類似度。自身とスコアが0以下の人を除外
+	  val simsum=similar.map(a=>a._1).reduce((a,b)=>a+b)
+	  
+	  val notyet=items.filterNot(a=>prefs(person).contains(a))
+	  
+	  println("similar : "+similar)
+	  println("simsum : "+simsum)
+	  println("notyet : "+notyet)
+	  
+
 	}
 	
 	
