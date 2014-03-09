@@ -28,7 +28,7 @@ object NaiveRecom {
  "The Night Listener"-> 3.0, "Superperson Returns"-> 5.0, "You, Me and Dupree"-> 3.5),
  		"Toby"-> Map("Snakes on a Plane"->4.5,"You, Me and Dupree"->1.0,"Superperson Returns"->4.0))
  		
- 	def euclidean(prefs:Map[String,Map[String,Double]],person1:String,person2:String)={
+ 	def euclisim(prefs:Map[String,Map[String,Double]],person1:String,person2:String)={
 		
 		val p1list=prefs(person1).keys.toVector
 		val bothlist=p1list.map{a=>
@@ -52,7 +52,7 @@ object NaiveRecom {
 		}
 	}
 	
-	 def pearSP(prefs:Map[String,Map[String,Double]],person1:String,person2:String)={
+	 def pearsim(prefs:Map[String,Map[String,Double]],person1:String,person2:String):Double={
 		
 		val p1list=prefs(person1).keys.toVector
 		val bothlist=p1list.map{a=>
@@ -67,6 +67,7 @@ object NaiveRecom {
 		  val m2val=bothlist.map(a=>prefs(person2)(a._1))		  
 		  		  		  
 		  val pear=ds(m1val.toda,m2val.toda).pears(0)
+		  //dataset化してpearsonを求める
 		  
 		  pear
 		  

@@ -29,6 +29,7 @@ object Coffees extends Table[(String, Int, Double, Int, Int)]("COFFEES") {
   def supplier = foreignKey("SUP_FK", supID, Suppliers)(_.id)
 }
 
+
 object DB extends App{
 //Session scopeから外れているからinsert等は使えない 
 //  def goin(content:String)=Coffees.insert((content,         101, 7.99, 0, 0))

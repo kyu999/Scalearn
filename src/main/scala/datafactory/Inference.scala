@@ -1,11 +1,17 @@
 package datafactory
 import scala.math._
+
 trait Inference extends Descritive{
 
-  def paired_t_test(rawX:Vector[Double],rawY:Vector[Double]){
+  def paired_t_test(rawX:Vector[Double],rawY:Vector[Double])={
 	  val gap=rawX.zip(rawY).map(a=>a._1-a._2)
-	  val tval=meanf(gap)/(stdevi(gap)/sqrt(gap.length))
-	  //関連2群の検定
+	  println("gap : "+gap)
+	  println("mean : "+meanf(gap))
+	  println("sd : "+popstdevi(gap))
+	  println("n : "+gap.length)
+	  val tval=meanf(gap) / ( popstdevi(gap) / sqrt(gap.length) )
+	  tval
+	   //関連2群の検定
 	  //ｔ値とは、２つの山がどのくらいずれているかを示す値です。たくさんずれていれば「両者は違う山から出てきた標本らしい」という結論が導かれます。
 	  //t分布の確率密度関数からp値を取得。。。ただし自由度が絡んでいるので分布表をMapや関数化した方がてっとりばやいかも
 	}

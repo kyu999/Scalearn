@@ -7,8 +7,44 @@
 		revision="0.13.1"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140308153144"/>
+		date="20140309113732"/>
 	<dependencies>
+		<module organisation="org.jscala" name="jscala-macros_2.10">
+			<revision name="0.4-SNAPSHOT" status="integration" pubdate="20140123005530" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jscala.org" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="5">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="2799" time="0" location="/Users/kyu/.ivy2/cache/org.jscala/jscala-macros_2.10/ivy-0.4-SNAPSHOT.xml" searched="true" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/snapshots/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/jscala-macros_2.10-0.4-SNAPSHOT.pom"/>
+				<caller organisation="scalearn" name="scalearn_2.10" conf="optional, compile, runtime, runtime-internal" rev="0.4-SNAPSHOT" rev-constraint-default="0.4-SNAPSHOT" rev-constraint-dynamic="0.4-SNAPSHOT" callerrev="0.13.1"/>
+				<artifacts>
+					<artifact name="jscala-macros_2.10" type="jar" ext="jar" status="no" details="" size="1107809" time="0" location="/Users/kyu/.ivy2/cache/org.jscala/jscala-macros_2.10/jars/jscala-macros_2.10-0.4-SNAPSHOT.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/snapshots/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/jscala-macros_2.10-0.4-SNAPSHOT.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.yahoo.platform.yui" name="yuicompressor">
+			<revision name="2.4.7" status="release" pubdate="20120630163315" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://developer.yahoo.com/yui/compressor/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="6">
+				<license name="BSD License" url="http://developer.yahoo.com/yui/license.html"/>
+				<metadata-artifact status="no" details="" size="2903" time="0" location="/Users/kyu/.ivy2/cache/com.yahoo.platform.yui/yuicompressor/ivy-2.4.7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/yahoo/platform/yui/yuicompressor/2.4.7/yuicompressor-2.4.7.pom"/>
+				<caller organisation="org.jscala" name="jscala-macros_2.10" conf="default, compile, runtime, master" rev="2.4.7" rev-constraint-default="2.4.7" rev-constraint-dynamic="2.4.7" callerrev="0.4-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="yuicompressor" type="jar" ext="jar" status="no" details="" size="891148" time="0" location="/Users/kyu/.ivy2/cache/com.yahoo.platform.yui/yuicompressor/jars/yuicompressor-2.4.7.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/yahoo/platform/yui/yuicompressor/2.4.7/yuicompressor-2.4.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="rhino" name="js">
+			<revision name="1.6R7" status="release" pubdate="20070826213352" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.mozilla.org/rhino/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="7">
+				<license name="Mozilla Public License version 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<metadata-artifact status="no" details="" size="2345" time="0" location="/Users/kyu/.ivy2/cache/rhino/js/ivy-1.6R7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/rhino/js/1.6R7/js-1.6R7.pom"/>
+				<caller organisation="com.yahoo.platform.yui" name="yuicompressor" conf="compile, runtime" rev="1.6R7" rev-constraint-default="1.6R7" rev-constraint-dynamic="1.6R7" callerrev="2.4.7"/>
+				<artifacts>
+					<artifact name="js" type="jar" ext="jar" status="no" details="" size="813521" time="0" location="/Users/kyu/.ivy2/cache/rhino/js/jars/js-1.6R7.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/rhino/js/1.6R7/js-1.6R7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="com.h2database" name="h2">
 			<revision name="1.3.166" status="release" pubdate="20120409015945" resolver="public" artresolver="public" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="4">
 				<license name="The H2 License, Version 1.0" url="http://h2database.com/html/license.html"/>
@@ -57,11 +93,12 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.10.3" status="release" pubdate="20130927184454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.3/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master, master(*), compile(*), runtime(*)" position="0">
+			<revision name="2.10.3" status="release" pubdate="20130927184454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.3/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="0">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
 				<metadata-artifact status="no" details="" size="2585" time="0" location="/Users/kyu/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.pom"/>
 				<caller organisation="scalearn" name="scalearn_2.10" conf="optional, compile, runtime, runtime-internal" rev="2.10.3" rev-constraint-default="2.10.3" rev-constraint-dynamic="2.10.3" callerrev="0.13.1"/>
 				<caller organisation="com.typesafe.slick" name="slick_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="1.0.0"/>
+				<caller organisation="org.jscala" name="jscala-macros_2.10" conf="default, compile, runtime, master" rev="2.10.3" rev-constraint-default="2.10.3" rev-constraint-dynamic="2.10.3" callerrev="0.4-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7126003" time="0" location="/Users/kyu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.3.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.3/scala-library-2.10.3.jar"/>

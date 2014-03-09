@@ -4,28 +4,14 @@ import math._
 
 object Converter{
   
-	implicit def DoubleSeqtoData(in:Seq[Double]):Convertda=
-	  in match{
-	  case v:Vector[Double]=>new Convertda(v)
-	  case _=>new Convertda(in.toVector)
-	}
-	implicit def IntSeqtoData(in:Seq[Int]):Convertda=
-	  in match{
-	  case v:Vector[Int]=>new Convertda(v.map(a=>a.toDouble))
-	  case _=>new Convertda(in.toVector.map(a=>a.toDouble))
-	}
+	implicit def DoubleVectortoData(in:Vector[Double]):Convertda=new Convertda(in)
 	
-	implicit def toDataset(in:Seq[Seq[Double]]):Convertds=
-	  in match{
-	  case vs:Vector[Seq[Double]]=>new Convertds(vs.map(a=>a.toVector))
-	  case ss:Seq[Seq[Double]]=>new Convertds(in.toVector.map(a=>a.toVector))
-	}
+	implicit def IntVectortoData(in:Vector[Int]):Convertda=new Convertda(in.map(a=>a.toDouble))
 	
-	implicit def tomat(in:Seq[Seq[Double]]):ConvertMatrix=
-	  in match{
-	  case vs:Vector[Seq[Double]]=>new ConvertMatrix(vs.map(a=>a.toVector))
-	  case ss:Seq[Seq[Double]]=>new ConvertMatrix(ss.toVector.map(a=>a.toVector))
-	}
+	
+	implicit def toDataset(in:Vector[Vector[Double]]):Convertds=new Convertds(in)
+	
+	implicit def tomat(in:Vector[Vector[Double]]):ConvertMatrix=new ConvertMatrix(in)
 	
 	implicit def **(in:Int):ScaleCulMat=new ScaleCulMat(in)
 	

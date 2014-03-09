@@ -4,7 +4,9 @@ import math._
 
 class ds(dalist:Vector[da]) extends Descritive 
 			with Inference with Bayes with Multivariate{
-		
+  
+  //datalistが欲しくなったらresolveで分解しよう。ただ、そもそもdataをdatasetに引数としていれてるんだからdataが欲しいとはあまりならないと思われる
+ 
     val raw:Vector[Vector[Double]]=dalist.map(a=>a.raw)
     
     val mean=dalist.map(_.mean)
@@ -47,6 +49,8 @@ class ds(dalist:Vector[da]) extends Descritive
 	lazy val yregline:Vector[Double=>Double]=reg.map(a=>{(y:Double)=>(y-a._2)/a._1})
 //共にregの値を基にした無名関数。xreglineはxを与えてyを得る。yreglineはその逆.x=>yは１つだけど　y=>xは複数になりうるから実装しない方が良いかも
 	
+//Inference
+	lazy val tpair=combi.map(a=>paired_t_test(a(0).raw,a(1).raw))
 	
 //Operation	
 	
@@ -102,10 +106,7 @@ class ds(dalist:Vector[da]) extends Descritive
 //コンパニオンオブジェクトを作成。applyでファクトリメソッドを定義しているのでnewが不要になる
 object ds{
   
-  def apply(das:da*):ds=
-    das match{
-    case v:Vector[da]=>new ds(v)
-    case _=>new ds(das.toVector)
-  }
+  def apply(das:da*):ds=new ds(das.toVector)
+  
 }
 

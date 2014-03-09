@@ -7,14 +7,14 @@ import org.scalautils.TolerantNumerics._
 import Converter._
 import scala.collection.mutable.ArrayBuffer
 
-class dsTes extends FunSuite {
+class DatasetTes extends FunSuite {
   
   implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 
     val x=Vector(35.0,20,63,59,14,44,42,25,73,38,56,69,28,46)
     val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
     val a=(1 to 10000).map(in=>nextDouble).toVector
-    val b=Vector(3,4,5,6.0)
+    val b=Vector(3,4,5,6)
 
     val d1=x.toda
     val d2=da(y)
@@ -22,7 +22,7 @@ class dsTes extends FunSuite {
     val s1=b.toda
     val d4=ds(d1,d2,s1) 
     val cons=(d1::d2::d2)
-    val enor1=Vector(a,b,x,y).tods
+//    val enor1=Vector(a,b,x,y).tods
 
 
     test("cov"){
