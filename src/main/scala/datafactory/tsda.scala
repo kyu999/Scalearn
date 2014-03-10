@@ -1,7 +1,7 @@
 package datafactory
 
 
-class tsda(raw:Vector[Double]) extends da(raw) with TimeSeries{
+class tsda(raw:Vector[Double]) extends data(raw) with TimeSeries{
 
 	lazy val acov=(0 to raw.length).map(a=>autocovariance(raw,a))
 	val acf=autocorrelation(raw)

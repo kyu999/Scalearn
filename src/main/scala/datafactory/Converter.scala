@@ -4,26 +4,26 @@ import math._
 
 object Converter{
   
-	implicit def DoubleVectortoData(in:Vector[Double]):Convertda=new Convertda(in)
+	implicit def DoubleVectortoData(in:Vector[Double]):ToData=new ToData(in)
 	
-	implicit def IntVectortoData(in:Vector[Int]):Convertda=new Convertda(in.map(a=>a.toDouble))
+	implicit def IntVectortoData(in:Vector[Int]):ToData=new ToData(in.map(a=>a.toDouble))
 	
 	
-	implicit def toDataset(in:Vector[Vector[Double]]):Convertds=new Convertds(in)
+	implicit def toDataset(in:Vector[Vector[Double]]):ToDase=new ToDase(in)
 	
-	implicit def tomat(in:Vector[Vector[Double]]):ConvertMatrix=new ConvertMatrix(in)
+	implicit def tomat(in:Vector[Vector[Double]]):ToMatrix=new ToMatrix(in)
 	
 	implicit def **(in:Int):ScaleCulMat=new ScaleCulMat(in)
 	
 }
-class Convertda(in:Vector[Double]){
-  def toda=da(in)
+class ToData(in:Vector[Double]){
+  def toda=data(in)
 }
-class Convertds(in:Vector[Vector[Double]]){
-  def tods=new ds(in.map(a=>da(a)))
+class ToDase(in:Vector[Vector[Double]]){
+  def tods=new dase(in.map(a=>data(a)))
 }
 
-class ConvertMatrix(in:Vector[Vector[Double]]){
+class ToMatrix(in:Vector[Vector[Double]]){
   def tomat=new m(in)
 }
 

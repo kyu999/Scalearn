@@ -14,7 +14,7 @@ class TsdaTes extends FunSuite {
  
 	val da1=Vector(5,8,6,9,10.0,11).toda.ts
     val d1=x.toda 
-	val ts1=da(z)
+	val ts1=data(z)
      
     test("autocovariance"){
 	  

@@ -11,7 +11,7 @@ class NaiveRecomTest extends FunSuite{
   val eu=NaiveRecom.euclisim _ 
   val getrecom=NaiveRecom.getRecommendations _
   val trans=NaiveRecom.transform _ 
-  val transdata=trans(data)
+//  val transdata=trans(data)
   
   test("topMatch"){
   
@@ -21,13 +21,13 @@ class NaiveRecomTest extends FunSuite{
   }
   
   test("getRecommendations"){
-    getrecom(data,"Toby",pe)
+//    getrecom(data,"Toby",pe)
   }
   test("trans"){
 //  (0 to 100000).par.map(a=>(0 to 10000).map(b=>a-b).reduce((a,b)=>a+b))
 //  par takes 60% faster than ordinary collection => par : ord = 3 : 5 
-    println(transdata)
-    println(topmat(transdata,"Superperson Returns",5,eu))
+ 
+//    println("this should be correlation : "+topmat(transdata,"Just My Luck",5,eu))
     
   }
   

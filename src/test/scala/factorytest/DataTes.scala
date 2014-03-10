@@ -19,7 +19,7 @@ class DataTes extends FunSuite {
     val b=Vector(4,5,6,4,3,2,5,6,7,5,433,3,3,9,8,96,56,4,33,2)
   
     val d1=x.toda
-    val d2=da(y)
+    val d2=data(y)
     val d3=z.toda
     val d4=a.toda
     val d5=b.toda

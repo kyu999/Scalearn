@@ -14,10 +14,10 @@ class InferenceTest extends FunSuite{
     val b=Vector(3,4,5,6)
 
     val dx=x.toda
-    val dy=da(y)
+    val dy=data(y)
     val dsxy=Vector(x,y).tods		
     val db=b.toda
-    val dsxyb=ds(dx,dy,db) 
+    val dsxyb=dase(dx,dy,db) 
     
     test("paired-t"){
       println("paired_t_test"+dsxy.tpair)
