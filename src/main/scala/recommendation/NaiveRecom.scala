@@ -3,6 +3,7 @@ package recommendation
 import scala.math._
 import datafactory._
 import Converter._
+import scala.collection.mutable.Map
 import scala.collection.mutable.ListBuffer
 
 object NaiveRecom {
@@ -46,16 +47,21 @@ object NaiveRecom {
  	def euclisim(prefs:Map[String,Map[String,Double]],person1:String,person2:String)={
 		
 		val p1list=prefs(person1).keys.toVector
-		val bothlist=p1list.map{a=>
+		val commons=p1list.map{a=>
 		  if( prefs(person2).get(a)==None ) (a,0)
 		  else (a,1)
 		    }
-				
-		if(bothlist.exists(_._2!=1)){ 0 }
+		
+		println("commons : "+commons)
+		
+		if(
+		   commons.exists(_._2!=1)
+		    ){ 0 }		//ここがバグ
+		
 		
 		else	 {
-		  val m1val=bothlist.map(a=>prefs(person1)(a._1))
-		  val m2val=bothlist.map(a=>prefs(person2)(a._1))		  
+		  val m1val=commons.map(a=>prefs(person1)(a._1))
+		  val m2val=commons.map(a=>prefs(person2)(a._1))		  
 		  
 		  val gapsquared=m1val.zip(m2val).map{
 		    a=>pow(a._1-a._2,2)
@@ -70,16 +76,16 @@ object NaiveRecom {
 	 def pearsim(prefs:Map[String,Map[String,Double]],person1:String,person2:String):Double={
 		
 		val p1list=prefs(person1).keys.toVector
-		val bothlist=p1list.map{a=>
+		val commons=p1list.map{a=>
 		  if( prefs(person2).get(a)==None ) (a,0)
 		  else (a,1)
-		    }
+		    }.filter(freq=>freq._2>1)
 		
-		if(bothlist.exists(_._2!=1)){ 0 }
+//		if(commons.exists(_._2!=1)){ 0 }
 		
-		else	 {
-		  val m1val=bothlist.map(a=>prefs(person1)(a._1))
-		  val m2val=bothlist.map(a=>prefs(person2)(a._1))		  
+//		else	 {
+		  val m1val=commons.map(a=>prefs(person1)(a._1))
+		  val m2val=commons.map(a=>prefs(person2)(a._1))		  
 		  		  		  
 		  val pear=ds(m1val.toda,m2val.toda).pears(0)
 		  //dataset化してpearsonを求める
@@ -88,31 +94,53 @@ object NaiveRecom {
 		  
 		}
 		
-	 }
+//	 }
 	
 	
 	def topMatches(prefs:Map[String,Map[String,Double]],person:String,n:Int,similarity:(Map[String,Map[String,Double]],String,String)=>Double)={
 	  
 	  val people=prefs.keys.filter(a=>a!=person).toList
-	  val similar=people.map(a=>(similarity(prefs,person,a),a)).toList
+	  val similar=people.map{a=>
+	    println("item : "+a+", each similarity : "+similarity(prefs,person,a))
+	    (similarity(prefs,person,a),a)}.toList
+	  println("similarity : "+similar)
 	  
 	  similar.sorted.reverse.take(n)
 	  
 	}
 	
+	def transform(prefs:Map[String,Map[String,Double]])={
+	  var result=Map("item"->Map("name"->0.0))
+	  prefs.foreach{person=>
+	    val fullname=person._1
+	    val items=person._2
+	    items.foreach{
+	    		item=>
+	    		  val itemname=item._1
+	    		  val value=item._2
+	    		  result.get(itemname) match{
+	    		    case Some(x)=>x.put(fullname,value)
+	    		    case None=>result.put(itemname,Map(fullname->value))
+	    		  }
+	    		  println("fullname "+fullname)
+	    		  println("")
+	    		  println("itemname : "+itemname)
+	    		  println("")
+	    		  println("value : "+value)
+	    		  println("")
+	    		  println("current entity : "+result)
+	    		  println("")
+	    		}
+	    }
+	  
+	  result.remove("item")
+	  result
+	  
+	}
+	
 	def getRecommendations(prefs:Map[String,Map[String,Double]],person:String,similarity:(Map[String,Map[String,Double]],String,String)=>Double)={
+
 	  
-	  val items=itemlistup(prefs)
-	  
-	  val similar=prefs.keys.map{a=>(similarity(prefs,person,a),a) }.filter(b=>b._1>0 && b._2!=person)
-	  //各ユーザー間の類似度。自身とスコアが0以下の人を除外
-	  val simsum=similar.map(a=>a._1).reduce((a,b)=>a+b)
-	  
-	  val notyet=items.filterNot(a=>prefs(person).contains(a))
-	  
-	  println("similar : "+similar)
-	  println("simsum : "+simsum)
-	  println("notyet : "+notyet)
 	  
 
 	}

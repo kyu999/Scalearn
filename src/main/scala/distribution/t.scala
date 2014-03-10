@@ -16,9 +16,10 @@ object t {
   def pdf(n:Int,t:Double)={
 	
     val logged=log(gamma.factstir(n/2))-log(gamma.factstir((n-1)/2))-2*n*log(1+(pow(t,2)/(n-1)))
-    println("t logged pdf"+logged)
+ //   println("t logged pdf"+logged)
     val ans=pow(E,logged)
-    println("t ans pdf "+ans)
+    println("ans : "+ans)
+    ans
   }
   
 }
@@ -26,6 +27,20 @@ object t {
 object ttes extends App{
   t.pdf(49,2.0)
   t.pdf(300, 1.967903)
+  var tval=1.967903
+  var rate=tval*0.001
+  var ok=true
+  var sum=0.0
+  var counter=0
+  while(ok){
+    val p=t.pdf(100,tval)
+    if(p<=0) ok=false
+    sum=sum+p
+    tval=rate+tval
+    counter=counter+1
+  }
+  println("sum: "+sum)
+  println("counter : "+counter)
   //n=300ではうまく行ったのに対してn=50では明らかにおかしな値だったからfactorial関連でミスってる可能性大。
   //factorialが分数には対処できないのでそこんとこかも。
 }
