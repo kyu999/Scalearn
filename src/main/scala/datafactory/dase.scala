@@ -107,6 +107,7 @@ class dase(datalist:Vector[data]) extends Descritive
 object dase{
   
   def apply(datas:data*):dase=new dase(datas.toVector)
+//  def apply(raws:Seq[Double]*):dase=new dase(raws.map(raw=>data(raw.toVector)).toVector)
   
 }
 

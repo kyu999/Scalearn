@@ -10,10 +10,18 @@ trait Descritive{
 	//各偏差の２乗
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
 	
+	def biased_variance(dvsquared:Vector[Double]):Double=dvsquared.reduce((a,b)=>a+b)/(dvsquared.length)
+	//分散
+	
+	def unbiased_variance(dvsquared:Vector[Double]):Double=dvsquared.reduce((a,b)=>a+b)/(dvsquared.length-1)
+	//不変分散
+	
 	def stdevi(dvsquared:Vector[Double]):Double=sqrt(dvsquared.reduce((a,b)=>a+b)/(dvsquared.length-1))	
-	//√分散＝標準偏差.ただしこれは不偏分散。通常標本分散は母集団分散よりも小さくなりがちなので標本抽出による偏りを是正するために-1している
+	//√分散＝標準偏差.ただし不偏分散を使用したため標本標準偏差。通常標本分散は母集団分散よりも小さくなりがちなので標本抽出による偏りを是正するために-1している
 	
 	def popstdevi(dvsquared:Vector[Double]):Double=sqrt(dvsquared.reduce((a,b)=>a+b)/(dvsquared.length))	
+	
+	def sterror(unbiase_vari:Double,n:Int)=sqrt(unbiase_vari/n)
 	
 	def zipdevi(dev1:Vector[Double],dev2:Vector[Double]):Vector[(Double,Double)]=dev1.zip(dev2)
 	//2つのデータセットの偏差をTuple化

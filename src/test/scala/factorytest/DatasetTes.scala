@@ -15,6 +15,8 @@ class DatasetTes extends FunSuite {
     val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
     val a=(1 to 10000).map(in=>nextDouble).toVector
     val b=Vector(3,4,5,6)
+    val c=Vector(90.0,75,75,75,80,65,75,80)
+    val d=Vector(95.0,80,80,80,75,75,80,85)
 
     val d1=x.toda
     val d2=data(y)
@@ -22,6 +24,7 @@ class DatasetTes extends FunSuite {
     val s1=b.toda
     val d4=dase(d1,d2,s1) 
     val cons=(d1::d2::d2)
+    val paired=dase(c.toda,d.toda)
 //    val enor1=Vector(a,b,x,y).tods
 
 
@@ -51,6 +54,7 @@ class DatasetTes extends FunSuite {
       assert(target.reg(0)==target.regRaw(target.raw(0),target.raw(1)))
       
     }
+    
 
     test("time"){
       

@@ -20,11 +20,11 @@ trait TimeSeries extends Descritive{
 	*/
 		
 	
-	def autocorrelation(raw:Vector[Double]):(Double,Vector[Double])={
+	def autocorrelation(raw:Vector[Double],lagmax:Int):(Double,Vector[Double])={
 	  val criteria=2/sqrt(raw.length)
 	  val r0=autocovariance(raw,0)
-	  if (raw.length<20) (criteria, (0 to raw.length).map(x=>autocovariance(raw,x)/r0).toVector )
-	  else (criteria, (0 to 20).map(x=>autocovariance(raw,x)/r0).toVector )
+	  if (raw.length<lagmax) (criteria, (0 to raw.length).map(x=>autocovariance(raw,x)/r0).toVector )
+	  else (criteria, (0 to lagmax).map(x=>autocovariance(raw,x)/r0).toVector )
 	}
 	//acf=r(h)/r(0) , criteriaは有意かどうかのライン。Rの点線のとこ。
 	

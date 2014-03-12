@@ -1,6 +1,29 @@
 package distribution
 import scala.math._
+
 object t {
+  
+	//α == 0.05 
+	def table(n:Int,t:Double)={
+	  var criteria=0.0
+	  val store=Map(1->12.706,2->4.303,3->3.182,4->2.776,5->2.571,6->2.447,7->2.365,8->2.306,9->2.262,10->2.226,11->2.201,12->2.179,13->2.160,14->2.145,15->2.131,16->2.120,17->2.110,18->2.101,19->2.093,20->2.086,21->2.080,22->2.074,23->2.069,24->2.064,25->2.060,26->2.056,27->2.052,28->2.048,29->2.045,30->2.042)
+	  store.get(n) match{
+	    case Some(x)=>criteria=x
+	    case None=>
+	      if(n<=40) criteria=2.021
+	      else if(n<=60) criteria=2.000
+	      else if(n<=120) criteria=1.980
+	      else criteria=1.960
+	  }
+	  
+	  println("crriteria : "+criteria)
+	  println("t-value : "+t)
+	  
+	  if(criteria<abs(t)) false
+	  else true
+	  //false stands for they have significant difference
+	  //true means they are from same population
+	}
   /*
    Steps
     1. 自由度を受け取り確率密度関数をreturnする関数定義
@@ -41,6 +64,9 @@ object ttes extends App{
   }
   println("sum: "+sum)
   println("counter : "+counter)
+  
+  println(t.table(7,-2.366))
+  
   //n=300ではうまく行ったのに対してn=50では明らかにおかしな値だったからfactorial関連でミスってる可能性大。
   //factorialが分数には対処できないのでそこんとこかも。
 }
