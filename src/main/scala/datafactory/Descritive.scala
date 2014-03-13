@@ -1,5 +1,7 @@
 package datafactory
+
 import scala.math._
+
 trait Descritive{ 
     
 	def meanf(raw:Vector[Double]):Double=raw.reduce((a,b)=>a+b)/raw.length
@@ -7,9 +9,28 @@ trait Descritive{
 	def deviation(raw:Vector[Double],average:Double):Vector[Double]=raw.map(x=>x-average)
 	//各偏差
 	
-	def devi(average:Double):Double=>Double= _ - average
-	def squared:Double=>Double = pow( _ ,2)
-	def devisquared=squared andThen devi _ 
+	def toint:Int=>Double={
+	  (elt:Int) => (elt.toDouble)
+	}
+	def eachdevi(average:Double):Double=>Double = {
+	  		println("in each devi, mean : "+average)
+	  		(elt:Double) => elt - average
+	}
+	  		
+	def eachsquared(each_devi:Double=>Double):Double=>Double = {
+	  		(elt:Double) => pow(each_devi(elt) ,2) 
+	}
+	  		
+	def eachdevisquared:Double=>(Double=>Double) 
+			= eachdevi _  andThen eachsquared _  		//最初のDoubleはaverage、２番目のDoubleはElement
+	//関数合成をする時は常に前の関数の戻り値を後の関数が受け取れるようにしなければならない
+	
+	//val testpartial=eachdevisquared(10)(7)
+	//right : elt value , left : average
+	
+	val testmapping=(0 to 10).map(toint).map(eachdevisquared(3))
+	
+	
 	
 	def devi_squared(devraw:Vector[Double]):Vector[Double]=devraw.map(x=>(pow(x,2))) 
 	//各偏差の２乗
