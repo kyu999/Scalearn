@@ -1,8 +1,10 @@
 package datafactory
 import Converter._
+import scala.math._
+
 class data(x:Vector[Double]) extends Descritive{
-  
-//Descriptive
+
+//Descriptive　※データを標本として捉えている
   
     var name:String="data"		       
     	//mutable   
@@ -14,12 +16,19 @@ class data(x:Vector[Double]) extends Descritive{
     val mean=meanf(x)
     
 	val dv=deviation(x,mean)
-	
-    val sd=stdevi(devito2(dv))
-    //データを標本と見なし不偏分散で出している。通常の分散が必要ならpopstdeviメソッドを使うべし
+
+	val vari=unbiased_variance(devi_squared(dv))
+    //不偏分散：標本から行う、母分散の推定値
+ 
+    val sd=sqrt(vari)
+    //データを標本と見なし不偏分散を用いて算出した母標準偏差推定値。標本自体の標準偏差が必要ならsamplesdを使うべし
     
-    lazy val popsd=popstdevi(devito2(dv))
-    
+    lazy val samplesd=popstdevi(devi_squared(dv))
+    //標本データ自体の標準偏差。母集団推定をしない場合に用いる
+
+    lazy val biasvari=biased_variance(devi_squared(dv))
+    //標本自体の分散。母分散の推定値ではない。
+   
     lazy val time:Vector[Double]=(1 to x.length).map(a=>a.toDouble).toVector
     
     lazy val reg:(Double,Double)=regRaw(time,raw)		 //x軸が時間軸のケース。

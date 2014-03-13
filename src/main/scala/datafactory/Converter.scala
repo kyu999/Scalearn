@@ -4,12 +4,12 @@ import math._
 
 object Converter{
   
-	implicit def DoubleVectortoData(in:Vector[Double]):ToData=new ToData(in)
+	implicit def DtoData(in:Vector[Double]):ToData=new ToData(in)
 	
-	implicit def IntVectortoData(in:Vector[Int]):ToData=new ToData(in.map(a=>a.toDouble))
+	implicit def ItoData(in:Vector[Int]):ToData=new ToData(in.map(a=>a.toDouble))
 	
 	
-	implicit def toDataset(in:Vector[Vector[Double]]):ToDase=new ToDase(in)
+	implicit def tods(in:Vector[Vector[Double]]):ToDase=new ToDase(in)
 	
 	implicit def tomat(in:Vector[Vector[Double]]):ToMatrix=new ToMatrix(in)
 	

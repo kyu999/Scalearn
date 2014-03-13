@@ -17,9 +17,9 @@ class DatasetTes extends FunSuite {
     val b=Vector(3,4,5,6)
     val c=Vector(90.0,75,75,75,80,65,75,80)
     val d=Vector(95.0,80,80,80,75,75,80,85)
-
+ 
     val d1=x.toda
-    val d2=data(y)
+    val d2=data(y) 
     val d3=Vector(x,y).tods		
     val s1=b.toda
     val d4=dase(d1,d2,s1) 
@@ -49,8 +49,8 @@ class DatasetTes extends FunSuite {
     test("regression"){
       
       val target=dase(d2,d1)
-      assert(target.xregline(0)(10)===114.701)
-      assert(target.yregline(0)(114.701)===10.000)
+      assert(target.regline(0)(10)===114.701)
+//      assert(target.regline(0)(114.701)===10.000)
       assert(target.reg(0)==target.regRaw(target.raw(0),target.raw(1)))
       
     }

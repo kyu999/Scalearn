@@ -18,7 +18,9 @@ class dase(datalist:Vector[data]) extends Descritive
 	
     lazy val covar=combi.map{a=>covariance(zipdevi(a(0).dv,a(1).dv))}.toVector
 	
+    
     lazy val pears=combi.map{a=>
+      
        if(a(0).n != a(1).n) {println("You can't compare different length variable");-10000}
        else{
 	   pearson(
@@ -28,7 +30,9 @@ class dase(datalist:Vector[data]) extends Descritive
        }
 	   }.toVector
 	
+	   
 	lazy val spears=combi.map{a=>
+	  
 	  if(a(0).n != a(1).n){println("You can't compare different length variable");-10000}
 	  else{
 	      spearman(difsqured(labeling(a(0).raw,a(1).raw)))
@@ -42,15 +46,18 @@ class dase(datalist:Vector[data]) extends Descritive
 
 	   
 	lazy val reg=combi.zip(pears).map{a=>regression(a._2,a._1(0).sd,a._1(1).sd,a._1(0).mean,a._1(1).mean)}
-	//regressionの引数は順に、相関係数、XのSD,YのSD、Xの平均、Yの平均. output=(slope,intercept).
-	//計算にpearsonを使っているから異なる長さの変数には適用出来ない。注意して使うように。
+	//regressionの引数は順に、相関係数、XのSD,YのSD、Xの平均、Yの平均. output=(slope,intercept).計算にpearsonを使っているから異なる長さの変数には適用出来ない。注意して使うように。
 	
-	lazy val xregline:Vector[Double=>Double]=reg.map(a=>{(x:Double)=>a._1*x+a._2})
-	lazy val yregline:Vector[Double=>Double]=reg.map(a=>{(y:Double)=>(y-a._2)/a._1})
-//共にregの値を基にした無名関数。xreglineはxを与えてyを得る。yreglineはその逆.x=>yは１つだけど　y=>xは複数になりうるから実装しない方が良いかも
+	lazy val regline:Vector[Double=>Double]=reg.map(a=>{(x:Double)=>a._1*x+a._2})
+	//共にregの値を基にした無名関数。xを与えてyを得る
+	
+	
 	
 //Inference
 	lazy val tpair=combi.map(a=>paired_t_test(a(0).raw,a(1).raw))
+	lazy val twelch=combi.map(a=>welch_t_test(a(0).raw,a(1).raw))
+	
+	
 	
 //Operation	
 	

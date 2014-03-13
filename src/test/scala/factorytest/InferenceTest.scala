@@ -14,19 +14,30 @@ class InferenceTest extends FunSuite{
     val b=Vector(3,4,5,6)
     val s=Vector(1.83,  0.50,  1.62,  2.48, 1.68, 1.88, 1.55, 3.06, 1.30) 
     val t=Vector(0.878, 0.647, 0.598, 2.05, 1.06, 1.29, 1.06, 3.14, 1.29) 
+    val m=(0 to 10000).map(_.toDouble).toVector
+    val l=(0 to 10000).map(_.toDouble).toVector
     
     val dx=x.toda
     val dy=data(y)
     val db=b.toda
     val ds=s.toda
     val dt=t.toda
+    val dm=m.toda
+    val dl=l.toda
     
     val dsxy=Vector(x,y).tods		
     val dsxyb=dase(dx,dy,db) 
     val dsst=dase(ds,dt)
+    val dsml=dase(dm,dl)
+    
     
     test("paired-t"){
       assert(false==dsxy.tpair.head)
       assert(false==dsst.tpair.head)
+      //println(dsml.tpair.head)
+      //println("df : "+(dm.n-1))
+    }
+    test("welch_t_test"){
+      assert(dsxy.twelch.head==true)
     }
 }

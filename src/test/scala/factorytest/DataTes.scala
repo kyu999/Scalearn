@@ -17,12 +17,16 @@ class DataTes extends FunSuite {
     val z=Vector(1,2,5,4,3)
     val a=(1 to 10000).map(in=>nextDouble).toVector
     val b=Vector(4,5,6,4,3,2,5,6,7,5,433,3,3,9,8,96,56,4,33,2)
-  
+    val c=Vector(90.0,75,75,75,80,65,75,80)
+    val d=Vector(95.0,80,80,80,75,75,80,85)
+     
     val d1=x.toda
     val d2=data(y)
     val d3=z.toda
     val d4=a.toda
     val d5=b.toda
+    val d6=c.toda
+    val d7=d.toda
     
     //このdaTesとTsdaTesを重点的にすることが何より大事！！
     
@@ -31,10 +35,19 @@ class DataTes extends FunSuite {
 	  assert(d1.mean===43.714," -> mean")
 	  assert(d2.mean===46.571," ->mean")
 	}
-    test("sd"){ 
+    test("estimations of pop sd from sample"){ 
 	  assert(d1.sd===18.424," -> sd")
 	  assert(d2.sd===8.933," ->sd")
+	  assert(d6.sd===7.03943)
+	  assert(d7.sd===6.408699)
 	}	
+    test("biased_variance"){
+      assert(d6.biasvari==43.359375)
+    }
+    test("unbiased_variance"){
+      assert(d6.vari==49.55357142857143)      
+    }
+    
     test("regression"){
    	  assert(d1.regline(10)===46.208)
    	  assert(d5.reg._1===1.947)

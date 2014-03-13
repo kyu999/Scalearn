@@ -6,7 +6,7 @@ trait Descritive{
 	//平均
 	def deviation(raw:Vector[Double],average:Double):Vector[Double]=raw.map(x=>x-average)
 	//各偏差
-	def devito2(devraw:Vector[Double]):Vector[Double]=devraw.map(x=>(pow(x,2))) 
+	def devi_squared(devraw:Vector[Double]):Vector[Double]=devraw.map(x=>(pow(x,2))) 
 	//各偏差の２乗
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
 	
@@ -14,7 +14,7 @@ trait Descritive{
 	//分散
 	
 	def unbiased_variance(dvsquared:Vector[Double]):Double=dvsquared.reduce((a,b)=>a+b)/(dvsquared.length-1)
-	//不変分散
+	//不偏分散
 	
 	def stdevi(dvsquared:Vector[Double]):Double=sqrt(dvsquared.reduce((a,b)=>a+b)/(dvsquared.length-1))	
 	//√分散＝標準偏差.ただし不偏分散を使用したため標本標準偏差。通常標本分散は母集団分散よりも小さくなりがちなので標本抽出による偏りを是正するために-1している
@@ -46,8 +46,8 @@ trait Descritive{
 	    	val xdevi=deviation(xraw,xmean)
 	    	val ydevi=deviation(yraw,ymean)
 	  
-	    	val xdevi2=devito2(xdevi)
-	    	val ydevi2=devito2(ydevi)
+	    	val xdevi2=devi_squared(xdevi)
+	    	val ydevi2=devi_squared(ydevi)
 	  
 	    	val xsd=stdevi(xdevi2)
 	    	val ysd=stdevi(ydevi2)
@@ -109,8 +109,8 @@ trait Descritive{
 		val xdevi=deviation(xraw,xmean)
 		val ydevi=deviation(yraw,ymean)
 	  
-		val xdevi2=devito2(xdevi)
-	  	val ydevi2=devito2(ydevi)
+		val xdevi2=devi_squared(xdevi)
+	  	val ydevi2=devi_squared(ydevi)
 	  
 	  	val xsd=stdevi(xdevi2)
 	  	val ysd=stdevi(ydevi2)
