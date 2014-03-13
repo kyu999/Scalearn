@@ -1,11 +1,16 @@
 package datafactory
 import scala.math._
 trait Descritive{ 
-  
+    
 	def meanf(raw:Vector[Double]):Double=raw.reduce((a,b)=>a+b)/raw.length
 	//平均
 	def deviation(raw:Vector[Double],average:Double):Vector[Double]=raw.map(x=>x-average)
 	//各偏差
+	
+	def devi(average:Double):Double=>Double= _ - average
+	def squared:Double=>Double = pow( _ ,2)
+	def devisquared=squared andThen devi _ 
+	
 	def devi_squared(devraw:Vector[Double]):Vector[Double]=devraw.map(x=>(pow(x,2))) 
 	//各偏差の２乗
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？

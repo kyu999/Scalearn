@@ -26,12 +26,15 @@ trait Inference extends Descritive{
 	  
 	  val meanX=meanf(rawX)
 	  val meanY=meanf(rawY)	  
-	  	  
+	  	  	  
 	  val devi2X=devi_squared(deviation(rawX,meanX))
 	  val devi2Y=devi_squared(deviation(rawY,meanY))
 	  
 	  val unbiase_variX=unbiased_variance(devi2X)
 	  val unbiase_variY=unbiased_variance(devi2Y)
+	  
+	  println("variX : "+unbiase_variX)
+	  println("variY : "+unbiase_variY)
 	  
 	  val sizeX=rawX.length
 	  val sizeY=rawY.length
