@@ -35,21 +35,50 @@
           <h3>
 <a name="welcome-to-scalearn" class="anchor" href="#welcome-to-scalearn"><span class="octicon octicon-link"></span></a>Welcome to Scalearn</h3>
 
-<p>This library would help you to deal with data in statistical or machine learning way. Although such academic domains seems to be difficult for most scala developers ( including me! ) , the main target user of this library is not professional scientists but ordinary scala developers; in that sense, it focus on usability rather than speed or efficiency. Moreover, I hope this could be useful for beginners of scala.</p>
+<p>This library would help you to deal with a bunch of data by making use of statistics, time series analysis, and machine learning. Although such academic domains seem to be difficult for most developers ( including me! ) , the main target users of this library are ordinary scala developers; in that sense, it focus on usability rather than speed or efficiency. Besides, I hope this could be useful for beginners of scala.</p>
 
 <h3>
 <a name="prerequisite" class="anchor" href="#prerequisite"><span class="octicon octicon-link"></span></a>Prerequisite</h3>
-<p> </p>
+<ul>
+	<li><a href="http://www.scala-lang.org/download/">scala</a>
+	</li>
+	
+	<li><a href="http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html">sbt</a>
+	</li>
+	
+	<li><a href="http://brew.sh/">Homebrew (optional)</a>
+	</li>
+</ul>
+		
 
 
 <h3>
-<a name="How to install" class="anchor" href="#How to Install"><span class="octicon octicon-link"></span></a>How to Install</h3>
+<a name="Installation" class="anchor" href="#Installation"><span class="octicon octicon-link"></span></a>Installation</h3>
 
-<a class="anchor">Installation</p>
-<pre><code>$ cd your_repo_root
-$ sbt
-$ test
+<ol>
+	<li>Download zip file of this library</li>
+	<br>
+	<li>Start your terminal ( if you are using mac ), and go to root directory</li>
+	<br>
+	<pre><code>$ cd root_directory</code></pre>
+	<li>If you don't have sbt, install through homebrew
+	</li>
+			<br>
+		<pre><code>$ brew install sbt</code></pre>
+
+	<li>At root directory, type "sbt package"( assume you need to install sbt first. Homebrew makes it easier to install both scala and sbt)</li>
+	<br>
+	<pre><code>$ sbt package
 </code></pre>
+	<li>Finally, you got jar file at root/target/scala-2.X/here</li>
+</ol>
+
+<h3>
+<a name="Quick Start" class="anchor" href="#Quick Start"><span class="octicon octicon-link"></span></a>Quick Start</h3>
+<p>If you are interested in statistics, you need to import "datafactory package" and "Converter object" first of all: they allows you to obtain statistical value easily. </p>
+	<pre><code>import datafactory._
+import Converter._</code></pre>			
+
 
 
 <h3>
