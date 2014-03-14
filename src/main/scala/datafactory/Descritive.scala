@@ -6,29 +6,27 @@ trait Descritive{
     
 	def meanf(raw:Vector[Double]):Double=raw.reduce((a,b)=>a+b)/raw.length
 	//平均
-	def deviation(raw:Vector[Double],average:Double):Vector[Double]=raw.map(x=>x-average)
-	//各偏差
 	
-	def toint:Int=>Double={
-	  (elt:Int) => (elt.toDouble)
-	}
-	def eachdevi(average:Double):Double=>Double = {
-	  		println("in each devi, mean : "+average)
+	def deviation(raw:Vector[Double],average:Double):Vector[Double]=raw.map(each_devi(average))
+	//各偏差
+		
+	def each_devi(average:Double):Double=>Double = {
 	  		(elt:Double) => elt - average
 	}
+	//println("in each devi, mean : "+average)
 	  		
-	def eachsquared(each_devi:Double=>Double):Double=>Double = {
+	def each_squared(each_devi:Double=>Double):Double=>Double = {
 	  		(elt:Double) => pow(each_devi(elt) ,2) 
 	}
 	  		
-	def eachdevisquared:Double=>(Double=>Double) 
-			= eachdevi _  andThen eachsquared _  		//最初のDoubleはaverage、２番目のDoubleはElement
+	def each_devi_squared:Double=>(Double=>Double) 
+			= each_devi _  andThen each_squared _  		//最初のDoubleはaverage、２番目のDoubleはElement
 	//関数合成をする時は常に前の関数の戻り値を後の関数が受け取れるようにしなければならない
 	
 	//val testpartial=eachdevisquared(10)(7)
 	//right : elt value , left : average
 	
-	val testmapping=(0 to 10).map(toint).map(eachdevisquared(3))
+	val testmapping=(0 to 10).map(_.toDouble).map(each_devi_squared(3))
 	
 	
 	
@@ -36,23 +34,25 @@ trait Descritive{
 	//各偏差の２乗
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
 	
-	def biased_variance(dvsquared:Vector[Double]):Double=dvsquared.reduce((a,b)=>a+b)/(dvsquared.length)
+	
+	//varianceのためにdevi_squared_summationを作っても良いかも
+	def biased_variance(dvsquaredsum:Double,n:Int):Double=dvsquaredsum/(n)
 	//分散
 	
-	def unbiased_variance(dvsquared:Vector[Double]):Double=dvsquared.reduce((a,b)=>a+b)/(dvsquared.length-1)
+	def unbiased_variance(dvsquaredsum:Double,n:Int):Double=dvsquaredsum/(n-1)
 	//不偏分散
 	
-	def stdevi(dvsquared:Vector[Double]):Double=sqrt(dvsquared.reduce((a,b)=>a+b)/(dvsquared.length-1))	
+	def stdevi(dvsquaredsum:Double,n:Int):Double=sqrt(dvsquaredsum/(n-1))	
 	//√分散＝標準偏差.ただし不偏分散を使用したため標本標準偏差。通常標本分散は母集団分散よりも小さくなりがちなので標本抽出による偏りを是正するために-1している
 	
-	def popstdevi(dvsquared:Vector[Double]):Double=sqrt(dvsquared.reduce((a,b)=>a+b)/(dvsquared.length))	
+	def popstdevi(dvsquaredsum:Double,n:Int):Double=sqrt(dvsquaredsum/n)	
 	
 	def sterror(unbiase_vari:Double,n:Int)=sqrt(unbiase_vari/n)
 	
 	def zipdevi(dev1:Vector[Double],dev2:Vector[Double]):Vector[(Double,Double)]=dev1.zip(dev2)
 	//2つのデータセットの偏差をTuple化
 	
-	def covariance(zipraw:Vector[(Double,Double)]):Double=zipraw.map(x=>x._1*x._2).reduce((a,b)=>a+b)/(zipraw.length-1) 
+	def covariance(zipraw:Vector[(Double,Double)]):Double=zipraw.map(x=>x._1*x._2).sum/(zipraw.length-1) 
 	//2つのデータセット共分散(=対応するXとYの偏差の積の平均）
 	
 	def pearson(covari:Double,sdX:Double,sdY:Double):Double=covari/(sdX*sdY)
@@ -66,6 +66,9 @@ trait Descritive{
 	  
 	  else {
 	    
+	    val xlength=xraw.length
+	    val ylength=yraw.length
+	    
 	    val xmean=meanf(xraw)
 	    	val ymean=meanf(yraw)
 	  
@@ -75,8 +78,11 @@ trait Descritive{
 	    	val xdevi2=devi_squared(xdevi)
 	    	val ydevi2=devi_squared(ydevi)
 	  
-	    	val xsd=stdevi(xdevi2)
-	    	val ysd=stdevi(ydevi2)
+	    	val xdevi2sum=xdevi2.sum
+	    	val ydevi2sum=ydevi2.sum
+	    	
+	    	val xsd=stdevi(xdevi2sum,xlength)
+	    	val ysd=stdevi(ydevi2sum,ylength)
 	  
 	    	val zipdevi=xdevi.zip(ydevi)
 	  
@@ -128,18 +134,24 @@ trait Descritive{
 	  
 	  else {
 	  
+	    val sizeX=xraw.length
+	    val sizeY=yraw.length
+	    
 		val xmean=meanf(xraw)
-	  
-		val ymean=meanf(yraw)
+	    val ymean=meanf(yraw)
 	  
 		val xdevi=deviation(xraw,xmean)
 		val ydevi=deviation(yraw,ymean)
 	  
-		val xdevi2=devi_squared(xdevi)
-	  	val ydevi2=devi_squared(ydevi)
+		val xdevi2=xraw.map(each_devi_squared(xmean))
+	  	val ydevi2=yraw.map(each_devi_squared(ymean))
 	  
-	  	val xsd=stdevi(xdevi2)
-	  	val ysd=stdevi(ydevi2)
+	    	val xdevi2sum=xdevi2.sum
+	    	val ydevi2sum=ydevi2.sum
+	    	
+	    	val xsd=stdevi(xdevi2sum,sizeX)
+	    	val ysd=stdevi(ydevi2sum,sizeY)
+	  
 	  
 	  	val zipdevi=xdevi.zip(ydevi)
 	  
@@ -155,8 +167,10 @@ trait Descritive{
 	
 	def regressionline(slope_intercept:(Double,Double)):Double=>Double={(x:Double)=>slope_intercept._1*x+slope_intercept._2}
 
+	
 	def residual(x:Vector[Double],raw:Vector[Double],xregline:(Double=>Double)):Vector[Double]=
 	  x.zip(raw).map{ a => a._2-xregline(a._1) }
 
+	
 	def mkLine=println("-------------------------------------------------------------")
 }

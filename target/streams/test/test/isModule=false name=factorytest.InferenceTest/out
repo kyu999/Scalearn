@@ -1,4 +1,3 @@
 [0m[[0minfo[0m] [0m[32mInferenceTest:[0m[0m
 [0m[[0minfo[0m] [0m[32m- paired-t[0m[0m
-[0m[[0minfo[0m] [0m[31m- welch_t_test *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  true did not equal false (InferenceTest.scala:42)[0m[0m
+[0m[[0minfo[0m] [0m[32m- welch_t_test[0m[0m

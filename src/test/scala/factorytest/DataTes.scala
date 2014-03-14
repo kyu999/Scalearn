@@ -42,7 +42,7 @@ class DataTes extends FunSuite {
 	  assert(d7.sd===6.408699)
 	}	
     test("biased_variance"){
-      assert(d6.biasvari==43.359375)
+      assert(d6.samplevari==43.359375)
     }
     test("unbiased_variance"){
       assert(d6.vari==49.55357142857143)      

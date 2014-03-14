@@ -37,6 +37,7 @@ class DatasetTes extends FunSuite {
     test("pear"){
       
       assert(d3.pears(0)===(-0.941)," -> pear")
+      assert(d3.pears(0)===d3.pearRaw(x, y))
       
     }
     

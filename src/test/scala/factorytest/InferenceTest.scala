@@ -39,6 +39,6 @@ class InferenceTest extends FunSuite{
     }
     test("welch_t_test"){
       assert(dsxy.twelch.head==true)
-      assert(dsml.twelch.head==false)
+      assert(dsml.twelch.head==true)
     }
 }

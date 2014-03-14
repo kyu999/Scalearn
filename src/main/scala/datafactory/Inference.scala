@@ -9,8 +9,8 @@ trait Inference extends Descritive{
       val gap=rawX.zip(rawY).map(a=>a._1-a._2)
 	  val mean=meanf(gap)
 	  val n=gap.length
-	  val devisquared=devi_squared(deviation(gap,mean))
-	  val unbiased_vari=unbiased_variance(devisquared)
+	  val dv_squared_sum=gap.map(each_devi_squared(mean)).sum
+	  val unbiased_vari=unbiased_variance(dv_squared_sum,n)
 	  val se=sterror(unbiased_vari,n)
 	  val tval=mean/se
 	  	  
@@ -21,24 +21,23 @@ trait Inference extends Descritive{
 	  //ｔ値とは、２つの山がどのくらいずれているかを示す値です。たくさんずれていれば「両者は違う山から出てきた標本らしい」という結論が導かれます。
 	  //t分布の確率密度関数からp値を取得。。。ただし自由度が絡んでいるので分布表をMapや関数化した方がてっとりばやいかも
 
-	
 	def welch_t_test(rawX:Vector[Double],rawY:Vector[Double])={
 	  
 	  val meanX=meanf(rawX)
 	  val meanY=meanf(rawY)	  
+	 
+	  val sizeX=rawX.length
+	  val sizeY=rawY.length
 	  	  	  
-	  val devi2X=devi_squared(deviation(rawX,meanX))
-	  val devi2Y=devi_squared(deviation(rawY,meanY))
+	  val devi2Xsum=rawX.map(each_devi_squared(meanX)).sum
+	  val devi2Ysum=rawY.map(each_devi_squared(meanY)).sum
 	  
-	  val unbiase_variX=unbiased_variance(devi2X)
-	  val unbiase_variY=unbiased_variance(devi2Y)
+	  val unbiase_variX=unbiased_variance(devi2Xsum,sizeX)
+	  val unbiase_variY=unbiased_variance(devi2Ysum,sizeY)
 	  
 	  println("variX : "+unbiase_variX)
 	  println("variY : "+unbiase_variY)
-	  
-	  val sizeX=rawX.length
-	  val sizeY=rawY.length
-	  
+	  	  
 	  val vari_averX=unbiase_variX/sizeX
 	  val vari_averY=unbiase_variY/sizeY
 	  

@@ -7,7 +7,6 @@ trait LinearRegression extends Descritive{
 	  
       val m=y.length
       val mean=y.reduce((a,b)=>a+b)/m
-      val sd=stdevi(deviation(y,mean))
 	  val zipped=y.zip(x)
 	  
       var tempθ0=0.0

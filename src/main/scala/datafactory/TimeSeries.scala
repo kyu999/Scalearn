@@ -8,7 +8,7 @@ trait TimeSeries extends Descritive{
 	  lazy val lag_raw=raw.drop(lag)
 	  if(raw.length<=lag) 0  
 	  else lag_raw.zip(raw).map{x=>(x._1-mean)*(x._2-mean)}.reduce{(a,b)=>a+b}/raw.length
-	  }
+	  } 
 	/*
 	 r(h)=E{( Xt - µt )*( Xt+h - µt+h )} 
 	 時間軸をずらすだけなのでµt==µt+h。２つの関数がかぶっていない部分は常に自己共分散が0になるので
