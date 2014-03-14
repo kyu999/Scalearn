@@ -32,13 +32,11 @@ class InferenceTest extends FunSuite{
     
     
     test("paired-t"){
-      assert(false==dsxy.tpair.head)
-      assert(false==dsst.tpair.head)
-      //println(dsml.tpair.head)
-      //println("df : "+(dm.n-1))
+      assert((-2.965614910077132,false)==dsxy.tpair.head)
+      assert((3.0353754156485913,false)==dsst.tpair.head)
     }
     test("welch_t_test"){
-      assert(dsxy.twelch.head==true)
-      assert(dsml.twelch.head==true)
+      assert(dsxy.twelch.head==(-1.299867367239363,true))
+      assert(dsml.twelch.head==(-14.599927901768629,false))
     }
 }

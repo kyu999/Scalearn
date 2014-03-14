@@ -16,10 +16,10 @@ object t {
 	      else criteria=1.960
 	  }
 	  
-	  println("df : "+df)
-	  println("criteria : "+criteria)
-	  println("t-value : "+t)
-	  println("帰無仮説：２つは同じ母集団を持つ。２つの標本平均の検定によると。")
+//	  println("df : "+df)
+//	  println("criteria : "+criteria)
+//	  println("t-value : "+t)
+//	  println("帰無仮説：２つは同じ母集団を持つ。２つの標本平均の検定によると。")
 	  
 	  if(criteria<abs(t)) false
 	  else true

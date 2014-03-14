@@ -4,7 +4,7 @@ import distribution.t
 
 trait Inference extends Descritive{
 
-	def paired_t_test(rawX:Vector[Double],rawY:Vector[Double]):Boolean={
+	def paired_t_test(rawX:Vector[Double],rawY:Vector[Double]):(Double,Boolean)={
 	 
       val gap=rawX.zip(rawY).map(a=>a._1-a._2)
 	  val mean=meanf(gap)
@@ -14,14 +14,14 @@ trait Inference extends Descritive{
 	  val se=sterror(unbiased_vari,n)
 	  val tval=mean/se
 	  	  
-	  t.table(n-1,tval)
+	  ( tval , t.table(n-1,tval) )
 	}
   	  //関連2群の検定：帰無仮説=>２つの群は同じ母集団を持つ
 	  //false => ２つの群には有為な差が存在する
 	  //ｔ値とは、２つの山がどのくらいずれているかを示す値です。たくさんずれていれば「両者は違う山から出てきた標本らしい」という結論が導かれます。
 	  //t分布の確率密度関数からp値を取得。。。ただし自由度が絡んでいるので分布表をMapや関数化した方がてっとりばやいかも
 
-	def welch_t_test(rawX:Vector[Double],rawY:Vector[Double])={
+	def welch_t_test(rawX:Vector[Double],rawY:Vector[Double]):(Double,Boolean)={
 	  
 	  val meanX=meanf(rawX)
 	  val meanY=meanf(rawY)	  
@@ -34,10 +34,7 @@ trait Inference extends Descritive{
 	  
 	  val unbiase_variX=unbiased_variance(devi2Xsum,sizeX)
 	  val unbiase_variY=unbiased_variance(devi2Ysum,sizeY)
-	  
-	  println("variX : "+unbiase_variX)
-	  println("variY : "+unbiase_variY)
-	  	  
+	  	  	  
 	  val vari_averX=unbiase_variX/sizeX
 	  val vari_averY=unbiase_variY/sizeY
 	  
@@ -49,11 +46,7 @@ trait Inference extends Descritive{
 	  
 	  val df=nume/(denoleft+denoright)
 	  
-//	  println("nume : "+nume)
-//	  println("denoleft : "+denoleft)
-//	  println("denoright : "+denoright)
-	  
-	  t.table(df.toInt,tval)
+	  ( tval , t.table(df.toInt,tval) )
 	  
 	}
 	// 等分散検定=>独立2群 の検定は多重検定にあたるためウェルチのみを用いるべきと言う考えにのっとりStudent T検定は実装しない
