@@ -41,7 +41,7 @@ trait Inference extends Descritive{
 	  val vari_averX=unbiase_variX/sizeX
 	  val vari_averY=unbiase_variY/sizeY
 	  
-	  val tval=(meanX-meanY)/sqrt( vari_averX + vari_averX )
+	  val tval=(meanX-meanY)/sqrt( vari_averX + vari_averY )
 	  	  
 	  val nume= pow( vari_averX + vari_averY ,2)
 	  val denoleft= ( pow(unbiase_variX,2) / ( pow(sizeX,2)*(sizeX-1) ) )
