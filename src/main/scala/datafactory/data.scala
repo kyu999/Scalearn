@@ -30,7 +30,7 @@ class data(x:Vector[Double]) extends Descritive{
     val sd=sqrt(vari)
     //データを標本と見なし不偏分散を用いて算出した母標準偏差推定値。標本自体の標準偏差が必要ならsamplesdを使うべし
     
-    lazy val samplesd=popstdevi(dvsquaredsum,n)
+    lazy val samplesd=samplestdevi(dvsquaredsum,n)
     //標本データ自体の標準偏差。母集団推定をしない場合に用いる
     
     
@@ -67,7 +67,7 @@ class data(x:Vector[Double]) extends Descritive{
     //時系列データ化
     
     def ::(component:data)=dase(component,this)
-    //２つのdaを１つのdsにする
+    //２つのdataを１つのdaseにする
         
 	def summary={ 
 	    Vector(name+" : "+raw,"length : "+n,"mean -> "+mean,"deviation -> "+dv,

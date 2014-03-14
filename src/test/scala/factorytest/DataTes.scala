@@ -62,9 +62,6 @@ class DataTes extends FunSuite {
       assert(d3.time===(1 to z.length))
       assert(d4.time===(1 to a.length))
     }
-    test("partial function"){
-      println("p : "+d1.testmapping)
-    }
     
     
 

@@ -13,29 +13,20 @@ trait Descritive{
 	def each_devi(average:Double):Double=>Double = {
 	  		(elt:Double) => elt - average
 	}
-	//println("in each devi, mean : "+average)
 	  		
 	def each_squared(each_devi:Double=>Double):Double=>Double = {
 	  		(elt:Double) => pow(each_devi(elt) ,2) 
 	}
 	  		
 	def each_devi_squared:Double=>(Double=>Double) 
-			= each_devi _  andThen each_squared _  		//最初のDoubleはaverage、２番目のDoubleはElement
-	//関数合成をする時は常に前の関数の戻り値を後の関数が受け取れるようにしなければならない
-	
-	//val testpartial=eachdevisquared(10)(7)
-	//right : elt value , left : average
-	
-	val testmapping=(0 to 10).map(_.toDouble).map(each_devi_squared(3))
-	
-	
+			= each_devi _  andThen each_squared _  		
+	//最初のDoubleはaverage、２番目のDoubleはElement.averageを受け取って、elementを受け取ってDoubleを返す関数を返す
+	//関数合成をする時は常に前の関数の戻り値を後の関数が受け取れるようにしなければならない	
 	
 	def devi_squared(devraw:Vector[Double]):Vector[Double]=devraw.map(x=>(pow(x,2))) 
 	//各偏差の２乗
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
 	
-	
-	//varianceのためにdevi_squared_summationを作っても良いかも
 	def biased_variance(dvsquaredsum:Double,n:Int):Double=dvsquaredsum/(n)
 	//分散
 	
@@ -45,7 +36,7 @@ trait Descritive{
 	def stdevi(dvsquaredsum:Double,n:Int):Double=sqrt(dvsquaredsum/(n-1))	
 	//√分散＝標準偏差.ただし不偏分散を使用したため標本標準偏差。通常標本分散は母集団分散よりも小さくなりがちなので標本抽出による偏りを是正するために-1している
 	
-	def popstdevi(dvsquaredsum:Double,n:Int):Double=sqrt(dvsquaredsum/n)	
+	def samplestdevi(dvsquaredsum:Double,n:Int):Double=sqrt(dvsquaredsum/n)	
 	
 	def sterror(unbiase_vari:Double,n:Int)=sqrt(unbiase_vari/n)
 	
@@ -74,12 +65,9 @@ trait Descritive{
 	  
 	    	val xdevi=deviation(xraw,xmean)
 	    	val ydevi=deviation(yraw,ymean)
-	  
-	    	val xdevi2=devi_squared(xdevi)
-	    	val ydevi2=devi_squared(ydevi)
-	  
-	    	val xdevi2sum=xdevi2.sum
-	    	val ydevi2sum=ydevi2.sum
+	    	
+	    	val xdevi2sum=devi_squared(xdevi).sum
+	    	val ydevi2sum=devi_squared(ydevi).sum
 	    	
 	    	val xsd=stdevi(xdevi2sum,xlength)
 	    	val ysd=stdevi(ydevi2sum,ylength)
@@ -115,7 +103,7 @@ trait Descritive{
 	  */
 	
 	def euclidean(xraw:Vector[Double],yraw:Vector[Double])={
-	  val sum=xraw.zip(yraw).map(a=>pow(a._1-a._2,2)).reduce((a,b)=>a+b)
+	  val sum=xraw.zip(yraw).map(a=>pow(a._1-a._2,2)).sum
 	  1/(1+sqrt(sum))	//0で除算してエラーになるのを防ぐため。
 	}
 	
@@ -142,12 +130,9 @@ trait Descritive{
 	  
 		val xdevi=deviation(xraw,xmean)
 		val ydevi=deviation(yraw,ymean)
-	  
-		val xdevi2=xraw.map(each_devi_squared(xmean))
-	  	val ydevi2=yraw.map(each_devi_squared(ymean))
-	  
-	    	val xdevi2sum=xdevi2.sum
-	    	val ydevi2sum=ydevi2.sum
+		
+		val xdevi2sum=xraw.map(each_devi_squared(xmean)).sum
+	    	val ydevi2sum=yraw.map(each_devi_squared(ymean)).sum
 	    	
 	    	val xsd=stdevi(xdevi2sum,sizeX)
 	    	val ysd=stdevi(ydevi2sum,sizeY)

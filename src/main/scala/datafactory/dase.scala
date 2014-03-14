@@ -6,18 +6,25 @@ class dase(datalist:Vector[data]) extends Descritive
 			with Inference with Bayes with Multivariate{
   
   //datalistが欲しくなったらresolveで分解しよう。ただ、そもそもdataをdatasetに引数としていれてるんだからdataが欲しいとはあまりならないと思われる
- 
+  //datalist.map(~)を多用してしまっているがdatalistのリストはそれほど巨大にならないと想定している上に、各変数の統計量は既にdata内で算出されている。また、使用頻度の高くなさそうなものは遅延評価にしているため計算量的にそんなに問題ない。
+    
     val raw:Vector[Vector[Double]]=datalist.map(a=>a.raw)
     
-    val mean=datalist.map(_.mean)
+    val mean=datalist.map(_.mean)		
+
+    val vari=datalist.map(_.vari)
     
     val sd=datalist.map(_.sd)
     
+    lazy val samplevari=datalist.map(_.samplevari)
+    
+    lazy val samplesd=datalist.map(_.samplesd)
     
     lazy val combi:Vector[Vector[data]]=datalist.combinations(2).toVector
+    //組み合わせ(2)
 	
     lazy val covar=combi.map{a=>covariance(zipdevi(a(0).dv,a(1).dv))}.toVector
-	
+	//共分散
     
     lazy val pears=combi.map{a=>
       
@@ -72,7 +79,7 @@ class dase(datalist:Vector[data]) extends Descritive
 	def resolve:Vector[data]=datalist
 	//dsを分解しdaのVectoruenceを返す
 	
-	def tomat=new m(raw)
+	def tomat=new m(raw) 
 	//def mat(direction)={データを行列に変換＝＝行列クラスのインスタンスを返す}
 	
 	def ::(component:data)=new dase(component+:datalist)
