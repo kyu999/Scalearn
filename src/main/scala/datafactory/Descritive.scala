@@ -4,7 +4,7 @@ import scala.math._
 
 trait Descritive{ 
     
-	def meanf(raw:Vector[Double]):Double=raw.reduce((a,b)=>a+b)/raw.length
+	def meanf(raw:Vector[Double]):Double=raw.sum/raw.length
 	//平均
 	
 	def deviation(raw:Vector[Double],average:Double):Vector[Double]=raw.map(each_devi(average))

@@ -1,28 +1,28 @@
 [0m[[0minfo[0m] [0mUpdating {file:/Users/kyu/Documents/Scala/Scalearn/}scalearn...[0m
-[0m[[0mdebug[0m] [0m:: resolving dependencies :: scalearn#scalearn_2.10;0.13.1[0m
+[0m[[0mdebug[0m] [0m:: resolving dependencies :: Kyu#scalearn_2.10;0.01[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
 [0m[[0mdebug[0m] [0m	refresh = false[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@12331143[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5ca7d478[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.3] org.scala-lang#scala-library;2.10.3[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.slick#slick_2.10;1.0.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.slick#slick_2.10;1.0.0 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.slick#slick_2.10;1.0.0[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: com.typesafe.slick#slick_2.10;1.0.0[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.slick#slick_2.10;1.0.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
@@ -39,30 +39,30 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-nop;1.6.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.slf4j#slf4j-nop;1.6.4 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.slf4j#slf4j-nop;1.6.4[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.slf4j#slf4j-nop;1.6.4[0m
 [0m[[0mdebug[0m] [0m	found org.slf4j#slf4j-nop;1.6.4 in public[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.h2database#h2;1.3.166 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.h2database#h2;1.3.166 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.h2database#h2;1.3.166[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: com.h2database#h2;1.3.166[0m
 [0m[[0mdebug[0m] [0m	found com.h2database#h2;1.3.166 in public[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.jscala#jscala-macros_2.10;0.4-SNAPSHOT ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jscala#jscala-macros_2.10;0.4-SNAPSHOT {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0mdon't use cache for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT: changing=true[0m
@@ -81,8 +81,8 @@
 [0m[[0mdebug[0m] [0m		=> https://oss.sonatype.org/content/repositories/snapshots/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/jscala-macros_2.10-0.4-SNAPSHOT.pom (0.4-SNAPSHOT)[0m
 [0m[[0mdebug[0m] [0m	default-cache: revision in cache (not updated): org.jscala#jscala-macros_2.10;0.4-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	found org.jscala#jscala-macros_2.10;0.4-SNAPSHOT in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
@@ -107,17 +107,17 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
@@ -129,22 +129,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
@@ -157,18 +157,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [test][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
@@ -180,22 +180,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
@@ -208,15 +208,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scalatest#scalatest_2.10;2.0 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.10;2.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.10;2.0 {test=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalatest#scalatest_2.10;2.0[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scalatest#scalatest_2.10;2.0[0m
 [0m[[0mdebug[0m] [0m	found org.scalatest#scalatest_2.10;2.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scalatest#scalatest_2.10;2.0 [test->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scalatest#scalatest_2.10;2.0 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
@@ -240,21 +240,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scalatest#scalatest_2.10;2.0 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [compile-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
@@ -266,22 +266,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
@@ -294,20 +294,20 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [optional][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [runtime-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
@@ -319,22 +319,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
@@ -347,20 +347,20 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [test-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [test][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [test-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
@@ -372,22 +372,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
@@ -400,10 +400,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scalatest#scalatest_2.10;2.0 [test->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scalatest#scalatest_2.10;2.0 [test->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scalatest#scalatest_2.10;2.0 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.10;2.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
@@ -422,27 +422,27 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scalatest#scalatest_2.10;2.0 [test->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [optional][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [plugin][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [plugin][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'sources'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [sources][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [sources][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'docs'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [docs][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [docs][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [pom][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [pom][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'scala-tool'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for scalearn#scalearn_2.10;0.13.1 [scala-tool][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-compiler;2.10.3 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [scala-tool][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-compiler;2.10.3 [scala-tool->default][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.10.3 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-compiler;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.10.3 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-compiler;2.10.3 [scala-tool->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-compiler;2.10.3 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-compiler;2.10.3 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-compiler;2.10.3 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#scala-library;2.10.3 [compile->default][0m
@@ -466,8 +466,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#scala-reflect;2.10.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.3->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.3->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-compiler;2.10.3 [scala-tool->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-compiler;2.10.3 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-compiler;2.10.3 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-compiler;2.10.3 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#jline;2.10.3 [optional->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#jline;2.10.3 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.3 {optional=[compile(*), master(*)]}[0m
@@ -482,12 +482,12 @@
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.fusesource.jansi#jansi;1.4[0m
 [0m[[0mdebug[0m] [0m	found org.fusesource.jansi#jansi;1.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.3->org.fusesource.jansi#jansi;1.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [scala-tool->default][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [scala-tool->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [scala-tool->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [scala-tool->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies scalearn#scalearn_2.10;0.13.1->org.scala-lang#scala-library;2.10.3 [scala-tool->optional(default)][0m
-[0m[[0mdebug[0m] [0m	resolved ivy file produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/scalearn/scalearn_2.10/0.13.1/resolved.xml.xml[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/Kyu/scalearn_2.10/0.01/resolved.xml.xml[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.3!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.slick#slick_2.10;1.0.0!slick_2.10.jar[0m
@@ -503,19 +503,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.3!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3869ms :: artifacts dl 32ms[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 compile produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 runtime produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 test produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 provided produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 optional produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 compile-internal produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 runtime-internal produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 test-internal produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 plugin produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 sources produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 docs produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 pom produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for scalearn#scalearn_2.10;0.13.1 scala-tool produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/scalearn-scalearn_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3869ms resolve - 32ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5328ms :: artifacts dl 14ms[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 provided produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 optional produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile-internal produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime-internal produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test-internal produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 plugin produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 sources produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (5328ms resolve - 14ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -237,3 +237,13 @@ compile
 test
 compile
 test
+reload
+test
+reload
+test
+publish
+reload
+update
+clean
+test
+run

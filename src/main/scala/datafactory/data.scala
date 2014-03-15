@@ -13,9 +13,13 @@ class data(x:Vector[Double]) extends Descritive{
     
     val raw=x.toVector
     
-    val mean=meanf(x)
-    
+    val sum=x.sum
+
+    val mean=sum/n
+        
 	lazy val dv=deviation(x,mean)
+	
+	lazy val squaredsum=x.map(pow(_,2)).sum
 	
 	val dvsquared=x.map(each_devi_squared(mean))
 	

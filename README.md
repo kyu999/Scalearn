@@ -1,4 +1,6 @@
 Scalearn
 ========
 
-The goal of this project is to implement software which enable us to analyze data immidiately not only for professional data-analyst but also for all scala developers dealing with data. 
+Simple library for statistics, time series analysis, and machine learning in Scala
+
+documentation : http://kyu999.github.io/Scalearn/
