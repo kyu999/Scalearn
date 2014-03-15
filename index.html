@@ -34,8 +34,9 @@
         <section id="main_content">
           <h3>
 <a name="welcome-to-scalearn" class="anchor" href="#welcome-to-scalearn"><span class="octicon octicon-link"></span></a>Welcome to Scalearn</h3>
+<img src="images/scala.png" style="float:right">
 
-<p>This library would help you to deal with a bunch of data by making use of statistics, time series analysis, and machine learning. Although such academic domains seem to be difficult for most developers ( including me! ) , the main target users of this library are ordinary scala developers; in that sense, it focus on usability rather than speed or efficiency. Besides, I hope this could be useful for beginners of scala.</p>
+<p>This library would help you to deal with a bunch of data by making use of statistics, time series analysis, and machine learning. Although such academic domains seem to be difficult for most developers ( including me! ) , this library targets ordinary scala developers; as a result, it focus on usability rather than precise definition. Besides, I hope this could be useful for beginners of scala.</p>
 
 <h3>
 <a name="prerequisite" class="anchor" href="#prerequisite"><span class="octicon octicon-link"></span></a>Prerequisite</h3>
@@ -66,7 +67,7 @@
 			<br>
 		<pre><code>$ brew install sbt</code></pre>
 
-	<li>At root directory, type "sbt package"( assume you need to install sbt first. Homebrew makes it easier to install both scala and sbt)</li>
+	<li>At root directory, type "sbt package"</li>
 	<br>
 	<pre><code>$ sbt package
 </code></pre>
@@ -75,31 +76,102 @@
 
 <h3>
 <a name="Quick Start" class="anchor" href="#Quick Start"><span class="octicon octicon-link"></span></a>Quick Start</h3>
-<p>If you are interested in statistics, you need to import "datafactory package" and "Converter object" first of all: they allows you to obtain statistical value easily. </p>
+
+<br>
+<h4>#Descriptive Statistics</h4>
+<br>
+<p>If you are interested in statistics, take a look at "datafactory" package since it is what you need to handle. Even compared to the other statistical environment, scala has a variety of simple but powerful functions to process data; therefore, the flow of statistical analysis in Scalearn might be like this.</p>
+<ol>
+	<li>get raw data</li>
+	<li>process data through a dozen of methods ( such as filter, map, groupBy ... )</li>
+	<li>convert that raw data into instance of "data class"</li>
+	<li>obtain statistical value by calling properties and methods</li>
+	<li>( If wanna treat it as time series data, convert it into instance of "tsda" class )</li>
+</ol>
+
+<p>Well, Let's take some examples</p>
+
+<p>First of all, you need to import "datafactory package" and "Converter object"; they allow you to obtain statistical value easily. </p>
 	<pre><code>import datafactory._
-import Converter._</code></pre>			
+import Converter._</code></pre>		
+
+<p>and assume you have raw data already( let me say just "raw" to distinguish with data instance) </p>	
+
+<pre><code>val raw1:Vector[Double] = Vector(1.0,2,3,4,5,6)</code></pre>
+
+<p>What I want you to be careful here is...
+	<ol>
+		<li>The collection must be Vector</li>
+		<li>The type of each element is "Double" type</li>
+	</ol>
+	then, process somehow...
+</p>
+
+<pre><code>val processed:Vector[Double] = raw.filter( elt => elt % 2 == 0 )</code></pre>
+
+<p>Ok, we could start to use Scalearn already. Create data instance</p>
+
+<pre><code>val data1:data = data(processed)
+val data2:data = Vector(1,2,3,4,5).toda
+
+val dase1:dase = dase(data1,data2,data1)
+val dase2:dase = new dase(Vector(data1,data2))
+val dase3:dase = Vector(raw1,raw2,raw3).tods</code></pre>
+
+<p>Get statistical value for data1</p>
+
+<pre><code>val mean:Double = data1.mean
+
+val standard_deviation:Double = data1.sd
+
+val length:Int = data1.n
+
+val deviation:Vector[Double] = data1.dv
+
+val axis_of_time:Vector[Double] = data1.time
+
+val regression_slope_intercept:(Double,Double) = data1.reg
+
+val regression_line:Double=>Double = data1.regline
+
+val residual:Vector[Double] = data1.resi</code></pre>
+
+<p>Scalearn treats data as a sample obtained from population and assume that we wanna know about population ( not sample data itself ), so "sd" is estimated standard deviation of population or square root of unbiased variance ( If you are not familiar with statistics, don't worry about this and just ignore cuz it is actually tiny problem when sample size is big enough ).
+
+<p>In the case wanna know about variance and standard deviation of sample itself</p>
+<pre><code>val biased_variance = data1.samplevari
+val sample_standard_deviation = data1.samplesd</code></pre>
+
+
+<br>
+<h4>#Statistical Inference</h4>
+<br>
+
+<p>Quite often, we have to distinguish whether the samples are taken from the same population or not; in other words, we should figure out the range of accidental error. Basically, "datafactory" package offers you understandable tools so as to analyze statistically in almost same way; just use data class ( precisely, data and dase class ).
+<pre><code>val tpair_vector :Vector[(Double,Boolean)] = dase1.tpair
+val twelch_vector :Vector[(Double,Boolean)] = dase1.twelch</code></pre>
 
 
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<br>
+<h4>#Time Series Analysis</h4>
+<br>
+<ol>
+	<li>Create instance of "tsda" class ( stands for time series data ) or "tsds" class ( stands for time series dataset ). Either of them below is available.</li>
+	<br>
+	<pre><code>val ts1:tsda = tsda(1.0,2,3,4)
+val ts2:tsda = new tsda(Vector(1.0,2,3,4,5))
+val ts3:tsda = data1.ts
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+val tsdase1:tsds = tsds(ts1,ts2,ts3)
+val tsdase2:tsds = new tsds(Vector(ts1,ts2,ts3))
+val tsdase3:tsds = dase3.ts</code></pre>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+	<p>Since tsda class inherits data class, you can call properties and methods of data class freely.
+</ol>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
         </section>
 
         <footer>
