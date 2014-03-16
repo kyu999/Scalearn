@@ -1,6 +1,8 @@
 package datafactory
 import Converter._
 import scala.math._
+import org.graphstream.algorithm.measure._
+
 
 class data(x:Vector[Double]) extends Descritive{
 
@@ -73,6 +75,12 @@ class data(x:Vector[Double]) extends Descritive{
     def ::(component:data)=dase(component,this)
     //２つのdataを１つのdaseにする
         
+    def draw={
+    	val chart:ChartSeries1DMeasure=new ChartSeries1DMeasure(name)
+    	x.foreach(elt=>chart.addValue(elt))
+    	chart.plot()
+    }
+    
 	def summary={ 
 	    Vector(name+" : "+raw,"length : "+n,"mean -> "+mean,"deviation -> "+dv,
 	        "standard deviation -> "+sd).foreach(println)

@@ -247,3 +247,15 @@ update
 clean
 test
 run
+reload
+update
+reload
+update
+test
+clean
+reload
+update
+test
+reload
+update
+test

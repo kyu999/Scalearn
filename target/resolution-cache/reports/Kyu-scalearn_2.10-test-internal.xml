@@ -7,10 +7,10 @@
 		revision="0.01"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140315145430"/>
+		date="20140316112444"/>
 	<dependencies>
 		<module organisation="org.scalatest" name="scalatest_2.10">
-			<revision name="2.0" status="release" pubdate="20131031231328" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="8">
+			<revision name="2.0" status="release" pubdate="20131031231328" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="21">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="6568" time="0" location="/Users/kyu/.ivy2/cache/org.scalatest/scalatest_2.10/ivy-2.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalatest/scalatest_2.10/2.0/scalatest_2.10-2.0.pom"/>
 				<caller organisation="Kyu" name="scalearn_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.0" rev-constraint-default="2.0" rev-constraint-dynamic="2.0" callerrev="0.01"/>
@@ -22,13 +22,175 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.10.0" status="release" pubdate="20121220022932" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="9">
+			<revision name="2.10.0" status="release" pubdate="20121220022932" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="22">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
 				<metadata-artifact status="no" details="" size="2541" time="0" location="/Users/kyu/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="file:/Users/kyu/Desktop/activator-0.4.2/repository/org.scala-lang/scala-reflect/2.10.0/ivys/ivy.xml"/>
 				<caller organisation="org.scalatest" name="scalatest_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.0"/>
 				<artifacts>
 					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3149351" time="0" location="/Users/kyu/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.0.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.0/scala-reflect-2.10.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.graphstream" name="gs-algo">
+			<revision name="1.2" status="release" pubdate="20130604224447" resolver="public" artresolver="public" homepage="http://graphstream-project.org" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="12">
+				<license name="LGPL3" url="http://www.gnu.org/copyleft/lesser.html"/>
+				<license name="Cecill-C" url="http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html
+			"/>
+				<metadata-artifact status="successful" details="" size="8556" time="1175" location="/Users/kyu/.ivy2/cache/org.graphstream/gs-algo/ivy-1.2.xml" searched="true" original-local-location="/Users/kyu/.ivy2/cache/org.graphstream/gs-algo/ivy-1.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.pom"/>
+				<caller organisation="Kyu" name="scalearn_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="0.01"/>
+				<artifacts>
+					<artifact name="gs-algo" type="jar" ext="jar" status="successful" details="" size="318295" time="1362" location="/Users/kyu/.ivy2/cache/org.graphstream/gs-algo/jars/gs-algo-1.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jfree" name="jfreechart">
+			<revision name="1.0.14" status="release" pubdate="20111121143516" resolver="public" artresolver="public" homepage="http://www.jfree.org/jfreechart/" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="15">
+				<license name="GNU Lesser General Public Licence" url="http://www.gnu.org/licenses/lgpl.txt"/>
+				<metadata-artifact status="successful" details="" size="7804" time="1191" location="/Users/kyu/.ivy2/cache/org.jfree/jfreechart/ivy-1.0.14.xml" searched="true" original-local-location="/Users/kyu/.ivy2/cache/org.jfree/jfreechart/ivy-1.0.14.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.pom"/>
+				<caller organisation="org.graphstream" name="gs-algo" conf="default, compile, runtime, master" rev="1.0.14" rev-constraint-default="1.0.14" rev-constraint-dynamic="1.0.14" callerrev="1.2"/>
+				<artifacts>
+					<artifact name="jfreechart" type="jar" ext="jar" status="successful" details="" size="1461633" time="2248" location="/Users/kyu/.ivy2/cache/org.jfree/jfreechart/jars/jfreechart-1.0.14.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.lowagie" name="itext">
+			<revision name="2.1.5" status="release" pubdate="20090421045248" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.lowagie.com/iText/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="18">
+				<license name="Mozilla Public License" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<metadata-artifact status="no" details="" size="2738" time="0" location="/Users/kyu/.ivy2/cache/com.lowagie/itext/ivy-2.1.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/lowagie/itext/2.1.5/itext-2.1.5.pom"/>
+				<caller organisation="org.jfree" name="jfreechart" conf="compile, runtime" rev="2.1.5" rev-constraint-default="2.1.5" rev-constraint-dynamic="2.1.5" callerrev="1.0.14"/>
+				<artifacts>
+					<artifact name="itext" type="jar" ext="jar" status="no" details="" size="1117661" time="0" location="/Users/kyu/.ivy2/cache/com.lowagie/itext/jars/itext-2.1.5.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/lowagie/itext/2.1.5/itext-2.1.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="bouncycastle" name="bcprov-jdk14">
+			<revision name="138" status="release" pubdate="20080405000549" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.bouncycastle.org/java.html" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="20">
+				<license name="Bouncy Castle License" url="http://www.bouncycastle.org/licence.html"/>
+				<metadata-artifact status="no" details="" size="2645" time="0" location="/Users/kyu/.ivy2/cache/bouncycastle/bcprov-jdk14/ivy-138.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/bouncycastle/bcprov-jdk14/138/bcprov-jdk14-138.pom"/>
+				<caller organisation="com.lowagie" name="itext" conf="compile, runtime" rev="138" rev-constraint-default="138" rev-constraint-dynamic="138" callerrev="2.1.5"/>
+				<artifacts>
+					<artifact name="bcprov-jdk14" type="jar" ext="jar" status="no" details="" size="1551468" time="0" location="/Users/kyu/.ivy2/cache/bouncycastle/bcprov-jdk14/jars/bcprov-jdk14-138.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/bouncycastle/bcprov-jdk14/138/bcprov-jdk14-138.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="bouncycastle" name="bcmail-jdk14">
+			<revision name="138" status="release" pubdate="20080404230727" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.bouncycastle.org/java.html" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="19">
+				<license name="Bouncy Castle License" url="http://www.bouncycastle.org/licence.html"/>
+				<metadata-artifact status="no" details="" size="2645" time="0" location="/Users/kyu/.ivy2/cache/bouncycastle/bcmail-jdk14/ivy-138.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/bouncycastle/bcmail-jdk14/138/bcmail-jdk14-138.pom"/>
+				<caller organisation="com.lowagie" name="itext" conf="compile, runtime" rev="138" rev-constraint-default="138" rev-constraint-dynamic="138" callerrev="2.1.5"/>
+				<artifacts>
+					<artifact name="bcmail-jdk14" type="jar" ext="jar" status="no" details="" size="192035" time="0" location="/Users/kyu/.ivy2/cache/bouncycastle/bcmail-jdk14/jars/bcmail-jdk14-138.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/bouncycastle/bcmail-jdk14/138/bcmail-jdk14-138.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xml-apis" name="xml-apis">
+			<revision name="1.3.04" status="release" pubdate="20061222203752" resolver="public" artresolver="public" homepage="http://xml.apache.org/commons/components/external/" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="17">
+				<metadata-artifact status="successful" details="" size="1822" time="1163" location="/Users/kyu/.ivy2/cache/xml-apis/xml-apis/ivy-1.3.04.xml" searched="true" original-local-location="/Users/kyu/.ivy2/cache/xml-apis/xml-apis/ivy-1.3.04.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom"/>
+				<caller organisation="org.jfree" name="jfreechart" conf="compile, runtime" rev="1.3.04" rev-constraint-default="1.3.04" rev-constraint-dynamic="1.3.04" callerrev="1.0.14"/>
+				<artifacts>
+					<artifact name="xml-apis" type="jar" ext="jar" status="successful" details="" size="194354" time="1168" location="/Users/kyu/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.3.04.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jfree" name="jcommon">
+			<revision name="1.0.17" status="release" pubdate="20111017192602" resolver="public" artresolver="public" homepage="http://www.jfree.org/jcommon/" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="16">
+				<license name="GNU Lesser General Public Licence" url="http://www.gnu.org/licenses/lgpl.txt"/>
+				<metadata-artifact status="successful" details="" size="6847" time="1207" location="/Users/kyu/.ivy2/cache/org.jfree/jcommon/ivy-1.0.17.xml" searched="true" original-local-location="/Users/kyu/.ivy2/cache/org.jfree/jcommon/ivy-1.0.17.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.pom"/>
+				<caller organisation="org.jfree" name="jfreechart" conf="compile, runtime" rev="1.0.17" rev-constraint-default="1.0.17" rev-constraint-dynamic="1.0.17" callerrev="1.0.14"/>
+				<artifacts>
+					<artifact name="jcommon" type="jar" ext="jar" status="successful" details="" size="506386" time="1432" location="/Users/kyu/.ivy2/cache/org.jfree/jcommon/jars/jcommon-1.0.17.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-math3">
+			<revision name="3.0" status="release" pubdate="20120305171458" resolver="public" artresolver="public" homepage="http://commons.apache.org/math/" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="14">
+				<metadata-artifact status="successful" details="" size="11590" time="1389" location="/Users/kyu/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.0.xml" searched="true" original-local-location="/Users/kyu/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.0.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.pom"/>
+				<caller organisation="org.graphstream" name="gs-algo" conf="default, compile, runtime, master" rev="3.0" rev-constraint-default="3.0" rev-constraint-dynamic="3.0" callerrev="1.2"/>
+				<artifacts>
+					<artifact name="commons-math3" type="jar" ext="jar" status="successful" details="" size="1285617" time="2374" location="/Users/kyu/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-math">
+			<revision name="2.1" status="release" pubdate="20100328094801" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/math/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="13">
+				<metadata-artifact status="no" details="" size="5887" time="0" location="/Users/kyu/.ivy2/cache/org.apache.commons/commons-math/ivy-2.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/apache/commons/commons-math/2.1/commons-math-2.1.pom"/>
+				<caller organisation="org.graphstream" name="gs-algo" conf="default, compile, runtime, master" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="1.2"/>
+				<artifacts>
+					<artifact name="commons-math" type="jar" ext="jar" status="no" details="" size="832410" time="0" location="/Users/kyu/.ivy2/cache/org.apache.commons/commons-math/jars/commons-math-2.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/apache/commons/commons-math/2.1/commons-math-2.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.graphstream" name="gs-core">
+			<revision name="1.2" status="release" pubdate="20130604223409" resolver="public" artresolver="public" homepage="http://graphstream-project.org" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="8">
+				<license name="LGPL3" url="http://www.gnu.org/copyleft/lesser.html"/>
+				<license name="Cecill-C" url="http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html
+			"/>
+				<metadata-artifact status="successful" details="" size="9193" time="1424" location="/Users/kyu/.ivy2/cache/org.graphstream/gs-core/ivy-1.2.xml" searched="true" original-local-location="/Users/kyu/.ivy2/cache/org.graphstream/gs-core/ivy-1.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom"/>
+				<caller organisation="Kyu" name="scalearn_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="0.01"/>
+				<caller organisation="org.graphstream" name="gs-algo" conf="default, compile, runtime, master" rev="[1.2,1.3)" rev-constraint-default="[1.2,1.3)" rev-constraint-dynamic="[1.2,1.3)" callerrev="1.2"/>
+				<artifacts>
+					<artifact name="gs-core" type="jar" ext="jar" status="successful" details="" size="823596" time="2771" location="/Users/kyu/.ivy2/cache/org.graphstream/gs-core/jars/gs-core-1.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.graphstream" name="pherd">
+			<revision name="1.0" status="release" pubdate="20110517155741" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://graphstream-project.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="10">
+				<license name="LGPL3" url="http://www.gnu.org/copyleft/lesser.html"/>
+				<license name="Cecill-C" url="http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html       "/>
+				<metadata-artifact status="no" details="" size="2913" time="0" location="/Users/kyu/.ivy2/cache/org.graphstream/pherd/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/graphstream/pherd/1.0/pherd-1.0.pom"/>
+				<caller organisation="org.graphstream" name="gs-core" conf="default, compile, runtime, master" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.2"/>
+				<artifacts>
+					<artifact name="pherd" type="jar" ext="jar" status="no" details="" size="46227" time="0" location="/Users/kyu/.ivy2/cache/org.graphstream/pherd/jars/pherd-1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/graphstream/pherd/1.0/pherd-1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.graphstream" name="mbox2">
+			<revision name="1.0" status="release" pubdate="20110517155724" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://graphstream-project.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="11">
+				<license name="LGPL3" url="http://www.gnu.org/copyleft/lesser.html"/>
+				<license name="Cecill-C" url="http://www.cecill.info/licences/Licence_CeCILL-C_V1-en.html       "/>
+				<metadata-artifact status="no" details="" size="2981" time="0" location="/Users/kyu/.ivy2/cache/org.graphstream/mbox2/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/graphstream/mbox2/1.0/mbox2-1.0.pom"/>
+				<caller organisation="org.graphstream" name="pherd" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.0"/>
+				<caller organisation="org.graphstream" name="gs-core" conf="default, compile, runtime, master" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.2"/>
+				<artifacts>
+					<artifact name="mbox2" type="jar" ext="jar" status="no" details="" size="23238" time="0" location="/Users/kyu/.ivy2/cache/org.graphstream/mbox2/jars/mbox2-1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/graphstream/mbox2/1.0/mbox2-1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="junit" name="junit">
+			<revision name="4.3.1" status="release" pubdate="20070515043407" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="9">
+				<license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
+				<metadata-artifact status="no" details="" size="2457" time="0" location="/Users/kyu/.ivy2/cache/junit/junit/ivy-4.3.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/junit/junit/4.3.1/junit-4.3.1.pom"/>
+				<caller organisation="org.graphstream" name="gs-algo" conf="default, compile, runtime, master" rev="4.3.1" rev-constraint-default="4.3.1" rev-constraint-dynamic="4.3.1" callerrev="1.2"/>
+				<caller organisation="org.graphstream" name="gs-core" conf="default, compile, runtime, master" rev="4.3.1" rev-constraint-default="4.3.1" rev-constraint-dynamic="4.3.1" callerrev="1.2"/>
+				<artifacts>
+					<artifact name="junit" type="jar" ext="jar" status="no" details="" size="106547" time="0" location="/Users/kyu/.ivy2/cache/junit/junit/jars/junit-4.3.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/junit/junit/4.3.1/junit-4.3.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

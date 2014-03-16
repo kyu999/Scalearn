@@ -15,7 +15,7 @@ class DataTes extends FunSuite {
     val x=Vector(35,20,63,59,14,44,42,25,73,38,56,69,28,46)
     val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
     val z=Vector(1,2,5,4,3)
-    val a=(1 to 10000).map(in=>nextDouble).toVector
+    val a=(1 to 1000).map(in=>in.toDouble).toVector
     val b=Vector(4,5,6,4,3,2,5,6,7,5,433,3,3,9,8,96,56,4,33,2)
     val c=Vector(90.0,75,75,75,80,65,75,80)
     val d=Vector(95.0,80,80,80,75,75,80,85)
@@ -61,6 +61,13 @@ class DataTes extends FunSuite {
       assert(d2.time===(1 to y.length))
       assert(d3.time===(1 to z.length))
       assert(d4.time===(1 to a.length))
+    }
+    
+    test("draw"){
+    	(1 to 100).map(_.toDouble).toVector.toda.draw
+    	d1.draw
+    	d2.draw
+    	d3.draw
     }
     
     
