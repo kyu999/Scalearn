@@ -36,8 +36,28 @@ class InferenceTest extends FunSuite{
       assert((-2.965614910077132,false)==dsxy.tpair.head)
       assert((3.0353754156485913,false)==dsst.tpair.head)
     }
+    
     test("welch_t_test"){
       assert(dsxy.twelch.head==(-1.299867367239363,true))
       assert(dsml.twelch.head==(-14.599927901768629,false))
+    }
+    
+    val infds1=Vector(
+    				Vector(77.4,78.2,78.1,77.8,77.9),
+    				Vector(78.3,78.2,78.4,77.3,79.1),
+    				Vector(79.2,79.3,79.1,78.2,79.3),
+    				Vector(78.9,78.8,78.1,78.1,78.9)).toinf
+    				
+    test("anova"){
+      println("grand sum : "+infds1.grandsum)
+      println("grand size : "+infds1.grandsize)
+      println("grand mean : "+infds1.grandmean)
+      println("factor df : "+infds1.factorDf)
+      println("error df : "+infds1.errorDf)
+      println("factor SS : "+infds1.factorSS)
+      println("error SS : "+infds1.errorSS)
+      println("factor MS : "+infds1.factorMS)
+      println("error MS : "+infds1.errorMS)
+      println("F : "+infds1.f)
     }
 }

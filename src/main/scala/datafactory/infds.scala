@@ -9,29 +9,49 @@ class infds(datalist:Vector[data]) extends dase(datalist){
 	
 	lazy val twelch:Vector[(Double,Boolean)]=combi.map(a=>welch_t_test(a(0).raw,a(1).raw))
 	
-	lazy val gsize=datalist.map(_.n).sum
+	lazy val grandsize=datalist.map(_.n).sum
 	//grand size
     
-    lazy val gsum=datalist.map(_.sum).sum
+    lazy val grandsum=datalist.map(_.sum).sum
     //grand sum
     
-    lazy val gmean=datalist.map(elt=>( elt.n*elt.mean ) ).sum / gsize 
+    lazy val grandmean=datalist.map(elt=>( elt.n*elt.mean ) ).sum / grandsize 
     //grand mean : 各要因データサイズの重みでの各要因の平均の荷重平均。一般平均という。
     
-    lazy val effects=datalist.map(elt=>elt.mean-gmean)
+    lazy val effects=datalist.map(elt=>elt.mean-grandmean)
     //Ai水準の効果(effect)：αi=µi-µ　これらを鑑みると、y[ij]=µ+α[i]+ε[ij]
     
-	lazy val ct=pow(gsum,2)/gsize
+	lazy val ct=pow(grandsum,2)/grandsize
 	//CT stands for correction term(修正項)
 	
-	lazy val gmeansquare=datalist.map(_.squaredsum).sum
-	//Sr : grand mean square(総平方和) == Sa+Se：ΣiΣj(Xij^2)    ※iは要因数,jは各要因のサイズ
+	lazy val grandSS=datalist.map(_.squaredsum).sum-ct
+	//Sr : grand square sum(総平方和) == Sa+Se：ΣiΣj(Xij^2)    ※iは要因数,jは各要因のサイズ
 	
-	lazy val Sa=datalist.map(elt=>pow(elt.sum,2)/elt.n).sum-ct
-	//水準の変更に伴うデータの変動の大きさを表す、級間平方和
+	lazy val factorSS=datalist.map(elt=>pow(elt.sum,2)/elt.n).sum-ct
+	//Sa : 水準の変更に伴うデータの変動の大きさを表す、級間平方和
 	
-	lazy val Se=gmeansquare-Sa
-	//同一実験条件化でのデータの変動の大きさを表す誤差平方和
+	lazy val errorSS=grandSS-factorSS
+	//Se : 同一実験条件化でのデータの変動の大きさを表す誤差平方和
+	
+	lazy val factorsize=datalist.length
+	//要因数
+
+	lazy val factorDf:Double=factorsize-1
+	//要因自由度
+	
+	lazy val errorDf:Double=grandsize-factorsize
+	//誤差自由度
+	
+	lazy val factorMS=factorSS/factorDf
+	//factor mean square
+	
+	lazy val errorMS=errorSS/errorDf
+	//error mean square
+	
+	lazy val f=factorMS/errorMS
+	//F値
+	
+	
 	
 }
 

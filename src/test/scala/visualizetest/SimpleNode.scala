@@ -1,10 +1,10 @@
 package visualizetest
 
 import org.scalatest.FunSuite	
-import org.graphstream.graph._
-import org.graphstream.graph.implementations._
+//import org.graphstream.graph._
+//import org.graphstream.graph.implementations._
 import scala.util.Random
-import org.graphstream.algorithm.measure._
+//import org.graphstream.algorithm.measure._
 
 class SimpleNode extends FunSuite{
 

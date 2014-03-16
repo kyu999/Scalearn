@@ -1,18 +1,18 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(classifytest.NaiveBayesTest, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.DataTes, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.MatrixTes, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.DatasetTes, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.LinearRegressionTes, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(visualizetest.SimpleNode, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.InferenceTest, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.TsdaTes, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.TsdsTes, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.IoTes, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(recomendtest.NaiveRecomTest, org.scalatest.tools.Framework$$anon$1@3b28c6f6, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 678 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 35[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(visualizetest.SimpleNode, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.DatasetTes, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.LinearRegressionTes, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.TsdsTes, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.InferenceTest, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(recomendtest.NaiveRecomTest, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.TsdaTes, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.DataTes, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.IoTes, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(classifytest.NaiveBayesTest, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.MatrixTes, org.scalatest.tools.Framework$$anon$1@c730916, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 642 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 36[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 11, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 35, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 36, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	factorytest.TsdaTes[0m

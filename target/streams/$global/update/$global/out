@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@16faf4ef[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@63bab9dc[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -110,24 +110,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.graphstream#gs-core;1.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@42548b72[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.graphstream/gs-core/1.2/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.graphstream#gs-core;1.2[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.graphstream#gs-core;1.2[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom (1.2)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.graphstream#gs-core;1.2!gs-core.pom(pom.original) (1424ms)[0m
-[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.graphstream/gs-core/1.2/jars/gs-core.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.jar[0m
-[0m[[0mdebug[0m] [0m	found org.graphstream#gs-core;1.2 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@47f347b6[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.graphstream#gs-core;1.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.graphstream#gs-core;1.2[0m
+[0m[[0mdebug[0m] [0m	found org.graphstream#gs-core;1.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->master(*)][0m
@@ -169,23 +155,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.graphstream#gs-algo;1.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.graphstream#gs-algo;1.2 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.graphstream/gs-algo/1.2/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.graphstream#gs-algo;1.2[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.graphstream#gs-algo;1.2[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.pom (1.2)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.graphstream#gs-algo;1.2!gs-algo.pom(pom.original) (1175ms)[0m
-[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.graphstream/gs-algo/1.2/jars/gs-algo.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.jar[0m
-[0m[[0mdebug[0m] [0m	found org.graphstream#gs-algo;1.2 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.graphstream#gs-algo;1.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.graphstream#gs-algo;1.2[0m
+[0m[[0mdebug[0m] [0m	found org.graphstream#gs-algo;1.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->master(*)][0m
@@ -200,132 +172,45 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.commons#commons-math3;3.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.commons#commons-math3;3.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.apache.commons/commons-math3/3.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.commons#commons-math3;3.0[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.commons#commons-math3;3.0[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.pom (3.0)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-math3;3.0!commons-math3.pom(pom.original) (1389ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-parent;23 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.commons#commons-parent;23 {}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.apache.commons/commons-parent/23/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.commons#commons-parent;23[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.commons#commons-parent;23[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.pom (23)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-parent;23!commons-parent.pom(pom.original) (1737ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache#apache;9 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache#apache;9 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache#apache;9[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache#apache;9[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.apache.commons/commons-parent/23/jars/commons-parent.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/apache/commons/commons-parent/23/commons-parent-23.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/org/apache/commons/commons-parent/23/commons-parent-23.jar[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.apache.commons/commons-math3/3.0/jars/commons-math3.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.jar[0m
-[0m[[0mdebug[0m] [0m	found org.apache.commons#commons-math3;3.0 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.commons#commons-math3;3.0[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.commons#commons-math3;3.0[0m
+[0m[[0mdebug[0m] [0m	found org.apache.commons#commons-math3;3.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;[1.2,1.3) [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.graphstream#gs-core;[1.2,1.3) ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.graphstream#gs-core;[1.2,1.3) {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.graphstream#gs-core;[1.2,1.3)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.graphstream#gs-core;[1.2,1.3)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.graphstream#gs-core;[1.2,1.3)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.graphstream#gs-core;[1.2,1.3)[0m
 [0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.graphstream/gs-core/[revision]/ivys/ivy.xml[0m
 [0m[[0mdebug[0m] [0m	local: no ivy file found for org.graphstream#gs-core;[1.2,1.3)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: no cached resolved revision for org.graphstream#gs-core;[1.2,1.3)[0m
+[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.graphstream#gs-core;[1.2,1.3)[0m
 [0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/graphstream/gs-core/[revision]/gs-core-[revision].pom[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.graphstream#gs-core;[1.2,1.3)[0m
 [0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom (1.2)[0m
 [0m[[0mdebug[0m] [0m	public: revision already resolved: org.graphstream#gs-core;1.2[0m
-[0m[[0mdebug[0m] [0m		[1.2] org.graphstream#gs-core[0m
-[0m[[0mdebug[0m] [0m	found org.graphstream#gs-core;1.2 in public[0m
+[0m[[0mdebug[0m] [0m	found org.graphstream#gs-core;1.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[1.2] org.graphstream#gs-core;[1.2,1.3)[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.jfree#jfreechart;1.0.14 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jfree#jfreechart;1.0.14 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jfree/jfreechart/1.0.14/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.jfree#jfreechart;1.0.14[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.jfree#jfreechart;1.0.14[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.pom (1.0.14)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.jfree#jfreechart;1.0.14!jfreechart.pom(pom.original) (1191ms)[0m
-[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jfree/jfreechart/1.0.14/jars/jfreechart.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar[0m
-[0m[[0mdebug[0m] [0m	found org.jfree#jfreechart;1.0.14 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jfree#jfreechart;1.0.14[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.jfree#jfreechart;1.0.14[0m
+[0m[[0mdebug[0m] [0m	found org.jfree#jfreechart;1.0.14 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.jfree#jcommon;1.0.17 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jfree#jcommon;1.0.17 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jfree/jcommon/1.0.17/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.jfree#jcommon;1.0.17[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.jfree#jcommon;1.0.17[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.pom (1.0.17)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.jfree#jcommon;1.0.17!jcommon.pom(pom.original) (1207ms)[0m
-[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.sonatype.oss#oss-parent;7[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jfree/jcommon/1.0.17/jars/jcommon.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar[0m
-[0m[[0mdebug[0m] [0m	found org.jfree#jcommon;1.0.17 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jfree#jcommon;1.0.17[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.jfree#jcommon;1.0.17[0m
+[0m[[0mdebug[0m] [0m	found org.jfree#jcommon;1.0.17 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving xml-apis#xml-apis;1.3.04 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: xml-apis#xml-apis;1.3.04 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/xml-apis/xml-apis/1.3.04/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for xml-apis#xml-apis;1.3.04[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for xml-apis#xml-apis;1.3.04[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom (1.3.04)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] xml-apis#xml-apis;1.3.04!xml-apis.pom(pom.original) (1163ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache#apache;3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache#apache;3 {}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.apache/apache/3/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache#apache;3[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/apache/3/apache-3.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache#apache;3[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/apache/apache/3/apache-3.pom (3)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/apache/3/apache-3.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/apache/3/apache-3.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/apache/3/apache-3.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/apache/3/apache-3.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache#apache;3!apache.pom(pom.original) (1097ms)[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.apache/apache/3/jars/apache.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/apache/3/apache-3.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/apache/apache/3/apache-3.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/apache/apache/3/apache-3.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/org/apache/apache/3/apache-3.jar[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/xml-apis/xml-apis/1.3.04/jars/xml-apis.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar[0m
-[0m[[0mdebug[0m] [0m	found xml-apis#xml-apis;1.3.04 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: xml-apis#xml-apis;1.3.04[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: xml-apis#xml-apis;1.3.04[0m
+[0m[[0mdebug[0m] [0m	found xml-apis#xml-apis;1.3.04 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving com.lowagie#itext;2.1.5 ...[0m
@@ -1077,18 +962,8 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.slf4j#slf4j-nop;1.6.4!slf4j-nop.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.h2database#h2;1.3.166!h2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jscala#jscala-macros_2.10;0.4-SNAPSHOT!jscala-macros_2.10.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.graphstream#gs-core;1.2!gs-core.jar (2771ms)[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/graphstream/gs-algo/1.2/gs-algo-1.2.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.graphstream#gs-algo;1.2!gs-algo.jar (1362ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.graphstream#gs-core;1.2!gs-core.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.graphstream#gs-algo;1.2!gs-algo.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.slf4j#slf4j-api;1.6.4!slf4j-api.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.yahoo.platform.yui#yuicompressor;2.4.7!yuicompressor.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] rhino#js;1.6R7!js.jar[0m
@@ -1096,30 +971,10 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.graphstream#pherd;1.0!pherd.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.graphstream#mbox2;1.0!mbox2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-math;2.1!commons-math.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.0/commons-math3-3.0.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.commons#commons-math3;3.0!commons-math3.jar (2374ms)[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.14/jfreechart-1.0.14.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jfree#jfreechart;1.0.14!jfreechart.jar (2248ms)[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.17/jcommon-1.0.17.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jfree#jcommon;1.0.17!jcommon.jar (1432ms)[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar[0m
-[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] xml-apis#xml-apis;1.3.04!xml-apis.jar (1168ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-math3;3.0!commons-math3.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jfree#jfreechart;1.0.14!jfreechart.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jfree#jcommon;1.0.17!jcommon.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] xml-apis#xml-apis;1.3.04!xml-apis.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lowagie#itext;2.1.5!itext.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] bouncycastle#bcmail-jdk14;138!bcmail-jdk14.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] bouncycastle#bcprov-jdk14;138!bcprov-jdk14.jar[0m
@@ -1129,7 +984,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.3!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 25130ms :: artifacts dl 11419ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 9452ms :: artifacts dl 48ms[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
@@ -1143,5 +998,5 @@
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (25130ms resolve - 11419ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (9452ms resolve - 48ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
