@@ -64,10 +64,12 @@ class DataTes extends FunSuite {
     }
     
     test("draw"){
-    	(1 to 100).map(_.toDouble).toVector.toda.draw
+/*    	(1 to 100).map(_.toDouble).toVector.toda.draw
     	d1.draw
     	d2.draw
     	d3.draw
+    	* 
+    	*/
     }
     
     

@@ -21,20 +21,22 @@ class SimpleNode extends FunSuite{
 		graph.display()
 		
 		val node1:Node=graph.getNode("A")
-		*/
+		
 		//基本的に型情報を書いた方がCastExceptionを招かずに済むようだ
 		
-//		println("id : "+graph.getId)
-//		println("each node : "+graph.getEachNode)
+		println("id : "+graph.getId)
+		println("each node : "+graph.getEachNode)
 		
-//		val chart:ChartSeries1DMeasure=new ChartSeries1DMeasure("my first measure")
+		val chart:ChartSeries1DMeasure=new ChartSeries1DMeasure("my first measure")
 		val r=new Random
 		var count=0
 		while(count<100){
-//			chart.addValue(r.nextDouble*10)
+			chart.addValue(r.nextDouble*10)
 			count=count+1
 		}
-//		chart.plot()
+		chart.plot()
+		* 
+		*/
 	}
 
 }

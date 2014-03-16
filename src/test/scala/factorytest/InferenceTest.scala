@@ -17,18 +17,19 @@ class InferenceTest extends FunSuite{
     val m=(0 to 10).map(_.toDouble).toVector
     val l=(0 to 100).map(_.toDouble).toVector
     
-    val dx=x.toda
-    val dy=data(y)
-    val db=b.toda
-    val ds=s.toda
-    val dt=t.toda
-    val dm=m.toda
-    val dl=l.toda
+    val dx:data=x.toda
+    val dy:data=data(y)
+    val db:data=b.toda
+    val ds:data=s.toda
+    val dt:data=t.toda
+    val dm:data=m.toda
+    val dl:data=l.toda
     
-    val dsxy=Vector(x,y).tods		
-    val dsxyb=dase(dx,dy,db) 
-    val dsst=dase(ds,dt)
-    val dsml=dase(dm,dl)
+    val dsxy:infds=Vector(x,y).toinf		
+    val dsxyb:infds=infds(dx,dy,db) 
+    val dsst:infds=infds(ds,dt)
+    val dsml:infds=infds(dm,dl)
+    
     
     
     test("paired-t"){

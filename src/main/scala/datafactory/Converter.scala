@@ -10,17 +10,25 @@ object Converter{
 	
 	
 	implicit def tods(in:Vector[Vector[Double]]):ToDase=new ToDase(in)
-	
+
+	implicit def toinf(in:Vector[Vector[Double]]):ToInfer=new ToInfer(in)
+
 	implicit def tomat(in:Vector[Vector[Double]]):ToMatrix=new ToMatrix(in)
 	
 	implicit def **(in:Int):ScaleCulMat=new ScaleCulMat(in)
 	
 }
+
 class ToData(in:Vector[Double]){
   def toda=data(in)
 }
+
 class ToDase(in:Vector[Vector[Double]]){
   def tods=new dase(in.map(a=>data(a)))
+}
+
+class ToInfer(in:Vector[Vector[Double]]){
+  def toinf=new infds(in.map(a=>data(a)))
 }
 
 class ToMatrix(in:Vector[Vector[Double]]){

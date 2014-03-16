@@ -1,13 +1,13 @@
 #Successful Tests
-#Sun Mar 16 13:15:56 ICT 2014
-recomendtest.NaiveRecomTest=1394950553753
-factorytest.DatasetTes=1394950553746
-factorytest.TsdsTes=1394950553606
-factorytest.DataTes=1394950556011
-factorytest.MatrixTes=1394950553705
-classifytest.NaiveBayesTest=1394950553551
-factorytest.InferenceTest=1394950553713
-factorytest.LinearRegressionTes=1394950553603
-visualizetest.SimpleNode=1394950553756
-factorytest.IoTes=1394950553758
-factorytest.TsdaTes=1394950553620
+#Sun Mar 16 14:37:31 ICT 2014
+recomendtest.NaiveRecomTest=1394955450959
+factorytest.DatasetTes=1394955450742
+factorytest.TsdsTes=1394955450960
+factorytest.DataTes=1394955450712
+factorytest.MatrixTes=1394955450707
+classifytest.NaiveBayesTest=1394955450631
+factorytest.InferenceTest=1394955450738
+factorytest.LinearRegressionTes=1394955450672
+visualizetest.SimpleNode=1394955450681
+factorytest.IoTes=1394955450967
+factorytest.TsdaTes=1394955450968
