@@ -115,7 +115,7 @@ class dase(datalist:Vector[data]) extends Descritive
 //コンパニオンオブジェクトを作成。applyでファクトリメソッドを定義しているのでnewが不要になる
 object dase{
   
-  def apply(datas:data*):dase=new dase(datas.toVector)
+  def apply(datalist:data*):dase=new dase(datalist.toVector)
 //  def apply(raws:Seq[Double]*):dase=new dase(raws.map(raw=>data(raw.toVector)).toVector)
   
 }

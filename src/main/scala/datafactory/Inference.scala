@@ -1,6 +1,6 @@
 package datafactory
 import scala.math._
-import distribution.t
+import distribution.T
 
 trait Inference extends Descritive{
 
@@ -14,7 +14,7 @@ trait Inference extends Descritive{
 	  val se=sterror(unbiased_vari,n)
 	  val tval=mean/se
 	  	  
-	  ( tval , t.table(n-1,tval) )
+	  ( tval , T.table(n-1,tval) )
 	}
   	  //関連2群の検定：帰無仮説=>２つの群は同じ母集団を持つ
 	  //false => ２つの群には有為な差が存在する
@@ -46,7 +46,7 @@ trait Inference extends Descritive{
 	  
 	  val df=nume/(denoleft+denoright)
 	  
-	  ( tval , t.table(df.toInt,tval) )
+	  ( tval , T.table(df.toInt,tval) )
 	  
 	}
 	// 等分散検定=>独立2群 の検定は多重検定にあたるためウェルチのみを用いるべきと言う考えにのっとりStudent T検定は実装しない

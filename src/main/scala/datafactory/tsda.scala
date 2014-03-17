@@ -9,7 +9,7 @@ class tsda(raw:Vector[Double]) extends data(raw) with TimeSeries{
 	val diff=differencing(raw)
 	//偏自己相関実装予定
 }
-
-object tsda{
+ 
+object tsda{ 
   def apply(raw:Double*)=new tsda(raw.toVector)
 }

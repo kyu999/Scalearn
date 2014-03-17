@@ -1,6 +1,7 @@
 package distribution
 import scala.math._
-object gamma{
+
+object Gamma{
 	
 	def factstir(n:Int)=if(n<100) pow(E,logfactorial(n)) else pow(E,logstirling(n))
 		
@@ -23,13 +24,13 @@ object gamma{
 	 */
 }
 
-object gammates extends App{
-  println(gamma.logstirling(50))
+object Gammates extends App{
+  println(Gamma.logstirling(50))
   println("factorial")
-  (0 to 10).map(a=>pow(E,gamma.logfactorial(a))).foreach(println)
+  (0 to 10).map(a=>pow(E,Gamma.logfactorial(a))).foreach(println)
   println("stirling")
-  (0 to 10).map(a=>pow(E,gamma.logstirling(a))).foreach(println)
-  println("correct : "+pow(E,363.7)+" , stirling : "+pow(E,gamma.logstirling(100))+" , factorial : "+pow(E,gamma.logfactorial(100)))
+  (0 to 10).map(a=>pow(E,Gamma.logstirling(a))).foreach(println)
+  println("correct : "+pow(E,363.7)+" , stirling : "+pow(E,Gamma.logstirling(100))+" , factorial : "+pow(E,Gamma.logfactorial(100)))
   
   
 }

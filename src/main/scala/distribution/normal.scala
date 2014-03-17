@@ -1,6 +1,6 @@
 package distribution
 import scala.math._
-class normal(mu:Double,sigma:Double) {
+class Normal(mu:Double,sigma:Double) {
 	def pdf:Double=>Double={
 	val f={
 	  (x:Double)=>
@@ -15,7 +15,7 @@ class normal(mu:Double,sigma:Double) {
 	//確率密度関数
 }
 object testes extends App{
-  val n=new normal(100,5)
+  val n=new Normal(100,5)
   println(n.pdf(102))
   println(n.pdf(96))
   
