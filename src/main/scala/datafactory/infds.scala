@@ -30,6 +30,16 @@ class infds(datalist:Vector[data]) extends dase(datalist){
 	lazy val factorSS=datalist.map(elt=>pow(elt.sum,2)/elt.n).sum-ct
 	//Sa : 水準の変更に伴うデータの変動の大きさを表す、級間平方和
 	
+	
+	def eachsubsum(in:data)={
+	  (in:data)
+	}
+	lazy val factorSS2=datalist.map(
+	    (elt:data)=>elt.subtotaling(raw)
+//	    andThen (elt:data)
+	    )
+	//Sb : もう一つの要因に置ける級間平方和
+	
 	lazy val errorSS=grandSS-factorSS
 	//Se : 同一実験条件化でのデータの変動の大きさを表す誤差平方和
 	

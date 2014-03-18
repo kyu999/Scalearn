@@ -59,5 +59,6 @@ class InferenceTest extends FunSuite{
       println("factor MS : "+infds1.factorMS)
       println("error MS : "+infds1.errorMS)
       println("F : "+infds1.f)
+      println("result : "+infds1.subtotaling(Vector(Vector(1,2,3),Vector(4,5,6),Vector(7,8,9))))
     }
 }

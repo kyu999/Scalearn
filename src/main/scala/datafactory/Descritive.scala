@@ -1,6 +1,7 @@
 package datafactory
 
 import scala.math._
+import scala.collection.mutable.ListBuffer
 
 trait Descritive{ 
     
@@ -156,6 +157,49 @@ trait Descritive{
 	def residual(x:Vector[Double],raw:Vector[Double],xregline:(Double=>Double)):Vector[Double]=
 	  x.zip(raw).map{ a => a._2-xregline(a._1) }
 
+	def subtotaling(raw:Vector[Vector[Double]])={
+	  	  
+	  var stock:ListBuffer[Double]=ListBuffer()
+	  
+	  var horizontal=true
+	  
+	  val width=raw.head.length
+	  val height=raw.length
+	  
+	  var lookraw=0
+	  var lookcol=0
+	  
+	  while(horizontal){		
+	    
+	    var vertical=true
+	    var sum=0.0
+	  
+	    while(vertical){
+
+	      val look=raw(lookcol)(lookraw)
+	      
+	      sum=sum+look		//縦の繰り返し。Doubleを返す
+
+	      lookcol=lookcol+1
+
+	      if(lookcol>=height) vertical=false
+	    
+	    }
+	    
+	    stock+=sum
+	    
+	    lookcol=0
+	    sum=0
+	    	    	    
+	    if(lookraw>=width-1) horizontal=false
+
+	    lookraw=lookraw+1
+
+	  }
+	  
+	  stock
+	  
+	}
 	
 	def mkLine=println("-------------------------------------------------------------")
 }
