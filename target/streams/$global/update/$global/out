@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@63bab9dc[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@107374a8[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -108,154 +108,61 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving org.graphstream#gs-core;1.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@47f347b6[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.graphstream#gs-core;1.2[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.graphstream#gs-core;1.2[0m
-[0m[[0mdebug[0m] [0m	found org.graphstream#gs-core;1.2 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving junit#junit;4.3.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: junit#junit;4.3.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: junit#junit;4.3.1[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: junit#junit;4.3.1[0m
-[0m[[0mdebug[0m] [0m	found junit#junit;4.3.1 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving org.graphstream#pherd;1.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.graphstream#pherd;1.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.graphstream#pherd;1.0[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.graphstream#pherd;1.0[0m
-[0m[[0mdebug[0m] [0m	found org.graphstream#pherd;1.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving org.graphstream#mbox2;1.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.graphstream#mbox2;1.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.graphstream#mbox2;1.0[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.graphstream#mbox2;1.0[0m
-[0m[[0mdebug[0m] [0m	found org.graphstream#mbox2;1.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving org.graphstream#gs-algo;1.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.graphstream#gs-algo;1.2 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.graphstream#gs-algo;1.2[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.graphstream#gs-algo;1.2[0m
-[0m[[0mdebug[0m] [0m	found org.graphstream#gs-algo;1.2 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-math;2.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.commons#commons-math;2.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.commons#commons-math;2.1[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.commons#commons-math;2.1[0m
-[0m[[0mdebug[0m] [0m	found org.apache.commons#commons-math;2.1 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving org.apache.commons#commons-math3;3.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.commons#commons-math3;3.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.commons#commons-math3;3.0[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.commons#commons-math3;3.0[0m
-[0m[[0mdebug[0m] [0m	found org.apache.commons#commons-math3;3.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;[1.2,1.3) [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving org.graphstream#gs-core;[1.2,1.3) ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.graphstream#gs-core;[1.2,1.3) {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.graphstream#gs-core;[1.2,1.3)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.graphstream#gs-core;[1.2,1.3)[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.graphstream/gs-core/[revision]/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.graphstream#gs-core;[1.2,1.3)[0m
-[0m[[0mdebug[0m] [0mdefault-cache: cached resolved revision expired for org.graphstream#gs-core;[1.2,1.3)[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/graphstream/gs-core/[revision]/gs-core-[revision].pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.graphstream#gs-core;[1.2,1.3)[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/graphstream/gs-core/1.2/gs-core-1.2.pom (1.2)[0m
-[0m[[0mdebug[0m] [0m	public: revision already resolved: org.graphstream#gs-core;1.2[0m
-[0m[[0mdebug[0m] [0m	found org.graphstream#gs-core;1.2 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m	[1.2] org.graphstream#gs-core;[1.2,1.3)[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving org.jfree#jfreechart;1.0.14 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jfree#jfreechart;1.0.14 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jfree#jfreechart;1.0.14[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.jfree#jfreechart;1.0.14[0m
-[0m[[0mdebug[0m] [0m	found org.jfree#jfreechart;1.0.14 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving org.jfree#jcommon;1.0.17 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jfree#jcommon;1.0.17 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jfree#jcommon;1.0.17[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.jfree#jcommon;1.0.17[0m
-[0m[[0mdebug[0m] [0m	found org.jfree#jcommon;1.0.17 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.jfree#jfreechart;1.0.17 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jfree#jfreechart;1.0.17 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jfree/jfreechart/1.0.17/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.jfree#jfreechart;1.0.17[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.jfree#jfreechart;1.0.17[0m
+[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.pom (1.0.17)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.jfree#jfreechart;1.0.17!jfreechart.pom(pom.original) (1195ms)[0m
+[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.sonatype.oss#oss-parent;7[0m
+[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jfree/jfreechart/1.0.17/jars/jfreechart.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.jar[0m
+[0m[[0mdebug[0m] [0m	found org.jfree#jfreechart;1.0.17 in public[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
+[0m[[0minfo[0m] [0mResolving org.jfree#jcommon;1.0.21 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jfree#jcommon;1.0.21 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jfree/jcommon/1.0.21/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.jfree#jcommon;1.0.21[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.jfree#jcommon;1.0.21[0m
+[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.pom (1.0.21)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.jfree#jcommon;1.0.21!jcommon.pom(pom.original) (1160ms)[0m
+[0m[[0minfo[0m] [0mResolving org.sonatype.oss#oss-parent;7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;7 {}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;7[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.sonatype.oss#oss-parent;7[0m
+[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jfree/jcommon/1.0.21/jars/jcommon.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.jar[0m
+[0m[[0mdebug[0m] [0m	found org.jfree#jcommon;1.0.21 in public[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving xml-apis#xml-apis;1.3.04 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: xml-apis#xml-apis;1.3.04 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: xml-apis#xml-apis;1.3.04[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: xml-apis#xml-apis;1.3.04[0m
 [0m[[0mdebug[0m] [0m	found xml-apis#xml-apis;1.3.04 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving com.lowagie#itext;2.1.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.lowagie#itext;2.1.5 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.lowagie#itext;2.1.5[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.lowagie#itext;2.1.5[0m
-[0m[[0mdebug[0m] [0m	found com.lowagie#itext;2.1.5 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving bouncycastle#bcmail-jdk14;138 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: bouncycastle#bcmail-jdk14;138 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: bouncycastle#bcmail-jdk14;138[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: bouncycastle#bcmail-jdk14;138[0m
-[0m[[0mdebug[0m] [0m	found bouncycastle#bcmail-jdk14;138 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving bouncycastle#bcprov-jdk14;138 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: bouncycastle#bcprov-jdk14;138 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: bouncycastle#bcprov-jdk14;138[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: bouncycastle#bcprov-jdk14;138[0m
-[0m[[0mdebug[0m] [0m	found bouncycastle#bcprov-jdk14;138 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
@@ -306,70 +213,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime][0m
@@ -421,70 +276,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.10;2.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.10;2.0 {test=[default(compile)]}[0m
@@ -571,70 +374,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -688,70 +439,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [test-internal][0m
@@ -805,70 +504,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#pherd;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#pherd;1.0->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-core;1.2->org.graphstream#mbox2;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-core;1.2 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->junit#junit;4.3.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math;2.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.apache.commons#commons-math3;3.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.graphstream#gs-core;1.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.graphstream#gs-algo;1.2->org.jfree#jfreechart;1.0.14 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->org.jfree#jcommon;1.0.17 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.14->com.lowagie#itext;2.1.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcmail-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.lowagie#itext;2.1.5->bouncycastle#bcprov-jdk14;138 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.graphstream#gs-algo;1.2 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->compile][0m
@@ -962,29 +609,29 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.slf4j#slf4j-nop;1.6.4!slf4j-nop.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.h2database#h2;1.3.166!h2.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jscala#jscala-macros_2.10;0.4-SNAPSHOT!jscala-macros_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.graphstream#gs-core;1.2!gs-core.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.graphstream#gs-algo;1.2!gs-algo.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jfree#jfreechart;1.0.17!jfreechart.jar (10443ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.slf4j#slf4j-api;1.6.4!slf4j-api.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.yahoo.platform.yui#yuicompressor;2.4.7!yuicompressor.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] rhino#js;1.6R7!js.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] junit#junit;4.3.1!junit.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.graphstream#pherd;1.0!pherd.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.graphstream#mbox2;1.0!mbox2.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-math;2.1!commons-math.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.commons#commons-math3;3.0!commons-math3.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jfree#jfreechart;1.0.14!jfreechart.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jfree#jcommon;1.0.17!jcommon.jar[0m
+[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.jfree#jcommon;1.0.21!jcommon.jar (3263ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] xml-apis#xml-apis;1.3.04!xml-apis.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lowagie#itext;2.1.5!itext.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] bouncycastle#bcmail-jdk14;138!bcmail-jdk14.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] bouncycastle#bcprov-jdk14;138!bcprov-jdk14.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.10;2.0!scalatest_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.0!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.3!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.3!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 9452ms :: artifacts dl 48ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 9768ms :: artifacts dl 13743ms[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
@@ -998,5 +645,5 @@
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (9452ms resolve - 48ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (9768ms resolve - 13743ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

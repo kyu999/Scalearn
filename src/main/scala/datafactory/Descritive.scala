@@ -157,6 +157,7 @@ trait Descritive{
 	def residual(x:Vector[Double],raw:Vector[Double],xregline:(Double=>Double)):Vector[Double]=
 	  x.zip(raw).map{ a => a._2-xregline(a._1) }
 
+	//縦列の集計
 	def subtotaling(raw:Vector[Vector[Double]])={
 	  	  
 	  var stock:ListBuffer[Double]=ListBuffer()

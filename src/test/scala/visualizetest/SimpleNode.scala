@@ -6,6 +6,7 @@ import org.scalatest.FunSuite
 import scala.util.Random
 //import org.graphstream.algorithm.measure._
 
+
 class SimpleNode extends FunSuite{
 
 	test("triangle"){

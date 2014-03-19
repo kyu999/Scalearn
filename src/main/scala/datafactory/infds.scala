@@ -1,6 +1,7 @@
 package datafactory
 
 import scala.math._
+import distribution.F
 
 class infds(datalist:Vector[data]) extends dase(datalist){
 	//Inference Dataset
@@ -30,16 +31,6 @@ class infds(datalist:Vector[data]) extends dase(datalist){
 	lazy val factorSS=datalist.map(elt=>pow(elt.sum,2)/elt.n).sum-ct
 	//Sa : 水準の変更に伴うデータの変動の大きさを表す、級間平方和
 	
-	
-	def eachsubsum(in:data)={
-	  (in:data)
-	}
-	lazy val factorSS2=datalist.map(
-	    (elt:data)=>elt.subtotaling(raw)
-//	    andThen (elt:data)
-	    )
-	//Sb : もう一つの要因に置ける級間平方和
-	
 	lazy val errorSS=grandSS-factorSS
 	//Se : 同一実験条件化でのデータの変動の大きさを表す誤差平方和
 	
@@ -47,10 +38,10 @@ class infds(datalist:Vector[data]) extends dase(datalist){
 	//要因数
 
 	lazy val factorDf:Double=factorsize-1
-	//要因自由度
+	//Va : 要因自由度
 	
 	lazy val errorDf:Double=grandsize-factorsize
-	//誤差自由度
+	//Ve : 誤差自由度
 	
 	lazy val factorMS=factorSS/factorDf
 	//factor mean square
@@ -58,9 +49,26 @@ class infds(datalist:Vector[data]) extends dase(datalist){
 	lazy val errorMS=errorSS/errorDf
 	//error mean square
 	
-	lazy val f=factorMS/errorMS
+	lazy val fval=factorMS/errorMS
 	//F値
+
 	
+//Operation	
+	
+	
+	def anova:(Boolean,Double)=F.table(factorDf.toInt,errorDf.toInt,fval)
+	
+	/*
+		def eachsubsum(in:data)={
+	  (in:data)
+	}
+	lazy val factorSS2=datalist.map(
+	    (elt:data)=>elt.subtotaling(raw)
+	    andThen (elt:data)
+	    )
+	Sb : もう一つの要因に置ける級間平方和
+	 * 
+	 */
 	
 	
 }

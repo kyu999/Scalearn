@@ -49,7 +49,7 @@ class InferenceTest extends FunSuite{
     				Vector(78.9,78.8,78.1,78.1,78.9)).toinf
     				
     test("anova"){
-      println("grand sum : "+infds1.grandsum)
+/*      println("grand sum : "+infds1.grandsum)
       println("grand size : "+infds1.grandsize)
       println("grand mean : "+infds1.grandmean)
       println("factor df : "+infds1.factorDf)
@@ -58,7 +58,10 @@ class InferenceTest extends FunSuite{
       println("error SS : "+infds1.errorSS)
       println("factor MS : "+infds1.factorMS)
       println("error MS : "+infds1.errorMS)
-      println("F : "+infds1.f)
+      println("F : "+infds1.fval)
+      * 
+      */
+      println("anova : "+infds1.anova)
       println("result : "+infds1.subtotaling(Vector(Vector(1,2,3),Vector(4,5,6),Vector(7,8,9))))
     }
 }
