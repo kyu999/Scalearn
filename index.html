@@ -167,25 +167,26 @@ val sample_standard_deviation = data1.samplesd</code></pre>
 
 <p>Quite often, we have to distinguish whether the samples are taken from the same population or not; in other words, we should figure out the range of accidental error. Basically, "datafactory" package offers you understandable tools so as to analyze statistically in almost same way; just use infds class ( meaningly, dataset for statistical inference ).
 
-<p>To begin with, let's make instance of infds 
-The infds class takes data instances as parameters, so you need to create them first;
+<p>To begin with, let's make instance of infds. The infds class takes data instances as parameters, so you need to create them first;
 <br>alternatively, you could convert Vector [ Vector [ Double ] ] into infds instance implicitly</p>
 
 <pre><code>val infer_dataset1:infds = infds(data1,data2,data3)
 
 val infer_dataset2:infds = Vector(raw1,raw2,raw3).toinf</code></pre>
 
-<pre><code>val grand_mean :Double = infer_dataset1.gmean
+<pre><code>val grand_mean :Double = infer_dataset1.grandmean
 
-val grand_size :Int = infer_dataset1.gsize
+val grand_size :Int = infer_dataset1.grandsize
 
-val grand_sum :Double = infer_dataset1.gsum
+val grand_sum :Double = infer_dataset1.grandsum
 
 val effects :Vector[Double] = infer_dataset1.effects
 
 val tpair_vector :Vector[(Double,Boolean)] = infer_dataset1.tpair
 
-val twelch_vector :Vector[(Double,Boolean)] = infer_dataset1.twelch</code></pre>
+val twelch_vector :Vector[(Double,Boolean)] = infer_dataset1.twelch
+
+val anova_result :(Boolean,Double) = infer_dataset1.anova</code></pre>
 
 
 
