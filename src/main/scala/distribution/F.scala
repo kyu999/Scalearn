@@ -5,33 +5,42 @@ import scala.math._
 object F {
   
 	def table(va:Int,ve:Int,fval:Double)={
+	  
 	  var vertical=closer(ve)
-	  var horizontal=closer(va)-1
-	  
-	  println("va : "+va)
-	  println("ve : "+ve)
-	  
-
-	
-	  println("vertical : "+vertical)
-	  println("horizontal : "+horizontal)
-	 
+	  var horizontal=closer(va)
 	  
 	  var criteria=0.0
-	  if(horizontal<=10) criteria=lessreference(vertical)(horizontal)
-	  else criteria=morereference(vertical)(horizontal)
 	  
+	  if(horizontal<=10) criteria=less10refer(vertical)(converter(horizontal))
+	  else criteria=more10refer(vertical)(converter(horizontal))
+
+/*
+	  println("va : "+va)
+	  println("ve : "+ve)
+	  println("vertical : "+vertical)
+	  println("horizontal : "+horizontal)
 	  println("criteria : "+criteria)	  
-//	  println("fval : "+fval)
+	  println("fval : "+fval)
+	  * 
+	  */
+	   
+	  
+	   
+	  
 	  
 	  if(criteria>fval) (true,fval)
 	  else (false,fval)
 	  
 	}
 	
+	
 	val index=Array(1,2,3,4,5,6,7,8,9,10,11,12,15,20,30,50,100,200,500,501)
 	
-	//input must be bigger than 1
+	val converter=Map(1->0,2->1,3->2,4->3,5->4,6->5,7->6,8->7,9->8,10->9,11->0
+	    ,12->1,15->2,20->3,30->4,50->5,100->6,200->7,500->8,501->9)
+	
+	//pre: input must be bigger than 1
+	//post: return the close element in index above
 	def closer(input:Double)={
 	  
 	  var look=0
@@ -63,9 +72,9 @@ object F {
 	  
 	}
 	
-	val lessreference=
+	val less10refer=
 	  Map(
-	  //m<=10 cases
+	  //参考サイトの表がm<=10とm>10で別れていたからこちらもそれに伴い別れさせた
 	    1->Vector(161.45, 199.5, 215.71, 224.58, 230.16, 233.99, 236.77, 238.88, 240.54, 241.88), 
 	    2->Vector(18.513, 19.0, 19.164, 19.247, 19.296, 19.33, 19.353, 19.371, 19.385, 19.396), 
 	    3->Vector(10.128, 9.5521, 9.2766, 9.1172, 9.0135, 8.9406, 8.8867, 8.8452, 8.8123, 8.7855), 
@@ -90,7 +99,7 @@ object F {
 	//m > 10 cases 
 	    
 	  
-	 val morereference=
+	 val more10refer=
 	   Map(
 	    1->Vector(242.98, 243.91, 245.95, 248.01, 250.1, 251.77, 253.04, 253.68, 254.06, 254.31), 
 	    2->Vector(19.405, 19.413, 19.429, 19.446, 19.462, 19.476, 19.486, 19.491, 19.494, 19.496), 
@@ -115,8 +124,7 @@ object F {
 	    )
 }
 
-object Ftest extends App{
-	println(F.closer(503))
-	println(F.table(4,11,8))
+object Ftesting extends App{
+  println(F.table(17,10,2.0))
   
 }

@@ -28,7 +28,7 @@ object Entity extends App{
     
 //    sample.foreach(a=>Raw.insert(a))
     val resi=data.resi
-    resi.foreach(a=>Raw.insert(a))
+    resi.raw.foreach(a=>Raw.insert(a))
     Raw.insert(data.regline(10))
     
     val raw=Query(Raw)

@@ -7,15 +7,15 @@
 		revision="0.01"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20140319105117"/>
+		date="20140320105219"/>
 	<dependencies>
 		<module organisation="org.jfree" name="jfreechart">
-			<revision name="1.0.17" status="release" pubdate="20140211212710" resolver="public" artresolver="public" homepage="http://www.jfree.org/jfreechart/" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="8">
+			<revision name="1.0.17" status="release" pubdate="20140211212710" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jfree.org/jfreechart/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="8">
 				<license name="GNU Lesser General Public Licence" url="http://www.gnu.org/licenses/lgpl.txt"/>
-				<metadata-artifact status="successful" details="" size="7850" time="1195" location="/Users/kyu/.ivy2/cache/org.jfree/jfreechart/ivy-1.0.17.xml" searched="true" original-local-location="/Users/kyu/.ivy2/cache/org.jfree/jfreechart/ivy-1.0.17.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.pom"/>
+				<metadata-artifact status="no" details="" size="4098" time="0" location="/Users/kyu/.ivy2/cache/org.jfree/jfreechart/ivy-1.0.17.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.pom"/>
 				<caller organisation="Kyu" name="scalearn_2.10" conf="optional, compile, provided, compile-internal" rev="1.0.17" rev-constraint-default="1.0.17" rev-constraint-dynamic="1.0.17" callerrev="0.01"/>
 				<artifacts>
-					<artifact name="jfreechart" type="jar" ext="jar" status="successful" details="" size="1544449" time="10443" location="/Users/kyu/.ivy2/cache/org.jfree/jfreechart/jars/jfreechart-1.0.17.jar">
+					<artifact name="jfreechart" type="jar" ext="jar" status="no" details="" size="1544449" time="0" location="/Users/kyu/.ivy2/cache/org.jfree/jfreechart/jars/jfreechart-1.0.17.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.17/jfreechart-1.0.17.jar"/>
 					</artifact>
 				</artifacts>
@@ -33,12 +33,12 @@
 			</revision>
 		</module>
 		<module organisation="org.jfree" name="jcommon">
-			<revision name="1.0.21" status="release" pubdate="20140212143439" resolver="public" artresolver="public" homepage="http://www.jfree.org/jcommon/" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="9">
+			<revision name="1.0.21" status="release" pubdate="20140212143439" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jfree.org/jcommon/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="9">
 				<license name="GNU Lesser General Public Licence" url="http://www.gnu.org/licenses/lgpl.txt"/>
-				<metadata-artifact status="successful" details="" size="6731" time="1160" location="/Users/kyu/.ivy2/cache/org.jfree/jcommon/ivy-1.0.21.xml" searched="true" original-local-location="/Users/kyu/.ivy2/cache/org.jfree/jcommon/ivy-1.0.21.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.pom"/>
+				<metadata-artifact status="no" details="" size="3477" time="0" location="/Users/kyu/.ivy2/cache/org.jfree/jcommon/ivy-1.0.21.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.pom"/>
 				<caller organisation="org.jfree" name="jfreechart" conf="default, compile, runtime, master" rev="1.0.21" rev-constraint-default="1.0.21" rev-constraint-dynamic="1.0.21" callerrev="1.0.17"/>
 				<artifacts>
-					<artifact name="jcommon" type="jar" ext="jar" status="successful" details="" size="323663" time="3263" location="/Users/kyu/.ivy2/cache/org.jfree/jcommon/jars/jcommon-1.0.21.jar">
+					<artifact name="jcommon" type="jar" ext="jar" status="no" details="" size="323663" time="0" location="/Users/kyu/.ivy2/cache/org.jfree/jcommon/jars/jcommon-1.0.21.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jfree/jcommon/1.0.21/jcommon-1.0.21.jar"/>
 					</artifact>
 				</artifacts>

@@ -5,11 +5,7 @@ import distribution.F
 
 class infds(datalist:Vector[data]) extends dase(datalist){
 	//Inference Dataset
-	
-	lazy val tpair:Vector[(Double,Boolean)]=combi.map(a=>paired_t_test(a(0).raw,a(1).raw))
-	
-	lazy val twelch:Vector[(Double,Boolean)]=combi.map(a=>welch_t_test(a(0).raw,a(1).raw))
-	
+		 
 	lazy val grandsize=datalist.map(_.n).sum
 	//grand size
     
@@ -53,9 +49,25 @@ class infds(datalist:Vector[data]) extends dase(datalist){
 	//F値
 
 	
-//Operation	
+//Testing Operation
 	
+	def tpair:Vector[(Boolean,Double)]=combi.map(elt=>paired_t_test(elt(0).raw,elt(1).raw))
 	
+	def twelch:Vector[(Boolean,Double)]=combi.map(elt=>welch_t_test(elt(0).raw,elt(1).raw))
+	
+	def ftest:Vector[(Boolean,Double)] =combi.map{  elt=>
+	 
+	  val vari1=elt(0).vari
+	  val vari2=elt(1).vari
+	  
+	  println("df : "+(elt(0).n-1)+" , "+(elt(1).n-1))
+	  println("var1 : "+vari1+" , "+"vari2 : "+vari2)
+	  
+	  if(vari1>vari2) F.table(elt(0).n-1,elt(1).n-1,vari1/vari2)
+	  else F.table(elt(1).n-1,elt(0).n-1,vari2/vari1)
+	  
+	}
+	  
 	def anova:(Boolean,Double)=F.table(factorDf.toInt,errorDf.toInt,fval)
 	
 	/*

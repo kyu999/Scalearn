@@ -62,9 +62,9 @@ class dase(datalist:Vector[data]) extends Descritive
 	
 //Operation	
 	
-	def inf=new infds(datalist)
+	def toinf=new infds(datalist)
 	
-	def ts=new tsds(datalist.map(a=>a.ts))
+	def tots=new tsds(datalist.map(a=>a.tots))
 	//時系列データ化
 	
 	def naming(in:String*)=in.zip(datalist).foreach{a=>a._2.name=a._1} 

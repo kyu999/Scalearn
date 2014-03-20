@@ -3,10 +3,13 @@ package datafactory
 class tsds(tsdalist:Vector[tsda]) extends dase(tsdalist){
 	
 	val acf=tsdalist.map(_.acf)
-	lazy val diff=tsdalist.map(_.diff)
+	
+//Operation
+	
+	def differencing=tsdalist.map(_.differencing)
 	
 }
-
+ 
 object tsds{
   def apply(x:tsda*)=
     x match{

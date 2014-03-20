@@ -21,8 +21,8 @@ object T {
 //	  println("t-value : "+t)
 //	  println("帰無仮説：２つは同じ母集団を持つ。２つの標本平均の検定によると。")
 	  
-	  if(criteria<abs(t)) false
-	  else true
+	  if(criteria<abs(t)) (false,t)
+	  else (true,t)
 	  //false stands for they have significant difference
 	  //true means they are from same population
 	}

@@ -5,6 +5,7 @@ import datafactory._
 import scala.util.Random.nextDouble
 import org.scalautils.TolerantNumerics._
 import Converter._
+import scala.collection.mutable.ListBuffer
 
 class InferenceTest extends FunSuite{
 	
@@ -30,38 +31,41 @@ class InferenceTest extends FunSuite{
     val dsst:infds=infds(ds,dt)
     val dsml:infds=infds(dm,dl)
     
-    
-    
-    test("paired-t"){
-      assert((-2.965614910077132,false)==dsxy.tpair.head)
-      assert((3.0353754156485913,false)==dsst.tpair.head)
-    }
-    
-    test("welch_t_test"){
-      assert(dsxy.twelch.head==(-1.299867367239363,true))
-      assert(dsml.twelch.head==(-14.599927901768629,false))
-    }
-    
     val infds1=Vector(
     				Vector(77.4,78.2,78.1,77.8,77.9),
     				Vector(78.3,78.2,78.4,77.3,79.1),
     				Vector(79.2,79.3,79.1,78.2,79.3),
     				Vector(78.9,78.8,78.1,78.1,78.9)).toinf
-    				
-    test("anova"){
-/*      println("grand sum : "+infds1.grandsum)
-      println("grand size : "+infds1.grandsize)
-      println("grand mean : "+infds1.grandmean)
-      println("factor df : "+infds1.factorDf)
-      println("error df : "+infds1.errorDf)
-      println("factor SS : "+infds1.factorSS)
-      println("error SS : "+infds1.errorSS)
-      println("factor MS : "+infds1.factorMS)
-      println("error MS : "+infds1.errorMS)
-      println("F : "+infds1.fval)
-      * 
-      */
-      println("anova : "+infds1.anova)
-      println("result : "+infds1.subtotaling(Vector(Vector(1,2,3),Vector(4,5,6),Vector(7,8,9))))
+   
+    
+    test("paired-t"){
+      
+      assert((false,-2.965614910077132)==dsxy.tpair.head)
+      assert((false,3.0353754156485913)==dsst.tpair.head)
+      
+    }
+    
+    test("welch_t_test"){
+      
+      assert(dsxy.twelch.head==(true,-1.299867367239363))
+      assert(dsml.twelch.head==(false,-14.599927901768629))
+      
+    }
+    
+    test("F test"){
+      
+//      println(Vector(Vector(1,2,3,555,666,777,4,5,654,34,3.9),Vector(1,2,3,4,5,6,7,8,9000.0)).toinf.ftest)
+      
+    }
+    
+        				
+    test("subtotaling & anova"){
+
+      assert(
+    		  infds1.subtotaling(Vector(Vector(1,2,3),Vector(4,5,6),Vector(7,8,9)))
+    		  ==ListBuffer(12.0, 15.0, 18.0))
+    		  
+      assert((false,5.130018416218995)==infds1.anova)
+
     }
 }

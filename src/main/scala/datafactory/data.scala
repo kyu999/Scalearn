@@ -64,12 +64,12 @@ class data(x:Vector[Double]) extends Descritive{
     
     lazy val regline:Double=>Double = regressionline(reg._1,reg._2)
         
-    lazy val resi:Vector[Double]=residual(time,raw,regline)
+    lazy val resi:data = data(residual(time,raw,regline))
 
     
     //Operation-------------------------------------------
     
-    def ts=new tsda(x) 
+    def tots=new tsda(x) 
     //時系列データ化
     
     def ::(component:data)=dase(component,this)
