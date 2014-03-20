@@ -64,7 +64,7 @@ class data(x:Vector[Double]) extends Descritive{
     
     lazy val regline:Double=>Double = regressionline(reg._1,reg._2)
         
-    lazy val resi:data = data(residual(time,raw,regline))
+    def resi:data = data(residual(time,raw,regline))
 
     
     //Operation-------------------------------------------
