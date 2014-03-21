@@ -70,6 +70,9 @@ class DataTes extends FunSuite {
     	d3.draw
     	* 
     	*/
+      val d=dase(d6,d7)
+      println("cos : "+d6.cos_similarity(d6.raw, d7.raw))
+      println("pear : "+d.pears.head)
     }
     
     

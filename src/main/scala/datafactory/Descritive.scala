@@ -105,8 +105,38 @@ trait Descritive{
 	
 	def euclidean(xraw:Vector[Double],yraw:Vector[Double])={
 	  val sum=xraw.zip(yraw).map(a=>pow(a._1-a._2,2)).sum
-	  1/(1+sqrt(sum))	//0で除算してエラーになるのを防ぐため。
+	  1/(1+sqrt(sum))	
+	  //0で除算してエラーになるのを防ぎたい場合,1を足す。集合知プログラミングの本からなので誤りの可能性あり
 	}
+	
+	def cos_similarity(xraw:Vector[Double],yraw:Vector[Double])={
+	  
+	  var end=xraw.length-1
+	  
+	  if (end+1 != yraw.length) throw new Exception("can't take dirrerent length of variable")
+	  
+	  else{
+		  var ok=true
+		  var look=0
+		  var sumtimes=0.0			//ΣXiYi
+		  var xsquaredsum=0.0
+		  var ysquaredsum=0.0
+		  
+		  while (ok){
+		    if(look>=end) ok=false
+		    
+		    sumtimes=sumtimes+xraw(look)*yraw(look)
+		    xsquaredsum=xsquaredsum+pow(xraw(look),2)
+		    ysquaredsum=ysquaredsum+pow(yraw(look),2)
+
+		    println("look : "+look+" , sumtimes : "+sumtimes+" , xsquaredsum : "+xsquaredsum+" , ysquaredsum : "+xsquaredsum)
+		    
+		    look+=1 
+		  }
+		  sumtimes/(sqrt(xsquaredsum*ysquaredsum))
+	  }
+	}
+	//コサイン類似度。
 	
 	def regression(corr:Double,xsd:Double,ysd:Double,xmean:Double,ymean:Double):(Double,Double)={
 	  val slope=corr*(ysd/xsd)
