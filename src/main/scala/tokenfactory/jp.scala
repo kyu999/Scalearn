@@ -3,12 +3,14 @@ package tokenfactory
 import org.atilika.kuromoji._
 import scala.collection.convert.WrapAsScala._
 import scala.io.Source
-object  jp{
+object  JP{
 	
 	def mkTokenL(content:String):List[Token]=Tokenizer.builder().build().tokenize(content).toList.filter((x:Token)=>x.getBaseForm() != null)
 	//StringからToken作成
 	def mkTokenS(content:String):Stream[Token]=Tokenizer.builder().build().tokenize(content).toStream.filter((x:Token)=>x.getBaseForm() != null)
-	
+
+	def mkTokenV(content:String):Vector[Token]=Tokenizer.builder().build().tokenize(content).toVector.filter((x:Token)=>x.getBaseForm() != null)
+
 	def mkTokenF(path:String):Stream[Token]={
 	  val file=Source.fromFile(path)
 	  val content=file.getLines.mkString

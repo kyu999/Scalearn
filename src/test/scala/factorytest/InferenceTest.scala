@@ -6,8 +6,13 @@ import scala.util.Random.nextDouble
 import org.scalautils.TolerantNumerics._
 import Converter._
 import scala.collection.mutable.ListBuffer
+import org.scalautils.TolerantNumerics._
 
 class InferenceTest extends FunSuite{
+	
+  
+	implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
+
 	
     val x=Vector(90.0,75,75,75,80,65,75,80)
     val y=Vector(95.0,80,80,80,75,75,80,85)
@@ -53,8 +58,9 @@ class InferenceTest extends FunSuite{
     }
     
     test("F test"){
-      
-//      println(Vector(Vector(1,2,3,555,666,777,4,5,654,34,3.9),Vector(1,2,3,4,5,6,7,8,9000.0)).toinf.ftest)
+      val result=Vector(Vector(1,2,3,555,666,777,4,5,654,34,3.9),Vector(1,2,3,4,5,6,7,8,9000.0)).toinf.ftest.head
+      assert(false==result._1)
+      assert(80.3401===result._2)
       
     }
     
@@ -66,6 +72,7 @@ class InferenceTest extends FunSuite{
     		  ==ListBuffer(12.0, 15.0, 18.0))
     		  
       assert((false,5.130018416218995)==infds1.anova)
+      
 
     }
 }

@@ -3,7 +3,7 @@ package classifier
 import scala.math._
 import org.atilika.kuromoji._
 import scala.collection.mutable.ListBuffer
-import tokenfactory.jp
+import tokenfactory.JP
 
 object NaiveBayes{	
   //並列コレクション化した方が効率上がるかもparメソッドの活用=>並列化によるオーバーヘッドが大きいため現状では使わないほうがいい。
@@ -22,7 +22,7 @@ object NaiveBayes{
   def stringSdata=getString(Sdata)	//成功例の文字列データ
   def stringFdata=getString(Fdata)	//失敗例の文字列データ
   
-  def getToken(stdata:String)=jp.mkTokenS(stdata)
+  def getToken(stdata:String)=JP.mkTokenS(stdata)
   def tokenSdata=getToken(stringSdata)		//成功例のトークンリスト
   def tokenFdata=getToken(stringFdata)		//失敗例のトークンリスト
   

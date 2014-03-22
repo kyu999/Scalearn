@@ -11,7 +11,7 @@ class tsds(tsdalist:Vector[tsda]) extends dase(tsdalist){
 }
  
 object tsds{
-  def apply(x:tsda*)=
+  def apply(x:tsda*)= 
     x match{
     case v:Vector[tsda]=>new tsds(v)
     case s:Seq[tsda]=>new tsds(s.toVector)

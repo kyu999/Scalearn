@@ -1,5 +1,5 @@
 package datafactory
 
-trait Bayes extends Descritive{
+trait Bayes extends Descriptive{
 
-}
+} 

@@ -3,13 +3,13 @@ package datafactory
 import scala.math._
 import math._
 
-class dase(datalist:Vector[data]) extends Descritive 
-			with Inference with Bayes with Multivariate{
+class dase(datalist:Vector[data]) extends  
+			 Inference with Bayes with Multivariate{
   
   //datalistが欲しくなったらresolveで分解しよう。ただ、そもそもdataをdatasetに引数としていれてるんだからdataが欲しいとはあまりならないと思われる
   //datalist.map(~)を多用してしまっているがdatalistのリストはそれほど巨大にならないと想定している上に、各変数の統計量は既にdata内で算出されている。また、使用頻度の高くなさそうなものは遅延評価にしているため計算量的にそんなに問題ない。
             
-    val raw:Vector[Vector[Double]]=datalist.map(a=>a.raw)
+    val raw:Vector[Vector[Double]]=datalist.map(a=>a.raw) 
     
     val mean=datalist.map(_.mean)		
 
@@ -29,7 +29,7 @@ class dase(datalist:Vector[data]) extends Descritive
     
     lazy val pears=combi.map{a=>
       
-       if(a(0).n != a(1).n) {println("You can't compare different length variable");-10000}
+       if(a(0).size != a(1).size) {println("You can't compare different length variable");-10000}
        else{
 	   pearson(
 	       covariance(
@@ -41,13 +41,15 @@ class dase(datalist:Vector[data]) extends Descritive
 	   
 	lazy val spears=combi.map{a=>
 	  
-	  if(a(0).n != a(1).n){println("You can't compare different length variable");-10000}
+	  if(a(0).size != a(1).size){println("You can't compare different length variable");-10000}
 	  else{
 	      spearman(difsqured(labeling(a(0).raw,a(1).raw)))
 	     }
 	  }
 	   
 	lazy val eucli=combi.map(a=>euclidean(a(0).raw,a(1).raw))
+	
+	lazy val simcos=combi.map(elt=>cos_similarity(elt(0).raw,elt(1).raw))
 
 	lazy val time:Vector[Vector[Double]]=raw.map{a=>(1 to a.length).map(_.toDouble).toVector}
 	
@@ -88,7 +90,7 @@ class dase(datalist:Vector[data]) extends Descritive
         datalist.foreach(x=>println(x.name))
 		mkLine
 		println("length of each")
-        datalist.foreach(a=>println(a.n))
+        datalist.foreach(a=>println(a.size))
         mkLine
 		println("mean : ")
 		mean.foreach(println)

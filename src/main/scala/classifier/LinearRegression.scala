@@ -1,7 +1,7 @@
 package classifier
-import datafactory.Descritive
+import datafactory.Descriptive
 import scala.math._
-trait LinearRegression extends Descritive{
+trait LinearRegression extends Descriptive{
 
    def BatchGradientDescent(x:Vector[Double],y:Vector[Double],α:Double,expθ0:Double,expθ1:Double):(Double,Double)={
 	  

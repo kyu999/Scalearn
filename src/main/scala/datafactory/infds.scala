@@ -6,13 +6,13 @@ import distribution.F
 class infds(datalist:Vector[data]) extends dase(datalist){
 	//Inference Dataset
 		 
-	lazy val grandsize=datalist.map(_.n).sum
+	lazy val grandsize=datalist.map(_.size).sum
 	//grand size
-    
+     
     lazy val grandsum=datalist.map(_.sum).sum
     //grand sum
     
-    lazy val grandmean=datalist.map(elt=>( elt.n*elt.mean ) ).sum / grandsize 
+    lazy val grandmean=datalist.map(elt=>( elt.size*elt.mean ) ).sum / grandsize 
     //grand mean : 各要因データサイズの重みでの各要因の平均の荷重平均。一般平均という。
     
     lazy val effects=datalist.map(elt=>elt.mean-grandmean)
@@ -24,7 +24,7 @@ class infds(datalist:Vector[data]) extends dase(datalist){
 	lazy val grandSS=datalist.map(_.squaredsum).sum-ct
 	//Sr : grand square sum(総平方和) == Sa+Se：ΣiΣj(Xij^2)    ※iは要因数,jは各要因のサイズ
 	
-	lazy val factorSS=datalist.map(elt=>pow(elt.sum,2)/elt.n).sum-ct
+	lazy val factorSS=datalist.map(elt=>pow(elt.sum,2)/elt.size).sum-ct
 	//Sa : 水準の変更に伴うデータの変動の大きさを表す、級間平方和
 	
 	lazy val errorSS=grandSS-factorSS
@@ -59,12 +59,12 @@ class infds(datalist:Vector[data]) extends dase(datalist){
 	 
 	  val vari1=elt(0).vari
 	  val vari2=elt(1).vari
+	  	  
+	  val df1=elt(0).size-1
+	  val df2=elt(1).size-1
 	  
-	  println("df : "+(elt(0).n-1)+" , "+(elt(1).n-1))
-	  println("var1 : "+vari1+" , "+"vari2 : "+vari2)
-	  
-	  if(vari1>vari2) F.table(elt(0).n-1,elt(1).n-1,vari1/vari2)
-	  else F.table(elt(1).n-1,elt(0).n-1,vari2/vari1)
+	  if(vari1>vari2) F.table(df1,df2,vari1/vari2)
+	  else F.table(df2,df1,vari2/vari1)
 	  
 	}
 	  

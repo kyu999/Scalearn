@@ -5,6 +5,7 @@ import scala.util.Random.nextDouble
 //import org.scalautils.Equality
 import org.scalautils.TolerantNumerics._
 //Doubleの丸め誤差の許可範囲設定のためのやつ
+
 import Converter._
 
 class DataTes extends FunSuite {
@@ -70,9 +71,7 @@ class DataTes extends FunSuite {
     	d3.draw
     	* 
     	*/
-      val d=dase(d6,d7)
-      println("cos : "+d6.cos_similarity(d6.raw, d7.raw))
-      println("pear : "+d.pears.head)
+    
     }
     
     

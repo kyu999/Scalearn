@@ -4,46 +4,44 @@ import scala.math._
 //import org.graphstream.algorithm.measure._
 
 
-class data(x:Vector[Double]) extends Descritive{
+case class data(raw:Vector[Double]) extends Descriptive{
 
 //Descriptive　※データを標本として捉えている
   
     var name:String="data"		       
     	//mutable   
     
-    val n=x.length
+    val size=raw.length
     
-    val raw=x.toVector
-    
-    val sum=x.sum
+    val sum=raw.sum
 
-    val mean=sum/n
+    val mean=sum/size
         
-	lazy val dv=deviation(x,mean)
+	lazy val dv=deviation(raw,mean)
 	
-	lazy val squaredsum=x.map(pow(_,2)).sum
+	lazy val squaredsum=raw.map(pow(_,2)).sum
 	
-	val dvsquared=x.map(each_devi_squared(mean))
+	val dvsquared=raw.map(each_devi_squared(mean))
 	
 	val dvsquaredsum=dvsquared.sum
 
-	val vari=unbiased_variance(dvsquaredsum,n)
+	val vari=unbiased_variance(dvsquaredsum,size)
     //不偏分散：標本から行う、母分散の推定値
 
-	lazy val samplevari=biased_variance(dvsquaredsum,n)
+	lazy val samplevari=biased_variance(dvsquaredsum,size)
     //標本自体の分散。母分散の推定値ではない。
 
     val sd=sqrt(vari)
     //データを標本と見なし不偏分散を用いて算出した母標準偏差推定値。標本自体の標準偏差が必要ならsamplesdを使うべし
     
-    lazy val samplesd=samplestdevi(dvsquaredsum,n)
+    lazy val samplesd=samplestdevi(dvsquaredsum,size)
     //標本データ自体の標準偏差。母集団推定をしない場合に用いる
     
     
    
-    lazy val time:Vector[Double]=(1 to n).map(a=>a.toDouble).toVector
+    lazy val time:Vector[Double]=(1 to size).map(a=>a.toDouble).toVector
     
-    lazy val timemean=time.sum/n
+    lazy val timemean=time.sum/size
     
     lazy val timedv=deviation(time,timemean)
     
@@ -51,7 +49,7 @@ class data(x:Vector[Double]) extends Descritive{
     
     lazy val timedvsquaredsum=timedvsquared.sum
     
-    lazy val timesd=stdevi(timedvsquaredsum,n)
+    lazy val timesd=stdevi(timedvsquaredsum,size)
     
     lazy val timezipdv=timedv.zip(dv)
     
@@ -69,7 +67,7 @@ class data(x:Vector[Double]) extends Descritive{
     
     //Operation-------------------------------------------
     
-    def tots=new tsda(x) 
+    def tots=new tsda(raw)
     //時系列データ化
     
     def ::(component:data)=dase(component,this)
@@ -85,14 +83,9 @@ class data(x:Vector[Double]) extends Descritive{
     */
     
 	def summary={ 
-	    Vector(name+" : "+raw,"length : "+n,"mean -> "+mean,"deviation -> "+dv,
+	    Vector(name+" : "+raw,"length : "+size,"mean -> "+mean,"deviation -> "+dv,
 	        "standard deviation -> "+sd).foreach(println)
 	    mkLine
 	}
 }
-
-//コンパニオンオブジェクト
-object data{
-  def apply(in:Vector[Double])=new data(in)
-  //方向を暗黙的引数として入れる必要あり
-}
+ 

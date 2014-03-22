@@ -2,7 +2,7 @@ package datafactory
 
 import scala.math._
 
-trait TimeSeries extends Descritive{
+trait TimeSeries extends Descriptive{
 	def autocovariance(raw:Vector[Double],lag:Int):Double={
 	  lazy val mean=meanf(raw)
 	  lazy val lag_raw=raw.drop(lag)

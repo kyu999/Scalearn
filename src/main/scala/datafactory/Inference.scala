@@ -2,10 +2,10 @@ package datafactory
 import scala.math._
 import distribution.T
 
-trait Inference extends Descritive{
+trait Inference extends Descriptive{
 
 	def paired_t_test(rawX:Vector[Double],rawY:Vector[Double]):(Boolean,Double)={
-	 
+	  
       val gap=rawX.zip(rawY).map(a=>a._1-a._2)
 	  val mean=meanf(gap)
 	  val n=gap.length
