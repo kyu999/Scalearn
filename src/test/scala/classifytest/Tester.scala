@@ -45,7 +45,7 @@ class Tester extends FunSuite{
 	val input_data=ArrayBuffer(fv3.values,fv4.values,fv5.values,fv3.values,fv5.values,fv4.values,fv5.values,fv3.values,fv3.values,fv5.values,fv4.values,fv5.values,fv3.values)
 	 //3453545335453=>33333 444 55555
 //	println("alltypes : "+alltypes)
-	val data=nlp.clustering.kmeans2(3, input_data)
+	val data=nlp.Clustering.kmeans(3, input_data)
 //	println("clusters : ")
 
 	println("after : "+data)
