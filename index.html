@@ -36,7 +36,7 @@
 <a name="welcome-to-scalearn" class="anchor" href="#welcome-to-scalearn"><span class="octicon octicon-link"></span></a>Welcome to Scalearn</h3>
 <img src="images/scala.png" style="float:right">
 
-<p>This library would help you to deal with a bunch of data by making use of statistics, time series analysis, and machine learning. Although such academic domains seem to be difficult for most developers ( including me! ) , this library targets ordinary scala developers; as a result, it focus on usability rather than precise definition. Besides, I hope this could be useful for beginners of scala.</p>
+<p>This library would help you to deal with a bunch of data by making use of statistics, time series analysis, and machine learning. Although such academic domains seem to be difficult for most developers, this library targets ordinary scala developers; as a result, it focus on usability rather than precise definition. Besides, I hope this could be useful for beginners of scala.</p>
 
 <h3>
 <a name="prerequisite" class="anchor" href="#prerequisite"><span class="octicon octicon-link"></span></a>Prerequisite</h3>
@@ -46,33 +46,8 @@
 	
 	<li><a href="http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html">sbt</a>
 	</li>
-	
-	<li><a href="http://brew.sh/">Homebrew (optional)</a>
-	</li>
 </ul>
 		
-
-
-<h3>
-<a name="Installation" class="anchor" href="#Installation"><span class="octicon octicon-link"></span></a>Installation</h3>
-
-<ol>
-	<li>Download zip file of this library</li>
-	<br>
-	<li>Start your terminal ( if you are using mac ), and go to root directory</li>
-	<br>
-	<pre><code>$ cd root_directory</code></pre>
-	<li>If you don't have sbt, install through homebrew
-	</li>
-			<br>
-		<pre><code>$ brew install sbt</code></pre>
-
-	<li>At root directory, type "sbt package"</li>
-	<br>
-	<pre><code>$ sbt package
-</code></pre>
-	<li>Finally, you got jar file at root/target/scala-2.X/here</li>
-</ol>
 
 <h3>
 <a name="Quick Start" class="anchor" href="#Quick Start"><span class="octicon octicon-link"></span></a>Quick Start</h3>
@@ -122,7 +97,7 @@ val dase3:dase = Vector(raw1,raw2,raw3).tods</code></pre>
 
 val standard_deviation:Double = data1.sd
 
-val length:Int = data1.n
+val length:Int = data1.size
 
 val deviation:Vector[Double] = data1.dv
 
@@ -132,7 +107,7 @@ val regression_slope_intercept:(Double,Double) = data1.reg
 
 val regression_line:Double=>Double = data1.regline
 
-val residual:Vector[Double] = data1.resi</code></pre>
+val residual:data = data1.resi</code></pre>
 
 <p>Perhaps, you would worry about cost to create data instance since it possesses a lot of properties; don't worry about it too much because scala initializes most of the properties when you require to use thanks to "lazy" keyword. Unless you call, it does't do anything to them. By the way, when you have to handle different kinds of data, it's time to use "dase" class ( dase stands for dataset )</p>
 
@@ -203,6 +178,10 @@ val ts3:tsda = data1.ts
 val tsdase1:tsds = tsds(ts1,ts2,ts3)
 val tsdase2:tsds = new tsds(Vector(ts1,ts2,ts3))
 val tsdase3:tsds = dase3.ts</code></pre>
+
+	<pre><code>val detrended:tsda = ts1.detrending
+val differenced:tsda = ts1.differencing
+ts1.differencing.differencing.detrending</code></pre>
 
 	<p>Since tsda class inherits data class, you can call properties and methods of data class freely.
 </ol>
