@@ -1,0 +1,30 @@
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.MatrixTes, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.IoTes, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.InferenceTest, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.LinearRegressionTes, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(classifytest.Tester, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.TsdaTes, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(classifytest.NaiveBayesTest, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(visualizetest.SimpleNode, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.DataTes, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(recomendtest.NaiveRecomTest, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.TsdsTes, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factorytest.DatasetTes, org.scalatest.tools.Framework$$anon$1@30d46a9f, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 1 second, 541 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 37[0m[0m
+[0m[[0minfo[0m] [0m[36mSuites: completed 12, aborted 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 37, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	factorytest.TsdaTes[0m
+[0m[[0mdebug[0m] [0m	factorytest.IoTes[0m
+[0m[[0mdebug[0m] [0m	classifytest.NaiveBayesTest[0m
+[0m[[0mdebug[0m] [0m	classifytest.Tester[0m
+[0m[[0mdebug[0m] [0m	factorytest.DataTes[0m
+[0m[[0mdebug[0m] [0m	factorytest.DatasetTes[0m
+[0m[[0mdebug[0m] [0m	factorytest.InferenceTest[0m
+[0m[[0mdebug[0m] [0m	recomendtest.NaiveRecomTest[0m
+[0m[[0mdebug[0m] [0m	factorytest.MatrixTes[0m
+[0m[[0mdebug[0m] [0m	visualizetest.SimpleNode[0m
+[0m[[0mdebug[0m] [0m	factorytest.TsdsTes[0m
+[0m[[0mdebug[0m] [0m	factorytest.LinearRegressionTes[0m

@@ -12,3 +12,6 @@ run
 run
 test
 clean
+test
+~compile
+test
