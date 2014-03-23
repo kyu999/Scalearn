@@ -34,21 +34,22 @@ class Tester extends FunSuite{
  * 
  */
 
-	val tokens3=JP.mkTokenV("私はリンゴが食べたい")
+	val tokens3=JP.mkTokenV("私はリンゴとてもとてもが食べたい")
 	val tokens4=JP.mkTokenV("私はゴリラが食べたい")
 	val tokens5=JP.mkTokenV("私はゴリラです")
-	val alltypes=JP.mkTokenV("私はリンゴゴリラが食べたいです").map(elt=>elt.getBaseForm).toSet
+	val alltypes=JP.mkTokenV("私はとてもリンゴゴリラが食べたいです").map(elt=>elt.getBaseForm).toSet
 	val fv3=FrequencyVector(tokens3,alltypes) 
 	val fv4=FrequencyVector(tokens4,alltypes) 
 	val fv5=FrequencyVector(tokens5,alltypes) 
 
-	val input_data=ArrayBuffer(fv3,fv4,fv5,fv3,fv5,fv4,fv5,fv3)
-	 
-	println("alltypes : "+alltypes)
-	val data=nlp.clustering.kmeans(3, input_data)
-	println("clusters : ")
-	data.foreach{elt=>elt.tokenvectors.foreach(each=>println(each.freqs));println("next cluster")}
-	
+	val input_data=ArrayBuffer(fv3.values,fv4.values,fv5.values,fv3.values,fv5.values,fv4.values,fv5.values,fv3.values,fv3.values,fv5.values,fv4.values,fv5.values,fv3.values)
+	 //3453545335453=>33333 444 55555
+//	println("alltypes : "+alltypes)
+	val data=nlp.clustering.kmeans2(3, input_data)
+//	println("clusters : ")
+
+	println("after : "+data)
+	println("before : "+input_data)
 	
 
 }

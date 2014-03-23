@@ -52,6 +52,46 @@ case class VectorCluster(tokenvectors:ArrayBuffer[FrequencyVector]) extends Clus
 	
 }
 
+case class VectorCluster2(freq_vectors:ArrayBuffer[Vector[Double]])// extends Cluster
+{
+ 
+	def center:Vector[Double] = { 
+	  
+	  var result:ArrayBuffer[Double]=ArrayBuffer()
+	  
+	  var lookraw=0
+	  val height=freq_vectors.length
+	  val width=freq_vectors.head.length
+	 
+	  while(lookraw<width){
+		  
+		  var lookcol=0
+		  var verticalsum=0.0
+		  		  
+		  while(lookcol<height){
+		    
+		    verticalsum+=freq_vectors(lookcol)(lookraw)
+		    lookcol+=1
+		    
+		  }
+		  
+		  result+=verticalsum/height
+		  lookraw+=1
+		  
+	   }
+	  
+	  result.toVector
+	}
+	        
+	def +(that:Vector[Double]) = freq_vectors+=that
+	
+    def ++(that:VectorCluster2) = new VectorCluster2(freq_vectors ++ that.freq_vectors)
+	
+	
+    
+	
+}
+
 class ProbabilityCluster(tokenprobs:Vector[TokenProbability])// extends Cluster
 {
   
