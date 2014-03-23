@@ -15,3 +15,7 @@ clean
 test
 ~compile
 test
+~compile
+test
+~compile
+test

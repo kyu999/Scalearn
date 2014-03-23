@@ -1,10 +1,10 @@
 package preprocessing
 
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.ArrayBuffer
 
 trait Cluster{
 
-  val tokenvectors:Vector[FrequencyVector]
+  val tokenvectors:ArrayBuffer[FrequencyVector]
  
 //  val center:FrequencyVector
   
@@ -12,29 +12,24 @@ trait Cluster{
     
 }
 
-case class VectorCluster(tokenvectors:Vector[FrequencyVector]) extends Cluster
+case class VectorCluster(tokenvectors:ArrayBuffer[FrequencyVector]) extends Cluster
 {
  
 	def center = { 
 	  
-	  var result:ListBuffer[Double]=ListBuffer()
+	  var result:ArrayBuffer[Double]=ArrayBuffer()
 	  
-	  var grandok=true
 	  var lookraw=0
 	  val height=tokenvectors.length
 	  val width=tokenvectors.head.values.length
 	 
-	  while(grandok){
+	  while(lookraw<width){
 		  
-		  var verticalok=true
 		  var lookcol=0
 		  var verticalsum=0.0
-		  
-		  if(lookraw>=width-1) grandok=false
-		  
-		  while(verticalok){
+		  		  
+		  while(lookcol<height){
 		    
-		    if(lookcol>=height-1) verticalok=false
 		    verticalsum+=tokenvectors(lookcol).values(lookraw)
 		    lookcol+=1
 		    
@@ -48,7 +43,11 @@ case class VectorCluster(tokenvectors:Vector[FrequencyVector]) extends Cluster
 	  result
 	}
 	        
-    def ++(that:Vector[FrequencyVector]) = new VectorCluster(tokenvectors ++ that)
+	def +(that:FrequencyVector) = tokenvectors+=that
+	
+    def ++(that:VectorCluster) = new VectorCluster(tokenvectors ++ that.tokenvectors)
+	
+	
     
 	
 }
