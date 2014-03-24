@@ -9,7 +9,7 @@ import Converter._
 object Clustering {
 
 	
-	def kmeans(k:Int,vectors:ArrayBuffer[Vector[Double]])={
+	def kmeans(k:Int,vectors:ArrayBuffer[Vector[Double]]):IndexedSeq[VectorCluster]={
 		  		
 		val size=vectors.length
 
@@ -18,16 +18,14 @@ object Clustering {
 		val first_clusters:IndexedSeq[VectorCluster] = ( 1 to k ).map{  elt=>
 		  
 		  val insert_place:Int=nextInt(size-1)
-		  val insert_value:Vector[Double] = vectors(insert_place)
-		  println("centers : "+insert_value)
-		  vectors.remove(insert_place)
+		  val insert_value:Vector[Double] = vectors(insert_place)		//;	println("centers : "+insert_value)
+		  vectors.remove(insert_place)								//;	println(vectors)
 		  VectorCluster(ArrayBuffer(insert_value))
 		 
 		}
-		
+				
 		def helper(clusters:IndexedSeq[VectorCluster]) = {
 		
-		println(vectors)
 		
 		//残りの全てのvectorと各clusterとの類似度を求めて最も類似しているclusterにvectorを含める
 		

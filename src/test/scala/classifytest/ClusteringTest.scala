@@ -10,7 +10,7 @@ import scala.collection.mutable.ArrayBuffer
 import scala.util.Random._
 
 
-class Tester extends FunSuite{
+class ClusteringTest extends FunSuite{
 /*	
 	val tokens=JP.mkTokenV("鋭利可愛いよ！可愛いすぎるよ…くぁいい。でもこれからの展開も気になる所です。")
 	val tokens2=JP.mkTokenV("この巻は今までの巻と比べても毛並みが違って好き嫌いが分かれるところじゃないかな。まず、重い。雰囲気もそうだしストーリー自体も前巻を引きずってスタートしとる。この巻で初めて八幡は自身の手法の限界にぶちあたりやり方を今までと変え、ある種進歩したと言える。少なくとも由比ケ浜にとってはそれが進歩に見えたことなんだろうが皮肉にも雪ノ下の考えは推測するにみんなで生徒会に入り負担を分散し今までの関係を維持するところにあったんじゃないかな。悲しいことにやり方を変えたにしろすれ違ってしまう八幡＆由比ケ浜ルート。")
@@ -33,7 +33,7 @@ class Tester extends FunSuite{
 //	println(allwords)
  * 
  */
-
+/*
 	val tokens3=JP.mkTokenV("私はリンゴとてもとてもが食べたい")
 	val tokens4=JP.mkTokenV("私はゴリラが食べたい")
 	val tokens5=JP.mkTokenV("私はゴリラです")
@@ -46,10 +46,23 @@ class Tester extends FunSuite{
 	 //3453545335453=>33333 444 55555
 //	println("alltypes : "+alltypes)
 	val data=nlp.Clustering.kmeans(3, input_data)
+	* 
+	*/
+/*	val easy_data=data.map(elt=>elt.freq_vectors.map{each=>
+	  val zipped=each.zip(alltypes)
+	 
+	  zipped.map(vector=>if(vector._1>0) vector._2 else "")
+	})
+	easy_data.foreach{elt=>println("");println(elt)}
+	* 
+	*/
 //	println("clusters : ")
-
+/*
 	println("after : "+data)
 	println("before : "+input_data)
+	*/
+	val data2=nlp.Clustering.kmeans(2,ArrayBuffer(Vector(100,2,3),Vector(2,3,4),Vector(300,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(3,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(300,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(3,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(300,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(3,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(300,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(3,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(300,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(3,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(300,4,5),Vector(4,5,6),Vector(100,2,3),Vector(2,3,4),Vector(3,4,5),Vector(4,5,6))) 
+	println("data2 : "+data2)
 	
 
 }
