@@ -3,8 +3,7 @@ package nlp
 import preprocessing._
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random._
-import datafactory._
-import Converter._
+import datafactory.Stats
 
 object Clustering {
 
@@ -17,10 +16,10 @@ object Clustering {
 		
 		val first_clusters:IndexedSeq[VectorCluster] = ( 1 to k ).map{  elt=>
 		  
-		  val insert_place:Int=nextInt(size-1)
-		  val insert_value:Vector[Double] = vectors(insert_place)		//;	println("centers : "+insert_value)
-		  vectors.remove(insert_place)								//;	println(vectors)
-		  VectorCluster(ArrayBuffer(insert_value))
+		  val pop_place:Int=nextInt(size-1)
+		  val pop_value:Vector[Double] = vectors(pop_place)		//;	println("centers : "+insert_value)
+		  vectors.remove(pop_place)								//;	println(vectors)
+		  VectorCluster(ArrayBuffer(pop_value))
 		 
 		}
 				
@@ -34,11 +33,11 @@ object Clustering {
 		    var cluster_index=0
 		    var inserting_place=0
 		    
-			var maxsim:(VectorCluster,Double) = (clusters.head , dase(clusters.head.center.toVector.toda,fv.toda).pears.head )
+			var maxsim:(VectorCluster,Double) = (clusters.head , Stats.pearRaw(clusters.head.center,fv))
 			
 			clusters.foreach{	cluster =>
 			  
-			  val sim:(VectorCluster,Double) = (cluster , dase(cluster.center.toVector.toda,fv.toda).pears.head )
+			  val sim:(VectorCluster,Double) = (cluster , Stats.pearRaw(cluster.center,fv))
 			  
 			  if(sim._2>maxsim._2){
 			    inserting_place=cluster_index
