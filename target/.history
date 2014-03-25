@@ -24,3 +24,8 @@ test
 ~compil
 ~compile
 test
+~compile
+tst
+test
+~compile
+test

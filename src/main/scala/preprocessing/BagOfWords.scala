@@ -7,7 +7,7 @@ trait BagOfWords// extends TokenVector
 {
 	
 	val tokens:Vector[Token]
-	val allwordtype:Set[String]
+	val allwordtype:Set[Token]
 	//↑２つとも引数
 	
 	val types:Set[String] = tokens.map(elt=>elt.getBaseForm).toSet
@@ -18,18 +18,18 @@ trait BagOfWords// extends TokenVector
     
 }
 
-case class BinaryVector(tokens:Vector[Token],allwordtype:Set[String]) extends BagOfWords{
+case class BinaryVector(tokens:Vector[Token],allwordtype:Set[Token]) extends BagOfWords{
    
 	
     val values = allwordtype.toVector.map{ elt=>
-      if (types.contains(elt)) 1.0
+      if (types.contains(elt.getBaseForm)) 1.0
 	  else 0.0
 	}
     
     
 }
 
-case class FrequencyVector(tokens:Vector[Token],allwordtype:Set[String])  extends BagOfWords{
+case class FrequencyVector(tokens:Vector[Token],allwordtype:Set[Token])  extends BagOfWords{
 /*全てのDocumentにおける単語タイプと、捜索すべき単語トークンを取得
  * allwordtypeを変形してreturnする
  * 
@@ -38,7 +38,7 @@ case class FrequencyVector(tokens:Vector[Token],allwordtype:Set[String])  extend
 	//改善の余地あり
 	 
 	val values=allwordtype.toVector.map{ elt=>
-	  freqs.get(elt) match{
+	  freqs.get(elt.getBaseForm) match{
 	    case Some(x)=>x
 	    case None=>0
 	  }
