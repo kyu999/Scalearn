@@ -29,3 +29,10 @@ tst
 test
 ~compile
 test
+reload
+update
+test
+~compile
+test
+last test:test
+test

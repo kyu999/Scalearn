@@ -5,6 +5,8 @@ import scala.collection.mutable.ArrayBuffer
 import scala.util.Random._
 import datafactory.Stats
 
+
+
 object Clustering {
 
 	
@@ -23,8 +25,8 @@ object Clustering {
 		 
 		}
 		
-		var previous_clustered:IndexedSeq[VectorCluster] = reclustering(vectors,first_clusters)
-		var after_clustered:IndexedSeq[VectorCluster] = reclustering( vectors,previous_clustered.map(elt=>VectorCluster(ArrayBuffer(elt.center))) )
+		var previous_clustered:IndexedSeq[VectorCluster] = reclustering( vectors,first_clusters )
+		var after_clustered:IndexedSeq[VectorCluster] = reclustering( vectors , previous_clustered.map(elt=>VectorCluster(ArrayBuffer(elt.center))) )
 		
 		while(previous_clustered!=after_clustered){
 		  
@@ -63,7 +65,7 @@ object Clustering {
 			}
 		
 		//一致するclusterにmaxsimのvectorを突っ込む    
-		clusters(inserting_place)+fv
+		clusters(inserting_place) + fv
 		
 		} 
 		
