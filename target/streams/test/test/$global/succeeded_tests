@@ -1,28 +1,15 @@
 #Successful Tests
-#Wed Mar 26 11:18:52 ICT 2014
-factory_test.LinearRegressionTes=1395807529010
-factory_test.DatasetTes=1395807529241
-factorytest.MatrixTes=1395756808733
-factory_test.TsdaTes=1395807529128
-factorytest.TsdaTes=1395756808551
-visualizetest.SimpleNode=1395756808349
-classifytest.NaiveBayesTest=1395756808251
-factory_test.DataTes=1395807529037
-factorytest.DataTes=1395756808505
-classifytest.ClusteringTest=1395756808512
-hello_spark=1395807532920
-recomendtest.NaiveRecomTest=1395756808683
-factorytest.LinearRegressionTes=1395756808594
-factory_test.InferenceTest=1395807529207
-factorytest.IoTes=1395756808354
-factory_test.IoTes=1395807529071
-unsupervised_test.ClusteringTest=1395807529541
-recomend_test.NaiveRecomTest=1395807529075
-supervised_test.NaiveBayesTest=1395807529031
-factory_test.TsdsTes=1395807529141
-factorytest.TsdsTes=1395756808649
-visualize_test.SimpleNode=1395807529019
-factorytest.DatasetTes=1395756808553
-classifytest.Tester=1395590583125
-factory_test.MatrixTes=1395807529018
-factorytest.InferenceTest=1395756808503
+#Fri Mar 28 11:12:07 ICT 2014
+factory_test.LinearRegressionTes=1395979922650
+factory_test.DatasetTes=1395979923102
+unsupervised_test.ClusteringTest=1395979923977
+supervised_test.NaiveBayesTest=1395979922543
+visualize_test.SimpleNode=1395979922600
+factory_test.InferenceTest=1395979922635
+hello_spark=1395979927318
+factory_test.MatrixTes=1395979922701
+factory_test.TsdaTes=1395979922703
+factory_test.IoTes=1395979922809
+recomend_test.NaiveRecomTest=1395979922732
+factory_test.TsdsTes=1395979922618
+factory_test.DataTes=1395979922623
