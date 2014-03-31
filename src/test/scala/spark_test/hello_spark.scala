@@ -1,11 +1,11 @@
 import org.scalatest.FunSuite
-
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.atilika.kuromoji._
 import tokenfactory.JP
 
-class hello_spark extends FunSuite{
+class hello_spark// extends FunSuite
+{
 
     val spark = new SparkContext("local", "SparkTest")
  
@@ -15,7 +15,7 @@ class hello_spark extends FunSuite{
                         .map(word => (word, 1))
                         .reduceByKey(_ + _)
  
-    counts.saveAsTextFile("out.txt")
+    counts.saveAsTextFile("resource/out.txt")
  
 	println("""
 	*********************

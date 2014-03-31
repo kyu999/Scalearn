@@ -6,8 +6,9 @@ import math._
 class dase(datalist:Vector[data]) extends  
 			 Inference with Bayes with Multivariate{
   
-  //datalistが欲しくなったらresolveで分解しよう。ただ、そもそもdataをdatasetに引数としていれてるんだからdataが欲しいとはあまりならないと思われる
-  //datalist.map(~)を多用してしまっているがdatalistのリストはそれほど巨大にならないと想定している上に、各変数の統計量は既にdata内で算出されている。また、使用頻度の高くなさそうなものは遅延評価にしているため計算量的にそんなに問題ない。
+  /**datalistが欲しくなったらresolveで分解しよう。ただ、そもそもdataをdatasetに引数としていれてるんだからdataが欲しいとはあまりならないと思われる
+  datalist.map(~)を多用してしまっているがdatalistのリストはそれほど巨大にならないと想定している上に、各変数の統計量は既にdata内で算出されている。また、使用頻度の高くなさそうなものは遅延評価にしているため計算量的にそんなに問題ない。
+  **/
             
     val raw:Vector[Vector[Double]]=datalist.map(a=>a.raw) 
     

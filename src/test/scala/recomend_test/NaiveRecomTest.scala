@@ -31,4 +31,20 @@ class NaiveRecomTest extends FunSuite{
     
   }
   
+  test("type parameter"){
+  	val exsuperString:ExSuper[Any]=new ExSuper[String]("get String as type parameter")
+  	exsuperString.typeName
+  	//AnyRefのサブクラス以降なら可。StringはAnyRefのサブクラスに当たる　
+  	val ExItoD:IntToDouble[Double]=new IntToDouble[Double](1500)
+  	ExItoD.typeName
+  }
+  
+}
+
+class IntToDouble[Type](para:Type){
+	def typeName=println(para)
+}
+
+class ExSuper[+Type](para:Type){
+	def typeName=println(para)
 }

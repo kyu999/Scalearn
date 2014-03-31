@@ -13,8 +13,12 @@ class DataTes extends FunSuite {
     implicit val doubleEquality = tolerantDoubleEquality(0.001)	  	
 	//===の誤算範囲を上書き設定。小数点三桁以下まで許可
 
-    val x=Vector(35,20,63,59,14,44,42,25,73,38,56,69,28,46)
-    val y=Vector(47.0,62,36,40,58,46,50,57,38,44,40,32,54,48)
+	val intData:Vector[Double]=Vector(1,2) 
+	//DoubleではなくIntのみの場合は型宣言をする必要あり
+	data(intData)
+    val x:Vector[Double]=Vector(35,20,63,59,14,44,42,25,73,38,56,69,28,46)
+    val y:Vector[Double]=Vector(47,62,36,40,58,46,50,57,38,44,40,32,54,48)
+    //val yのみだとエラー
     val z=Vector(1,2,5,4,3)
     val a=(1 to 1000).map(in=>in.toDouble).toVector
     val b=Vector(4,5,6,4,3,2,5,6,7,5,433,3,3,9,8,96,56,4,33,2)

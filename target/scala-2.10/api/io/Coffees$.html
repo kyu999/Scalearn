@@ -1,0 +1,925 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>Coffees - io.Coffees</title>
+          <meta name="description" content="Coffees - io.Coffees" />
+          <meta name="keywords" content="Coffees io.Coffees" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../index.html';
+            var hash = 'io.Coffees$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../lib/object_big.png" />
+        <p id="owner"><a href="package.html" class="extype" name="io">io</a></p>
+        <h1>Coffees</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Coffees</span><span class="result"> extends <span class="extype" name="scala.slick.driver.BasicProfile.SimpleQL.Table">Table</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.slick.driver.BasicTableComponent.Table">scala.slick.driver.H2Driver.Table</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <span class="extype" name="scala.slick.lifted.AbstractTable">AbstractTable</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <span class="extype" name="scala.slick.ast.NullaryNode">NullaryNode</span>, <span class="extype" name="scala.slick.ast.SimpleNode">SimpleNode</span>, <span class="extype" name="scala.slick.lifted.ColumnBase">ColumnBase</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <span class="extype" name="scala.slick.util.RecordLinearizer">RecordLinearizer</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <span class="extype" name="scala.slick.util.ValueLinearizer">ValueLinearizer</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <span class="extype" name="scala.slick.lifted.Rep">Rep</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <span class="extype" name="scala.slick.ast.WithOp">WithOp</span>, <span class="extype" name="scala.Cloneable">Cloneable</span>, <span class="extype" name="java.lang.Cloneable">Cloneable</span>, <span class="extype" name="scala.slick.ast.TableNode">TableNode</span>, <span class="extype" name="scala.slick.ast.Node">Node</span>, <span class="extype" name="scala.slick.ast.NodeGenerator">NodeGenerator</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="io.Coffees"><span>Coffees</span></li><li class="in" name="scala.slick.driver.BasicTableComponent.Table"><span>Table</span></li><li class="in" name="scala.slick.lifted.AbstractTable"><span>AbstractTable</span></li><li class="in" name="scala.slick.ast.NullaryNode"><span>NullaryNode</span></li><li class="in" name="scala.slick.ast.SimpleNode"><span>SimpleNode</span></li><li class="in" name="scala.slick.lifted.ColumnBase"><span>ColumnBase</span></li><li class="in" name="scala.slick.util.RecordLinearizer"><span>RecordLinearizer</span></li><li class="in" name="scala.slick.util.ValueLinearizer"><span>ValueLinearizer</span></li><li class="in" name="scala.slick.lifted.Rep"><span>Rep</span></li><li class="in" name="scala.slick.ast.WithOp"><span>WithOp</span></li><li class="in" name="scala.Cloneable"><span>Cloneable</span></li><li class="in" name="java.lang.Cloneable"><span>Cloneable</span></li><li class="in" name="scala.slick.ast.TableNode"><span>TableNode</span></li><li class="in" name="scala.slick.ast.Node"><span>Node</span></li><li class="in" name="scala.slick.ast.NodeGenerator"><span>NodeGenerator</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="io.Coffees#*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*:scala.slick.lifted.Projection5[String,Int,Double,Int,Int]"></a>
+      <a id="*:Projection5[String,Int,Double,Int,Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times" class="name">*</span><span class="result">: <span class="extype" name="scala.slick.lifted.Projection5">Projection5</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="io.Coffees">Coffees</a> → AbstractTable</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.slick.driver.BasicTableComponent.Table#O" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="O:BasicTableComponent.this.columnOptions.type"></a>
+      <a id="O:scala.slick.driver.H2Driver.columnOptions.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">O</span><span class="result">: <span class="extype" name="scala.slick.driver.ExtendedTableComponent.columnOptions">scala.slick.driver.H2Driver.columnOptions</span>.type</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Table</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.slick.ast.WithOp#clone" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():scala.slick.ast.WithOp.&lt;refinement&gt;.type"></a>
+      <a id="clone():Coffees.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="io.Coffees">Coffees</a>.this.type</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithOp → AnyRef</dd></dl></div>
+    </li><li name="scala.slick.driver.BasicTableComponent.Table#column" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="column[C](n:String,options:scala.slick.lifted.ColumnOption[C]*)(implicittm:scala.slick.lifted.TypeMapper[C]):scala.slick.lifted.Column[C]"></a>
+      <a id="column[C](String,ColumnOption[C]*)(TypeMapper[C]):Column[C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">column</span><span class="tparams">[<span name="C">C</span>]</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="options">options: <span class="extype" name="scala.slick.lifted.ColumnOption">ColumnOption</span>[<span class="extype" name="scala.slick.driver.BasicTableComponent.Table.column.C">C</span>]*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tm">tm: <span class="extype" name="scala.slick.lifted.TypeMapper">TypeMapper</span>[<span class="extype" name="scala.slick.driver.BasicTableComponent.Table.column.C">C</span>]</span>)</span><span class="result">: <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="scala.slick.driver.BasicTableComponent.Table.column.C">C</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Table</dd></dl></div>
+    </li><li name="scala.slick.driver.BasicTableComponent.Table#createFinderBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createFinderBy[P](f:Table.this.type=&gt;scala.slick.lifted.Column[P])(implicittm:scala.slick.lifted.TypeMapper[P]):scala.slick.driver.BasicQueryTemplate[P,T]"></a>
+      <a id="createFinderBy[P]((Coffees.this.type)⇒Column[P])(TypeMapper[P]):BasicQueryTemplate[P,(String,Int,Double,Int,Int)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createFinderBy</span><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="io.Coffees">Coffees</a>.this.type) ⇒ <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="scala.slick.driver.BasicTableComponent.Table.createFinderBy.P">P</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tm">tm: <span class="extype" name="scala.slick.lifted.TypeMapper">TypeMapper</span>[<span class="extype" name="scala.slick.driver.BasicTableComponent.Table.createFinderBy.P">P</span>]</span>)</span><span class="result">: <span class="extype" name="scala.slick.driver.BasicQueryTemplate">BasicQueryTemplate</span>[<span class="extype" name="scala.slick.driver.BasicTableComponent.Table.createFinderBy.P">P</span>, (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Table</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#create_*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="create_*:Iterable[scala.slick.ast.FieldSymbol]"></a>
+      <a id="create_*:Iterable[FieldSymbol]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: create_$times" class="name">create_*</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.slick.ast.FieldSymbol">FieldSymbol</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="scala.slick.driver.BasicTableComponent.Table#ddl" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ddl:scala.slick.lifted.DDL"></a>
+      <a id="ddl:DDL"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ddl</span><span class="result">: <span class="extype" name="scala.slick.lifted.DDL">DDL</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Table</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#foreignKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreignKey[P,PU,TT&lt;:scala.slick.ast.TableNode,U](name:String,sourceColumns:P,targetTable:TT)(targetColumns:TT=&gt;P,onUpdate:scala.slick.lifted.ForeignKeyAction,onDelete:scala.slick.lifted.ForeignKeyAction)(implicitunpack:scala.slick.lifted.Shape[TT,U,_],implicitunpackp:scala.slick.lifted.Shape[P,PU,_]):scala.slick.lifted.ForeignKeyQuery[TT,U]"></a>
+      <a id="foreignKey[P,PU,TT&lt;:TableNode,U](String,P,TT)((TT)⇒P,ForeignKeyAction,ForeignKeyAction)(Shape[TT,U,_],Shape[P,PU,_]):ForeignKeyQuery[TT,U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreignKey</span><span class="tparams">[<span name="P">P</span>, <span name="PU">PU</span>, <span name="TT">TT &lt;: <span class="extype" name="scala.slick.ast.TableNode">TableNode</span></span>, <span name="U">U</span>]</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sourceColumns">sourceColumns: <span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.P">P</span></span>, <span name="targetTable">targetTable: <span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.TT">TT</span></span>)</span><span class="params">(<span name="targetColumns">targetColumns: (<span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.TT">TT</span>) ⇒ <span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.P">P</span></span>, <span name="onUpdate">onUpdate: <span class="extype" name="scala.slick.lifted.ForeignKeyAction">ForeignKeyAction</span></span>, <span name="onDelete">onDelete: <span class="extype" name="scala.slick.lifted.ForeignKeyAction">ForeignKeyAction</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="unpack">unpack: <span class="extype" name="scala.slick.lifted.Shape">Shape</span>[<span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.TT">TT</span>, <span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.U">U</span>, _]</span>, <span name="unpackp">unpackp: <span class="extype" name="scala.slick.lifted.Shape">Shape</span>[<span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.P">P</span>, <span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.PU">PU</span>, _]</span>)</span><span class="result">: <span class="extype" name="scala.slick.lifted.ForeignKeyQuery">ForeignKeyQuery</span>[<span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.TT">TT</span>, <span class="extype" name="scala.slick.lifted.AbstractTable.foreignKey.U">U</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#foreignKeys" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreignKeys:Iterable[scala.slick.lifted.ForeignKey[_&lt;:scala.slick.ast.TableNode,_]]"></a>
+      <a id="foreignKeys:Iterable[ForeignKey[_&lt;:TableNode,_]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreignKeys</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.slick.lifted.ForeignKey">ForeignKey</span>[_ &lt;: <span class="extype" name="scala.slick.ast.TableNode">TableNode</span>, _]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#getLinearizedNodes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getLinearizedNodes:IndexedSeq[scala.slick.ast.Node]"></a>
+      <a id="getLinearizedNodes:IndexedSeq[Node]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLinearizedNodes</span><span class="result">: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="scala.slick.ast.Node">Node</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable → RecordLinearizer</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#getResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getResult(profile:scala.slick.driver.BasicProfile,rs:scala.slick.session.PositionedResult):T"></a>
+      <a id="getResult(BasicProfile,PositionedResult):(String,Int,Double,Int,Int)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getResult</span><span class="params">(<span name="profile">profile: <span class="extype" name="scala.slick.driver.BasicProfile">BasicProfile</span></span>, <span name="rs">rs: <span class="extype" name="scala.slick.session.PositionedResult">PositionedResult</span></span>)</span><span class="result">: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable → RecordLinearizer</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#index" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="index[T](name:String,on:T,unique:Boolean)(implicitshape:scala.slick.lifted.Shape[T,_,_]):scala.slick.lifted.Index"></a>
+      <a id="index[T](String,T,Boolean)(Shape[T,_,_]):Index"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">index</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="on">on: <span class="extype" name="scala.slick.lifted.AbstractTable.index.T">T</span></span>, <span name="unique">unique: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="shape">shape: <span class="extype" name="scala.slick.lifted.Shape">Shape</span>[<span class="extype" name="scala.slick.lifted.AbstractTable.index.T">T</span>, _, _]</span>)</span><span class="result">: <span class="extype" name="scala.slick.lifted.Index">Index</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#indexes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="indexes:Iterable[scala.slick.lifted.Index]"></a>
+      <a id="indexes:Iterable[Index]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">indexes</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.slick.lifted.Index">Index</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.slick.ast.WithOp#mapOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mapOp(f:(scala.slick.ast.Node,List[Int])=&gt;scala.slick.ast.Node,positions:List[Int]):scala.slick.ast.WithOp.&lt;refinement&gt;.type"></a>
+      <a id="mapOp((Node,List[Int])⇒Node,List[Int]):Coffees.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapOp</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.slick.ast.Node">Node</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Int">Int</span>]) ⇒ <span class="extype" name="scala.slick.ast.Node">Node</span></span>, <span name="positions">positions: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="io.Coffees">Coffees</a>.this.type</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithOp</dd></dl></div>
+    </li><li name="io.Coffees#name" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="name:scala.slick.lifted.Column[String]"></a>
+      <a id="name:Column[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.slick.util.RecordLinearizer#narrowedLinearizer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="narrowedLinearizer:scala.slick.util.RecordLinearizer[T]"></a>
+      <a id="narrowedLinearizer:RecordLinearizer[(String,Int,Double,Int,Int)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">narrowedLinearizer</span><span class="result">: <span class="extype" name="scala.slick.util.RecordLinearizer">RecordLinearizer</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RecordLinearizer → ValueLinearizer</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.slick.ast.Node#nodeChildNames" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeChildNames:Iterable[String]"></a>
+      <a id="nodeChildNames:Iterable[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeChildNames</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Node</dd></dl></div>
+    </li><li name="scala.slick.ast.NullaryNode#nodeChildren" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeChildren:scala.collection.immutable.Nil.type"></a>
+      <a id="nodeChildren:Nil.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeChildren</span><span class="result">: <span class="extype" name="scala.collection.immutable.Nil">Nil</span>.type</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>NullaryNode → Node</dd></dl></div>
+    </li><li name="scala.slick.ast.Node#nodeDelegate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeDelegate:scala.slick.ast.Node"></a>
+      <a id="nodeDelegate:Node"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeDelegate</span><span class="result">: <span class="extype" name="scala.slick.ast.Node">Node</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Node → NodeGenerator</dd></dl></div>
+    </li><li name="scala.slick.ast.Node#nodeIntrinsicSymbol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeIntrinsicSymbol:scala.slick.ast.IntrinsicSymbol"></a>
+      <a id="nodeIntrinsicSymbol:IntrinsicSymbol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeIntrinsicSymbol</span><span class="result">: <span class="extype" name="scala.slick.ast.IntrinsicSymbol">IntrinsicSymbol</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Node</dd></dl></div>
+    </li><li name="scala.slick.ast.SimpleNode#nodeMapChildren" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeMapChildren(f:scala.slick.ast.Node=&gt;scala.slick.ast.Node):scala.slick.ast.Node"></a>
+      <a id="nodeMapChildren((Node)⇒Node):Node"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeMapChildren</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.slick.ast.Node">Node</span>) ⇒ <span class="extype" name="scala.slick.ast.Node">Node</span></span>)</span><span class="result">: <span class="extype" name="scala.slick.ast.Node">Node</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleNode → Node</dd></dl></div>
+    </li><li name="scala.slick.ast.Node#nodeMapNodes" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeMapNodes(s:Iterable[scala.slick.ast.Node],f:scala.slick.ast.Node=&gt;scala.slick.ast.Node):Option[IndexedSeq[scala.slick.ast.Node]]"></a>
+      <a id="nodeMapNodes(Iterable[Node],(Node)⇒Node):Option[IndexedSeq[Node]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeMapNodes</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.slick.ast.Node">Node</span>]</span>, <span name="f">f: (<span class="extype" name="scala.slick.ast.Node">Node</span>) ⇒ <span class="extype" name="scala.slick.ast.Node">Node</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="scala.slick.ast.Node">Node</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd>Node</dd></dl></div>
+    </li><li name="scala.slick.ast.NullaryNode#nodeRebuild" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeRebuild(ch:IndexedSeq[scala.slick.ast.Node]):scala.slick.ast.Node"></a>
+      <a id="nodeRebuild(IndexedSeq[Node]):Node"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeRebuild</span><span class="params">(<span name="ch">ch: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="scala.slick.ast.Node">Node</span>]</span>)</span><span class="result">: <span class="extype" name="scala.slick.ast.Node">Node</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd>NullaryNode → SimpleNode</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#nodeShaped_*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeShaped_*:scala.slick.lifted.ShapedValue[_,_]"></a>
+      <a id="nodeShaped_*:ShapedValue[_,_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: nodeShaped_$times" class="name">nodeShaped_*</span><span class="result">: <span class="extype" name="scala.slick.lifted.ShapedValue">ShapedValue</span>[_, _]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable → TableNode</dd></dl></div>
+    </li><li name="scala.slick.ast.TableNode#nodeTableSymbol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nodeTableSymbol:scala.slick.ast.TableSymbol"></a>
+      <a id="nodeTableSymbol:TableSymbol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeTableSymbol</span><span class="result">: <span class="extype" name="scala.slick.ast.TableSymbol">TableSymbol</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TableNode</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.slick.ast.WithOp#op" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="op:scala.slick.ast.Node"></a>
+      <a id="op:Node"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">op</span><span class="result">: <span class="extype" name="scala.slick.ast.Node">Node</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithOp</dd></dl></div>
+    </li><li name="io.Coffees#price" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="price:scala.slick.lifted.Column[Double]"></a>
+      <a id="price:Column[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">price</span><span class="result">: <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.slick.lifted.AbstractTable#primaryKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="primaryKey[T](name:String,sourceColumns:T)(implicitunpack:scala.slick.lifted.Shape[T,_,_]):scala.slick.lifted.PrimaryKey"></a>
+      <a id="primaryKey[T](String,T)(Shape[T,_,_]):PrimaryKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">primaryKey</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sourceColumns">sourceColumns: <span class="extype" name="scala.slick.lifted.AbstractTable.primaryKey.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="unpack">unpack: <span class="extype" name="scala.slick.lifted.Shape">Shape</span>[<span class="extype" name="scala.slick.lifted.AbstractTable.primaryKey.T">T</span>, _, _]</span>)</span><span class="result">: <span class="extype" name="scala.slick.lifted.PrimaryKey">PrimaryKey</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#primaryKeys" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="primaryKeys:Iterable[scala.slick.lifted.PrimaryKey]"></a>
+      <a id="primaryKeys:Iterable[PrimaryKey]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">primaryKeys</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.slick.lifted.PrimaryKey">PrimaryKey</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="io.Coffees#sales" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sales:scala.slick.lifted.Column[Int]"></a>
+      <a id="sales:Column[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sales</span><span class="result">: <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.slick.lifted.AbstractTable#schemaName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="schemaName:Option[String]"></a>
+      <a id="schemaName:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">schemaName</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#setParameter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setParameter(profile:scala.slick.driver.BasicProfile,ps:scala.slick.session.PositionedParameters,value:Option[T]):Unit"></a>
+      <a id="setParameter(BasicProfile,PositionedParameters,Option[(String,Int,Double,Int,Int)]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setParameter</span><span class="params">(<span name="profile">profile: <span class="extype" name="scala.slick.driver.BasicProfile">BasicProfile</span></span>, <span name="ps">ps: <span class="extype" name="scala.slick.session.PositionedParameters">PositionedParameters</span></span>, <span name="value">value: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable → RecordLinearizer</dd></dl></div>
+    </li><li name="io.Coffees#supID" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="supID:scala.slick.lifted.Column[Int]"></a>
+      <a id="supID:Column[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">supID</span><span class="result">: <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="io.Coffees#supplier" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="supplier:scala.slick.lifted.ForeignKeyQuery[io.Suppliers.type,(Int,String,String,String,String,String)]"></a>
+      <a id="supplier:ForeignKeyQuery[Suppliers.type,(Int,String,String,String,String,String)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">supplier</span><span class="result">: <span class="extype" name="scala.slick.lifted.ForeignKeyQuery">ForeignKeyQuery</span>[<a href="Suppliers$.html" class="extype" name="io.Suppliers">Suppliers</a>.type, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#tableConstraints" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tableConstraints:Iterator[scala.slick.lifted.Constraint]"></a>
+      <a id="tableConstraints:Iterator[Constraint]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tableConstraints</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="scala.slick.lifted.Constraint">Constraint</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable</dd></dl></div>
+    </li><li name="scala.slick.lifted.AbstractTable#tableName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tableName:String"></a>
+      <a id="tableName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tableName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable → TableNode</dd></dl></div>
+    </li><li name="scala.slick.ast.TableNode#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TableNode → Node → AnyRef → Any</dd></dl></div>
+    </li><li name="io.Coffees#total" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="total:scala.slick.lifted.Column[Int]"></a>
+      <a id="total:Column[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">total</span><span class="result">: <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.slick.lifted.AbstractTable#updateResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateResult(profile:scala.slick.driver.BasicProfile,rs:scala.slick.session.PositionedResult,value:T):Unit"></a>
+      <a id="updateResult(BasicProfile,PositionedResult,(String,Int,Double,Int,Int)):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateResult</span><span class="params">(<span name="profile">profile: <span class="extype" name="scala.slick.driver.BasicProfile">BasicProfile</span></span>, <span name="rs">rs: <span class="extype" name="scala.slick.session.PositionedResult">PositionedResult</span></span>, <span name="value">value: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractTable → RecordLinearizer</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.slick.driver.BasicTableComponent.Table">
+              <h3>Inherited from <span class="extype" name="scala.slick.driver.BasicTableComponent.Table">scala.slick.driver.H2Driver.Table</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
+            </div><div class="parent" name="scala.slick.lifted.AbstractTable">
+              <h3>Inherited from <span class="extype" name="scala.slick.lifted.AbstractTable">AbstractTable</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
+            </div><div class="parent" name="scala.slick.ast.NullaryNode">
+              <h3>Inherited from <span class="extype" name="scala.slick.ast.NullaryNode">NullaryNode</span></h3>
+            </div><div class="parent" name="scala.slick.ast.SimpleNode">
+              <h3>Inherited from <span class="extype" name="scala.slick.ast.SimpleNode">SimpleNode</span></h3>
+            </div><div class="parent" name="scala.slick.lifted.ColumnBase">
+              <h3>Inherited from <span class="extype" name="scala.slick.lifted.ColumnBase">ColumnBase</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
+            </div><div class="parent" name="scala.slick.util.RecordLinearizer">
+              <h3>Inherited from <span class="extype" name="scala.slick.util.RecordLinearizer">RecordLinearizer</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
+            </div><div class="parent" name="scala.slick.util.ValueLinearizer">
+              <h3>Inherited from <span class="extype" name="scala.slick.util.ValueLinearizer">ValueLinearizer</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
+            </div><div class="parent" name="scala.slick.lifted.Rep">
+              <h3>Inherited from <span class="extype" name="scala.slick.lifted.Rep">Rep</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
+            </div><div class="parent" name="scala.slick.ast.WithOp">
+              <h3>Inherited from <span class="extype" name="scala.slick.ast.WithOp">WithOp</span></h3>
+            </div><div class="parent" name="scala.Cloneable">
+              <h3>Inherited from <span class="extype" name="scala.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="java.lang.Cloneable">
+              <h3>Inherited from <span class="extype" name="java.lang.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="scala.slick.ast.TableNode">
+              <h3>Inherited from <span class="extype" name="scala.slick.ast.TableNode">TableNode</span></h3>
+            </div><div class="parent" name="scala.slick.ast.Node">
+              <h3>Inherited from <span class="extype" name="scala.slick.ast.Node">Node</span></h3>
+            </div><div class="parent" name="scala.slick.ast.NodeGenerator">
+              <h3>Inherited from <span class="extype" name="scala.slick.ast.NodeGenerator">NodeGenerator</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../lib/template.js"></script>
+    </body>
+      </html>
