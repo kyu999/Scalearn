@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@323909b7[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@10ff73af[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -44,7 +44,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.hadoop#hadoop-core;1.0.4!hadoop-core.pom(pom.original) (1745ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.hadoop#hadoop-core;1.0.4!hadoop-core.pom(pom.original) (1499ms)[0m
 [0m[[0mdebug[0m] [0m	found org.apache.hadoop#hadoop-core;1.0.4 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.hadoop#hadoop-client;1.0.4->org.apache.hadoop#hadoop-core;1.0.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: commons-cli#commons-cli;1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
@@ -296,7 +296,7 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: org.codehaus.jackson#jackson-mapper-asl;1.0.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scalatest#scalatest_2.10;2.0 {test=[default(compile)]} => dependency: org.scalatest#scalatest_2.10;1.9.1 {test=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving commons-net#commons-net;1.4.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@793f31e5[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4ebded0b[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: commons-net#commons-net;1.4.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: commons-net#commons-net;1.4.1[0m
 [0m[[0mdebug[0m] [0m	found commons-net#commons-net;1.4.1 in sbt-chain[0m
@@ -634,7 +634,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.avro#avro-ipc;1.7.4!avro-ipc.pom(pom.original) (1206ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.avro#avro-ipc;1.7.4!avro-ipc.pom(pom.original) (1179ms)[0m
 [0m[[0minfo[0m] [0mResolving org.apache.avro#avro-parent;1.7.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.avro#avro-parent;1.7.4 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.avro#avro-parent;1.7.4[0m
@@ -945,7 +945,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518!javax.servlet.pom(pom.original) (1330ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518!javax.servlet.pom(pom.original) (1204ms)[0m
 [0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#jetty-orbit;1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.eclipse.jetty.orbit#jetty-orbit;1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.eclipse.jetty.orbit#jetty-orbit;1[0m
@@ -9638,7 +9638,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.3!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 17705ms :: artifacts dl 127ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 14516ms :: artifacts dl 132ms[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
@@ -9652,5 +9652,5 @@
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (17705ms resolve - 127ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (14516ms resolve - 132ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

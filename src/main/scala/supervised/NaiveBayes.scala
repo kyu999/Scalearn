@@ -4,8 +4,11 @@ import scala.math._
 import org.atilika.kuromoji._
 import scala.collection.mutable.ListBuffer
 import tokenfactory.JP
+import org.apache.spark.rdd._
 
-object NaiveBayes{	
+
+object NaiveBayes{
+		
   //並列コレクション化した方が効率上がるかもparメソッドの活用=>並列化によるオーバーヘッドが大きいため現状では使わないほうがいい。
   var data:ListBuffer[(Boolean,String)]
 		  =VirtualData.datalist

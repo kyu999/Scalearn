@@ -8,7 +8,7 @@ import datafactory._
 import datafactory.Converter._
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random._
-import preprocessing.NLP
+import preprocessing.WordsConverter
 
 class ClusteringTest extends FunSuite{
 /*	
@@ -74,7 +74,7 @@ class ClusteringTest extends FunSuite{
 	println("before : "+input_data)
 	*/
   
-	println("めっちゃ疎なデータ："+NLP.toMathVector("りんこりんかわいいよおお", """りんこりんかわいいよおお点からみれば、クラスタリングは信頼性を得る為（1台のマシンが動作しなくなっても他がその作業を引き継ぐ）、またはコンピュータの非常に高い性能を廉価に得る1手段として利用される。コンピュータ・クラスターを参照。
+	println("めっちゃ疎なデータ："+WordsConverter.toMathVector("りんこりんかわいいよおお", """りんこりんかわいいよおお点からみれば、クラスタリングは信頼性を得る為（1台のマシンが動作しなくなっても他がその作業を引き継ぐ）、またはコンピュータの非常に高い性能を廉価に得る1手段として利用される。コンピュータ・クラスターを参照。
 （統計学）データ解析手法の1つ。機械学習やデータマイニング、パターン認識、イメージ解析やバイオインフォマティックスなど多くの分野で用いられる。クラスタリングではデータの集合を部分集合（クラスタ）に切り分けて、それぞれの部分集合に含まれるデータが（理想的には）ある共通の特徴を持つようにする。この特徴は多くの場合、類似性や、ある定められた距離尺度に基づく近さで示される。データ・クラスタリングを見よ。
 （人口統計学）民族、経済、信"""))
   

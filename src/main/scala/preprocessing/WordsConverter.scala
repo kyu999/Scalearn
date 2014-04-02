@@ -5,7 +5,7 @@ import org.atilika.kuromoji._
 import scala.collection.mutable.ArrayBuffer
 
 
-object NLP {
+object WordsConverter {
   
 	def toMathVector(document:String,allwordtype:String)={
 	  
@@ -13,6 +13,5 @@ object NLP {
 	  	    mkToken(document).toVector , mkToken(allwordtype).toSet
 	  	    ).values
 	  			
-
 	}
 }

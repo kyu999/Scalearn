@@ -74,3 +74,18 @@ doc
 ~compile
 test
 doc
+tasks
+test
+~compile
+test
+tes
+test
+tes
+test
+~compile
+re-run -deprecation
+run -deprecation
+~compile -deprecation
+tasks
+~compile
+test
