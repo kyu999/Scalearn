@@ -12,7 +12,7 @@ class hello_spark extends FunSuite
  
     val myFile = sc.textFile("resource/doc1.txt")
     
-    val counts = myFile//.flatMap{line =>JP.mkToken(line).map(elt=>elt.getBaseForm)}.filter(elt=>elt=="好く")
+    val counts = myFile.flatMap{line =>JP.mkToken(line).map(elt=>elt.getBaseForm)}
                         .map(word => (word, 1))
                         .reduceByKey(_ + _)
                         .cache() 

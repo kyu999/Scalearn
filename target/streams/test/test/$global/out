@@ -1,17 +1,17 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.MatrixTes, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.DataTes, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(recomend_test.NaiveRecomTest, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(hello_spark, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.TsdsTes, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.IoTes, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.InferenceTest, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.LinearRegressionTes, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(visualize_test.SimpleNode, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.TsdaTes, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(supervised_test.NaiveBayesTest, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(unsupervised_test.ClusteringTest, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.DatasetTes, org.scalatest.tools.Framework$$anon$1@204cc2a3, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 5 seconds, 202 milliseconds.[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.TsdaTes, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(recomend_test.NaiveRecomTest, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.InferenceTest, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(unsupervised_test.ClusteringTest, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.DatasetTes, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.LinearRegressionTes, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.TsdsTes, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.DataTes, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.MatrixTes, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(hello_spark, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.IoTes, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(supervised_test.NaiveBayesTest, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(visualize_test.SimpleNode, org.scalatest.tools.Framework$$anon$1@36c1656c, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 5 seconds, 366 milliseconds.[0m[0m
 [0m[[0minfo[0m] [0m[36mTotal number of tests run: 38[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 13, aborted 0[0m[0m
 [0m[[0minfo[0m] [0m[36mTests: succeeded 38, failed 0, canceled 0, ignored 0, pending 0[0m[0m

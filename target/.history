@@ -89,3 +89,9 @@ run -deprecation
 tasks
 ~compile
 test
+~compi
+~compile
+test
+~compile
+test
+~compile
