@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@10ff73af[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@9fdd065[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -35,17 +35,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scalatest#scalatest_2.10;2.0 {test=[default(compile)]} => dependency: org.scalatest#scalatest_2.10;1.9.1 {test=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.apache.hadoop#hadoop-core;1.0.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.hadoop#hadoop-core;1.0.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.apache.hadoop/hadoop-core/1.0.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.hadoop#hadoop-core;1.0.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.hadoop#hadoop-core;1.0.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom (1.0.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.hadoop#hadoop-core;1.0.4!hadoop-core.pom(pom.original) (1499ms)[0m
-[0m[[0mdebug[0m] [0m	found org.apache.hadoop#hadoop-core;1.0.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.hadoop#hadoop-core;1.0.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.hadoop#hadoop-core;1.0.4[0m
+[0m[[0mdebug[0m] [0m	found org.apache.hadoop#hadoop-core;1.0.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.hadoop#hadoop-client;1.0.4->org.apache.hadoop#hadoop-core;1.0.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: commons-cli#commons-cli;1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0mexcluding dependency: commons-httpclient#commons-httpclient;3.0.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
@@ -296,7 +288,7 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: org.codehaus.jackson#jackson-mapper-asl;1.0.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scalatest#scalatest_2.10;2.0 {test=[default(compile)]} => dependency: org.scalatest#scalatest_2.10;1.9.1 {test=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving commons-net#commons-net;1.4.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4ebded0b[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: commons-net#commons-net;1.4.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: commons-net#commons-net;1.4.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: commons-net#commons-net;1.4.1[0m
 [0m[[0mdebug[0m] [0m	found commons-net#commons-net;1.4.1 in sbt-chain[0m
@@ -625,21 +617,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scalatest#scalatest_2.10;2.0 {test=[default(compile)]} => dependency: org.scalatest#scalatest_2.10;1.9.1 {test=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.apache.avro#avro-ipc;1.7.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.avro#avro-ipc;1.7.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.apache.avro/avro-ipc/1.7.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.avro#avro-ipc;1.7.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.avro#avro-ipc;1.7.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom (1.7.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.avro#avro-ipc;1.7.4!avro-ipc.pom(pom.original) (1179ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache.avro#avro-parent;1.7.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.avro#avro-parent;1.7.4 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.avro#avro-parent;1.7.4[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.avro#avro-parent;1.7.4[0m
-[0m[[0mdebug[0m] [0m	found org.apache.avro#avro-ipc;1.7.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.avro#avro-ipc;1.7.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.avro#avro-ipc;1.7.4[0m
+[0m[[0mdebug[0m] [0m	found org.apache.avro#avro-ipc;1.7.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.6.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.slf4j#slf4j-api;1.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.spark#spark-core_2.10;0.9.0-incubating->org.apache.avro#avro-ipc;1.7.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: io.netty#netty;3.4.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
@@ -936,26 +916,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scalatest#scalatest_2.10;2.0 {test=[default(compile)]} => dependency: org.scalatest#scalatest_2.10;1.9.1 {test=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.eclipse.jetty.orbit/javax.servlet/2.5.0.v201103041518/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom (2.5.0.v201103041518)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518!javax.servlet.pom(pom.original) (1204ms)[0m
-[0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#jetty-orbit;1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.eclipse.jetty.orbit#jetty-orbit;1 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.eclipse.jetty.orbit#jetty-orbit;1[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.eclipse.jetty.orbit#jetty-orbit;1[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.eclipse.jetty.orbit/javax.servlet/2.5.0.v201103041518/orbits/javax.servlet.orbit[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0m	found org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518[0m
+[0m[[0mdebug[0m] [0m	found org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.eclipse.jetty#jetty-server;7.6.8.v20121106->org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.eclipse.jetty#jetty-server;7.6.8.v20121106->org.eclipse.jetty#jetty-continuation;7.6.8.v20121106 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.slf4j#slf4j-api;1.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -9638,7 +9601,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.3!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 14516ms :: artifacts dl 132ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10970ms :: artifacts dl 139ms[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
@@ -9652,5 +9615,5 @@
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (14516ms resolve - 132ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (10970ms resolve - 139ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -58,7 +58,7 @@ class ParallelNaive( var docs:Vector[ ( String , RDD[(String,Int)] ) ] )
 	//|C|：クラスの種類数
 		
 		
-	//前処理が済んでいるRDDを扱う。
+	//前処理が済んでいるRDDを扱う。ただしcache化はしていないと仮定
 	def classify(rdd:RDD[(String,Int)])(alpha:Int) = {
 	
 		val cached_rdd = rdd.cache()	//何度も使うのでcache化

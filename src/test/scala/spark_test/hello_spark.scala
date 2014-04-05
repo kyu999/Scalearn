@@ -5,7 +5,7 @@ import parallel.SparkInstance
 import org.atilika.kuromoji._
 import tokenfactory.JP
 
-class hello_spark extends FunSuite
+class hello_spark //extends FunSuite
 {
 
     val sc = SparkInstance.context
