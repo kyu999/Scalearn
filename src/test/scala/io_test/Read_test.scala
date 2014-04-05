@@ -10,7 +10,7 @@ class Read_test extends FunSuite{
 	
 		val vector_rdd = file_pathes.map( path => read.rdds(path,false) )
 		//localで実行したらメモリ不足になったためcacheしない。
-		
+
 		vector_rdd.foreach{
 			rdd => 
 				counter += 1
