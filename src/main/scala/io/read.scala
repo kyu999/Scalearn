@@ -50,14 +50,15 @@ object read {
 	  }
 	}
 	
-	def rdds(path:String,cache_or_not:Boolean = true,lang:String = "jp"):RDD[(String,Int)] = {
+	def rdds(path:String , cache_it:Boolean = true , lang:String = "jp"):RDD[(String,Int)] = {
 					
-		val myfile = SparkInstance.context.textFile(path)
-							.flatMap{ ( line:String ) => JP.mkToken(line).map(elt=>elt.getBaseForm) }
-							.map(word => (word, 1))
-							.reduceByKey(_ + _)
+		val myfile =
+            SparkInstance.context.textFile(path)
+				.flatMap{ ( line:String ) => JP.mkToken(line).map(elt=>elt.getBaseForm) }
+				.map(word => (word, 1))
+				.reduceByKey(_ + _)
                                         
-        if(cache_or_not) myfile.cache()
+        if(cache_it) myfile.cache()
         else myfile
 		
 	}

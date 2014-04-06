@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5eeeaa56[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4d32cc95[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -1742,82 +1742,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving org.jscala#jscala-macros_2.10;0.4-SNAPSHOT ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jscala#jscala-macros_2.10;0.4-SNAPSHOT {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0mdon't use cache for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT: changing=true[0m
-[0m[[0mdebug[0m] [0mdon't use cache for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT: changing=true[0m
-[0m[[0mdebug[0m] [0m		tried /Users/kyu/.ivy2/local/org.jscala/jscala-macros_2.10/0.4-SNAPSHOT/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT[0m
-[0m[[0mdebug[0m] [0mdon't use cache for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT: changing=true[0m
-[0m[[0mdebug[0m] [0m		tried file:/Applications/activator-1.1.0/repository/org.jscala/jscala-macros_2.10/0.4-SNAPSHOT/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	activator-local: no ivy file found for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT[0m
-[0m[[0mdebug[0m] [0mdon't use cache for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT: changing=true[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/maven-metadata.xml[0m
-[0m[[0mdebug[0m] [0m	maven-metadata not available: http://repo1.maven.org/maven2/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/maven-metadata.xml[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/jscala-macros_2.10-0.4-SNAPSHOT.pom[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/jscala-macros_2.10-0.4-SNAPSHOT.pom[0m
-[0m[[0mdebug[0m] [0m	public: no ivy file found for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT[0m
-[0m[[0mdebug[0m] [0mdon't use cache for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT: changing=true[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/jscala-macros_2.10-0.4-SNAPSHOT.pom[0m
-[0m[[0mdebug[0m] [0m	sonatype-snapshots: found md file for org.jscala#jscala-macros_2.10;0.4-SNAPSHOT[0m
-[0m[[0mdebug[0m] [0m		=> https://oss.sonatype.org/content/repositories/snapshots/org/jscala/jscala-macros_2.10/0.4-SNAPSHOT/jscala-macros_2.10-0.4-SNAPSHOT.pom (0.4-SNAPSHOT)[0m
-[0m[[0mdebug[0m] [0m	default-cache: revision in cache (not updated): org.jscala#jscala-macros_2.10;0.4-SNAPSHOT[0m
-[0m[[0mdebug[0m] [0m	found org.jscala#jscala-macros_2.10;0.4-SNAPSHOT in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving com.yahoo.platform.yui#yuicompressor;2.4.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.yahoo.platform.yui#yuicompressor;2.4.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.yahoo.platform.yui#yuicompressor;2.4.7[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.yahoo.platform.yui#yuicompressor;2.4.7[0m
-[0m[[0mdebug[0m] [0m	found com.yahoo.platform.yui#yuicompressor;2.4.7 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving rhino#js;1.6R7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: rhino#js;1.6R7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: rhino#js;1.6R7[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: rhino#js;1.6R7[0m
-[0m[[0mdebug[0m] [0m	found rhino#js;1.6R7 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving org.jfree#jfreechart;1.0.17 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jfree#jfreechart;1.0.17 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jfree#jfreechart;1.0.17[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.jfree#jfreechart;1.0.17[0m
-[0m[[0mdebug[0m] [0m	found org.jfree#jfreechart;1.0.17 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving org.jfree#jcommon;1.0.21 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.jfree#jcommon;1.0.21 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.jfree#jcommon;1.0.21[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.jfree#jcommon;1.0.21[0m
-[0m[[0mdebug[0m] [0m	found org.jfree#jcommon;1.0.21 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0minfo[0m] [0mResolving xml-apis#xml-apis;1.3.04 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: xml-apis#xml-apis;1.3.04 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: xml-apis#xml-apis;1.3.04[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: xml-apis#xml-apis;1.3.04[0m
-[0m[[0mdebug[0m] [0m	found xml-apis#xml-apis;1.3.04 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
@@ -3158,34 +3082,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [test][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [runtime][0m
@@ -4607,34 +4503,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.10;2.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.10;2.0 {test=[default(compile)]}[0m
@@ -6171,34 +6039,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -7702,34 +7542,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [test-internal][0m
@@ -9393,34 +9205,6 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jscala#jscala-macros_2.10;0.4-SNAPSHOT->com.yahoo.platform.yui#yuicompressor;2.4.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.yahoo.platform.yui#yuicompressor;2.4.7->rhino#js;1.6R7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jscala#jscala-macros_2.10;0.4-SNAPSHOT [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->org.jfree#jcommon;1.0.21 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.jfree#jfreechart;1.0.17->xml-apis#xml-apis;1.3.04 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.jfree#jfreechart;1.0.17 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalatest#scalatest_2.10;2.0 [test->compile][0m
@@ -9513,8 +9297,6 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.spark#spark-core_2.10;0.9.0-incubating!spark-core_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.slick#slick_2.10;1.0.0!slick_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.h2database#h2;1.3.166!h2.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jscala#jscala-macros_2.10;0.4-SNAPSHOT!jscala-macros_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jfree#jfreechart;1.0.17!jfreechart.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.hadoop#hadoop-client;1.0.4!hadoop-client.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.java.dev.jets3t#jets3t;0.7.1!jets3t.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.avro#avro;1.7.4!avro.jar[0m
@@ -9594,17 +9376,13 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.2.2!jackson-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] info.ganglia.gmetric4j#gmetric4j;1.0.3!gmetric4j.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.acplt#oncrpc;1.0.7!oncrpc.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.yahoo.platform.yui#yuicompressor;2.4.7!yuicompressor.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] rhino#js;1.6R7!js.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jfree#jcommon;1.0.21!jcommon.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] xml-apis#xml-apis;1.3.04!xml-apis.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.10;2.0!scalatest_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.0!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.3!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.3!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 7229ms :: artifacts dl 135ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 7702ms :: artifacts dl 316ms[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
@@ -9618,5 +9396,5 @@
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/kyu/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (7229ms resolve - 135ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (7702ms resolve - 316ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

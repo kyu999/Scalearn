@@ -5,7 +5,7 @@ import parallel.SparkInstance
 import org.atilika.kuromoji._
 import tokenfactory.JP
 
-class hello_spark //extends FunSuite
+class hello_spark// extends FunSuite
 {
 
     val sc = SparkInstance.context
@@ -15,8 +15,18 @@ class hello_spark //extends FunSuite
     val counts = myFile.flatMap{line =>JP.mkToken(line).map(elt=>elt.getBaseForm)}
                         .map(word => (word, 1))
                         .reduceByKey(_ + _)
-                        .cache() 
-                   
+                        .take(1)//(0)._2
+                        //take the first one ; it automatically convert into array, so take the first one again alghough it is singleton ; and take the second value = frequency
+                        
+     
+     println("counts : "+counts+"--------------------------------------------------------")  
+     counts.foreach(println)      
+     val second = myFile.flatMap{line =>JP.mkToken(line).map(elt=>elt.getBaseForm)}
+                        .map(word => (word, 1))
+                        .reduceByKey(_ + _)
+                        .take(1)(0)._2     
+                        
+     println("second : "+second)
     /**
     val double_counts=counts.join(counts)
     これをすると("word",(1,1))みたいな形になる
@@ -24,7 +34,7 @@ class hello_spark //extends FunSuite
     println(counts.takeSample(false,1,2)+"--------------------------------------------")
     counts.filter(elt=>elt._1=="好く").foreach(println)//
  	**/   
-    counts.saveAsTextFile("resource/single.txt")
+    //counts.saveAsTextFile("resource/single.txt")
 	
 	println("""
 	*********************

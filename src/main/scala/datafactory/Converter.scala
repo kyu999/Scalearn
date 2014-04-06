@@ -4,9 +4,9 @@ import math._
 
 object Converter{
   
-	implicit def DtoData(in:Vector[Double]):ToData=new ToData(in)
+	implicit def VectorDoubleToData(in:Vector[Double]):ToData=new ToData(in)
 	
-	implicit def ItoData(in:Vector[Int]):ToData=new ToData(in.map(a=>a.toDouble))
+	implicit def VectorIntToData(in:Vector[Int]):ToData=new ToData(in.map(a=>a.toDouble))
 	
 	
 	implicit def tods(in:Vector[Vector[Double]]):ToDase=new ToDase(in)

@@ -5,31 +5,32 @@ import preprocessing.TokenProbability
 
 trait Cluster{
 
-	val freq_vectors:ArrayBuffer[Vector[Double]]
+	val vectors:ArrayBuffer[Vector[Double]]
 	//抽象メンバー。クラスでの引数に当たる
 
-	val size=freq_vectors.length
+	val size = vectors.length
 		
-	def +(that:Vector[Double]) = freq_vectors+=that
+	def <+(that:Vector[Double]) = ( vectors += that )
 	
-    def ++(that:VectorCluster) = new VectorCluster(freq_vectors ++ that.freq_vectors)
+    def ++(that:VectorCluster) = new VectorCluster( vectors ++ that.vectors)
 	
 	def center:Vector[Double] = { 
 	  
 	  var result:ArrayBuffer[Double]=ArrayBuffer()
 	  
-	  var lookraw=0
-	  val height=freq_vectors.length
-	  val width=freq_vectors.head.length
+	  var lookraw = 0
+      
+	  val height = vectors.length
+	  val width = vectors.head.length
 	 
 	  while(lookraw<width){
 		  
-		  var lookcol=0
-		  var verticalsum=0.0
+		  var lookcol = 0
+		  var verticalsum = 0.0
 		  		  
 		  while(lookcol<height){
 		    
-		    verticalsum+=freq_vectors(lookcol)(lookraw)
+		    verticalsum += vectors(lookcol)(lookraw)
 		    lookcol+=1
 		    
 		  }
@@ -46,7 +47,7 @@ trait Cluster{
 }
 
 
-case class VectorCluster(freq_vectors:ArrayBuffer[Vector[Double]]) extends Cluster 
+case class VectorCluster(vectors:ArrayBuffer[Vector[Double]]) extends Cluster 
 
 
 class ProbabilityCluster(tokenprobs:Vector[TokenProbability])// extends Cluster

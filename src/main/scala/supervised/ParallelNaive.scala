@@ -2,44 +2,56 @@ package supervised
 
 import org.apache.spark.rdd._
 import scala.math.log
+import io.read
+import java.io.Serializable
 
 /**
-input : Vector[ (the class name the document belong to , RDD of document) ]
-引数の文書群は学習データ。前処理は済ましておく
-雑念とした各文書を既に Set( (word,frequency) )　としてRDD化した上で用いる
+input : Vector[ (the class name the document belong to , path to document ) ]
 **/
-class ParallelNaive( var docs:Vector[ ( String , RDD[(String,Int)] ) ] )
+
+case class ParallelNaive( file_pathes : Vector[(String,String)] ) extends Serializable 
 {
 	/** both strings as inputs above stand for classes here **/
 	
-	def wholeClass :Map[String,Vector[(String,RDD[(String,Int)])]] = docs.groupBy(elt=>elt._1)
+	val docs:Vector[(String ,RDD[(String,Int)])] = file_pathes.map( class_path => ( class_path._1 , read.rdds(class_path._2,false) ) )
+	
+	val wholeClass :Map[String,Vector[(String,RDD[(String,Int)])]] = docs.groupBy(elt=>elt._1)
 	//全てのクラスとドキュメントの集合：Map( 各クラス-> Vector( ( 各クラス,ドキュメントの集合 ) ) )
 	
-	def allClassNames:Vector[String] = wholeClass.map(elt=>elt._1).toVector
+	val allClassNames:Vector[String] = wholeClass.map(elt=>elt._1).toVector
 	//全classのリスト作成
 	
-	def eachNumDocs:Map[String,Int] = wholeClass.map(elt=>(elt._1,elt._2.length))
+	val eachNumDocs:Map[String,Int] = wholeClass.map(elt=>(elt._1,elt._2.length))
 	//Nc：各クラスに置けるdocument数、のMap : Map(class->number of docs)
 	
-	def sumNumDocs:Int = docs.size
+	val sumNumDocs:Int = docs.size
 	//ΣNc：総document数
 	
-	def eachNumWord(word:String)(class_name:String):Int = {
-		var word_count = 0
+	def eachNumWord(word:String , class_name:String ):Int = {
+
+		println(" eachNumWord---------------------------------------------")
+				
+		var doc_count = 0
+
 		wholeClass(class_name).foreach{
 			class_rdd =>  // == (class,rdd)
-				word_count += 
-					class_rdd._2.filter(word_occur=>word_occur._1==word)	//filter pair contains the word
-					.take(1)(0)._2											//get frequency of the word 	
+				val filtered = class_rdd._2.filter{word_occur=> word_occur._1==word}.take(1)
+				if(filtered.size!=0) doc_count += 1
 		}
-		word_count
+		
+		println("eachNumWord Done!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+		doc_count
 	}
 	//N(w,c)：各クラスに置ける各単語の出現回数、のMap。できれば。もし未知語が来たらNoneではなく0を返す
 	
-	def eachProbWord(word:String)(class_name:String)(alpha:Int):Double={
+	def eachProbWord(word:String , class_name:String , alpha:Int = 2):Double={
+		println(" eachProbWord---------------------------------------------")
 		
-		val Nwc = eachNumWord(word)(class_name).toDouble
+		val Nwc = eachNumWord(word , class_name).toDouble
 		val Nc = eachNumDocs(class_name).toDouble
+		
+		println("Nwc : "+Nwc)
+		println("Nc : "+Nc)
 		
 		log( ( Nwc+(alpha-1) ) / ( Nc + 2*(alpha-1) ) )
 	}
@@ -47,6 +59,7 @@ class ParallelNaive( var docs:Vector[ ( String , RDD[(String,Int)] ) ] )
 	//alpha is the parameter to decide how much we gonna make the data flat
 	
 	def eachProbClass(class_name:String):Double={
+		println(" eachProbClass---------------------------------------------")
 		
 		val Nc = eachNumDocs(class_name).toDouble
 		
@@ -54,26 +67,53 @@ class ParallelNaive( var docs:Vector[ ( String , RDD[(String,Int)] ) ] )
 
 	}
 	
-	def NumClass = wholeClass.size
+	val NumClass = wholeClass.size
 	//|C|：クラスの種類数
-		
-		
-	//前処理が済んでいるRDDを扱う。ただしcache化はしていないと仮定
-	def classify(rdd:RDD[(String,Int)])(alpha:Int) = {
 	
-		val cached_rdd = rdd.cache()	//何度も使うのでcache化
+	def temp(doc_path:String) ={
 	
+		val cached_rdd = read.rdds(doc_path)
+		
+		println ( "cached_rdd : "+cached_rdd.collect() ) 	
+		println ( "cached_rdd : "+cached_rdd.collect() ) 	//okならactionの回数は問題ではない
+		
+		val each_prob : Vector[RDD[Double]] =
+			allClassNames.map{
+				class_name => 	
+						cached_rdd
+							.map { elt => eachProbWord(elt._1 , class_name ) * elt._2 }
+			}
+					
+		each_prob.map(_.take(1))
+
+//					val sum_prob  = each_prob.reduce{ (a,b) => a+b } 
+			
+	}
+	
+
+	def classify(doc_path:String , alpha:Int = 2 ) = {
+
+		val cached_rdd = read.rdds(doc_path)	//何度も使うのでcache化
+								
 		val ProbPerClass = 
 			allClassNames.map{
-				class_name => 
-					cached_rdd
-						.map { elt => eachProbWord(elt._1)(class_name)(alpha) * elt._2 }
-						.reduce( (a,b) => a+b ) + eachProbClass(class_name)
+				class_name => 					
+										
+					val each_prob = 
+						cached_rdd.map { elt => eachProbWord(elt._1 , class_name , alpha) * elt._2 }
+										
+					val sum_prob : Double = each_prob.reduce{ (a,b) => a+b } 
+										
+					sum_prob + eachProbClass(class_name)
 				}	
 		//list of probability that this document would belong to
+		println(" max_class---------------------------------------------")
+
+		println("ProbPerClass : "+ProbPerClass)
 		
 		val max_class : (Double,Int) = ProbPerClass.zipWithIndex.max
 		// ( probability , index of the class )
+		println(" return estimation class---------------------------------------------")
 		
 		allClassNames(max_class._2)
 		//推定クラスを返す
@@ -87,4 +127,39 @@ class ParallelNaive( var docs:Vector[ ( String , RDD[(String,Int)] ) ] )
 		最も高いクラスを推定クラスとして(String,rdd)という形で既存の分類器にデータを追加
 		**/
 	}
+		
+}
+
+object DoNaive extends App{
+
+  	val file_pathes = 
+  		Vector( ("plus","resource/doc1.txt"),
+  			    ("plus","resource/doc2.txt"),
+  			    ("plus","resource/doc3.txt"),
+  			    ("minus","resource/doc4.txt"),
+  			    ("minus","resource/doc5.txt"),
+  			    ("minus","resource/doc6.txt")
+  			  )
+  	
+  	val pn = ParallelNaive(file_pathes)  	
+
+ 	val cached_rdd = read.rdds("resource/examine.txt")	
+ 	     
+ 	val each_prob : Vector[RDD[String]] =
+		pn.allClassNames.map{	
+			class_name => 	
+					cached_rdd
+						.map { elt => ( pn.eachProbWord(elt._1 , class_name ) * elt._2 ).toString }
+			}
+     
+	val head_prob = each_prob.head
+	
+//	println("head_prob : "+head_prob.take(1).head)
+	
+    println(pn.docs.map(elt=>elt._2.take(1).head))
+      
+      
+      
+     
+    pn.temp("resource/examine.txt")
 }
