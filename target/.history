@@ -192,3 +192,8 @@ run
 console
 run
 last compile:run
+run
+sbt
+run
+3
+run

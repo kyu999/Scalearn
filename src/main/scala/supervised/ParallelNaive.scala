@@ -35,8 +35,9 @@ case class ParallelNaive( file_pathes : Vector[(String,String)] ) extends Serial
 
 		wholeClass(class_name).foreach{
 			class_rdd =>  // == (class,rdd)
-				val filtered = class_rdd._2.filter{word_occur=> word_occur._1==word}.take(1)
-				if(filtered.size!=0) doc_count += 1
+				val filtered = class_rdd._2.filter{word_occur=> word_occur._1==word}
+				
+				if(filtered.count != 0) doc_count += 1
 		}
 		
 		println("eachNumWord Done!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
@@ -99,7 +100,7 @@ case class ParallelNaive( file_pathes : Vector[(String,String)] ) extends Serial
 			allClassNames.map{
 				class_name => 					
 										
-					val each_prob = 
+					val each_prob :RDD[Double] = 
 						cached_rdd.map { elt => eachProbWord(elt._1 , class_name , alpha) * elt._2 }
 										
 					val sum_prob : Double = each_prob.reduce{ (a,b) => a+b } 
@@ -161,5 +162,5 @@ object DoNaive extends App{
       
       
      
-    pn.temp("resource/examine.txt")
+    pn.classify("resource/examine.txt")
 }
