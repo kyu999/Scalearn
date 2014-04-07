@@ -1,17 +1,15 @@
 package supervised
 
-import org.apache.spark.rdd._
+import org.apache.spark.rdd
 import scala.math.log
 import io.read
-import java.io.Serializable
 
 /**
 input : Vector[ (the class name the document belong to , path to document ) ]
 **/
 
-case class NaiveBayes( file_pathes : Vector[(String,String)] ) extends Serializable 
+case class NaiveBayes( file_pathes : Vector[(String,String)] )
 {
-    /** both strings as inputs above stand for classes here **/
 	
 	val docs:Vector[(String ,Array[(String,Int)])] = file_pathes.map( class_path => ( class_path._1 , read.rdds(class_path._2,false).collect ) )
 	
@@ -28,8 +26,6 @@ case class NaiveBayes( file_pathes : Vector[(String,String)] ) extends Serializa
 	//ΣNc：総document数
 	
 	def eachNumWord(word:String , class_name:String ):Int = {
-
-		println(" eachNumWord---------------------------------------------")
 				
 		var doc_count = 0
 
@@ -40,28 +36,21 @@ case class NaiveBayes( file_pathes : Vector[(String,String)] ) extends Serializa
                 if(!filtered.isEmpty) doc_count += 1
 		}
 		
-		println("eachNumWord Done!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 		doc_count
 	}
 	//N(w,c)：各クラスに置ける各単語の出現回数、のMap。できれば。もし未知語が来たらNoneではなく0を返す
 	
 	def eachProbWord(word:String , class_name:String , alpha:Int = 2):Double={
-		println(" eachProbWord---------------------------------------------")
 		
 		val Nwc = eachNumWord(word , class_name).toDouble
 		val Nc = eachNumDocs(class_name).toDouble
-		
-		println("Nwc : "+Nwc)
-		println("Nc : "+Nc)
-		println(" class : "+class_name+" eachProbWord => "+ log( ( Nwc+(alpha-1) ) / ( Nc + 2*(alpha-1) ) ) )
-		
+				
 		log( ( Nwc+(alpha-1) ) / ( Nc + 2*(alpha-1) ) )
 	}
 	//log(Pw,c)
 	//alpha is the parameter to decide how much we gonna make the data flat
 	
 	def eachProbClass(class_name:String):Double={
-		println(" eachProbClass---------------------------------------------")
 		
 		val Nc = eachNumDocs(class_name).toDouble
 		
@@ -82,20 +71,16 @@ case class NaiveBayes( file_pathes : Vector[(String,String)] ) extends Serializa
 				class_name => 					
 										
 					val each_prob = 
-						arrayWord.map { elt => eachProbWord(elt._1 , class_name , alpha) * elt._2 }
-										
-					val sum_prob : Double = each_prob.reduce{ (a,b) => a+b } 
-										
-					sum_prob + eachProbClass(class_name)
+						arrayWord.map { word_freq => eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2 }
+																				
+					each_prob.sum + eachProbClass(class_name)
 				}	
 		//list of probability that this document would belong to
-		println(" max_class---------------------------------------------")
-
-		println("ProbPerClass : "+ProbPerClass)
 		
+        println("ProbPerClass : "+ProbPerClass.zip(allClassNames))
+        
 		val max_class : (Double,Int) = ProbPerClass.zipWithIndex.max
 		// ( probability , index of the class )
-		println(" return estimation class---------------------------------------------")
 		
 		allClassNames(max_class._2)
 		//推定クラスを返す
@@ -128,10 +113,4 @@ object DoNaiveBayes extends App{
 
  	println("classify : "+ pn.classify("resource/examine.txt") ) 	
  	     
-    pn.docs.foreach(elt=>elt._2.foreach(println))
-      
-      
-      
-     
-//	pn.temp("resource/examine.txt")
 }
