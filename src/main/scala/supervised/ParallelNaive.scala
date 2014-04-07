@@ -155,9 +155,11 @@ object DoNaive extends App{
      
 	val head_prob = each_prob.head
 	
-//	println("head_prob : "+head_prob.take(1).head)
+//	println("head_prob : "+head_prob.take(1).head)  <= does not work. please try!
 	
     println(pn.docs.map(elt=>elt._2.take(1).head))
+    
+    //this works!! why???
       
       
       
