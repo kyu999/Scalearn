@@ -197,3 +197,7 @@ sbt
 run
 3
 run
+package
+clean
+compile
+~compile
