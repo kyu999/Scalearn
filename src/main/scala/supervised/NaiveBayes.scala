@@ -12,13 +12,10 @@ only the file_paths is mutable variable, the other things are just functions
 
 
 case class NaiveBayes( var file_paths : ListBuffer[(String,String)] )
-{
-	
-	val study_docs = 		
+{	
+	var docs:ListBuffer[(String ,Array[(String,Int)])] = 
 		file_paths
 			.map( class_path => ( class_path._1 , read.rdds(class_path._2,false).collect ) )
-			
-	var docs:ListBuffer[(String ,Array[(String,Int)])] = study_docs 
 		
 	def wholeClass :Map[String,ListBuffer[(String,Array[(String,Int)])]] = docs.groupBy(elt=>elt._1)
 	//全てのクラスとドキュメントの集合：Map( 各クラス-> List( ( 各クラス,ドキュメントの集合 ) ) )
@@ -124,7 +121,7 @@ object DoNaiveBayes extends App{
   			  )
   	      
   	val pn = NaiveBayes(file_paths)  	
-  	
+  	  	
  	println("classify : " + pn.classify("resource/examine.txt") ) 
 
     pn.classify("resource/examine2.txt")
@@ -137,8 +134,6 @@ object DoNaiveBayes extends App{
 
     pn.classify("resource/doc2.txt")
 
-    pn.classify("resource/doc1.txt")
-    
-    println("current paths : ")
+    pn.classify("resource/doc1.txt")    
      	     
 }

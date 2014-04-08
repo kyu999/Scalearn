@@ -208,3 +208,8 @@ run
 run
 ~compile
 run
+comile
+compile
+~compile
+run
+clean
