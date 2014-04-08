@@ -213,3 +213,5 @@ compile
 ~compile
 run
 clean
+compile
+run

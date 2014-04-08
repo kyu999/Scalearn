@@ -11,9 +11,9 @@ only the file_paths is mutable variable, the other things are just functions
 **/
 
 
-case class NaiveBayes( var file_paths : ListBuffer[(String,String)] )
+case class NaiveBayes( file_paths : ListBuffer[(String,String)] )
 {	
-	var docs:ListBuffer[(String ,Array[(String,Int)])] = 
+	val docs:ListBuffer[(String ,Array[(String,Int)])] = 
 		file_paths
 			.map( class_path => ( class_path._1 , read.rdds(class_path._2,false).collect ) )
 		
