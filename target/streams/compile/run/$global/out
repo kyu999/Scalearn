@@ -1,0 +1,217 @@
+[0m[[0minfo[0m] [0mRunning supervised.DoNaiveBayes [0m
+[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
+[0m[[0mdebug[0m] [0m  Classpath:[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/Documents/Scala/Scalearn/target/scala-2.10/classes[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/Documents/Scala/Scalearn/lib/kuromoji-0.7.7.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.sbt/boot/scala-2.10.3/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-0.9.0-incubating.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.hadoop/hadoop-client/jars/hadoop-client-1.0.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.hadoop/hadoop-core/jars/hadoop-core-1.0.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/xmlenc/xmlenc/jars/xmlenc-0.52.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.commons/commons-math/jars/commons-math-2.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-configuration/commons-configuration/jars/commons-configuration-1.6.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-lang/commons-lang/jars/commons-lang-2.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-digester/commons-digester/jars/commons-digester-1.8.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.7.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-beanutils/commons-beanutils-core/jars/commons-beanutils-core-1.8.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-net/commons-net/jars/commons-net-1.4.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/oro/oro/jars/oro-2.0.8.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-el/commons-el/jars/commons-el-1.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/hsqldb/hsqldb/jars/hsqldb-1.8.0.10.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/net.java.dev.jets3t/jets3t/jars/jets3t-0.7.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/commons-httpclient/commons-httpclient/jars/commons-httpclient-3.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.avro/avro/jars/avro-1.7.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.8.8.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.8.8.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.xerial.snappy/snappy-java/bundles/snappy-java-1.0.5.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.4.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.tukaani/xz/jars/xz-1.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.avro/avro-ipc/jars/avro-ipc-1.7.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.mortbay.jetty/jetty/jars/jetty-6.1.26.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.mortbay.jetty/jetty-util/jars/jetty-util-6.1.26.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.mortbay.jetty/servlet-api/jars/servlet-api-2.5-20081211.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.velocity/velocity/jars/velocity-1.7.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.zookeeper/zookeeper/jars/zookeeper-3.4.5.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.7.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/jline/jline/jars/jline-0.9.94.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/junit/junit/jars/junit-3.8.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.eclipse.jetty/jetty-server/jars/jetty-server-7.6.8.v20121106.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.eclipse.jetty.orbit/javax.servlet/orbits/javax.servlet-2.5.0.v201103041518.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.eclipse.jetty/jetty-continuation/jars/jetty-continuation-7.6.8.v20121106.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.eclipse.jetty/jetty-http/jars/jetty-http-7.6.8.v20121106.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.eclipse.jetty/jetty-io/jars/jetty-io-7.6.8.v20121106.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.eclipse.jetty/jetty-util/jars/jetty-util-7.6.8.v20121106.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.google.guava/guava/bundles/guava-14.0.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-1.3.9.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.ning/compress-lzf/bundles/compress-lzf-1.0.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.ow2.asm/asm/jars/asm-4.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.twitter/chill_2.10/jars/chill_2.10-0.3.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.twitter/chill-java/jars/chill-java-0.3.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.esotericsoftware.kryo/kryo/bundles/kryo-2.21.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.esotericsoftware.reflectasm/reflectasm/jars/reflectasm-1.07-shaded.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.esotericsoftware.minlog/minlog/jars/minlog-1.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.objenesis/objenesis/jars/objenesis-1.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.ow2.asm/asm-commons/jars/asm-commons-4.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.ow2.asm/asm-tree/jars/asm-tree-4.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.spark-project.akka/akka-remote_2.10/bundles/akka-remote_2.10-2.2.3-shaded-protobuf.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.spark-project.akka/akka-actor_2.10/jars/akka-actor_2.10-2.2.3-shaded-protobuf.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.typesafe/config/bundles/config-1.0.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/io.netty/netty/bundles/netty-3.6.6.Final.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.spark-project.protobuf/protobuf-java/jars/protobuf-java-2.4.1-shaded.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.uncommons.maths/uncommons-maths/jars/uncommons-maths-1.2.2a.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.spark-project.akka/akka-slf4j_2.10/bundles/akka-slf4j_2.10-2.2.3-shaded-protobuf.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/net.liftweb/lift-json_2.10/jars/lift-json_2.10-2.5.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.4.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/it.unimi.dsi/fastutil/jars/fastutil-6.4.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/colt/colt/jars/colt-1.2.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/concurrent/concurrent/jars/concurrent-1.3.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.mesos/mesos/jars/mesos-0.13.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.google.protobuf/protobuf-java/jars/protobuf-java-2.4.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/io.netty/netty-all/jars/netty-all-4.0.13.Final.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.clearspring.analytics/stream/jars/stream-2.4.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.codahale.metrics/metrics-core/bundles/metrics-core-3.0.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.codahale.metrics/metrics-jvm/bundles/metrics-jvm-3.0.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.codahale.metrics/metrics-json/bundles/metrics-json-3.0.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/jars/jackson-databind-2.2.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/jars/jackson-annotations-2.2.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/jars/jackson-core-2.2.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.codahale.metrics/metrics-ganglia/bundles/metrics-ganglia-3.0.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/info.ganglia.gmetric4j/gmetric4j/jars/gmetric4j-1.0.3.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.acplt/oncrpc/jars/oncrpc-1.0.7.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.codahale.metrics/metrics-graphite/bundles/metrics-graphite-3.0.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.typesafe.slick/slick_2.10/jars/slick_2.10-1.0.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.h2database/h2/jars/h2-1.3.166.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
+[0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp346738531-70 Acceptor0 SelectChannelConnector@0.0.0.0:4040[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp346738531-70 Acceptor0 SelectChannelConnector@0.0.0.0:4040[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp346738531-73[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp346738531-73[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp2048011351-48 Acceptor0 SocketConnector@0.0.0.0:57530[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp2048011351-48 Acceptor0 SocketConnector@0.0.0.0:57530[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-14[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-14[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-3[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-3[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-12[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-12[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp346738531-71[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp346738531-71[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp647730925-66[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp647730925-66[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp346738531-75[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp346738531-75[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp647730925-62[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp647730925-62[0m
+[0m[[0mdebug[0m] [0mInterrupting thread SHUFFLE_BLOCK_MANAGER cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted SHUFFLE_BLOCK_MANAGER cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp2048011351-55[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp2048011351-55[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Timer-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted Timer-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #5[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #5[0m
+[0m[[0mdebug[0m] [0mInterrupting thread BLOCK_MANAGER cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted BLOCK_MANAGER cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-2[0m
+[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread DAG_SCHEDULER cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted DAG_SCHEDULER cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread delete Spark local dirs[0m
+[0m[[0mdebug[0m] [0m	Interrupted delete Spark local dirs[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-13[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-13[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp346738531-76[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp346738531-76[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp647730925-64[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp647730925-64[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp647730925-61[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp647730925-61[0m
+[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-9c97a1a8-e5d1-48c7-bb1b-9cb7b4a01714[0m
+[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-9c97a1a8-e5d1-48c7-bb1b-9cb7b4a01714[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O boss #3[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O boss #3[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-scheduler-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-scheduler-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp346738531-72[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp346738531-72[0m
+[0m[[0mdebug[0m] [0mInterrupting thread BROADCAST_VARS cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted BROADCAST_VARS cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp647730925-60[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp647730925-60[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp647730925-63[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp647730925-63[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #4[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #4[0m
+[0m[[0mdebug[0m] [0mInterrupting thread SPARK_CONTEXT cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted SPARK_CONTEXT cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #2[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp647730925-65[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp647730925-65[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O server boss #6[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O server boss #6[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-3[0m
+[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-3[0m
+[0m[[0mdebug[0m] [0mInterrupting thread connection-manager-thread[0m
+[0m[[0mdebug[0m] [0m	Interrupted connection-manager-thread[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp2048011351-54[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp2048011351-54[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp647730925-59 Acceptor0 SocketConnector@0.0.0.0:57531[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp647730925-59 Acceptor0 SocketConnector@0.0.0.0:57531[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp346738531-69 Selector0[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp346738531-69 Selector0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp2048011351-49[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp2048011351-49[0m
+[0m[[0mdebug[0m] [0mInterrupting thread SHUFFLE_MAP_TASK cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted SHUFFLE_MAP_TASK cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread MAP_OUTPUT_TRACKER cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted MAP_OUTPUT_TRACKER cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp346738531-74[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp346738531-74[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #1[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Connection manager future execution context-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted Connection manager future execution context-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread RESULT_TASK cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted RESULT_TASK cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-2[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Executor task launch worker-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted Executor task launch worker-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-34[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-34[0m
+[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-262a2c09-e746-4299-9188-fe8dcfaf7f92[0m
+[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-262a2c09-e746-4299-9188-fe8dcfaf7f92[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp2048011351-53[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp2048011351-53[0m
+[0m[[0mdebug[0m] [0mInterrupting thread SparkListenerBus[0m
+[0m[[0mdebug[0m] [0m	Interrupted SparkListenerBus[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp2048011351-52[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp2048011351-52[0m
+[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-08f66e71-dd88-4d91-bd5f-448dcd852620[0m
+[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-08f66e71-dd88-4d91-bd5f-448dcd852620[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp2048011351-50[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp2048011351-50[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-7[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-7[0m
+[0m[[0mdebug[0m] [0mInterrupting thread HTTP_BROADCAST cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted HTTP_BROADCAST cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp2048011351-51[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp2048011351-51[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-4[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-4[0m
+[0m[[0mdebug[0m] [0mSandboxed run complete..[0m
+[0m[[0mdebug[0m] [0mExited with code 0[0m

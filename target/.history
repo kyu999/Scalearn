@@ -201,3 +201,10 @@ package
 clean
 compile
 ~compile
+run
+run3
+run
+~compile
+run
+~compile
+run

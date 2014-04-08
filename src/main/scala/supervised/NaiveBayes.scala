@@ -14,9 +14,13 @@ only the file_paths is mutable variable, the other things are just functions
 case class NaiveBayes( var file_paths : ListBuffer[(String,String)] )
 {
 	
-	def docs:List[(String ,Array[(String,Int)])] = file_paths.map( class_path => ( class_path._1 , read.rdds(class_path._2,false).collect ) ).toList
-	
-	def wholeClass :Map[String,List[(String,Array[(String,Int)])]] = docs.groupBy(elt=>elt._1)
+	val study_docs = 		
+		file_paths
+			.map( class_path => ( class_path._1 , read.rdds(class_path._2,false).collect ) )
+			
+	var docs:ListBuffer[(String ,Array[(String,Int)])] = study_docs 
+		
+	def wholeClass :Map[String,ListBuffer[(String,Array[(String,Int)])]] = docs.groupBy(elt=>elt._1)
 	//全てのクラスとドキュメントの集合：Map( 各クラス-> List( ( 各クラス,ドキュメントの集合 ) ) )
 	
 	def allClassNames:List[String] = wholeClass.map(elt=>elt._1).toList
@@ -65,7 +69,7 @@ case class NaiveBayes( var file_paths : ListBuffer[(String,String)] )
 	//|C|：クラスの種類数
 	
 
-	def classify(doc_path:String , alpha:Int = 2 ):String = {
+	def classify(doc_path:String , alpha:Int = 2 ):(Double,String) = {
 
 		val arrayWord = read.rdds(doc_path).collect	//何度も使うのでcache化
 								
@@ -76,18 +80,17 @@ case class NaiveBayes( var file_paths : ListBuffer[(String,String)] )
 					val each_prob = 
 						arrayWord.map { word_freq => eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2 }
 																				
-					each_prob.sum + eachProbClass(class_name)
+					( each_prob.sum + eachProbClass(class_name) , class_name )
 				}	
 		//list of probability that this document would belong to
 		
-        println("ProbPerClass : "+ProbPerClass.zip(allClassNames))
+        println("ProbPerClass : "+ProbPerClass)
         
-		val max_prob_index : (Double,Int) = ProbPerClass.zipWithIndex.max
-		// ( probability , index of the class )
-		
-		val estimate_class:String = allClassNames(max_prob_index._2)
+		val estimate_class:(Double,String) = ProbPerClass.max
         
-        file_paths += Pair(estimate_class,doc_path)
+        file_paths += Pair(estimate_class._2,doc_path)
+        
+        docs += Pair(estimate_class._2,arrayWord)
         
         estimate_class
 		//推定クラスを返す
@@ -99,6 +102,10 @@ case class NaiveBayes( var file_paths : ListBuffer[(String,String)] )
 		rddに含まれる全ての単語を、分類器を使って各クラス各単語出現確率(log)へ変換 
 		reduceで各確率を足し合わせ、log事前確率P(c)を足したものをクラスごとに作成
 		最も高いクラスを推定クラスとして(String,rdd)という形で既存の分類器にデータを追加
+		
+		if we need to classify in fast, just divide study phase and classify phase definitely 
+			1. use "val" instead "def" above
+			2. create Map instead function like eachNumWord , eachProbWord, eachProbClass
 		**/
 	}
     
@@ -117,13 +124,21 @@ object DoNaiveBayes extends App{
   			  )
   	      
   	val pn = NaiveBayes(file_paths)  	
-
-    println("previous file_paths : " + pn.file_paths)  
-
+  	
  	println("classify : " + pn.classify("resource/examine.txt") ) 
-     
-    println("after file_paths : " + pn.file_paths)
-     
+
+    pn.classify("resource/examine2.txt")
+
+    pn.classify("resource/examine3.txt")
+
+    pn.classify("resource/examine4.txt")
+
+    pn.classify("resource/examine5.txt")
+
+    pn.classify("resource/doc2.txt")
+
+    pn.classify("resource/doc1.txt")
     
- 	     
+    println("current paths : ")
+     	     
 }

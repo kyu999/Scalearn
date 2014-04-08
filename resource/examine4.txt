@@ -1,0 +1,18 @@
+
+クラウド
+コメント
+0
+Java PaaSのCloudBeesが早くもシリーズCで$11.2Mを調達
+Frederic Lardinois
+2014年3月6日
+コメント 0
+
+CloudBeesはJava対応の企業向けPaaSで、本誌も過去に何度か取り上げている。同社は今日（米国時間3/5）、Verizon Venturesが率いるシリーズCの投資ラウンドにより、1120万ドルを調達した。既存の投資家Matrix PartnersとLightspeed Venturesのほか、新たにBlue Cloud Venturesも参加した。
+
+これで2010年に創業した同社の調達資金総額は2570万ドルになる。今回の資金の用途は、売上増のために機能集合を拡張することと、営業のグローバル化だ。また、CloudBeesブランドのPRの強化も計画している。
+
+CloudBeesとVerizonのパートナーシップは今年初めに発表されたが、関係は前からある。今回の投資の関連事業の一環として、CloudBeesのサービスが、最近ローンチしたばかりのVerizon Cloudからも利用できるようになる。同社がVerizonをリード投資家として選んだ理由は、“トップレベルの投資者になることに熱心で、そのほかの優良企業にも投資している”からだ、という。
+
+企業向けPaaSサービスはどこでもそうだが、CloudBeesでもアプリケーションを同社提供のプラットホーム上で構築し試験できる。CloudBeesの特徴は、Java専門であることだ。
+
+同社は、Spring、JRuby、Grails、Scala、Groovyなどなど、JVMベースの言語をほとんどすべてサポートしている。CloudBees上のデベロッパは継続的インテグレーションツールJenkinsを使ってGitやSVNリポジトリのコードを追跡し、Maven、Gradle、Antなどを使ってビルドをトリガできる。
