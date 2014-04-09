@@ -1,14 +1,15 @@
 package unsupervised_test
  
-import tokenfactory.JP
+import scalearn.preprocessing.tokenfactory.JP
 import org.atilika.kuromoji._
-import preprocessing._
+import scalearn.preprocessing._
 import org.scalatest.FunSuite
-import datafactory._
-import datafactory.Converter._
+import scalearn.statistics._
+import scalearn.statistics.Converter
+
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random._
-import preprocessing.WordsConverter
+import scalearn.preprocessing.WordsConverter
 
 class ClusteringTest extends FunSuite{
 /*	

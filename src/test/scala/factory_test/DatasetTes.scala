@@ -1,11 +1,12 @@
 package factory_test
 
 import org.scalatest.FunSuite
-import datafactory._
 import scala.util.Random.nextDouble
 import org.scalautils.TolerantNumerics._
-import Converter._
 import scala.collection.mutable.ArrayBuffer
+
+import scalearn.statistics._
+import scalearn.statistics.Converter._
 
 class DatasetTes extends FunSuite {
   

@@ -1,8 +1,11 @@
 package factory_test
+
 import org.scalatest.FunSuite	
-import supervised._
-import datafactory._
-import Converter._
+
+import scalearn.classification.supervised._
+import scalearn.statistics._
+import scalearn.statistics.Converter._
+
 import scala.math._
 
 class LinearRegressionTes extends FunSuite{

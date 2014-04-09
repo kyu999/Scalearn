@@ -1,5 +1,0 @@
-package datafactory
-
-trait Multivariate {
-
-}

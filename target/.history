@@ -215,3 +215,10 @@ run
 clean
 compile
 run
+~compile
+run
+~compile
+test
+test:compile
+~test:compile
+test

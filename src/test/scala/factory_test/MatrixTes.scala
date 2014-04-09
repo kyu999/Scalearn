@@ -1,9 +1,13 @@
 package factory_test
+
 import org.scalatest.FunSuite	//継承するFunSuiteトレイト
-import datafactory._
-import Converter._ 
-import math._
+
+import scalearn.statistics._
+import scalearn.statistics.Converter._
+import scalearn.math._
+
 import scala.collection.immutable.{Vector=>v}
+
 class MatrixTes extends FunSuite{
   
 	val a=v(1,2.0,3)

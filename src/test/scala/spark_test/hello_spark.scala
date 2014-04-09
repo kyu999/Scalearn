@@ -1,10 +1,13 @@
+
 import org.scalatest.FunSuite
+
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import parallel.SparkInstance
 import org.atilika.kuromoji._
-import tokenfactory.JP
+import scalearn.preprocessing.tokenfactory.JP
 
+/*
 class hello_spark// extends FunSuite
 {
 
@@ -41,3 +44,5 @@ class hello_spark// extends FunSuite
 	*   Success Spark   *
 	*********************""")
 }
+
+*/

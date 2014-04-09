@@ -1,12 +1,13 @@
 package factory_test
+
 import org.scalatest.FunSuite	
-import datafactory._
 import scala.util.Random.nextDouble
 //import org.scalautils.Equality
 import org.scalautils.TolerantNumerics._
 //Doubleの丸め誤差の許可範囲設定のためのやつ
 
-import Converter._
+import scalearn.statistics._
+import scalearn.statistics.Converter._
 
 class DataTes extends FunSuite {
 

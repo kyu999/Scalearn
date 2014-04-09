@@ -1,17 +1,14 @@
 package supervised_test
+
 import org.scalatest.FunSuite
 import org.apache.spark.rdd._
 
-import supervised._
-import io.read
+import scalearn.classification.supervised._
+import scalearn.interface.read
 
 class NaiveBayesTest extends FunSuite
 {
-  
-  val t=NaiveBayes.time _
-//  val f=NaiveBayes.examine _  //オブジェクトのメソッドは関数ではないので関数化するには　メソッド名+ _　 
-//  VirtualData.examlist.map(x=>f(x))
-  
+    
   	val file_pathes = 
   		Vector( ("plus","resource/doc1.txt"),
   			    ("plus","resource/doc2.txt"),
