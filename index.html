@@ -36,7 +36,7 @@
 <a name="welcome-to-scalearn" class="anchor" href="#welcome-to-scalearn"><span class="octicon octicon-link"></span></a>Welcome to Scalearn</h3>
 <img src="images/scala.png" style="float:right">
 
-<p>This library would help you to deal with a bunch of Data by making use of statistics, time series analysis, and machine learning. Although such academic domains seem to be difficult for most developers, this library targets ordinary scala developers; as a result, it focus on usability rather than precise definition. Besides, I hope this could be useful for beginners of scala.</p>
+<p>This library would help you to deal with a bunch of data by making use of statistics, time series analysis, and machine learning. Although such academic domains seem to be difficult for most developers, this library targets ordinary scala developers; accordingly, it focus on usability rather than precise definition. Besides, I hope this could be useful for beginners of scala.</p>
 
 <h3>
 <a name="prerequisite" class="anchor" href="#prerequisite"><span class="octicon octicon-link"></span></a>Prerequisite</h3>
@@ -55,7 +55,7 @@
 Scalearn runs on spark, which is distributed system like hadoop 
 <br>
 => <a href="http://spark.apache.org/">spark</a>
-<br>The main difference between them is that spark concentrates on the tasks which need to load Dataset again and again like machine learning algorithms. For such tasks spark runs much faster( at most 100 times roughly speaking ). Therefore, you could carry out machine learning on your distributed system without complicated configuration.</p>
+<br>The main difference between them is that spark concentrates on the tasks which need to load dase again and again like machine learning algorithms. For such tasks spark runs much faster( at most 100 times roughly speaking ). Thankfully, it enables us to implement machine learning algorithms running on your distributed system without complicated configuration.</p>
 
 
 
@@ -63,116 +63,137 @@ Scalearn runs on spark, which is distributed system like hadoop
 <a name="Quick Start" class="anchor" href="#Quick Start"><span class="octicon octicon-link"></span></a>Quick Start</h3>
 
 <br>
+<h4>#Machine Learning</h4>
+<br>
+
+	<p>
+		Basically, machine leaning has two different direction; one is supervised learning, and the other is unsupervised learning. Supervised learning requires you to collect data for study so as to construct classifier for instance. Scalearn offers some famous methods of them such as k-means, naive bayes, and so on. If you would like to handle natural language, you might have to preprocessing first, and dive into concrete learning ways like classification; therefore, please take a look at "scalearn.preprocessing" package and "scalearn.classification" package. 
+	</p>
+	
+	<pre><code>import scalearn.classification.supervised._
+
+val file_paths = 
+  		ListBuffer( ("plus","resource/doc1.txt"),
+  			    ("plus","resource/doc2.txt"),
+  			    ("plus","resource/doc3.txt"),
+  			    ("minus","resource/doc4.txt"),
+  			    ("minus","resource/doc5.txt"),
+  			    ("minus","resource/doc6.txt")
+  			  )
+val pn = NaiveBayes(file_paths)  	
+pn.classify("resource/examine.txt")</code></pre>
+
+
+<br>
 <h4>#Descriptive Statistics</h4>
 <br>
-<p>If you are interested in statistics, take a look at "datafactory" package since it is what you need to handle. Even compared to the other statistical environment, scala has a variety of simple but powerful functions to process Data; accordingly, you would use Scalearn after processing raw Data somehow through scala's functions. The description below might be the common flow of statistical analysis in Scalearn</p>
-<ol>
-	<li>get raw Data</li>
-	<li>preprocessing the raw Data</li>
-	<li>convert that raw Data into instance of "Data class"</li>
-	<li>obtain statistical value by calling properties and methods</li>
-	<li>( If wanna treat it differently; for instance,  as time series Data, convert it into instance of "TimeData" class )</li>
-</ol>
+	<p>If you are interested in statistics, take a look at "scalearn.statistics" package since it is what you need to handle. Even compared to the other statistical environment, scala has a variety of simple but powerful functions to process data; in that sense, you could preprocess raw data on your own through scala's plain functions such as map, filter, and flatMap. Of course, when you have to handle natural language as data, Scalearn would help you not only to analyze but also to preprocess. 
+	<br>
+The description below might be the common flow of statistical analysis in Scalearn
+	</p>
+		<ol>
+			<li> Get raw data</li>
+			<li> Preprocessing the raw data</li>
+			<li> Convert that raw data into instance of some data class scalearn offers like data, dase, infds, tsda, tsds, and so on</li>
+			<li> Obtain statistical value by calling properties and methods</li>
+		</ol>
 
-<p>Well, Let's take some examples</p>
+	<p>Well, Let's take some examples</p>
 
-<p>First of all, you need to import "datafactory package" and "Converter object"; they allow you to obtain statistical value easily. </p>
-	<pre><code>import datafactory._
-import Converter._</code></pre>		
+	<p>First of all, you need to import "scalearn.statistics package" and "Converter object" into your code. They allow you to obtain statistical value easily. </p>
+	<pre><code>import scalearn.statistics._
+import scalearn.statistics.Converter._</code></pre>		
 
-<p>and assume you have raw Data already( let me say just "raw" to distinguish with Data instance) </p>	
+	<p>and assume you have raw data already( let me say just "raw" to distinguish with data instance) </p>	
 
-<pre><code>val raw1:Vector[Double] = Vector(1,2,3,4,5,6)
+	<pre><code>val raw1:Vector[Double] = Vector(1,2,3,4,5,6)
 val raw2 = Vector(1.0,2,3,4,5)
 val raw3 = Vector(1,2,3,4,5).map(elt=>elt.toDouble)</code></pre>
 
-<p>What I want you to be careful here is...
-	<ol>
-		<li>The collection must be Vector</li>
-		<li>you need to either declare type name of variable or insert "Double" in Vector[Int] such as "raw2" above</li>
-	</ol>
+	<p>Ok, let's get start it. To begin with, create data instance( if you need to make a set of data, generate instance of "dase" class by giving parameters [ data* ] )</p>
+
+	<pre><code>val data1:data = data(raw1)
+val data2:data = Vector(1,2,3,4,5).toda
+
+val dase1:dase = dase(data1,data2,data1)
+val dase2:dase = new dase(Vector(data1,data2))
+val dase3:dase = Vector(raw1,raw2,raw3).tods</code></pre>
+
+	<p>Get statistical value for data1</p>
+
+<pre><code>val mean:Double = data1.mean
+
+val standard_deviation:Double = data1.sd
+
+val length:Int = data1.size
+
+val deviation:Vector[Double] = data1.dv
+
+val axis_of_time:Vector[Double] = data1.time
+
+val regression_slope_intercept:(Double,Double) = data1.reg
+
+val regression_line:Double=>Double = data1.regline
+
+val residual:data = data1.resi</code></pre>
+
+<p>Perhaps, you would worry about cost to create data instance since it possesses a lot of properties; don't worry about it too much because scala initializes most of the properties when you require to use thanks to "lazy" keyword. Unless you call, it does't do anything to them.
 </p>
 
-<p>Ok, we could start to use Scalearn already. Create Data instance( if you need to make a set of Data, generate instance of "DataSet" class by giving parameters [ Data* ] )</p>
+<p>
+Then, when you have to handle different kinds of data, it's time to use "dase" class ( dase stands for dase )</p>
 
-<pre><code>val Data1:Data = Data(raw1)
-val Data2:Data = Vector(1,2,3,4,5).toda
+<pre><code>val mean:Vector[Double] = dase1.mean
 
-val DataSet1:DataSet = DataSet(Data1,Data2,Data1)
-val DataSet2:DataSet = new DataSet(Vector(Data1,Data2))
-val DataSet3:DataSet = Vector(raw1,raw2,raw3).tods</code></pre>
+val standard_deviation:Vector[Double] = dase1.sd
 
-<p>Get statistical value for Data1</p>
+val combinations:Vector[Vector[Double]] = dase1.combi
 
-<pre><code>val mean:Double = Data1.mean
+val covariance:Vector[Double] = dase1.covar
 
-val standard_deviation:Double = Data1.sd
+val pearson_correlation:Vector[Double] = dase1.pears
 
-val length:Int = Data1.size
+val spearman_correlation:Vector[Double] = dase1.spears
 
-val deviation:Vector[Double] = Data1.dv
+val eucliean_distance:Vector[Double] = dase1.eucli
 
-val axis_of_time:Vector[Double] = Data1.time
+val regression_paremeters:Vector[(Double,Double)] = dase1.reg
 
-val regression_slope_intercept:(Double,Double) = Data1.reg
+val regression_line:Vector[Double=>Double] = dase1.regline</code></pre>
 
-val regression_line:Double=>Double = Data1.regline
-
-val residual:Data = Data1.resi</code></pre>
-
-<p>Perhaps, you would worry about cost to create Data instance since it possesses a lot of properties; don't worry about it too much because scala initializes most of the properties when you require to use thanks to "lazy" keyword. Unless you call, it does't do anything to them. By the way, when you have to handle different kinds of Data, it's time to use "DataSet" class ( DataSet stands for Dataset )</p>
-
-<pre><code>val mean:Vector[Double] = DataSet1.mean
-
-val standard_deviation:Vector[Double] = DataSet1.sd
-
-val combinations:Vector[Vector[Double]] = DataSet1.combi
-
-val covariance:Vector[Double] = DataSet1.covar
-
-val pearson_correlation:Vector[Double] = DataSet1.pears
-
-val spearman_correlation:Vector[Double] = DataSet1.spears
-
-val eucliean_distance:Vector[Double] = DataSet1.eucli
-
-val regression_paremeters:Vector[(Double,Double)] = DataSet1.reg
-
-val regression_line:Vector[Double=>Double] = DataSet1.regline</code></pre>
-
-<p>Scalearn treats Data as a sample obtained from population and assume that we wanna know about population ( not sample Data itself ), so "sd" is estimated standard deviation of population or square root of unbiased variance ( If you are not familiar with statistics, don't worry about this and just ignore cuz it is actually tiny problem when sample size is big enough ).
+<p>Scalearn treats data as a sample obtained from population and assume that we wanna know about population ( not sample data itself ), so "sd" is estimated standard deviation of population or square root of unbiased variance ( If you are not familiar with statistics, don't worry about this and just ignore cuz it is actually tiny problem when sample size is big enough ).
 
 <p>In the case wanna know about variance and standard deviation of sample itself</p>
-<pre><code>val biased_variance = Data1.samplevari
-val sample_standard_deviation = Data1.samplesd</code></pre>
+<pre><code>val biased_variance = data1.samplevari
+val sample_standard_deviation = data1.samplesd</code></pre>
 
 
 <br>
 <h4>#Statistical Inference</h4>
 <br>
 
-<p>Quite often, we have to distinguish whether the samples are taken from the same population or not; in other words, we should figure out the range of accidental error. Basically, "Datafactory" package offers you understandable tools so as to analyze statistically in almost same way; just use infds class ( meaningly, Dataset for statistical inference ).
+<p>Quite often, we have to distinguish whether the samples are taken from the same population or not; in other words, we should figure out the range of accidental error. Basically, "scalearn.statistics" package offers you understandable tools so as to analyze in almost same way with previous one; just create infds class instance( stands for dase in statistical inference ).
 
-<p>To begin with, let's make instance of infds. The infds class takes Data instances as parameters, so you need to create them first;
+<p>To begin with, let's make instance of infds. The infds class takes data instances as parameters, so you need to create them first;
 <br>alternatively, you could convert Vector [ Vector [ Double ] ] into infds instance implicitly</p>
 
-<pre><code>val infer_Dataset1:infds = infds(Data1,Data2,Data3)
+<pre><code>val infer_dase1:infds = infds(data1,data2,data3)
 
-val infer_Dataset2:infds = Vector(raw1,raw2,raw3).toinf</code></pre>
+val infer_dase2:infds = Vector(raw1,raw2,raw3).toinf</code></pre>
 
-<pre><code>val grand_mean :Double = infer_Dataset1.grandmean
+<pre><code>val grand_mean :Double = infer_dase1.grandmean
 
-val grand_size :Int = infer_Dataset1.grandsize
+val grand_size :Int = infer_dase1.grandsize
 
-val grand_sum :Double = infer_Dataset1.grandsum
+val grand_sum :Double = infer_dase1.grandsum
 
-val effects :Vector[Double] = infer_Dataset1.effects
+val effects :Vector[Double] = infer_dase1.effects
 
-val tpair_vector :Vector[(Double,Boolean)] = infer_Dataset1.tpair
+val tpair_vector :Vector[(Double,Boolean)] = infer_dase1.tpair
 
-val twelch_vector :Vector[(Double,Boolean)] = infer_Dataset1.twelch
+val twelch_vector :Vector[(Double,Boolean)] = infer_dase1.twelch
 
-val anova_result :(Boolean,Double) = infer_Dataset1.anova</code></pre>
+val anova_result :(Boolean,Double) = infer_dase1.anova</code></pre>
 
 
 
@@ -180,21 +201,21 @@ val anova_result :(Boolean,Double) = infer_Dataset1.anova</code></pre>
 <h4>#Time Series Analysis</h4>
 <br>
 <ol>
-	<li>Create instance of "TimeData" class ( stands for time series Data ) or "TimeDataSet" class ( stands for time series Dataset ). Either of them below is available.</li>
+	<li>Create instance of "tsda" class ( stands for time series data ) or "Timedase" class ( stands for time series dase ). Either of them below is available.</li>
 	<br>
-	<pre><code>val ts1:TimeData = TimeData(1.0,2,3,4)
-val ts2:TimeData = new TimeData(Vector(1.0,2,3,4,5))
-val ts3:TimeData = Data1.ts
+	<pre><code>val ts1:tsda = tsda(1.0,2,3,4)
+val ts2:tsda = new tsda(Vector(1.0,2,3,4,5))
+val ts3:tsda = data1.ts
 
-val tsds1:TimeDataset = TimeDataset(ts1,ts2,ts3)
-val tsds2:TimeDataset = new TimeDataset(Vector(ts1,ts2,ts3))
-val tsds3:TimeDataset = Dataset3.ts</code></pre>
+val tsds1:Timedase = Timedase(ts1,ts2,ts3)
+val tsds2:Timedase = new Timedase(Vector(ts1,ts2,ts3))
+val tsds3:Timedase = dase3.ts</code></pre>
 
-	<pre><code>val detrended:TimeData = ts1.detrending
-val differenced:TimeData = ts1.differencing
+	<pre><code>val detrended:tsda = ts1.detrending
+val differenced:tsda = ts1.differencing
 ts1.differencing.differencing.detrending</code></pre>
 
-	<p>Since TimeData class inherits Data class, you can call properties and methods of Data class freely.
+	<p>Since tsda class inherits data class, you can call properties and methods of data class freely.
 </ol>
 
 
