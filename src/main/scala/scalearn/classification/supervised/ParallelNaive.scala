@@ -12,10 +12,12 @@ input : ListBuffer[ (the class name the document belong to , path to document ) 
 file_paths & docs are mutable !! Be careful. it has side effect.
 **/
 
-case class ParallelNaive( file_paths : ListBuffer[(String,String)] ) extends Serializable 
+case class ParallelNaive( 
+	file_paths : ListBuffer[(String,String)] , 
+	spark_context:SparkContext = SparkInstance.default) extends Serializable 
 {
 	
-	val docs:ListBuffer[(String ,RDD[(String,Int)])] = file_paths.map( class_path => ( class_path._1 , read.rdds(class_path._2,false) ) )
+	val docs:ListBuffer[(String ,RDD[(String,Int)])] = file_paths.map( class_path => ( class_path._1 , read.rdds(class_path._2,false,spark_context) ) )
 	
 	def wholeClass :Map[String,ListBuffer[(String,RDD[(String,Int)])]] = docs.groupBy(elt=>elt._1)
 	//全てのクラスとドキュメントの集合：Map( 各クラス-> Vector( ( 各クラス,ドキュメントの集合 ) ) )
