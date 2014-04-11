@@ -222,3 +222,6 @@ test
 test:compile
 ~test:compile
 test
+run
+~compile
+run
