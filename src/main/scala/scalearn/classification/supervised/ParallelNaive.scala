@@ -1,11 +1,15 @@
 package scalearn.classification.supervised
 
-import org.apache.spark.rdd._
 import scala.math.log
-import scalearn.interface.read
 import java.io.Serializable
 import scala.collection.mutable.ListBuffer
 
+import org.apache.spark.rdd._
+import org.apache.spark.SparkContext._
+
+import scalearn.interface.read
+import scalearn.parallel.SparkInstance
+import org.apache.spark.SparkContext
 
 /**
 input : ListBuffer[ (the class name the document belong to , path to document ) ]

@@ -8,7 +8,7 @@ import scalearn.statistics.Converter
 
 import org.atilika.kuromoji._
 import scalearn.preprocessing.tokenfactory.JP
-import parallel.SparkInstance
+import scalearn.parallel.SparkInstance
 
 import org.apache.spark.rdd._
 import org.apache.spark.SparkContext

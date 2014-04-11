@@ -225,3 +225,5 @@ test
 run
 ~compile
 run
+~compile
+run

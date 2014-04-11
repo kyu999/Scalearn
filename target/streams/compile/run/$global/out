@@ -89,127 +89,129 @@
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp377379006-76[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp377379006-76[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp272754204-66[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp272754204-66[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O server boss #6[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O server boss #6[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp1761330643-50 Acceptor0 SocketConnector@0.0.0.0:51055[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp1761330643-50 Acceptor0 SocketConnector@0.0.0.0:51055[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Executor task launch worker-0[0m
-[0m[[0mdebug[0m] [0m	Interrupted Executor task launch worker-0[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O boss #3[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O boss #3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread MAP_OUTPUT_TRACKER cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted MAP_OUTPUT_TRACKER cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp272754204-61 Acceptor0 SocketConnector@0.0.0.0:51056[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp272754204-61 Acceptor0 SocketConnector@0.0.0.0:51056[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp272754204-65[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp272754204-65[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp377379006-75[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp377379006-75[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp377379006-78[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp377379006-78[0m
-[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-5[0m
-[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-5[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp1761330643-51[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp1761330643-51[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp377379006-73[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp377379006-73[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp1761330643-54[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp1761330643-54[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp377379006-71 Selector0[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp377379006-71 Selector0[0m
-[0m[[0mdebug[0m] [0mInterrupting thread HTTP_BROADCAST cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted HTTP_BROADCAST cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread RESULT_TASK cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted RESULT_TASK cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #5[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #5[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-34[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-34[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp1761330643-53[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp1761330643-53[0m
-[0m[[0mdebug[0m] [0mInterrupting thread SHUFFLE_MAP_TASK cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted SHUFFLE_MAP_TASK cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #4[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #4[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp377379006-77[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp377379006-77[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp377379006-72 Acceptor0 SelectChannelConnector@0.0.0.0:4040[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp377379006-72 Acceptor0 SelectChannelConnector@0.0.0.0:4040[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp272754204-64[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp272754204-64[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-2[0m
-[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-2[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp1761330643-55[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp1761330643-55[0m
-[0m[[0mdebug[0m] [0mInterrupting thread DAG_SCHEDULER cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted DAG_SCHEDULER cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp1761330643-57[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp1761330643-57[0m
-[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-2[0m
-[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-2[0m
-[0m[[0mdebug[0m] [0mInterrupting thread connection-manager-thread[0m
-[0m[[0mdebug[0m] [0m	Interrupted connection-manager-thread[0m
-[0m[[0mdebug[0m] [0mInterrupting thread SparkListenerBus[0m
-[0m[[0mdebug[0m] [0m	Interrupted SparkListenerBus[0m
-[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-6a62c05c-4adf-4da7-a21e-5f37cae1ecb5[0m
-[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-6a62c05c-4adf-4da7-a21e-5f37cae1ecb5[0m
-[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-d900c6db-ad23-4b1a-8df5-91b6176df763[0m
-[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-d900c6db-ad23-4b1a-8df5-91b6176df763[0m
-[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-13[0m
-[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-13[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp272754204-68[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp272754204-68[0m
-[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-4[0m
-[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-4[0m
-[0m[[0mdebug[0m] [0mInterrupting thread BLOCK_MANAGER cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted BLOCK_MANAGER cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #1[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #1[0m
-[0m[[0mdebug[0m] [0mInterrupting thread SPARK_CONTEXT cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted SPARK_CONTEXT cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp272754204-63[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp272754204-63[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-0[0m
-[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-0[0m
-[0m[[0mdebug[0m] [0mInterrupting thread BROADCAST_VARS cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted BROADCAST_VARS cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp1761330643-56[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp1761330643-56[0m
-[0m[[0mdebug[0m] [0mInterrupting thread SHUFFLE_BLOCK_MANAGER cleanup timer[0m
-[0m[[0mdebug[0m] [0m	Interrupted SHUFFLE_BLOCK_MANAGER cleanup timer[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #2[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #2[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp272754204-62[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp272754204-62[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp1761330643-52[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp1761330643-52[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp272754204-67[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp272754204-67[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Connection manager future execution context-0[0m
-[0m[[0mdebug[0m] [0m	Interrupted Connection manager future execution context-0[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-1[0m
-[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-a5c13399-6483-4b3a-a1c0-802867de8332[0m
+[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-a5c13399-6483-4b3a-a1c0-802867de8332[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-7[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-7[0m
 [0m[[0mdebug[0m] [0mInterrupting thread delete Spark local dirs[0m
 [0m[[0mdebug[0m] [0m	Interrupted delete Spark local dirs[0m
-[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-c87c6289-f04c-4ece-a914-1a7a9e6d7d5a[0m
-[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-c87c6289-f04c-4ece-a914-1a7a9e6d7d5a[0m
-[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-3[0m
-[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Timer-0[0m
-[0m[[0mdebug[0m] [0m	Interrupted Timer-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp323643596-54[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp323643596-54[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Connection manager future execution context-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted Connection manager future execution context-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread HTTP_BROADCAST cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted HTTP_BROADCAST cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread RESULT_TASK cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted RESULT_TASK cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread DAG_SCHEDULER cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted DAG_SCHEDULER cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread SparkListenerBus[0m
+[0m[[0mdebug[0m] [0m	Interrupted SparkListenerBus[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp323643596-49 Acceptor0 SocketConnector@0.0.0.0:51120[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp323643596-49 Acceptor0 SocketConnector@0.0.0.0:51120[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1406805628-67[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1406805628-67[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-12[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-12[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1406805628-64[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1406805628-64[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1786698517-73[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1786698517-73[0m
+[0m[[0mdebug[0m] [0mInterrupting thread SHUFFLE_BLOCK_MANAGER cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted SHUFFLE_BLOCK_MANAGER cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1406805628-65[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1406805628-65[0m
+[0m[[0mdebug[0m] [0mInterrupting thread BLOCK_MANAGER cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted BLOCK_MANAGER cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-54525766-7d90-4be1-b2bf-e2489e3c59c3[0m
+[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-54525766-7d90-4be1-b2bf-e2489e3c59c3[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #4[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #4[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1406805628-62[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1406805628-62[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1406805628-60 Acceptor0 SocketConnector@0.0.0.0:51121[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1406805628-60 Acceptor0 SocketConnector@0.0.0.0:51121[0m
+[0m[[0mdebug[0m] [0mInterrupting thread BROADCAST_VARS cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted BROADCAST_VARS cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp323643596-52[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp323643596-52[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp323643596-51[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp323643596-51[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-14[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-14[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O server boss #6[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O server boss #6[0m
+[0m[[0mdebug[0m] [0mInterrupting thread SPARK_CONTEXT cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted SPARK_CONTEXT cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1786698517-71 Acceptor0 SelectChannelConnector@0.0.0.0:4040[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1786698517-71 Acceptor0 SelectChannelConnector@0.0.0.0:4040[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #5[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #5[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1786698517-70 Selector0[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1786698517-70 Selector0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-4[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-4[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1786698517-72[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1786698517-72[0m
 [0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-3[0m
 [0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread qtp377379006-74[0m
-[0m[[0mdebug[0m] [0m	Interrupted qtp377379006-74[0m
-[0m[[0mdebug[0m] [0mInterrupting thread spark-8[0m
-[0m[[0mdebug[0m] [0m	Interrupted spark-8[0m
+[0m[[0mdebug[0m] [0mInterrupting thread SHUFFLE_MAP_TASK cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted SHUFFLE_MAP_TASK cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #2[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-3[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-3[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-2[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-34[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-34[0m
+[0m[[0mdebug[0m] [0mInterrupting thread spark-akka.actor.default-dispatcher-13[0m
+[0m[[0mdebug[0m] [0m	Interrupted spark-akka.actor.default-dispatcher-13[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp323643596-50[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp323643596-50[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Timer-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted Timer-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1786698517-76[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1786698517-76[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1406805628-63[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1406805628-63[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp323643596-56[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp323643596-56[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1786698517-77[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1786698517-77[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1406805628-66[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1406805628-66[0m
 [0m[[0mdebug[0m] [0mInterrupting thread spark-scheduler-1[0m
 [0m[[0mdebug[0m] [0m	Interrupted spark-scheduler-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-9b19af66-43da-4f09-9f50-673c61f2bf84[0m
+[0m[[0mdebug[0m] [0m	Interrupted delete Spark temp dir /var/folders/t3/gksn7pg933sbljff_m15cggh0000gn/T/spark-9b19af66-43da-4f09-9f50-673c61f2bf84[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Result resolver thread-2[0m
+[0m[[0mdebug[0m] [0m	Interrupted Result resolver thread-2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp323643596-53[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp323643596-53[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Executor task launch worker-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted Executor task launch worker-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1786698517-74[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1786698517-74[0m
+[0m[[0mdebug[0m] [0mInterrupting thread MAP_OUTPUT_TRACKER cleanup timer[0m
+[0m[[0mdebug[0m] [0m	Interrupted MAP_OUTPUT_TRACKER cleanup timer[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1406805628-61[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1406805628-61[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp323643596-55[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp323643596-55[0m
+[0m[[0mdebug[0m] [0mInterrupting thread connection-manager-thread[0m
+[0m[[0mdebug[0m] [0m	Interrupted connection-manager-thread[0m
+[0m[[0mdebug[0m] [0mInterrupting thread qtp1786698517-75[0m
+[0m[[0mdebug[0m] [0m	Interrupted qtp1786698517-75[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O boss #3[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O boss #3[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #1[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #1[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m

@@ -1,4 +1,4 @@
-package parallel
+package scalearn.parallel
 
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext._
