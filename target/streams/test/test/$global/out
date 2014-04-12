@@ -1,9 +1,0 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.DataTes, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.TsdaTes, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.TsdsTes, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.MatrixTes, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.LinearRegressionTes, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.InferenceTest, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(unsupervised_test.ClusteringTest, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(factory_test.DatasetTes, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(supervised_test.NaiveBayesTest, org.scalatest.tools.Framework$$anon$1@91f5f9a, false, [SuiteSelector])[0m

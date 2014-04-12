@@ -18,13 +18,13 @@ file_paths & docs are mutable !! Be careful. they are subject to side effect.
 
 case class ParallelNaive( 
 	file_paths :ListBuffer[(String,String)] , 
-	spark_context :SparkContext = SparkInstance.default ) extends Serializable 
+	cache_it :Boolean = false ,
+    spark_context :SparkContext = SparkInstance.default ) extends Serializable 
 {
 	
 	val docs :ListBuffer[(String ,RDD[(String,Int)])] = 
-        file_paths.map( 
-            class_path => 
-                ( class_path._1 , read.rdds(class_path._2,false,spark_context) ) 
+        file_paths.map( class_path => 
+                ( class_path._1 , read.rdds( class_path._2 , cache_it , spark_context) ) 
             )
 	
 	def wholeClass :Map[String,ListBuffer[(String,RDD[(String,Int)])]] = docs.groupBy(elt=>elt._1)
@@ -45,9 +45,9 @@ case class ParallelNaive(
 
 		wholeClass(class_name).foreach{ 
             class_rdd =>  // == (class,rdd)
-				val filtered = class_rdd._2.filter{word_occur=> word_occur._1==word}
+				val filtered = class_rdd._2.filter{ word_occur => word_occur._1 == word }
 				
-				if(filtered.count != 0) doc_count += 1
+				if (filtered.count != 0) doc_count += 1
 		    }
 		
 		doc_count
