@@ -48,7 +48,7 @@ class NaiveBayesTest extends FunSuite
 		println (" word_count : "+ word_count )
 */
 	
-	val pn = ParallelNaive(file_pathes)
+/*	val pn = ParallelNaive(file_pathes)
 	println("eachNumWord (良い,plus): "+pn.eachNumWord("良い","plus"))
 
 	println("result : "+pn.temp(examine_file) )
@@ -64,7 +64,7 @@ class NaiveBayesTest extends FunSuite
 	println("eachProbWord (良い,minus): "+pn.eachProbWord("良い","minus"))
 	println("eachProbWord (悪い,plus): "+pn.eachProbWord("悪い","plus"))
 	println("eachProbWord (おい,minus): "+pn.eachProbWord("悪い","minus"))
-
+*/
 	
 	
 	

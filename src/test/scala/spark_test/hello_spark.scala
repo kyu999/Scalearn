@@ -3,7 +3,7 @@ import org.scalatest.FunSuite
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
-import parallel.SparkInstance
+import scalearn.parallel.SparkInstance
 import org.atilika.kuromoji._
 import scalearn.preprocessing.tokenfactory.JP
 

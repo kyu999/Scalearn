@@ -1,0 +1,11 @@
+#Successful Tests
+#Sat Apr 12 22:19:48 ICT 2014
+factory_test.LinearRegressionTes=1397315984264
+factory_test.DatasetTes=1397315984773
+unsupervised_test.ClusteringTest=1397315985915
+supervised_test.NaiveBayesTest=1397315988423
+factory_test.InferenceTest=1397315984754
+factory_test.MatrixTes=1397315984396
+factory_test.TsdaTes=1397315984507
+factory_test.TsdsTes=1397315984808
+factory_test.DataTes=1397315984449

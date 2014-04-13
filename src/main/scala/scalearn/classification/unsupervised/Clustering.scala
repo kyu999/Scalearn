@@ -9,17 +9,21 @@ import scalearn.statistics.Tools
 object Clustering {
 
 	
-	def kmeans(k:Int,vectors:ArrayBuffer[Vector[Double]]):IndexedSeq[VectorCluster]={
+	def kmeans(
+        k:Int,
+        vectors:ArrayBuffer[Vector[Double]],
+        max_iteration:Int = 100 
+        ):IndexedSeq[VectorCluster] = {
 		  		
 		val size = vectors.length
 
 		//k個の代表ベクトルを無作為に決め,事例集から削除しk個のクラスターを作成
 		
-		val first_clusters:IndexedSeq[VectorCluster] =
+		val initial_clusters:IndexedSeq[VectorCluster] =
         
-            ( 1 to k ).map {  elt=>
+            ( 1 to k ).map {  elt =>
 		  
-		        val pop_place:Int=nextInt(size-1)
+		        val pop_place:Int = nextInt(size-1)
 		        val pop_value:Vector[Double] = vectors(pop_place)		
 		  
                 vectors.remove(pop_place)								
@@ -29,13 +33,20 @@ object Clustering {
         
         //kはそこまで大きくないので下の処理と比べると、上の処理は性能にそこまで関係ない
 		
-		var previous_clustered:IndexedSeq[VectorCluster] = reclustering( vectors,first_clusters )
+		var previous_clustered:IndexedSeq[VectorCluster] = reclustering( vectors,initial_clusters )
 		var after_clustered:IndexedSeq[VectorCluster] = reclustering( vectors , previous_clustered.map(elt=>VectorCluster(ArrayBuffer(elt.center))) )
 		
-		while(previous_clustered!=after_clustered){
-		  
-			 previous_clustered = after_clustered
+        var current_iteration = 1
+        var keep_iteration = true
+        
+		while( (previous_clustered != after_clustered) && keep_iteration){
+		     
+             if(current_iteration >= max_iteration) keep_iteration = false
+			 
+             previous_clustered = after_clustered
 			 after_clustered = reclustering( vectors,previous_clustered.map(elt=>VectorCluster(ArrayBuffer(elt.center))) )
+             
+             current_iteration += 1
 		}
 		
 		after_clustered
@@ -59,7 +70,7 @@ object Clustering {
 			  
 			  val sim:(VectorCluster,Double) = (cluster , Tools.pearRaw(cluster.center,vect))
 			  
-			  if(sim._2>maxsim._2){
+			  if(sim._2 > maxsim._2){
 			    inserting_place = cluster_index
 			    maxsim = sim			    
 			  }
