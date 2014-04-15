@@ -15,7 +15,7 @@ case class NaiveBayes( file_paths : ListBuffer[(String,String)] )
 {	
 	val docs:ListBuffer[(String ,Array[(String,Int)])] = 
 		file_paths
-			.map( class_path => ( class_path._1 , read.rdds(class_path._2,false).collect ) )
+			.map( class_path => ( class_path._1 , read.document(class_path._2,false).collect ) )
 		
 	def wholeClass :Map[String,ListBuffer[(String,Array[(String,Int)])]] = docs.groupBy(elt=>elt._1)
 	//全てのクラスとドキュメントの集合：Map( 各クラス-> List( ( 各クラス,ドキュメントの集合 ) ) )
@@ -68,7 +68,7 @@ case class NaiveBayes( file_paths : ListBuffer[(String,String)] )
 
 	def classify(doc_path:String , alpha:Int = 2 ):(Double,String) = {
 
-		val arrayWord = read.rdds(doc_path).collect	//何度も使うのでcache化
+		val arrayWord = read.document(doc_path).collect	//何度も使うのでcache化
 								
 		val ProbPerClass = 
 			allClassNames.map{

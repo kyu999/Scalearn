@@ -6,7 +6,12 @@ import scala.io.Source
 
 object  JP{
 	
-  	def mkToken(content:String):Seq[Token]=Tokenizer.builder().build().tokenize(content).filter((x:Token)=>x.getBaseForm() != null)
+  	def mkToken(content:String):Seq[Token]
+      = Tokenizer
+            .builder()
+            .build()
+            .tokenize(content)
+            .filter( (x:Token) => x.getBaseForm() != null )
 
 	def mkTokenF(path:String):Stream[Token]={
 	  val file=Source.fromFile(path)

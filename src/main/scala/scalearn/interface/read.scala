@@ -50,7 +50,7 @@ object read {
 	  }
 	}
 	
-	def rdds( 
+	def document( 
 		path:String ,
 		cache_it:Boolean = true , 
 		spark_context:SparkContext = SparkInstance.default

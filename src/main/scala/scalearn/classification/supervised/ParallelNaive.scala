@@ -24,7 +24,7 @@ case class ParallelNaive(
 	
 	val docs :ListBuffer[(String ,RDD[(String,Int)])] = 
         file_paths.map( class_path => 
-                ( class_path._1 , read.rdds( class_path._2 , cache_it , spark_context) ) 
+                ( class_path._1 , read.document( class_path._2 , cache_it , spark_context) ) 
             )
 	
 	def wholeClass :Map[String,ListBuffer[(String,RDD[(String,Int)])]] = docs.groupBy(elt=>elt._1)
@@ -34,12 +34,13 @@ case class ParallelNaive(
 	//全classのリスト作成
 	
 	def eachNumDocs :Map[String,Int] = wholeClass.map(elt=>(elt._1,elt._2.length))
-	//Nc：各クラスに置けるdocument数、のMap : Map(class->number of docs)
+	//each == at each class
+    //Nc：各クラスに置けるdocument数、のMap : Map(class->number of docs)
 	
 	def sumNumDocs :Int = docs.size
 	//ΣNc：総document数
 	
-	def eachNumWord(word:String , class_name:String ):Int = {
+	def eachNumDocsAtWord(word:String , class_name:String ):Int = {
 				
 		var doc_count = 0
 
@@ -52,14 +53,14 @@ case class ParallelNaive(
 		
 		doc_count
 	}
-	//N(w,c)：各クラスに置ける各単語の出現回数、のMap。できれば。もし未知語が来たらNoneではなく0を返す
+	//N(w,c)：各クラスに置ける特定のwordが出現するdocument数
 	
 	def eachProbWord(word:String , class_name:String , alpha:Int = 2):Double={
 		
-		val Nwc = eachNumWord(word , class_name).toDouble
+		val Nwc = eachNumDocsAtWord(word , class_name).toDouble
 		val Nc = eachNumDocs(class_name).toDouble
 				
-		log( ( Nwc+(alpha-1) ) / ( Nc + 2*(alpha-1) ) )
+		log( ( Nwc + (alpha-1) ) / ( Nc + 2*(alpha-1) ) )
 	}
 	//log(Pw,c)
 	//alpha is the parameter to decide how much we gonna make the data flat
@@ -77,7 +78,7 @@ case class ParallelNaive(
 
 	def classify(doc_path:String , alpha:Int = 2 ):(Double,String) = {
 
-        val new_rdd = read.rdds(doc_path)
+        val new_rdd = read.document(doc_path)
         
 		val array_word_freq :Array[(String,Int)] = new_rdd.collect	
 								

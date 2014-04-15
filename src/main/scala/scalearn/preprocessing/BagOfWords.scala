@@ -3,6 +3,7 @@ package scalearn.preprocessing
 import scalearn.preprocessing.tokenfactory.JP._
 import org.atilika.kuromoji._
 
+
 trait BagOfWords// extends TokenVector
 {
 	
@@ -21,10 +22,13 @@ trait BagOfWords// extends TokenVector
 case class BinaryVector(tokens:Vector[Token],allwordtype:Set[Token]) extends BagOfWords{
    
 	
-    val values = allwordtype.toVector.map{ elt=>
-      if (types.contains(elt.getBaseForm)) 1.0
-	  else 0.0
-	}
+    val values = 
+        allwordtype
+            .toVector
+            .map{ elt =>
+                if (types.contains(elt.getBaseForm)) 1.0
+	            else 0.0
+	        }
     
     
 }
@@ -34,14 +38,21 @@ case class FrequencyVector(tokens:Vector[Token],allwordtype:Set[Token])  extends
  * allwordtypeを変形してreturnする
  * 
  */ 	   
-	val freqs:Map[String,Double]=tokens.groupBy((elt=>elt.getBaseForm)).toMap.map(elt=>(elt._1,elt._2.length.toDouble))
+	val freqs:Map[String,Double] 
+        = tokens
+            .groupBy( (elt=>elt.getBaseForm) )
+            .toMap
+            .map( elt => (elt._1,elt._2.length.toDouble) )
 	//改善の余地あり
 	 
-	val values=allwordtype.toVector.map{ elt=>
-	  freqs.get(elt.getBaseForm) match{
-	    case Some(x)=>x
-	    case None=>0
-	  }
-	}
+	val values
+        = allwordtype
+            .toVector
+            .map{ elt=>
+	            freqs.get(elt.getBaseForm) match{
+	                case Some(x)=>x
+	                case None=>0
+	            }
+	        }
 
 }

@@ -231,3 +231,12 @@ reload
 update
 clean
 ~compile
+console
+clean
+reload
+update
+reload
+update
+reload
+update
+console
