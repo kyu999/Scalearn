@@ -117,7 +117,7 @@ case class ParallelNaive(
 		
 }
 
-object DoNaive extends App{
+object DoParallelNaive extends App{
 
   	val file_paths = 
   		ListBuffer( ("plus","resource/doc1.txt"),
@@ -130,25 +130,6 @@ object DoNaive extends App{
   	
   	val pn = ParallelNaive(file_paths)  	
 
-/*
- 	val cached_rdd = read.rdds("resource/examine.txt")	
- 	     
- 	val each_prob : List[RDD[String]] =
-		pn.allClassNames.map{	
-			class_name => 	
-					cached_rdd
-						.map { elt => ( pn.eachProbWord(elt._1 , class_name ) * elt._2 ).toString }
-			}
-     
-	val head_prob = each_prob.head
-	
-//	println("head_prob : "+head_prob.take(1).head)  <= does not work. please try!
-	
-    println(pn.docs.map(elt=>elt._2.take(1).head))
-    
-    //this works!! why???
-    
-*/
     pn.classify("resource/examine.txt")
     
     file_paths.foreach(println)

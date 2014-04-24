@@ -109,7 +109,7 @@ case class NaiveBayes( file_paths : ListBuffer[(String,String)] )
 		
 }
 
-object DoNaiveBayes extends App{
+object DoNaiveBayesOnMemory extends App{
 
   	val file_paths = 
   		ListBuffer( ("plus","resource/doc1.txt"),
