@@ -240,3 +240,11 @@ update
 reload
 update
 console
+clean 
+reload
+update
+reload
+update
+run
+test
+~compile
