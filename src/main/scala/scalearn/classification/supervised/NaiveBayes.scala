@@ -2,7 +2,7 @@ package scalearn.classification.supervised
 
 import org.apache.spark.rdd
 import scala.math.log
-import scalearn.interface.read
+import scalearn.io.read
 import scala.collection.mutable.ListBuffer
 
 /**

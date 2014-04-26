@@ -261,3 +261,16 @@ run
 run
 8
 run
+~compile
+run
+~compile
+run
+playerReference.get("second player")
+playerReference("second player")
+playerReference
+~compile
+run
+8
+run
+~compile
+run

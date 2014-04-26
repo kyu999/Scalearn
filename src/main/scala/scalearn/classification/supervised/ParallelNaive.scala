@@ -7,10 +7,10 @@ import scala.collection.mutable.ListBuffer
 import org.apache.spark.rdd._
 import org.apache.spark.SparkContext._
 
-import scalearn.interface.read
+import scalearn.io.read
 import scalearn.parallel.SparkInstance
 import org.apache.spark.SparkContext
-    
+     
 /**
 input : ListBuffer[ (the class name the document belong to , path to document ) ]
 file_paths & docs are mutable !! Be careful. they are subject to side effect.
