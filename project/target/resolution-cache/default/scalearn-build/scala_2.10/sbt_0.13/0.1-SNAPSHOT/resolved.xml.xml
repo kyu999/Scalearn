@@ -4,7 +4,7 @@
 		module="scalearn-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20140424214108"
+		publication="20140426185205"
 		e:scalaVersion="2.10" e:sbtVersion="0.13"
 	>
 		<description>
