@@ -2,8 +2,9 @@ package probability
         
 import scala.collection.mutable.Set
 import scala.collection.mutable.Map
-
     
+import scalearn.general._
+
     
     case class Event(situation:String, probability:Double)
 
@@ -43,9 +44,37 @@ import scala.collection.mutable.Map
     }
 
 
-    case class DirectedRelation(startPlayer:String,endPlayer:String) extends Relation
+    case class DirectedRelation(startPlayer:String,endPlayer:String) extends Relation{
 
-    case class UndirectedRelation(startPlayer:String,endPlayer:String) extends Relation
+       override def equals(that:Any):Boolean = {
+            that match {
+                case dr : DirectedRelation =>
+                    if(startPlayer == dr.startPlayer && endPlayer == dr.endPlayer)
+                        true
+                    else false
+                case _ => false
+                }
+        }
+ 
+    
+    }
+
+    case class UndirectedRelation(startPlayer:String,endPlayer:String) extends Relation {
+ 
+       override def equals(that:Any):Boolean = {
+            that match {
+                case udr : UndirectedRelation =>
+                    if( (startPlayer == udr.startPlayer && endPlayer == udr.endPlayer)
+                        |
+                        (startPlayer == udr.endPlayer && endPlayer == udr.startPlayer)
+                    ) true 
+                    else false
+                case _ => false
+                }
+        }               
+    
+        
+    }
 
         
     trait Network[ Re<:Relation , Pl<:Player ] {
@@ -55,18 +84,30 @@ import scala.collection.mutable.Map
 
         val players : Set[Pl] 
             
-        val playerReference = 
-            players
+        val playerReference :Map[String,Pl] = //mutable Map
+            Map() ++
+            ( players
                 .map{ player => ( player.name , player ) }
-                .toMap  //immutable Map
+                .toMap )
         
               
-        def addPlayer(player:Pl) = 
+        def add(player:Pl) = {
             players += player
-                    
-        def addRelation(relation:Re) = 
+            playerReference += player.name -> player
+        }
+        
+        def add(relation:Re) = 
             relations += relation
-        //side effect 
+
+        def remove(player:Pl) = {
+            players -= player
+            playerReference -= player.name
+        }
+                
+        def remove(relation:Re) = 
+            relations -= relation
+            
+        
             
     }
 

@@ -50,6 +50,34 @@ object NetworkTest extends App{
         
     val mn = SimpleMarkovNetwork(players,Set(relation2))
 
-    println("mn : "+mn)
+    println("Origine Markov Network : ")
+        
+    println(mn.playerReference)
+        
+    val player3 = SimplePlayer("third player",eventsB)
+    
+    mn.add(player3)
+        
+    println("After add player : ")
+        
+    println(mn.playerReference)
 
+    mn.remove(player3)
+        
+    println("After delete player : ")
+        
+    println(mn.playerReference)
+        
+    val relation3 = UndirectedRelation(player3.name,player1.name)
+        
+    mn.add(relation3)
+        
+    println("After add relation : ")
+        
+    println(mn.relations)
+        
+    println( mn.relations.contains( relation3 ) )
+
+    println( relation3 == UndirectedRelation(player1.name,player3.name) )
+        
 }
