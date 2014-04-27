@@ -11,7 +11,7 @@ object NetworkTest extends App{
         
     val eventsA = Vector(event1,event2,event3)
         
-    val player1 = SimpleFactor("first player",eventsA)
+    val factor1 = SimpleFactor("first factor",eventsA)
         
 //    player1.cpd.foreach(println)
 
@@ -21,19 +21,19 @@ object NetworkTest extends App{
         
     val eventsB = Vector(event4,event5,event6)
       
-    val player2 = SimpleFactor("second player",eventsB)
+    val factor2 = SimpleFactor("second factor",eventsB)
     
     println("")
         
 //    player2.cpd.foreach(println)
         
-    val players = Set(player1,player2)
+    val factors = Set(factor1,factor2)
             
-    val relation1 = DirectedRelation(player1.name,player2.name)
+    val relation1 = DirectedRelation(factor1.name,factor2.name)
         
     val relations = Set(relation1)
         
-    val bn = SimpleBayesianNetwork(players,relations)
+    val bn = SimpleBayesianNetwork(factors,relations)
         
     println("bn : "+bn)
         
@@ -46,31 +46,35 @@ object NetworkTest extends App{
     println("playerReference : "+bn.factorReference)
 
         
-    val relation2 = UndirectedRelation(player1.name,player2.name)
+    val relation2 = UndirectedRelation(factor1.name,factor2.name)
         
-    val mn = SimpleMarkovNetwork(players,Set(relation2))
+    val mn = SimpleMarkovNetwork(factors,Set(relation2))
 
     println("Origine Markov Network : ")
         
     println(mn.factorReference)
         
-    val player3 = SimpleFactor("third player",eventsB)
+    val factor3 = SimpleFactor("third factor",eventsB)
     
-    mn.add(player3)
+    mn.addFactor(factor3)
         
-    println("After add player : ")
+    println("After add factor : ")
         
     println(mn.factorReference)
+        
+    val dif_factor = TestingFactor("test factor",eventsB)
+        
+//    mn.addFactor(dif_factor) <= これがうまくいくようにしたい！
 
-    mn.remove(player3)
+    mn.removeFactor(factor3)
         
-    println("After delete player : ")
+    println("After delete factor : ")
         
     println(mn.factorReference)
         
-    val relation3 = UndirectedRelation(player3.name,player1.name)
+    val relation3 = UndirectedRelation(factor3.name,factor1.name)
         
-    mn.add(relation3)
+    mn.addRelation(relation3)
         
     println("After add relation : ")
         
@@ -78,6 +82,6 @@ object NetworkTest extends App{
         
     println( mn.relations.contains( relation3 ) )
 
-    println( relation3 == UndirectedRelation(player1.name,player3.name) )
+    println( relation3 == UndirectedRelation(factor1.name,factor3.name) )
         
 }

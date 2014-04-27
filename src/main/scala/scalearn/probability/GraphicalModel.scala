@@ -2,6 +2,7 @@ package probability
         
 import scala.collection.mutable.Set
 import scala.collection.mutable.Map
+import scala.math._
     
 import scalearn.general._
 
@@ -13,20 +14,33 @@ import scalearn.general._
         val name : String
         
         val events : Vector[Event]
+                        
+        require( round( events.map( event => event.probability ).sum ) == 1 ,
+                 "Sum of Probabilities should be 1" )
   
+            
+        def sortBySituation :Vector[Event] = 
+            events.sortWith( (a,b)=> a.situation < b.situation )
+            
+        def sortByProbability : Vector[Event] = 
+            events.sortWith( (a,b)=> a.probability < b.probability )
+
+            
         def indepenentWith(factor:Factor) = { }
         //Factor同士の関係性をデータから得る関数も実装する必要あり
 
     }
 
+    case class TestingFactor(name:String,events:Vector[Event]) extends Factor{}
+
     case class SimpleFactor(name:String,events:Vector[Event]) extends Factor{
 
-        val cpd : Vector[(String,Double)] = 
+        val cpd : Vector[( (String,String) , Double )] = 
             events
                 .combinations(2)
                 .map{ 
                     eventPair => 
-                        ( eventPair(0).situation + "_" + eventPair(1).situation , 
+                        ( ( eventPair(0).situation , eventPair(1).situation ) , 
                         eventPair(0).probability * eventPair(1).probability )
                 }
                 .toVector
@@ -91,20 +105,20 @@ import scalearn.general._
                 .toMap )
         
               
-        def add(factor:Fa) = {
+        def addFactor(factor:Fa) = {
             factors += factor
             factorReference += factor.name -> factor
         }
         
-        def add(relation:Re) = 
+        def addRelation(relation:Re) = 
             relations += relation
 
-        def remove(factor:Fa) = {
+        def removeFactor(factor:Fa) = {
             factors -= factor
             factorReference -= factor.name
         }
                 
-        def remove(relation:Re) = 
+        def removeRelation(relation:Re) = 
             relations -= relation
             
         
@@ -127,6 +141,8 @@ import scalearn.general._
         relations:Set[DirectedRelation]
         
     ) extends BayesianNetwork[SimpleFactor]
+        
+    //この実装では各Factorに対応したNetworkを選ばなければいけない；異なるFactorを同じNetworkで使えない
 
         
     trait MarkovNetwork[Fa<:Factor] extends Network[UndirectedRelation,Fa] {

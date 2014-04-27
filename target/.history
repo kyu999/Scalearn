@@ -284,3 +284,15 @@ run
 run
 clean
 ~compile
+clean
+~compile
+compile
+~compile
+run
+9
+run
+~compile
+run
+9
+run
+~compile
