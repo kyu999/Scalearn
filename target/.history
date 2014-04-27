@@ -296,3 +296,14 @@ run
 9
 run
 ~compile
+clean
+relaod
+reload
+update
+~compile
+compile
+~compile
+reload
+update
+~compile
+run

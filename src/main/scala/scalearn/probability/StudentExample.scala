@@ -18,8 +18,8 @@ object StudentExample extends App{
     val iq = SimpleFactor("iq",
                      Vector(
                          Event("~100",0.1),
-                         Event("100~120",0.2),
-                         Event("120~160",0.3),
+                         Event("100~120",0.4),
+                         Event("120~160",0.4),
                          Event("160~",0.1)
                         )
                     )

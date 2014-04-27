@@ -4,8 +4,7 @@ import scala.collection.mutable.Set
 import scala.collection.mutable.Map
 import scala.math._
     
-import scalearn.general._
-
+import scalearn.general.Checking
     
     case class Event(situation:String, probability:Double)
 
@@ -14,16 +13,19 @@ import scalearn.general._
         val name : String
         
         val events : Vector[Event]
+        
+        val sumProbability :Double = events.map( event => event.probability ).sum
                         
-        require( round( events.map( event => event.probability ).sum ) == 1 ,
-                 "Sum of Probabilities should be 1" )
-  
+        Checking.requireDouble(
+            sumProbability,
+            1.0,
+            "Sum of probabilities should be 1. Error here => " + name )
             
         def sortBySituation :Vector[Event] = 
-            events.sortWith( (a,b)=> a.situation < b.situation )
+            events.sortWith( (a,b) => a.situation < b.situation )
             
         def sortByProbability : Vector[Event] = 
-            events.sortWith( (a,b)=> a.probability < b.probability )
+            events.sortWith( (a,b) => a.probability < b.probability )
 
             
         def indepenentWith(factor:Factor) = { }
