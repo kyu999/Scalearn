@@ -283,3 +283,4 @@ run
 ~compile
 run
 clean
+~compile

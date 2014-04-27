@@ -8,18 +8,18 @@ import scalearn.general._
     
     case class Event(situation:String, probability:Double)
 
-    trait Player{
+    trait Factor{
         
         val name : String
         
         val events : Vector[Event]
   
-        def indepenentWith(player:Player) = { }
-        //player同士の関係性をデータから得る関数も実装する必要あり
+        def indepenentWith(factor:Factor) = { }
+        //Factor同士の関係性をデータから得る関数も実装する必要あり
 
     }
 
-    case class SimplePlayer(name:String,events:Vector[Event]) extends Player{
+    case class SimpleFactor(name:String,events:Vector[Event]) extends Factor{
 
         val cpd : Vector[(String,Double)] = 
             events
@@ -37,19 +37,19 @@ import scalearn.general._
 
     trait Relation{
     
-        val startPlayer : String
+        val startFactor : String
     
-        val endPlayer : String
+        val endFactor : String
         
     }
 
 
-    case class DirectedRelation(startPlayer:String,endPlayer:String) extends Relation{
+    case class DirectedRelation(startFactor:String,endFactor:String) extends Relation{
 
        override def equals(that:Any):Boolean = {
             that match {
                 case dr : DirectedRelation =>
-                    if(startPlayer == dr.startPlayer && endPlayer == dr.endPlayer)
+                    if(startFactor == dr.startFactor && endFactor == dr.endFactor)
                         true
                     else false
                 case _ => false
@@ -59,14 +59,14 @@ import scalearn.general._
     
     }
 
-    case class UndirectedRelation(startPlayer:String,endPlayer:String) extends Relation {
+    case class UndirectedRelation(startFactor:String,endFactor:String) extends Relation {
  
        override def equals(that:Any):Boolean = {
             that match {
                 case udr : UndirectedRelation =>
-                    if( (startPlayer == udr.startPlayer && endPlayer == udr.endPlayer)
+                    if( (startFactor == udr.startFactor && endFactor == udr.endFactor)
                         |
-                        (startPlayer == udr.endPlayer && endPlayer == udr.startPlayer)
+                        (startFactor == udr.endFactor && endFactor == udr.startFactor)
                     ) true 
                     else false
                 case _ => false
@@ -77,31 +77,31 @@ import scalearn.general._
     }
 
         
-    trait Network[ Re<:Relation , Pl<:Player ] {
+    trait Network[ Re<:Relation , Fa<:Factor ] {
                         
         val relations : Set[Re]
         //mutable Set
 
-        val players : Set[Pl] 
+        val factors : Set[Fa] 
             
-        val playerReference :Map[String,Pl] = //mutable Map
+        val factorReference :Map[String,Fa] = //mutable Map
             Map() ++
-            ( players
-                .map{ player => ( player.name , player ) }
+            ( factors
+                .map{ factor => ( factor.name , factor ) }
                 .toMap )
         
               
-        def add(player:Pl) = {
-            players += player
-            playerReference += player.name -> player
+        def add(factor:Fa) = {
+            factors += factor
+            factorReference += factor.name -> factor
         }
         
         def add(relation:Re) = 
             relations += relation
 
-        def remove(player:Pl) = {
-            players -= player
-            playerReference -= player.name
+        def remove(factor:Fa) = {
+            factors -= factor
+            factorReference -= factor.name
         }
                 
         def remove(relation:Re) = 
@@ -112,9 +112,9 @@ import scalearn.general._
     }
 
 
-    trait BayesianNetwork[Pl<:Player] extends Network[DirectedRelation,Pl] {
+    trait BayesianNetwork[Fa<:Factor] extends Network[DirectedRelation,Fa] {
             
-        val players:Set[Pl]
+        val factors:Set[Fa]
                 
         val relations:Set[DirectedRelation]
                 
@@ -123,15 +123,15 @@ import scalearn.general._
 
     case class SimpleBayesianNetwork(
         
-        players:Set[SimplePlayer],
+        factors:Set[SimpleFactor],
         relations:Set[DirectedRelation]
         
-    ) extends BayesianNetwork[SimplePlayer]
+    ) extends BayesianNetwork[SimpleFactor]
 
         
-    trait MarkovNetwork[Pl<:Player] extends Network[UndirectedRelation,Pl] {
+    trait MarkovNetwork[Fa<:Factor] extends Network[UndirectedRelation,Fa] {
             
-        val players:Set[Pl]
+        val factors:Set[Fa]
                 
         val relations:Set[UndirectedRelation]
                 
@@ -140,9 +140,9 @@ import scalearn.general._
         
    case class SimpleMarkovNetwork(
        
-        players:Set[SimplePlayer],
+        factors:Set[SimpleFactor],
         relations:Set[UndirectedRelation]
        
-    ) extends MarkovNetwork[SimplePlayer]
+    ) extends MarkovNetwork[SimpleFactor]
 
         

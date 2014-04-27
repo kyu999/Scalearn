@@ -11,7 +11,7 @@ object NetworkTest extends App{
         
     val eventsA = Vector(event1,event2,event3)
         
-    val player1 = SimplePlayer("first player",eventsA)
+    val player1 = SimpleFactor("first player",eventsA)
         
 //    player1.cpd.foreach(println)
 
@@ -21,7 +21,7 @@ object NetworkTest extends App{
         
     val eventsB = Vector(event4,event5,event6)
       
-    val player2 = SimplePlayer("second player",eventsB)
+    val player2 = SimpleFactor("second player",eventsB)
     
     println("")
         
@@ -43,7 +43,7 @@ object NetworkTest extends App{
         
     println("")
         
-    println("playerReference : "+bn.playerReference)
+    println("playerReference : "+bn.factorReference)
 
         
     val relation2 = UndirectedRelation(player1.name,player2.name)
@@ -52,21 +52,21 @@ object NetworkTest extends App{
 
     println("Origine Markov Network : ")
         
-    println(mn.playerReference)
+    println(mn.factorReference)
         
-    val player3 = SimplePlayer("third player",eventsB)
+    val player3 = SimpleFactor("third player",eventsB)
     
     mn.add(player3)
         
     println("After add player : ")
         
-    println(mn.playerReference)
+    println(mn.factorReference)
 
     mn.remove(player3)
         
     println("After delete player : ")
         
-    println(mn.playerReference)
+    println(mn.factorReference)
         
     val relation3 = UndirectedRelation(player3.name,player1.name)
         
