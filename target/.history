@@ -307,3 +307,7 @@ reload
 update
 ~compile
 run
+console
+~compile
+console
+~compile

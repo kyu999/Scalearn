@@ -1,7 +1,7 @@
 Scalearn
 ========
 
-Simple library for statistics, time series analysis, and machine learning in Scala
+Simple library for statistics, machine learning , and natural language processing in Scala
 
 Documentation : http://kyu999.github.io/Scalearn/
 

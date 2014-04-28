@@ -45,13 +45,13 @@ case class FrequencyVector(tokens:Vector[Token],allwordtype:Set[Token])  extends
             .map( elt => (elt._1,elt._2.length.toDouble) )
 	//改善の余地あり
 	 
-	val values
+	val values         //単語の出現頻度を元に作ったベクトル。
         = allwordtype
             .toVector
             .map{ elt=>
 	            freqs.get(elt.getBaseForm) match{
-	                case Some(x)=>x
-	                case None=>0
+	                case Some(x) => x+1    //本来は x だが、未知語対策のため1を足している
+	                case None => 1         //本来は 0 だが、未知語対策のため1にしている
 	            }
 	        }
 
