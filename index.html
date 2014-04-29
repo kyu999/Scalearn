@@ -52,12 +52,17 @@
 <a name="architecture" class="anchor" href="#architecture"><span class="octicon octicon-link"></span></a>Architecture</h3>
 
 <p>
-Scalearn runs on spark, which is distributed system like hadoop 
+Some functions in Scalearn runs on spark, which is constructed on Hadoop distribution 
 <br>
 => <a href="http://spark.apache.org/">spark</a>
-<br>The main difference between them is that spark concentrates on the tasks which need to load dase again and again like machine learning algorithms. For such tasks spark runs much faster( at most 100 times roughly speaking ). Thankfully, it enables us to implement machine learning algorithms running on your distributed system without complicated configuration.</p>
+<br>The main difference between Hadoop and Spark is that spark concentrates on the tasks which need to load data again and again like machine learning algorithms. For such tasks spark runs much faster( at most 100 times roughly speaking ). Thankfully, it enables us to implement machine learning algorithms running on your distributed system without complicated configuration.</p>
 
-
+<h3>
+<a name="Installation" class="anchor" href="#Installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+            
+    <p>
+    So far, no sbt installation available, therefore please build on your own ( since this is still the younger version and need to polish to some extent ) .         
+    </p>            
 
 <h3>
 <a name="Quick Start" class="anchor" href="#Quick Start"><span class="octicon octicon-link"></span></a>Quick Start</h3>
@@ -67,7 +72,7 @@ Scalearn runs on spark, which is distributed system like hadoop
 <br>
 
 	<p>
-		Basically, machine leaning has two different direction; one is supervised learning, and the other is unsupervised learning. Supervised learning requires you to collect data for study so as to construct classifier for instance. Scalearn offers some famous methods of them such as k-means, naive bayes, and so on. If you would like to handle natural language, you might have to preprocessing first, and dive into concrete learning ways like classification; therefore, please take a look at "scalearn.preprocessing" package and "scalearn.classification" package. 
+		Extremely roughly speanking, machine leaning has two different direction; one is supervised learning, and the other is unsupervised learning. Supervised learning requires you to collect data for study so as to construct classifier for instance, while unsupervised learning doesn't. Scalearn offers some famous methods of them such as k-means, naive bayes, and so on. 
 	</p>
 	
 	<pre><code>import scalearn.classification.supervised._
@@ -80,9 +85,22 @@ val file_paths =
   			    ("minus","resource/doc5.txt"),
   			    ("minus","resource/doc6.txt")
   			  )
-val pn = NaiveBayes(file_paths)  	
-pn.classify("resource/examine.txt")</code></pre>
+val nb = NaiveBayes(file_paths)  	
+nb.classify("resource/examine.txt")
 
+val pn = ParallelNaive(file_paths)
+pn.classify("resource/examine.txt")</code></pre>
+    
+    <p>
+    If the amount of data is not quite a lot, better to run on memory; should use NaiveBayes class as a classifier because it possess whole words on memory including data for study. On the other hand, ParallelNaive requires memory to have only the coming data you wanna classify; slower than NaiveBayes, yet could handle a bunch of data. Also, you could run on Hadoop thanks to Spark if you want. As a default, ParallelNaive utilizes whole cores on your computer.</p>
+
+<br>
+<h4>#Natural Language Processing</h4>
+<br>
+
+    <p>
+        
+    </p>
 
 <br>
 <h4>#Descriptive Statistics</h4>
@@ -218,7 +236,7 @@ ts1.differencing.differencing.detrending</code></pre>
 	<p>Since tsda class inherits data class, you can call properties and methods of data class freely.
 </ol>
 
-
+<p>For more examples, recommend that you should take a look at tests in the test directory.</p>
 
         </section>
 
