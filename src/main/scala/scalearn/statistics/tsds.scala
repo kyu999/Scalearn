@@ -2,11 +2,11 @@ package scalearn.statistics
 
 class tsds(tsdalist:Vector[tsda]) extends dase(tsdalist){
 	
-	val acf=tsdalist.map(_.acf)
+	val acf = tsdalist.map(_.acf)
 	
 //Operation
 	
-	def differencing=tsdalist.map(_.differencing)
+	def differencing = tsdalist.map(_.differencing)
 	
 }
  

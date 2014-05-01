@@ -10,10 +10,10 @@ object Clustering {
 
 	
 	def kmeans(
-        k:Int,
+        numberOfPrototype:Int,
         vectors:ArrayBuffer[Vector[Double]],
         max_iteration:Int = 100 
-        ):IndexedSeq[VectorCluster] = {
+    ):IndexedSeq[VectorCluster] = {
 		  		
 		val size = vectors.length
 
@@ -21,7 +21,7 @@ object Clustering {
 		
 		val initial_clusters:IndexedSeq[VectorCluster] =
         
-            ( 1 to k ).map {  elt =>
+            ( 1 to numberOfPrototype ).map {  elt =>
 		  
 		        val pop_place:Int = nextInt(size-1)
 		        val pop_value:Vector[Double] = vectors(pop_place)		
@@ -30,11 +30,16 @@ object Clustering {
 		        VectorCluster(ArrayBuffer(pop_value))
 		 
 		    }
-        
-        //kはそこまで大きくないので下の処理と比べると、上の処理は性能にそこまで関係ない
-		
-		var previous_clustered:IndexedSeq[VectorCluster] = reclustering( vectors,initial_clusters )
-		var after_clustered:IndexedSeq[VectorCluster] = reclustering( vectors , previous_clustered.map(elt=>VectorCluster(ArrayBuffer(elt.center))) )
+        		
+		var previous_clustered:IndexedSeq[VectorCluster] = 
+            reclustering( vectors,initial_clusters )
+            
+		var after_clustered:IndexedSeq[VectorCluster] = 
+            reclustering( 
+                vectors ,                     
+                previous_clustered
+                    .map( elt => VectorCluster(ArrayBuffer(elt.center)) ) 
+            )
 		
         var current_iteration = 1
         var keep_iteration = true
@@ -44,7 +49,13 @@ object Clustering {
              if(current_iteration >= max_iteration) keep_iteration = false
 			 
              previous_clustered = after_clustered
-			 after_clustered = reclustering( vectors,previous_clustered.map(elt=>VectorCluster(ArrayBuffer(elt.center))) )
+                 
+			 after_clustered = 
+                 reclustering( 
+                    vectors,
+                    previous_clustered
+                        .map( elt => VectorCluster(ArrayBuffer(elt.center)) )
+             )
              
              current_iteration += 1
 		}
@@ -54,7 +65,10 @@ object Clustering {
 	}	
 	
 	//clusterとvectorのコレクションを受け取り新たなclusterを作成する
-	def reclustering(vectors:ArrayBuffer[Vector[Double]],clusters:IndexedSeq[VectorCluster]) = {
+	def reclustering(
+        vectors:ArrayBuffer[Vector[Double]],
+        clusters:IndexedSeq[VectorCluster]
+    ) = {
 		
 		
 		//残りの全てのvectorと各clusterとの類似度を求めて最も類似しているclusterにvectorを含める
@@ -64,20 +78,22 @@ object Clustering {
 		    var cluster_index = 0
 		    var inserting_place = 0
 		    
-			var maxsim:(VectorCluster,Double) = (clusters.head , Tools.pearRaw(clusters.head.center,vect))
+			var maxsim:(VectorCluster,Double) = 
+                (clusters.head , Tools.pearRaw(clusters.head.center,vect))
 			
 			clusters.foreach{ cluster =>
 			  
-			  val sim:(VectorCluster,Double) = (cluster , Tools.pearRaw(cluster.center,vect))
+                val sim:(VectorCluster,Double) = 
+                    (cluster , Tools.pearRaw(cluster.center,vect))
 			  
-			  if(sim._2 > maxsim._2){
-			    inserting_place = cluster_index
-			    maxsim = sim			    
-			  }
+                if(sim._2 > maxsim._2){
+                    inserting_place = cluster_index
+                    maxsim = sim			    
+			    }
 			  
-			  cluster_index += 1
+                cluster_index += 1
   
-			}
+            }
 		
 		//一致するclusterにmaxsimのvectorを突っ込む    
 		clusters(inserting_place) <+ vect

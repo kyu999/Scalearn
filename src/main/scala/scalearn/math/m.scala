@@ -14,11 +14,13 @@ class m(in:Vector[Vector[Double]]) extends Matrix{
 
 //Operation
     def +(component:m)=
-      	if( (width != component.width) || (height != component.height) ) throw new Exception("not formatted") 
-    		else new m(add(in,component.raw))
+      	if( (width != component.width) || (height != component.height) ) 
+            throw new Exception("not formatted") 
+        else new m(add(in,component.raw))
     
     def -(component:m)=
-        if( (width != component.width) || (height != component.height) ) throw new Exception("not formatted") 
+        if( (width != component.width) || (height != component.height) ) 
+            throw new Exception("not formatted") 
         else new m(subtract(in,component.raw))
     
     def *(component:m)=
