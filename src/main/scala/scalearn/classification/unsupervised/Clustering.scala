@@ -14,54 +14,51 @@ object Clustering {
 	    max_iteration:Int = 100 
 	    ):IndexedSeq[VectorCluster] = {
 	    	
-	  val size = vectors.length
-
-		//k個の代表ベクトルを無作為に決め,事例集から削除しk個のクラスターを作成
-		
-		val initial_clusters:IndexedSeq[VectorCluster] =
-		
-		    ( 1 to numberOfPrototype ).map {  elt =>
-		  
-		        val pop_place:Int = nextInt(size-1)
-		        val pop_value:Vector[Double] = vectors(pop_place)
-		        
-		        vectors.remove(pop_place)
-		        VectorCluster(ArrayBuffer(pop_value))
-		        
-		        }
-        		
-		var previous_clustered:IndexedSeq[VectorCluster] = 
-		    reclustering( vectors,initial_clusters )
-            
-		var after_clustered:IndexedSeq[VectorCluster] = 
-		    reclustering( 
-		    	vectors ,
-		    	previous_clustered
-		    	    .map( elt => VectorCluster(ArrayBuffer(elt.center)) ) 
-		    	)
-		
-		var current_iteration = 1
-		var keep_iteration = true
-        
-		while( (previous_clustered != after_clustered) && keep_iteration){
-		    
-		    if(current_iteration >= max_iteration) keep_iteration = false
-		    
-		    previous_clustered = after_clustered
-		    
-		    after_clustered = 
-		        reclustering(
-		            vectors,
-		            previous_clustered
-		                .map( elt => VectorCluster(ArrayBuffer(elt.center)) )
-		            )
-		            
-		   current_iteration += 1
-		}
-		
-		after_clustered
-		
-	}	
+	   val size = vectors.length
+	   
+	   val initial_clusters:IndexedSeq[VectorCluster] =
+	       
+	       ( 1 to numberOfPrototype ).map {  elt =>
+	       
+	           val pop_place:Int = nextInt(size-1)
+	           val pop_value:Vector[Double] = vectors(pop_place)
+	           
+	           vectors.remove(pop_place)
+	           VectorCluster(ArrayBuffer(pop_value))
+	           
+	           }
+	   var previous_clustered:IndexedSeq[VectorCluster] = reclustering( vectors,initial_clusters )
+	   
+	   var after_clustered:IndexedSeq[VectorCluster] = 
+	       reclustering(
+	           vectors ,
+	           previous_clustered
+	               .map( elt => VectorCluster(ArrayBuffer(elt.center)) )
+	               )
+	         
+	   var current_iteration = 1
+	   var keep_iteration = true
+	   
+	   while( (previous_clustered != after_clustered) && keep_iteration){
+	   	
+	   	if(current_iteration >= max_iteration) keep_iteration = false
+	   	
+	   	previous_clustered = after_clustered
+	   	
+	   	after_clustered = 
+	   	    reclustering(
+	   	    	vectors,
+	   	    	previous_clustered
+	   	    	    .map( elt => VectorCluster(ArrayBuffer(elt.center)) )
+	   	    	    )
+	   	    	   
+	   	current_iteration += 1
+	   	
+	   	}
+	   	
+	   	after_clustered
+	   	
+	   	}	
 	
 	//clusterとvectorのコレクションを受け取り新たなclusterを作成する
 	def reclustering(
