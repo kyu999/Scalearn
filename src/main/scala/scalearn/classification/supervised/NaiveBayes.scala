@@ -33,11 +33,10 @@ case class NaiveBayes( file_paths : ListBuffer[(String,String)] )
 				
 		var doc_count = 0
 
-		wholeClass(class_name).foreach{
-			class_array =>  // == (class,array)
+		wholeClass(class_name).foreach{ class_array =>  // == (class,array)
 				val filtered = class_array._2.filter{word_occur=> word_occur._1==word}
-
-                if(!filtered.isEmpty) doc_count += 1
+				
+				if(!filtered.isEmpty) doc_count += 1
 		}
 		
 		doc_count
@@ -71,25 +70,24 @@ case class NaiveBayes( file_paths : ListBuffer[(String,String)] )
 		val arrayWord = read.document(doc_path).collect	//何度も使うのでcache化
 								
 		val ProbPerClass = 
-			allClassNames.map{
-				class_name => 					
-										
-					val each_prob = 
-						arrayWord.map { word_freq => eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2 }
-																				
-					( each_prob.sum + eachProbClass(class_name) , class_name )
-				}	
-		//list of probability that this document would belong to
+			allClassNames.map{ class_name =>
+			    val each_prob = 
+			        arrayWord
+			            .map { word_freq => 
+			                eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2 }
+			    ( each_prob.sum + eachProbClass(class_name) , class_name )
+			    
+			    }
 		
-        println("ProbPerClass : "+ProbPerClass)
-        
-        val estimate_class:(Double,String) = ProbPerClass.max
-        
-        file_paths += Pair(estimate_class._2,doc_path)
-        
-        docs += Pair(estimate_class._2,arrayWord)
-        
-        estimate_class
+		println("ProbPerClass : "+ProbPerClass)
+		
+		val estimate_class:(Double,String) = ProbPerClass.max
+		
+		file_paths += Pair(estimate_class._2,doc_path)
+		
+		docs += Pair(estimate_class._2,arrayWord)
+		
+		estimate_class
 		//推定クラスを返す
 		
 		
