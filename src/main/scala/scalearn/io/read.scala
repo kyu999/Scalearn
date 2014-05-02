@@ -63,7 +63,8 @@ object read {
 				.reduceByKey(_ + _)
                                         
         if(cache_it) myfile.cache()
-        else myfile
+        
+        myfile
 		
 	}
     
