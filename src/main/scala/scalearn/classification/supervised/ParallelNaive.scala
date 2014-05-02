@@ -19,12 +19,12 @@ file_paths & docs are mutable !! Be careful. they are subject to side effect.
 case class ParallelNaive( 
 	file_paths :ListBuffer[(String,String)] , 
 	cache_it :Boolean = false ,
-    spark_context :SparkContext = SparkInstance.default ) extends Serializable 
+	spark_context :SparkContext = SparkInstance.default ) extends Serializable 
 {
 	
 	val docs :ListBuffer[(String ,RDD[(String,Int)])] = 
-        file_paths.map( class_path => 
-                ( class_path._1 , read.document( class_path._2 , cache_it , spark_context) ) 
+	    file_paths.map( class_path => 
+	        ( class_path._1 , read.document( class_path._2 , cache_it , spark_context) ) 
             )
 	
 	def wholeClass :Map[String,ListBuffer[(String,RDD[(String,Int)])]] = docs.groupBy(elt=>elt._1)
@@ -45,7 +45,7 @@ case class ParallelNaive(
 		var doc_count = 0
 
 		wholeClass(class_name).foreach{ 
-            class_rdd =>  // == (class,rdd)
+			class_rdd =>  // == (class,rdd)
 				val filtered = class_rdd._2.filter{ word_occur => word_occur._1 == word }
 				
 				if (filtered.count != 0) doc_count += 1
@@ -80,24 +80,22 @@ case class ParallelNaive(
 
         val new_rdd = read.document(doc_path)
         
-		val array_word_freq :Array[(String,Int)] = new_rdd.collect	
-								
-		val probPerClass :List[(Double,String)] = 
+        val array_word_freq :Array[(String,Int)] = new_rdd.collect
+        
+        val probPerClass :List[(Double,String)] = 
             allClassNames.map{   
-                class_name => 															
-                    
-                    val each_prob :Array[Double] = 
-					    array_word_freq.map {   
-                            word_freq => 
+                class_name =>
+                    val each_prob :Array[Double] =
+                        array_word_freq.map {
+                            word_freq =>
                                 eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2 
                             }
-															
-				    ( each_prob.sum + eachProbClass(class_name) , class_name )
-			    }	
-
-		println("probability of each class : " + probPerClass)
-		
-		val estimate_class :(Double,String) = probPerClass.max
+                    ( each_prob.sum + eachProbClass(class_name) , class_name )
+            }
+        
+        println("probability of each class : " + probPerClass)
+        
+        val estimate_class :(Double,String) = probPerClass.max
 		
         file_paths += Pair(estimate_class._2,doc_path)
         
@@ -128,15 +126,15 @@ object DoParallelNaive extends App{
   			    ("minus","resource/doc6.txt")
   			  )
   	
-  	val pn = ParallelNaive(file_paths)  	
-
-    pn.classify("resource/examine.txt")
-    
-    file_paths.foreach(println)
-    
-    pn.docs.foreach(println)
-    
-    pn.classify("resource/examine.txt")
+  	val pn = ParallelNaive(file_paths)
+  	
+  	pn.classify("resource/examine.txt")
+  	
+  	file_paths.foreach(println)
+  	
+  	pn.docs.foreach(println)
+  	
+  	pn.classify("resource/examine.txt")
     
     
 }
