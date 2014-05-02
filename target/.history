@@ -311,3 +311,13 @@ console
 ~compile
 console
 ~compile
+compile
+run -deprecation
+compile
+reload
+update
+compile
+~compile
+re-run -deprecation
+run -deprecation
+~compile

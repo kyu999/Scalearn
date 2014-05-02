@@ -7,11 +7,11 @@ import scala.collection.mutable.ArrayBuffer
 
 object WordsConverter {
   
-	def toMathVector(document:String,all_docuemnts:String) = 
-	  
-	  	FrequencyVector(
-	  	    mkToken(document).toVector , mkToken(all_docuemnts).toSet
-	  	    ).values
+    def toMathVector(document:String,all_docuemnts:String) = 
+        FrequencyVector(
+            mkToken(document).toVector , 
+            mkToken(all_docuemnts).toSet
+	  	).values
 	  			
 	
 }

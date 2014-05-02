@@ -18,7 +18,7 @@ import org.apache.spark.SparkContext._
 
 object read {
   
-    def retrieving(path:String,header:Boolean):Vector[String]={
+    def retrieving(path: String,header: Boolean): Vector[String]={
       
       val source=Source.fromFile(path)
       
@@ -33,7 +33,7 @@ object read {
       } 
     }    
     
-	def csv(path:String)(header:Boolean)={
+    def csv(path: String)(header: Boolean) = {
 	  
 	  val resource=retrieving(path,header).map(_.split(","))
 	  
@@ -51,10 +51,10 @@ object read {
 	}
 	
 	def document( 
-		path:String ,
-		cache_it:Boolean = true , 
-		spark_context:SparkContext = SparkInstance.default
-	):RDD[(String,Int)] = {
+		path: String ,
+		cache_it: Boolean = true , 
+		spark_context: SparkContext = SparkInstance.default
+	): RDD[(String,Int)] = {
 					
 		val myfile =
             spark_context.textFile(path)
@@ -69,7 +69,7 @@ object read {
 	}
     
     def event(
-        path:String
+        path: String
     ) = {
         
     }
@@ -77,7 +77,7 @@ object read {
 	//cannot use like this ; rdds("document.txt",MySparkContext)
 	//specify the parameter instead ; rdds("document.txt",spark_context = MySparkContext)	
 	
-	def matching(in:String)={
+	def matching(in: String)={
 	  try{
 	      in.toDouble
 	  }catch{

@@ -8,7 +8,8 @@ class MCMC{
     def metropolis(
         f:Double => Double,
         initial_place : Double,
-        max_iteration :Int = 1000
+        max_iteration :Int = 1000,
+        stepScale: Double = 1.0
     ):Vector[(Double,Double)] = {
         
         var counter = 1
@@ -19,7 +20,7 @@ class MCMC{
         
         var current_place :Double = initial_place
             
-        var next_place : Double = 0.0
+        var next_place = 0.0
         
         while(counter < max_iteration){
             
@@ -27,7 +28,7 @@ class MCMC{
                  
             holder += counter -> (current_place,current_value)
             
-            val step = random.nextDouble
+            val step = random.nextDouble * stepScale
                 
             next_place = current_place + step
                 
