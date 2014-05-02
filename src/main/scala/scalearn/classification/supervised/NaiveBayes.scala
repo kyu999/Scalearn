@@ -83,7 +83,7 @@ case class NaiveBayes( file_paths : ListBuffer[(String,String)] )
 		
         println("ProbPerClass : "+ProbPerClass)
         
-		val estimate_class:(Double,String) = ProbPerClass.max
+        val estimate_class:(Double,String) = ProbPerClass.max
         
         file_paths += Pair(estimate_class._2,doc_path)
         
@@ -121,19 +121,19 @@ object DoNaiveBayesOnMemory extends App{
   			  )
   	      
   	val pn = NaiveBayes(file_paths)  	
-  	  	
- 	println("classify : " + pn.classify("resource/examine.txt") ) 
-
-    pn.classify("resource/examine2.txt")
-
-    pn.classify("resource/examine3.txt")
-
-    pn.classify("resource/examine4.txt")
-
-    pn.classify("resource/examine5.txt")
-
-    pn.classify("resource/doc2.txt")
-
-    pn.classify("resource/doc1.txt")    
+  	
+  	println("classify : " + pn.classify("resource/examine.txt") ) 
+  	
+  	pn.classify("resource/examine2.txt")
+  	
+  	pn.classify("resource/examine3.txt")
+  	
+  	pn.classify("resource/examine4.txt")
+  	
+  	pn.classify("resource/examine5.txt")
+  	
+  	pn.classify("resource/doc2.txt")
+  	
+  	pn.classify("resource/doc1.txt")    
      	     
 }
