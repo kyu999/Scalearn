@@ -12,7 +12,7 @@ trait Cluster{
 		
 	def <+(that:Vector[Double]) = ( vectors += that )
 	
-    def ++(that:VectorCluster) = new VectorCluster( vectors ++ that.vectors)
+	def ++(that:VectorCluster) = new VectorCluster( vectors ++ that.vectors)
 	
 	def center:Vector[Double] = { 
 	  
@@ -24,11 +24,12 @@ trait Cluster{
 	  val width = vectors.head.length
 	 
 	  while(lookraw<width){
-		  
-		  var lookcol = 0
-		  var verticalsum = 0.0
-		  		  
-		  while(lookcol<height){
+	      
+	      var lookcol = 0
+	      
+	      var verticalsum = 0.0
+	      
+	      while(lookcol<height){
 		    
 		    verticalsum += vectors(lookcol)(lookraw)
 		    lookcol+=1
@@ -53,10 +54,10 @@ case class VectorCluster(vectors:ArrayBuffer[Vector[Double]]) extends Cluster
 class ProbabilityCluster(tokenprobs:Vector[TokenProbability])// extends Cluster
 {
   
-  val center=tokenprobs.head		//これは一時的なものであって、完全に間違い
+  val center = tokenprobs.head		//これは一時的なものであって、完全に間違い
   
-  val vectors:Vector[TokenProbability]=tokenprobs
+  val vectors:Vector[TokenProbability] = tokenprobs
     
-  def ++(that:Vector[TokenProbability])=new ProbabilityCluster(tokenprobs ++ that)
+  def ++(that:Vector[TokenProbability]) = new ProbabilityCluster(tokenprobs ++ that)
   
 }
