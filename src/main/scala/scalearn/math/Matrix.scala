@@ -13,6 +13,7 @@ trait Matrix {
 	}
 	
 	def subtract(left:Vector[Vector[Double]],right:Vector[Vector[Double]])={
+
 	    def helper(x:Vector[Double],y:Vector[Double])={
 	        x.zip(y).map(c=>c._1-c._2)
 	  }
@@ -26,17 +27,4 @@ trait Matrix {
 		
 	    x.map{a=>y.map{b=>helper(a,b)}}
 	}
-
-	    
-	    row=row+1
-	    //ループの最後に下の段へ移動
-	    
-	  }
-	  
-	  
-	}
-	
-	
-
-
 }
