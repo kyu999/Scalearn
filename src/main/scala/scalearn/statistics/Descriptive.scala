@@ -83,20 +83,22 @@ trait Descriptive{
 	}
 	 	
 	
-	def labeling(rawX:Vector[Double],rawY:Vector[Double])={
+	def labeling(rawX:Vector[Double],rawY:Vector[Double]) = {
 	      if (rawX.length != rawY.length) println("You can't compare different length of variable")
-		  val placeX=rawX.sorted.zipWithIndex.toMap
-		  val placeY=rawY.sorted.zipWithIndex.toMap
+		  
+              val placeX=rawX.sorted.zipWithIndex.toMap
+              val placeY=rawY.sorted.zipWithIndex.toMap
 	      val rankedX=rawX.map{a=>placeX(a)}
 	      val rankedY=rawY.map{a=>placeY(a)}
 	      rankedX.zip(rankedY)	    
 	}
 	
 	
-	def difsqured(zippedlabel:Vector[(Int,Int)]):Vector[Double]=zippedlabel.map{x=>pow(x._1-x._2,2)}
+	def difsqured(zippedlabel:Vector[(Int,Int)]):Vector[Double] = zippedlabel.map{x=>pow(x._1-x._2,2)}
 	//2つのlabelデータをzip化して、対となる値の差をそれぞれ求めて２乗する
 	
-	def spearman(difsquared:Vector[Double])=1-(6*difsquared.reduce{(a,b)=>a+b})/(pow(difsquared.length,3)-difsquared.length)
+	def spearman(difsquared:Vector[Double]) = 
+	    1-(6*difsquared.reduce{(a,b)=>a+b})/(pow(difsquared.length,3)-difsquared.length)
 	/*スピアマンの順位相関係数。同じ順位の場合は昇順にしているため若干本来と違う。a:4.5,b:4.5 => a:4,b:4　にしてる。
   	  peason=covariance / (SD of X * SD of Y)
 	  peasonは外れ値の影響を受けやすいのと、厳密には正規分布のデータが対象のパラメトリックな手法
@@ -156,26 +158,25 @@ trait Descriptive{
 	    val sizeX=xraw.length
 	    val sizeY=yraw.length
 	    
-		val xmean=meanf(xraw)
+	    val xmean=meanf(xraw)
 	    val ymean=meanf(yraw)
 	  
-		val xdevi=deviation(xraw,xmean)
-		val ydevi=deviation(yraw,ymean)
-		
-		val xdevi2sum=xraw.map(each_devi_squared(xmean)).sum
-	    	val ydevi2sum=yraw.map(each_devi_squared(ymean)).sum
-	    	
-	    	val xsd=stdevi(xdevi2sum,sizeX)
-	    	val ysd=stdevi(ydevi2sum,sizeY)
-	  
-	  
-	  	val zipdevi=xdevi.zip(ydevi)
-	  
-	  	val covar=covariance(zipdevi)
-	  
-	  	val pear=pearson(covar,xsd,ysd)
-	  
-	  	regression(pear,xsd,ysd,xmean,ymean)
+	    val xdevi=deviation(xraw,xmean)
+	    val ydevi=deviation(yraw,ymean)
+	    
+	    val xdevi2sum=xraw.map(each_devi_squared(xmean)).sum
+	    val ydevi2sum=yraw.map(each_devi_squared(ymean)).sum
+	    
+	    val xsd=stdevi(xdevi2sum,sizeX)
+	    val ysd=stdevi(ydevi2sum,sizeY)
+	    
+	    val zipdevi=xdevi.zip(ydevi)
+	    
+	    val covar=covariance(zipdevi)
+	    
+	    val pear=pearson(covar,xsd,ysd)
+	    
+	    regression(pear,xsd,ysd,xmean,ymean)
 	  
 	  }
 	  
