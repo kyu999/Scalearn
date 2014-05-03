@@ -5,52 +5,52 @@ import scala.collection.mutable.ListBuffer
 
 trait Descriptive{ 
     	
-	def meanf(raw:Vector[Double]):Double=raw.sum/raw.length
+	def meanf(raw:Vector[Double]): Double = raw.sum/raw.length
 	//平均
 	
-	def deviation(raw:Vector[Double],average:Double):Vector[Double]=raw.map(each_devi(average))
+	def deviation(raw:Vector[Double],average:Double): Vector[Double] = raw.map(each_devi(average))
 	//各偏差
 		
-	def each_devi(average:Double):Double=>Double = {
-	  		(elt:Double) => elt - average
+	def each_devi(average:Double): Double=>Double = {
+	    (elt:Double) => elt - average
 	}
 	  		
-	def each_squared(each_devi:Double=>Double):Double=>Double = {
-	  		(elt:Double) => pow(each_devi(elt) ,2) 
+	def each_squared(each_devi:Double=>Double): Double=>Double = {
+	    (elt:Double) => pow(each_devi(elt) ,2) 
 	}
 	  		
-	def each_devi_squared:Double=>(Double=>Double) 
-			= each_devi _  andThen each_squared _  		
+	def each_devi_squared: Double=>(Double=>Double) 
+	    = each_devi _  andThen each_squared _  		
 	//最初のDoubleはaverage、２番目のDoubleはElement.averageを受け取って、elementを受け取ってDoubleを返す関数を返す
 	//関数合成をする時は常に前の関数の戻り値を後の関数が受け取れるようにしなければならない	
 	
-	def devi_squared(devraw:Vector[Double]):Vector[Double]=devraw.map(x=>(pow(x,2))) 
+	def devi_squared(devraw:Vector[Double]): Vector[Double] = devraw.map(x=>(pow(x,2))) 
 	//各偏差の２乗
 	//偏差の２乗して平方根とるんじゃなくて偏差の絶対値をとったほうが効率良いかな？
 	
-	def biased_variance(dvsquaredsum:Double,n:Int):Double=dvsquaredsum/(n)
+	def biased_variance(dvsquaredsum:Double,n:Int): Double = dvsquaredsum/(n)
 	//分散
 	
-	def unbiased_variance(dvsquaredsum:Double,n:Int):Double=dvsquaredsum/(n-1)
+	def unbiased_variance(dvsquaredsum:Double,n:Int): Double = dvsquaredsum/(n-1)
 	//不偏分散
 	
-	def stdevi(dvsquaredsum:Double,n:Int):Double=sqrt(dvsquaredsum/(n-1))	
+	def stdevi(dvsquaredsum:Double,n:Int): Double = sqrt(dvsquaredsum/(n-1))	
 	//√分散＝標準偏差.ただし不偏分散を使用したため標本標準偏差。通常標本分散は母集団分散よりも小さくなりがちなので標本抽出による偏りを是正するために-1している
 	
-	def samplestdevi(dvsquaredsum:Double,n:Int):Double=sqrt(dvsquaredsum/n)	
+	def samplestdevi(dvsquaredsum:Double,n:Int): Double = sqrt(dvsquaredsum/n)	
 	
-	def sterror(unbiase_vari:Double,n:Int)=sqrt(unbiase_vari/n)
+	def sterror(unbiase_vari:Double,n:Int) = sqrt(unbiase_vari/n)
 	
-	def zipdevi(dev1:Vector[Double],dev2:Vector[Double]):Vector[(Double,Double)]=dev1.zip(dev2)
+	def zipdevi(dev1:Vector[Double],dev2:Vector[Double]): Vector[(Double,Double)] = dev1.zip(dev2)
 	//2つのデータセットの偏差をTuple化
 	
-	def covariance(zipraw:Vector[(Double,Double)]):Double=zipraw.map(x=>x._1*x._2).sum/(zipraw.length-1) 
+	def covariance(zipraw:Vector[(Double,Double)]): Double = zipraw.map(x=>x._1*x._2).sum/(zipraw.length-1) 
 	//2つのデータセット共分散(=対応するXとYの偏差の積の平均）
 	
-	def pearson(covari:Double,sdX:Double,sdY:Double):Double=covari/(sdX*sdY)
+	def pearson(covari:Double,sdX:Double,sdY:Double): Double = covari/(sdX*sdY)
 	//２つのデータセットのピアソン相関関係
 	
-	def pearRaw(xraw:Vector[Double],yraw:Vector[Double])={
+	def pearRaw(xraw:Vector[Double],yraw:Vector[Double]) = {
 	  
 	  if (xraw.length != yraw.length) throw new Exception("can't take dirrerent length of variable")
 	  
@@ -62,22 +62,22 @@ trait Descriptive{
 	    val ylength=yraw.length
 	    
 	    val xmean=meanf(xraw)
-	    	val ymean=meanf(yraw)
+	    val ymean=meanf(yraw)
 	  
-	    	val xdevi=deviation(xraw,xmean)
-	    	val ydevi=deviation(yraw,ymean)
+	    val xdevi=deviation(xraw,xmean)
+	    val ydevi=deviation(yraw,ymean)
 	    	
-	    	val xdevi2sum=devi_squared(xdevi).sum
-	    	val ydevi2sum=devi_squared(ydevi).sum
+	    val xdevi2sum=devi_squared(xdevi).sum
+	    val ydevi2sum=devi_squared(ydevi).sum
 	    	
-	    	val xsd=stdevi(xdevi2sum,xlength)
-	    	val ysd=stdevi(ydevi2sum,ylength)
+	    val xsd=stdevi(xdevi2sum,xlength)
+	    val ysd=stdevi(ydevi2sum,ylength)
 	  
-	    	val zipdevi=xdevi.zip(ydevi)
+	    val zipdevi=xdevi.zip(ydevi)
 	  
-	  	val covar=covariance(zipdevi)
+	    val covar=covariance(zipdevi)
 	  
-	  	pearson(covar,xsd,ysd)
+	    pearson(covar,xsd,ysd)
 	  }
 	  
 	}
