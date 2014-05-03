@@ -15,19 +15,19 @@ case class data(raw:Vector[Double]){
     val sum = raw.sum
 
     val mean = sum/size
-        
-	lazy val dv = Tools.deviation(raw,mean)
+    
+    lazy val dv = Tools.deviation(raw,mean)
 	
-	lazy val squaredsum = raw.map(pow(_,2)).sum
+    lazy val squaredsum = raw.map(pow(_,2)).sum
 	
-	val dvsquared = raw.map(Tools.each_devi_squared(mean))
+    val dvsquared = raw.map(Tools.each_devi_squared(mean))
 	
-	val dvsquaredsum = dvsquared.sum
+    val dvsquaredsum = dvsquared.sum
 
-	val vari = Tools.unbiased_variance(dvsquaredsum,size)
+    val vari = Tools.unbiased_variance(dvsquaredsum,size)
     //不偏分散：標本から行う、母分散の推定値
 
-	lazy val samplevari = Tools.biased_variance(dvsquaredsum,size)
+    lazy val samplevari = Tools.biased_variance(dvsquaredsum,size)
     //標本自体の分散。母分散の推定値ではない。
 
     val sd = sqrt(vari)
@@ -81,8 +81,8 @@ case class data(raw:Vector[Double]){
     * 
     */
     
-	def summary = { 
-	    Vector(name+" : "+raw,"length : "+size,"mean -> "+mean,"deviation -> "+dv,
+    def summary = { 
+        Vector(name+" : "+raw,"length : "+size,"mean -> "+mean,"deviation -> "+dv,
 	        "standard deviation -> "+sd).foreach(println)
 	}
 }
