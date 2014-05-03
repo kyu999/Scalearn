@@ -49,9 +49,9 @@ class dase(datalist:Vector[data])
             }
                  }
     
-    lazy val eucli=combi.map(a=>euclidean(a(0).raw,a(1).raw))
+    lazy val eucli = combi.map(a=>euclidean(a(0).raw,a(1).raw))
 	
-    lazy val simcos=combi.map(elt=>cos_similarity(elt(0).raw,elt(1).raw))
+    lazy val simcos = combi.map(elt=>cos_similarity(elt(0).raw,elt(1).raw))
 
     lazy val time:Vector[Vector[Double]] = 
         raw
@@ -65,66 +65,65 @@ class dase(datalist:Vector[data])
             .zip(pears)
             .map{a => regression(a._2,a._1(0).sd,a._1(1).sd,a._1(0).mean,a._1(1).mean)}
 	//regressionの引数は順に、相関係数、XのSD,YのSD、Xの平均、Yの平均. output=(slope,intercept).計算にpearsonを使っているから異なる長さの変数には適用出来ない。注意して使うように。
-    lazy val regline:Vector[Double=>Double]=reg.map(a=>{(x:Double)=>a._1*x+a._2})
+    lazy val regline:Vector[Double=>Double] = reg.map(a=>{(x:Double)=>a._1*x+a._2})
 	//共にregの値を基にした無名関数。xを与えてyを得る
 	
 	
 //Operation	
         
-    def toinf=new infds(datalist)
+    def toinf = new infds(datalist)
         
-    def tots=new tsds(datalist.map(a=>a.tots))
+    def tots = new tsds(datalist.map(a=>a.tots))
 	//時系列データ化
+    def naming(in:String*) = in.zip(datalist).foreach{a=>a._2.name=a._1} 
 	
-	def naming(in:String*)=in.zip(datalist).foreach{a=>a._2.name=a._1} 
-	
-    def naming(in:Array[String])=in.zip(datalist).foreach{a=>a._2.name=a._1} 
+    def naming(in:Array[String]) = in.zip(datalist).foreach{a=>a._2.name=a._1} 
 	//side effect
   
-	def resolve:Vector[data]=datalist
+    def resolve:Vector[data] = datalist
 	//dsを分解しdaのVectoruenceを返す
 	
-	def tomat=new m(raw) 
+    def tomat = new m(raw) 
 	//def mat(direction)={データを行列に変換＝＝行列クラスのインスタンスを返す}
 	
-	def ::(component:data) = new dase(component+:datalist)
+    def ::(component:data) = new dase(component+:datalist)
 	//componentは末尾に追加される。既存のdsに新たな要素を１つ加えたい場合に使ってください。複数追加は効率悪いです
 	//コンパニオンオブジェクトのapplyメソッドの引数はda*なのでこのままではエラーとなるから直接newでクラスを作ってる
 	//既存のdsから新たなdaを１つ加えたdsを作る。効率に関して考える必要はある。複数追加する必要があるならds(....)を使うべき
 	
-    def summary={
+    def summary = {
         mkLine 
         println("name list : ")
         datalist.foreach(x=>println(x.name))
-		mkLine
-		println("length of each")
+        mkLine
+        println("length of each")
         datalist.foreach(a=>println(a.size))
         mkLine
-		println("mean : ")
-		mean.foreach(println)
-		mkLine
-		println("estimated sd : ")
-		sd.foreach(println)
-		mkLine
-		println("combination : ")
-		combi.foreach(a=>println(a(0).name+" & "+a(1).name))
-		mkLine
-		println("covariance : ")
-		covar.foreach(println)
-		mkLine
-		println("pearson's correlation : ")
-		pears.foreach(println)
-		mkLine
-		println("spearman's correlation : ")
-		spears.foreach(println)
-		mkLine        
+        println("mean : ")
+        mean.foreach(println)
+        mkLine
+        println("estimated sd : ")
+        sd.foreach(println)
+        mkLine
+        println("combination : ")
+        combi.foreach(a=>println(a(0).name+" & "+a(1).name))
+        mkLine
+        println("covariance : ")
+        covar.foreach(println)
+        mkLine
+        println("pearson's correlation : ")
+        pears.foreach(println)
+        mkLine
+        println("spearman's correlation : ")
+        spears.foreach(println)
+        mkLine        
 	}
 	
 }
 
 //コンパニオンオブジェクトを作成。applyでファクトリメソッドを定義しているのでnewが不要になる
 object dase{
-    def apply(datalist:data*):dase=new dase(datalist.toVector)
+    def apply(datalist:data*): dase = new dase(datalist.toVector)
 //  def apply(raws:Seq[Double]*):dase=new dase(raws.map(raw=>data(raw.toVector)).toVector)
   
 }
