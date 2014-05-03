@@ -34,33 +34,34 @@ object read {
     }    
     
     def csv(path: String)(header: Boolean) = {
-	  
-	  val resource=retrieving(path,header).map(_.split(","))
-	  
-	  if(header){
-	  
-	    val head=resource.head
-	    val content=resource.tail.map(_.map(matching(_)).toVector)
-	    content
-	  
-	  }else{
-	  
-	    resource.tail.map(_.map(a=>matching(a)).toVector)
-	  
-	  }
-	}
+    
+        val resource=retrieving(path,header).map(_.split(","))
+        
+        if(header){
+        
+            val head = resource.head
+            val content = resource.tail.map(_.map(matching(_)).toVector)
+            content
+            
+        }else{
+        
+            resource.tail.map(_.map(a=>matching(a)).toVector)
+            
+             }
+            
+        }
 	
-	def document( 
-		path: String ,
-		cache_it: Boolean = true , 
-		spark_context: SparkContext = SparkInstance.default
-	): RDD[(String,Int)] = {
-					
-		val myfile =
-            spark_context.textFile(path)
-				.flatMap{ (line:String) => JP.mkToken(line).map(elt=>elt.getBaseForm) }
-				.map(word => (word, 1))
-				.reduceByKey(_ + _)
+    def document( 
+    	path: String ,
+    	cache_it: Boolean = true , 
+    	spark_context: SparkContext = SparkInstance.default
+    	): RDD[(String,Int)] = {
+    	
+    	val myfile =
+	    spark_context.textFile(path)
+	        .flatMap{ (line:String) => JP.mkToken(line).map(elt=>elt.getBaseForm) }
+	        .map(word => (word, 1))
+	        .reduceByKey(_ + _)
                                         
         if(cache_it) myfile.cache()
         
@@ -77,21 +78,15 @@ object read {
 	//cannot use like this ; rdds("document.txt",MySparkContext)
 	//specify the parameter instead ; rdds("document.txt",spark_context = MySparkContext)	
 	
-	def matching(in: String)={
-	  try{
-	      in.toDouble
-	  }catch{
-	      case e: NumberFormatException => in  
+    def matching(in: String)={
+        try{
+            in.toDouble
+        }catch{
+            case e: NumberFormatException => in  
 	  }
 	}
 	
 	
-	def table = {
-      
-    }
- 
-
-	def db={}
 }
 
 
