@@ -321,3 +321,6 @@ compile
 re-run -deprecation
 run -deprecation
 ~compile
+run
+~compile
+run
