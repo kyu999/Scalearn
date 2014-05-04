@@ -324,3 +324,4 @@ run -deprecation
 run
 ~compile
 run
+~compile

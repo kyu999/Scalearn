@@ -1,7 +1,7 @@
 package scalearn.probability.graphicalmodel
 
 
-    trait Relation{
+    trait Dependency{
     
         val startFactor : String
     
@@ -10,11 +10,11 @@ package scalearn.probability.graphicalmodel
     }
 
 
-    case class DirectedRelation(startFactor:String,endFactor:String) extends Relation{
+    case class DirectedDependency(startFactor:String,endFactor:String) extends Dependency{
 
        override def equals(that:Any):Boolean = {
             that match {
-                case dr : DirectedRelation =>
+                case dr : DirectedDependency =>
                     if(startFactor == dr.startFactor && endFactor == dr.endFactor)
                         true
                     else false
@@ -25,11 +25,11 @@ package scalearn.probability.graphicalmodel
     
     }
 
-    trait UndirectedRelation extends Relation {
+    trait UndirectedDependency extends Dependency {
  
         override def equals(that:Any):Boolean = {
             that match {
-                case udr : UndirectedRelation =>
+                case udr : UndirectedDependency =>
                     if( (startFactor == udr.startFactor && endFactor == udr.endFactor)
                         |
                         (startFactor == udr.endFactor && endFactor == udr.startFactor)
@@ -42,7 +42,7 @@ package scalearn.probability.graphicalmodel
         
     }
 
-    case class PairwiseRelation(startFactor:String,endFactor:String) 
-        extends UndirectedRelation{
+    case class PairwiseDependency(startFactor:String,endFactor:String) 
+        extends UndirectedDependency{
         
     }        

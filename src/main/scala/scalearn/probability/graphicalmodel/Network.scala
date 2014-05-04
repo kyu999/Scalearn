@@ -2,9 +2,9 @@ package scalearn.probability.graphicalmodel
     
 import scala.collection.mutable.{Set,Map}
     
-    trait Network[ Re<:Relation , Fa<:Factor ] {
+    trait Network[ De<:Dependency , Fa<:Factor ] {
                         
-        val relations : Set[Re]
+        val dependencies : Set[De]
         //mutable Set
 
         val factors : Set[Fa] 
@@ -21,27 +21,27 @@ import scala.collection.mutable.{Set,Map}
             factorReference += factor.name -> factor
         }
         
-        def addRelation(relation:Re) = 
-            relations += relation
+        def addDependency(dependency:De) = 
+            dependencies += dependency
 
         def removeFactor(factor:Fa) = {
             factors -= factor
             factorReference -= factor.name
         }
                 
-        def removeRelation(relation:Re) = 
-            relations -= relation
+        def removeDependency(dependency:De) = 
+            dependencies -= dependency
             
         
             
     }
 
 
-    trait BayesianNetwork[Fa<:Factor] extends Network[DirectedRelation,Fa] {
+    trait BayesianNetwork[Fa<:Factor] extends Network[DirectedDependency,Fa] {
             
         val factors:Set[Fa]
                 
-        val relations:Set[DirectedRelation]
+        val dependencies:Set[DirectedDependency]
                 
     }
            
@@ -49,17 +49,17 @@ import scala.collection.mutable.{Set,Map}
     case class SimpleBayesianNetwork(
         
         factors:Set[CpdFactor],
-        relations:Set[DirectedRelation]
+        dependencies:Set[DirectedDependency]
         
     ) extends BayesianNetwork[CpdFactor]
         
         
-    trait MarkovNetwork[ Ur<:UndirectedRelation, Fa<:Factor ] 
-        extends Network[Ur,Fa] {
+    trait MarkovNetwork[ Ud<:UndirectedDependency, Fa<:Factor ] 
+        extends Network[Ud,Fa] {
             
         val factors:Set[Fa]
                 
-        val relations:Set[Ur]
+        val dependencies:Set[Ud]
                  
     }
 
@@ -67,8 +67,8 @@ import scala.collection.mutable.{Set,Map}
    case class PairwiseMarkovNetwork(
        
         factors:Set[NaiveFactor],
-        relations:Set[PairwiseRelation]
+        dependencies:Set[PairwiseDependency]
        
-    ) extends MarkovNetwork[PairwiseRelation,NaiveFactor]
+    ) extends MarkovNetwork[PairwiseDependency,NaiveFactor]
 
         

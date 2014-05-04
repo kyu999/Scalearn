@@ -30,17 +30,17 @@ object NetworkTest extends App{
         
     val factors = Set(factor1,factor2)
             
-    val relation1 = DirectedRelation(factor1.name,factor2.name)
+    val dependency1 = DirectedDependency(factor1.name,factor2.name)
         
-    val relations = Set(relation1)
+    val dependencies = Set(dependency1)
         
-    val bn = SimpleBayesianNetwork(factors,relations)
+    val bn = SimpleBayesianNetwork(factors,dependencies)
         
     println("bn : "+bn)
         
-    bn.relations.foreach(println)
+    bn.dependencies.foreach(println)
         
-    println("relations : "+relations)
+    println("Dependencys : "+dependencies)
         
     println("")
         
@@ -50,11 +50,11 @@ object NetworkTest extends App{
         
     val factor5 = NaiveFactor("fifth factor",eventsB)
 
-    val relation2 = PairwiseRelation(factor4.name,factor5.name)
+    val dependency2 = PairwiseDependency(factor4.name,factor5.name)
         
     val factorsNew = Set(factor4,factor5)
         
-    val mn = PairwiseMarkovNetwork(factorsNew,Set(relation2))
+    val mn = PairwiseMarkovNetwork(factorsNew,Set(dependency2))
 
     println("Origine Markov Network : ")
         
@@ -78,16 +78,16 @@ object NetworkTest extends App{
         
     println(mn.factorReference)
         
-    val relation3 = PairwiseRelation(factor3.name,factor5.name)    
+    val dependency3 = PairwiseDependency(factor3.name,factor5.name)    
 
-    mn.addRelation(relation3)
+    mn.addDependency(dependency3)
         
-    println("After add relation : ")
+    println("After add Dependency : ")
         
-    println(mn.relations)
+    println(mn.dependencies)
         
-    println( mn.relations.contains( relation3 ) )
+    println( mn.dependencies.contains( dependency3 ) )
 
-    println( relation3 == PairwiseRelation(factor4.name,factor3.name) )
+    println( dependency3 == PairwiseDependency(factor4.name,factor3.name) )
         
 }

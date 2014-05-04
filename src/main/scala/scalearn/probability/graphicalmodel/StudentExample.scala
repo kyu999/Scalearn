@@ -53,16 +53,16 @@ object StudentExample extends App{
                 )
         
         
-    val relation1 = DirectedRelation(difficulty.name,grade.name)
-    val relation2 = DirectedRelation(iq.name,grade.name)
-    val relation3 = DirectedRelation(iq.name,sat.name)
-    val relation4 = DirectedRelation(grade.name,letter.name)
+    val Dependency1 = DirectedDependency(difficulty.name,grade.name)
+    val Dependency2 = DirectedDependency(iq.name,grade.name)
+    val Dependency3 = DirectedDependency(iq.name,sat.name)
+    val Dependency4 = DirectedDependency(grade.name,letter.name)
         
     val factors = Set(difficulty,iq,grade,sat,letter)
     
-    val relations = Set(relation1,relation2,relation3,relation4)
+    val Dependencys = Set(Dependency1,Dependency2,Dependency3,Dependency4)
         
-    val bn = SimpleBayesianNetwork(factors,relations)
+    val bn = SimpleBayesianNetwork(factors,Dependencys)
         
     println(bn)
         
