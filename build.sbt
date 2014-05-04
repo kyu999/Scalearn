@@ -15,6 +15,8 @@ libraryDependencies ++= Seq(
   "org.scalanlp" % "breeze-natives_2.10" % "0.7",
   "eu.fakod" % "neo4j-scala_2.10" % "0.3.0")
 
+scalacOptions ++= Seq("-unchecked", "-deprecation")
+    
 resolvers += Resolver.sonatypeRepo("snapshots")
 
 resolvers ++= Seq(
