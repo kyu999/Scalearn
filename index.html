@@ -72,19 +72,31 @@ Some functions in Scalearn runs on spark, which is constructed on Hadoop distrib
 <br>
 
 	<p>
-		Extremely roughly speanking, machine leaning has two different direction; one is supervised learning, and the other is unsupervised learning. Supervised learning requires you to collect data for study so as to construct classifier for instance, while unsupervised learning doesn't. Scalearn offers some famous methods of them such as k-means, naive bayes, and so on. 
+		Roughly speanking, machine leaning has two different direction; one is supervised learning, and the other is unsupervised learning. Supervised learning requires you to collect data for study so as to construct classifier for instance, while unsupervised learning doesn't. Scalearn offers some famous methods of them such as k-means, naive bayes, and so on. 
 	</p>
-	
-	<pre><code>import scalearn.classification.supervised._
+
+<br>
+<h4>#Natural Language Processing</h4>
+<br>
+            
+    <h5><li>Supervised Classification</li></h5>
+            
+<br>
+
+ 	<pre><code>import scalearn.classification.supervised._
 
 val file_paths = 
-  		ListBuffer( ("plus","resource/doc1.txt"),
-  			    ("plus","resource/doc2.txt"),
-  			    ("plus","resource/doc3.txt"),
-  			    ("minus","resource/doc4.txt"),
-  			    ("minus","resource/doc5.txt"),
-  			    ("minus","resource/doc6.txt")
-  			  )
+        ListBuffer( 
+            ("classA","resource/doc1.txt"),
+            ("classA","resource/doc2.txt"),
+            ("classA","resource/doc3.txt"),
+            ("classB","resource/doc4.txt"),
+            ("classB","resource/doc5.txt"),
+            ("classB","resource/doc6.txt"),
+            ("classC","resource/doc7.txt"),
+            ("classC","resource/doc8.txt"),
+            ("classC","resource/doc9.txt")
+            )
 val nb = NaiveBayes(file_paths)  	
 nb.classify("resource/examine.txt")
 
@@ -92,15 +104,34 @@ val pn = ParallelNaive(file_paths)
 pn.classify("resource/examine.txt")</code></pre>
     
     <p>
-    If the amount of data is not quite a lot, better to run on memory; should use NaiveBayes class as a classifier because it possess whole words on memory including data for study. On the other hand, ParallelNaive requires memory to have only the coming data you wanna classify; slower than NaiveBayes, yet could handle a bunch of data. Also, you could run on Hadoop thanks to Spark if you want. As a default, ParallelNaive utilizes whole cores on your computer.</p>
+    As you can expect above, both NaiveBayes and ParallelNaive classes are classifier to classify coming new data based on the past data for studying. The parameter of both classes is the ListBuffer of Pair(class name document belong to , path to the document for study). If the amount of data is not quite a lot, better to run on memory; should use NaiveBayes class as a classifier because it possess whole words on memory including data for study. On the other hand, ParallelNaive requires memory to have only the coming data you wanna classify; slower than NaiveBayes, yet could handle a bunch of data. Also, you could run on Hadoop thanks to Spark if you want. As a default, ParallelNaive utilizes whole cores on your computer.</p>
+        <p>※Docuemnts(data) should be japanese so far.</p>
 
-<br>
-<h4>#Natural Language Processing</h4>
-<br>
+            <h5><li>Unsupervised Classification => Clustering</li></h5>
+            
+    <br>
+            
+    <pre><code>import scalearn.classification.unsupervised.Clustering
+import scala.collection.mutable.ArrayBuffer
 
-    <p>
-        
-    </p>
+val data = ArrayBuffer(
+                Vector(3.2,4.64,2.21,6.7,4.5),
+                Vector(1.1,2.2,32.3,4.4,5.5),
+                Vector(9.9,8.8,7.73,6.65,5.5)
+                Vector(9.5,4.8,3.7,2.6,53.5)
+                Vector(3.2,4.64,2.21,6.7,4.5),
+                Vector(1.1,2.2,3.3,4.4,5.533),
+                Vector(3.2,4.64,2.21,6.7,43.5),
+                Vector(1.1,2.22,3.322,4.42,5.5),
+                Vector(9.9,82.8,7.7,6.6,5.5)
+                )
+                
+val result: IndexedSeq[VectorCluster] = Clustering.kmeans(2,data,200)</code></pre>
+            
+    <p>When you have no idea about the ideal result of classification, it's time to take unsupervised classification like clustering. The example above shows how to use kmeans algorithm which is one of the clustering methods. The form of data must be ArrayBufer[Vector[Double]] in this function, so you need to import mutable ArrayBuffer first of all. Then, import Clustering object to call method of it. That's it!! The rest of your task is just use it by giving proper parameter to it. As the note, the parameter numberOfPrototype determine the number of local  data you would realize as prototype and you cannot classify the prototype itself since it would vary again and again; in that sense, it is the procedure to determine not only how many class ( or cluster ) do you create but also how many data you lose.
+            </p>
+            
+
 
 <br>
 <h4>#Descriptive Statistics</h4>
@@ -225,9 +256,9 @@ val anova_result :(Boolean,Double) = infer_dase1.anova</code></pre>
 val ts2:tsda = new tsda(Vector(1.0,2,3,4,5))
 val ts3:tsda = data1.ts
 
-val tsds1:Timedase = Timedase(ts1,ts2,ts3)
-val tsds2:Timedase = new Timedase(Vector(ts1,ts2,ts3))
-val tsds3:Timedase = dase3.ts</code></pre>
+val tsds1:tsds = tsds(ts1,ts2,ts3)
+val tsds2:tsds = new tsds(Vector(ts1,ts2,ts3))
+val tsds3:tsds = dase3.ts</code></pre>
 
 	<pre><code>val detrended:tsda = ts1.detrending
 val differenced:tsda = ts1.differencing
