@@ -41,35 +41,34 @@ case class ParallelNaive(
 	//ΣNc：総document数
 	
 	def eachNumDocsAtWord(word:String , class_name:String ):Int = {
+	
+	    var doc_count = 0
+	    
+	    wholeClass(class_name).foreach{ 
+	        class_rdd =>  // == (class,rdd)
+			val filtered = class_rdd._2.filter{ word_occur => word_occur._1 == word }
 				
-		var doc_count = 0
-
-		wholeClass(class_name).foreach{ 
-			class_rdd =>  // == (class,rdd)
-				val filtered = class_rdd._2.filter{ word_occur => word_occur._1 == word }
-				
-				if (filtered.count != 0) doc_count += 1
-		    }
-		
-		doc_count
+			if (filtered.count != 0) doc_count += 1
+		  }
+		  doc_count
 	}
 	//N(w,c)：各クラスに置ける特定のwordが出現するdocument数
 	
-	def eachProbWord(word:String , class_name:String , alpha:Int = 2):Double={
+	def eachProbWord(word:String , class_name:String , alpha:Int = 2):Double = {
 		
-		val Nwc = eachNumDocsAtWord(word , class_name).toDouble
-		val Nc = eachNumDocs(class_name).toDouble
-				
-		log( ( Nwc + (alpha-1) ) / ( Nc + 2*(alpha-1) ) )
+	    val Nwc = eachNumDocsAtWord(word , class_name).toDouble
+	    val Nc = eachNumDocs(class_name).toDouble
+	    
+	    log( ( Nwc + (alpha-1) ) / ( Nc + 2*(alpha-1) ) )
 	}
 	//log(Pw,c)
 	//alpha is the parameter to decide how much we gonna make the data flat
 	
-	def eachProbClass(class_name:String):Double={
+	def eachProbClass(class_name:String):Double = {
 		
-		val Nc = eachNumDocs(class_name).toDouble
-		
-		log( ( Nc+1 ) / ( sumNumDocs + numClass ) )
+	    val Nc = eachNumDocs(class_name).toDouble
+	    
+	    log( ( Nc+1 ) / ( sumNumDocs + numClass ) )
 
 	}
 	
@@ -77,33 +76,31 @@ case class ParallelNaive(
 	//|C|：クラスの種類数
 
 	def classify(doc_path:String , alpha:Int = 2 ):(Double,String) = {
-
-        val new_rdd = read.document(doc_path)
-        
-        val array_word_freq :Array[(String,Int)] = new_rdd.collect
-        
-        val probPerClass :List[(Double,String)] = 
-            allClassNames.map{   
-                class_name =>
-                    val each_prob :Array[Double] =
-                        array_word_freq.map {
-                            word_freq =>
-                                eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2 
-                            }
-                    ( each_prob.sum + eachProbClass(class_name) , class_name )
-            }
-        
-        println("probability of each class : " + probPerClass)
-        
-        val estimate_class :(Double,String) = probPerClass.max
-		
-        file_paths += Pair(estimate_class._2,doc_path)
-        
-        docs += Pair(estimate_class._2,new_rdd)
-        
-        estimate_class		
-        		
-	}
+	
+	    val new_rdd = read.document(doc_path)
+	    val array_word_freq :Array[(String,Int)] = new_rdd.collect
+	    
+	    val probPerClass :List[(Double,String)] = 
+	        allClassNames.map{ class_name =>
+	            val each_prob :Array[Double] =
+	                array_word_freq.map { word_freq =>
+	                    eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2
+	                    }
+	            ( each_prob.sum + eachProbClass(class_name) , class_name )
+	            
+	            }
+	            
+	    println("probability of each class : " + probPerClass)
+	    
+	    val estimate_class :(Double,String) = probPerClass.max
+	    
+	    file_paths += Pair(estimate_class._2,doc_path)
+	    
+	    docs += Pair(estimate_class._2,new_rdd)
+	    
+	    estimate_class
+	    
+	    }
 	
 	/**
 		cached_rddの各要素：(word,frequency) => probability of the word * frequency in the document 
