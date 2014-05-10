@@ -16,7 +16,7 @@ trait Cluster{
 	
 	def center:Vector[Double] = { 
 	  
-	  var result:ArrayBuffer[Double]=ArrayBuffer()
+	  var result: ArrayBuffer[Double] = ArrayBuffer()
 	  
 	  var lookraw = 0
       
@@ -36,8 +36,8 @@ trait Cluster{
 		    
 		  }
 		  
-		  result+=verticalsum/height
-		  lookraw+=1
+		  result += verticalsum/height
+		  lookraw += 1
 		  
 	   }
 	  

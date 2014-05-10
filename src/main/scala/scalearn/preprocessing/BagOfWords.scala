@@ -7,19 +7,20 @@ import org.atilika.kuromoji._
 trait BagOfWords// extends TokenVector
 {
 	
-	val tokens:Vector[Token]
-	val allwordtype:Set[Token]
+	val tokens: Vector[Token]
+	val allwordtype: Set[Token]
 	//↑２つとも引数
 	
-	val types:Set[String] = tokens.map(elt=>elt.getBaseForm).toSet
+	val types: Set[String] = tokens.map(elt=>elt.getBaseForm).toSet
 	
-	val values:Vector[Double]
+	val values: Vector[Double]
 
 //allwordtypeはドキュメント全体で出現する全ての単語タイプ
     
 }
 
-case class BinaryVector(tokens:Vector[Token],allwordtype:Set[Token]) extends BagOfWords{
+case class BinaryVector(tokens:Vector[Token],allwordtype:Set[Token]) 
+    extends BagOfWords{
    
 	
     val values = 
@@ -33,12 +34,12 @@ case class BinaryVector(tokens:Vector[Token],allwordtype:Set[Token]) extends Bag
     
 }
 
-case class FrequencyVector(tokens:Vector[Token],allwordtype:Set[Token])  extends BagOfWords{
+case class FrequencyVector(tokens: Vector[Token],allwordtype: Set[Token])
+    extends BagOfWords{
 /*全てのDocumentにおける単語タイプと、捜索すべき単語トークンを取得
  * allwordtypeを変形してreturnする
- * 
  */ 	   
-	val freqs:Map[String,Double] 
+	val frequency: Map[String,Double] 
         = tokens
             .groupBy( (elt=>elt.getBaseForm) )
             .toMap
@@ -48,10 +49,12 @@ case class FrequencyVector(tokens:Vector[Token],allwordtype:Set[Token])  extends
 	val values         //単語の出現頻度を元に作ったベクトル。
         = allwordtype
             .toVector
-            .map{ elt=>
-	            freqs.get(elt.getBaseForm) match{
-	                case Some(x) => x+1    //本来は x だが、未知語対策のため1を足している
-	                case None => 1         //本来は 0 だが、未知語対策のため1にしている
+            .map{ elt =>
+	            frequency.get(elt.getBaseForm) match{
+	                case Some(x) => x+1    
+                        //本来は x だが、未知語対策のため1を足している
+	                case None => 1         
+                        //本来は 0 だが、未知語対策のため1にしている
 	            }
 	        }
 

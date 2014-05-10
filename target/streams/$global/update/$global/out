@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1944f891[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e55a58f[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -33,17 +33,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.hadoop#hadoop-client;1.0.4->org.apache.hadoop#hadoop-core;1.0.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.hadoop#hadoop-core;1.0.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.hadoop#hadoop-core;1.0.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.apache.hadoop/hadoop-core/1.0.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.hadoop#hadoop-core;1.0.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.hadoop#hadoop-core;1.0.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom (1.0.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.0.4/hadoop-core-1.0.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.hadoop#hadoop-core;1.0.4!hadoop-core.pom(pom.original) (1220ms)[0m
-[0m[[0mdebug[0m] [0m	found org.apache.hadoop#hadoop-core;1.0.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.hadoop#hadoop-core;1.0.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.hadoop#hadoop-core;1.0.4[0m
+[0m[[0mdebug[0m] [0m	found org.apache.hadoop#hadoop-core;1.0.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.hadoop#hadoop-client;1.0.4->org.apache.hadoop#hadoop-core;1.0.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: commons-cli#commons-cli;1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0mexcluding dependency: commons-httpclient#commons-httpclient;3.0.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
@@ -283,7 +275,7 @@
 [0m[[0mdebug[0m] [0mexcluding dependency: org.eclipse.jdt#core;3.1.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
 [0m[[0mdebug[0m] [0mexcluding dependency: org.codehaus.jackson#jackson-mapper-asl;1.0.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
 [0m[[0minfo[0m] [0mResolving commons-net#commons-net;1.4.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@b27b9b5[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: commons-net#commons-net;1.4.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: commons-net#commons-net;1.4.1[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: commons-net#commons-net;1.4.1[0m
 [0m[[0mdebug[0m] [0m	found commons-net#commons-net;1.4.1 in sbt-chain[0m
@@ -598,21 +590,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.spark#spark-core_2.10;0.9.0-incubating->org.apache.avro#avro-ipc;1.7.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.avro#avro-ipc;1.7.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.avro#avro-ipc;1.7.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.apache.avro/avro-ipc/1.7.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.avro#avro-ipc;1.7.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.avro#avro-ipc;1.7.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom (1.7.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/avro/avro-ipc/1.7.4/avro-ipc-1.7.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.avro#avro-ipc;1.7.4!avro-ipc.pom(pom.original) (1231ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache.avro#avro-parent;1.7.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.avro#avro-parent;1.7.4 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.avro#avro-parent;1.7.4[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.avro#avro-parent;1.7.4[0m
-[0m[[0mdebug[0m] [0m	found org.apache.avro#avro-ipc;1.7.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.avro#avro-ipc;1.7.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.avro#avro-ipc;1.7.4[0m
+[0m[[0mdebug[0m] [0m	found org.apache.avro#avro-ipc;1.7.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.6.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.slf4j#slf4j-api;1.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.spark#spark-core_2.10;0.9.0-incubating->org.apache.avro#avro-ipc;1.7.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0mexcluding dependency: io.netty#netty;3.4.0.Final {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile[0m
@@ -898,32 +878,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.slf4j#slf4j-api;1.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.eclipse.jetty.orbit/javax.servlet/2.5.0.v201103041518/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom (2.5.0.v201103041518)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518!javax.servlet.pom(pom.original) (1232ms)[0m
-[0m[[0minfo[0m] [0mResolving org.eclipse.jetty.orbit#jetty-orbit;1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.eclipse.jetty.orbit#jetty-orbit;1 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.eclipse.jetty.orbit#jetty-orbit;1[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.eclipse.jetty.orbit#jetty-orbit;1[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.eclipse.jetty.orbit/javax.servlet/2.5.0.v201103041518/orbits/javax.servlet.orbit[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0m		tried http://m2.neo4j.org/content/repositories/releases/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: The server has not found anything matching the request URI url=http://m2.neo4j.org/content/repositories/releases/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/releases/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/releases/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.orbit[0m
-[0m[[0mdebug[0m] [0m	found org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518[0m
+[0m[[0mdebug[0m] [0m	found org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.eclipse.jetty#jetty-server;7.6.8.v20121106->org.eclipse.jetty.orbit#javax.servlet;2.5.0.v201103041518 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.eclipse.jetty#jetty-server;7.6.8.v20121106->org.eclipse.jetty#jetty-continuation;7.6.8.v20121106 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.slf4j#slf4j-api;1.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.slf4j#slf4j-api;1.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -1673,29 +1630,26 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.spark#spark-core_2.10;0.9.0-incubating->com.codahale.metrics#metrics-graphite;3.0.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.spark#spark-core_2.10;0.9.0-incubating->com.codahale.metrics#metrics-graphite;3.0.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.apache.spark#spark-core_2.10;0.9.0-incubating [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0minfo[0m] [0mResolving com.typesafe.slick#slick_2.10;1.0.0 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.slick#slick_2.10;1.0.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.slick#slick_2.10;1.0.0[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.typesafe.slick#slick_2.10;1.0.0[0m
-[0m[[0mdebug[0m] [0m	found com.typesafe.slick#slick_2.10;1.0.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.slick#slick_2.10;2.0.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.slick#slick_2.10;2.0.1 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.slick#slick_2.10;2.0.1[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: com.typesafe.slick#slick_2.10;2.0.1[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.slick#slick_2.10;2.0.1 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.h2database#h2;1.3.166 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.h2database#h2;1.3.166 {compile=[default(compile)]}[0m
@@ -1705,6 +1659,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-nop;1.6.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.slf4j#slf4j-nop;1.6.4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.slf4j#slf4j-nop;1.6.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.slf4j#slf4j-nop;1.6.4[0m
+[0m[[0mdebug[0m] [0m	found org.slf4j#slf4j-nop;1.6.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scalanlp#breeze_2.10;0.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalanlp#breeze_2.10;0.7 {compile=[default(compile)]}[0m
@@ -1749,21 +1719,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalanlp#breeze_2.10;0.7->com.github.fommil.netlib#core;1.1.2 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#core;1.1.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#core;1.1.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/core/1.1.2/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.github.fommil.netlib#core;1.1.2[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for com.github.fommil.netlib#core;1.1.2[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2.pom (1.1.2)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/core/1.1.2/core-1.1.2.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#core;1.1.2!core.pom(pom.original) (1533ms)[0m
-[0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#parent;1.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#parent;1.1 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#parent;1.1[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.github.fommil.netlib#parent;1.1[0m
-[0m[[0mdebug[0m] [0m	found com.github.fommil.netlib#core;1.1.2 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#core;1.1.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: com.github.fommil.netlib#core;1.1.2[0m
+[0m[[0mdebug[0m] [0m	found com.github.fommil.netlib#core;1.1.2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalanlp#breeze_2.10;0.7->com.github.fommil.netlib#core;1.1.2 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalanlp#breeze_2.10;0.7->com.github.fommil.netlib#core;1.1.2 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalanlp#breeze_2.10;0.7->com.github.fommil.netlib#core;1.1.2 [compile->compile][0m
@@ -1937,34 +1895,11 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-osx-x86_64;1.1!netlib-native_ref-osx-x86_64.pom(pom.original) (1351ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-osx-x86_64;1.1!netlib-native_ref-osx-x86_64.pom(pom.original) (2913ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/native_ref/1.1/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.github.fommil.netlib#native_ref;1.1[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for com.github.fommil.netlib#native_ref;1.1[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.pom (1.1)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref;1.1!native_ref.pom(pom.original) (1266ms)[0m
-[0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#parent;1.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#parent;1.1 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#parent;1.1[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.github.fommil.netlib#parent;1.1[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/native_ref/1.1/jars/native_ref.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://m2.neo4j.org/content/repositories/releases/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: The server has not found anything matching the request URI url=http://m2.neo4j.org/content/repositories/releases/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/releases/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/releases/com/github/fommil/netlib/native_ref/1.1/native_ref-1.1.jar[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: com.github.fommil.netlib#native_ref;1.1[0m
 [0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/netlib-native_ref-osx-x86_64/1.1/jnilibs/netlib-native_ref-osx-x86_64.jnilib[0m
 [0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.jnilib[0m
 [0m[[0mdebug[0m] [0m	found com.github.fommil.netlib#netlib-native_ref-osx-x86_64;1.1 in public[0m
@@ -1981,7 +1916,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref-java;1.1!native_ref-java.pom(pom.original) (1563ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref-java;1.1!native_ref-java.pom(pom.original) (1818ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -2013,7 +1948,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-x86_64;1.1!netlib-native_ref-linux-x86_64.pom(pom.original) (1451ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-x86_64;1.1!netlib-native_ref-linux-x86_64.pom(pom.original) (2659ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/native_ref-xbuilds/1.1/ivys/ivy.xml[0m
@@ -2025,7 +1960,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-xbuilds/1.1/native_ref-xbuilds-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-xbuilds/1.1/native_ref-xbuilds-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-xbuilds/1.1/native_ref-xbuilds-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref-xbuilds;1.1!native_ref-xbuilds.pom(pom.original) (1102ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref-xbuilds;1.1!native_ref-xbuilds.pom(pom.original) (2058ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -2059,7 +1994,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-i686;1.1!netlib-native_ref-linux-i686.pom(pom.original) (1413ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-i686;1.1!netlib-native_ref-linux-i686.pom(pom.original) (2795ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref-xbuilds;1.1[0m
@@ -2082,7 +2017,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-win-x86_64;1.1!netlib-native_ref-win-x86_64.pom(pom.original) (1234ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-win-x86_64;1.1!netlib-native_ref-win-x86_64.pom(pom.original) (3449ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -2105,7 +2040,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-win-i686;1.1!netlib-native_ref-win-i686.pom(pom.original) (1411ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-win-i686;1.1!netlib-native_ref-win-i686.pom(pom.original) (3382ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -2128,7 +2063,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-armhf;1.1!netlib-native_ref-linux-armhf.pom(pom.original) (1199ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-armhf;1.1!netlib-native_ref-linux-armhf.pom(pom.original) (3575ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref-xbuilds;1.1[0m
@@ -2151,34 +2086,11 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-osx-x86_64;1.1!netlib-native_system-osx-x86_64.pom(pom.original) (1452ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-osx-x86_64;1.1!netlib-native_system-osx-x86_64.pom(pom.original) (3942ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/native_system/1.1/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for com.github.fommil.netlib#native_system;1.1[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system/1.1/native_system-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for com.github.fommil.netlib#native_system;1.1[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system/1.1/native_system-1.1.pom (1.1)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system/1.1/native_system-1.1.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system/1.1/native_system-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system/1.1/native_system-1.1.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system/1.1/native_system-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system;1.1!native_system.pom(pom.original) (2164ms)[0m
-[0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#parent;1.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#parent;1.1 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#parent;1.1[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: com.github.fommil.netlib#parent;1.1[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/native_system/1.1/jars/native_system.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://m2.neo4j.org/content/repositories/releases/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: The server has not found anything matching the request URI url=http://m2.neo4j.org/content/repositories/releases/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/releases/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/releases/com/github/fommil/netlib/native_system/1.1/native_system-1.1.jar[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: com.github.fommil.netlib#native_system;1.1[0m
 [0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/netlib-native_system-osx-x86_64/1.1/jnilibs/netlib-native_system-osx-x86_64.jnilib[0m
 [0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.jnilib[0m
 [0m[[0mdebug[0m] [0m	found com.github.fommil.netlib#netlib-native_system-osx-x86_64;1.1 in public[0m
@@ -2195,7 +2107,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system-java;1.1!native_system-java.pom(pom.original) (1235ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system-java;1.1!native_system-java.pom(pom.original) (4306ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2220,7 +2132,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-x86_64;1.1!netlib-native_system-linux-x86_64.pom(pom.original) (1162ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-x86_64;1.1!netlib-native_system-linux-x86_64.pom(pom.original) (3057ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/native_system-xbuilds/1.1/ivys/ivy.xml[0m
@@ -2232,7 +2144,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-xbuilds/1.1/native_system-xbuilds-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-xbuilds/1.1/native_system-xbuilds-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-xbuilds/1.1/native_system-xbuilds-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system-xbuilds;1.1!native_system-xbuilds.pom(pom.original) (1236ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system-xbuilds;1.1!native_system-xbuilds.pom(pom.original) (3970ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2266,7 +2178,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-i686;1.1!netlib-native_system-linux-i686.pom(pom.original) (1286ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-i686;1.1!netlib-native_system-linux-i686.pom(pom.original) (1344ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system-xbuilds;1.1[0m
@@ -2289,7 +2201,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-armhf;1.1!netlib-native_system-linux-armhf.pom(pom.original) (1130ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-armhf;1.1!netlib-native_system-linux-armhf.pom(pom.original) (1589ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system-xbuilds;1.1[0m
@@ -2312,7 +2224,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-x86_64/1.1/netlib-native_system-win-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-x86_64/1.1/netlib-native_system-win-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-x86_64/1.1/netlib-native_system-win-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-win-x86_64;1.1!netlib-native_system-win-x86_64.pom(pom.original) (1158ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-win-x86_64;1.1!netlib-native_system-win-x86_64.pom(pom.original) (1338ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2335,7 +2247,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-win-i686;1.1!netlib-native_system-win-i686.pom(pom.original) (1117ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-win-i686;1.1!netlib-native_system-win-i686.pom(pom.original) (1492ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2418,6 +2330,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalanlp#breeze-natives_2.10;0.7->com.github.fommil.netlib#all;1.1.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalanlp#breeze-natives_2.10;0.7->com.github.fommil.netlib#all;1.1.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze-natives_2.10;0.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.xerial#sqlite-jdbc;3.7.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.xerial#sqlite-jdbc;3.7.2 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.xerial#sqlite-jdbc;3.7.2[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.xerial#sqlite-jdbc;3.7.2[0m
+[0m[[0mdebug[0m] [0m	found org.xerial#sqlite-jdbc;3.7.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving eu.fakod#neo4j-scala_2.10;0.3.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: eu.fakod#neo4j-scala_2.10;0.3.0 {compile=[default(compile)]}[0m
@@ -2454,64 +2375,26 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1!geronimo-jta_1.1_spec.pom(pom.original) (1127ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1!geronimo-jta_1.1_spec.pom(pom.original) (1907ms)[0m
 [0m[[0minfo[0m] [0mResolving org.apache.geronimo.specs#specs;1.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.geronimo.specs#specs;1.4 {}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.apache.geronimo.specs/specs/1.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.geronimo.specs#specs;1.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.apache.geronimo.specs#specs;1.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.pom (1.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.geronimo.specs#specs;1.4!specs.pom(pom.original) (1541ms)[0m
-[0m[[0minfo[0m] [0mResolving org.apache.geronimo.genesis.config#project-config;1.2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.geronimo.genesis.config#project-config;1.2 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.geronimo.genesis.config#project-config;1.2[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.geronimo.genesis.config#project-config;1.2[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.apache.geronimo.specs/specs/1.4/jars/specs.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://m2.neo4j.org/content/repositories/releases/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: The server has not found anything matching the request URI url=http://m2.neo4j.org/content/repositories/releases/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/releases/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/releases/org/apache/geronimo/specs/specs/1.4/specs-1.4.jar[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.geronimo.specs#specs;1.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.geronimo.specs#specs;1.4[0m
 [0m[[0mdebug[0m] [0m	found org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 in public[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@76c8ea1a[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@818de3[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@1fef0b44[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.neo4j#neo4j-lucene-index;1.9.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#neo4j-lucene-index;1.9.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.neo4j/neo4j-lucene-index/1.9.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.neo4j#neo4j-lucene-index;1.9.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/neo4j/neo4j-lucene-index/1.9.4/neo4j-lucene-index-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.neo4j#neo4j-lucene-index;1.9.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/neo4j/neo4j-lucene-index/1.9.4/neo4j-lucene-index-1.9.4.pom (1.9.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/neo4j/neo4j-lucene-index/1.9.4/neo4j-lucene-index-1.9.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-lucene-index/1.9.4/neo4j-lucene-index-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-lucene-index/1.9.4/neo4j-lucene-index-1.9.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/neo4j/neo4j-lucene-index/1.9.4/neo4j-lucene-index-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.neo4j#neo4j-lucene-index;1.9.4!neo4j-lucene-index.pom(pom.original) (1198ms)[0m
-[0m[[0minfo[0m] [0mResolving org.neo4j#parent;1.9.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#parent;1.9.4 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-lucene-index;1.9.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#neo4j-lucene-index;1.9.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#neo4j-lucene-index;1.9.4[0m
+[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-lucene-index;1.9.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->compile(*)][0m
@@ -2531,21 +2414,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-shell;1.9.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.neo4j#neo4j-shell;1.9.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#neo4j-shell;1.9.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.neo4j/neo4j-shell/1.9.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.neo4j#neo4j-shell;1.9.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/neo4j/neo4j-shell/1.9.4/neo4j-shell-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.neo4j#neo4j-shell;1.9.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/neo4j/neo4j-shell/1.9.4/neo4j-shell-1.9.4.pom (1.9.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/neo4j/neo4j-shell/1.9.4/neo4j-shell-1.9.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-shell/1.9.4/neo4j-shell-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-shell/1.9.4/neo4j-shell-1.9.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/neo4j/neo4j-shell/1.9.4/neo4j-shell-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.neo4j#neo4j-shell;1.9.4!neo4j-shell.pom(pom.original) (1228ms)[0m
-[0m[[0minfo[0m] [0mResolving org.neo4j#parent;1.9.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#parent;1.9.4 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-shell;1.9.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#neo4j-shell;1.9.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#neo4j-shell;1.9.4[0m
+[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-shell;1.9.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-shell;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-shell;1.9.4->org.apache.servicemix.bundles#org.apache.servicemix.bundles.jline;0.9.94_1 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.servicemix.bundles#org.apache.servicemix.bundles.jline;0.9.94_1 ...[0m
@@ -2563,23 +2434,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-rest-graphdb;1.9 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.neo4j#neo4j-rest-graphdb;1.9 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#neo4j-rest-graphdb;1.9 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.neo4j/neo4j-rest-graphdb/1.9/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.neo4j#neo4j-rest-graphdb;1.9[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo1.maven.org/maven2/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom[0m
-[0m[[0mdebug[0m] [0m	public: no ivy file found for org.neo4j#neo4j-rest-graphdb;1.9[0m
-[0m[[0mdebug[0m] [0m		tried https://oss.sonatype.org/content/repositories/snapshots/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://oss.sonatype.org/content/repositories/snapshots/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom[0m
-[0m[[0mdebug[0m] [0m	sonatype-snapshots: no ivy file found for org.neo4j#neo4j-rest-graphdb;1.9[0m
-[0m[[0mdebug[0m] [0m		tried http://m2.neo4j.org/content/repositories/releases/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom[0m
-[0m[[0mdebug[0m] [0m	Neo4j Scala Repo: found md file for org.neo4j#neo4j-rest-graphdb;1.9[0m
-[0m[[0mdebug[0m] [0m		=> http://m2.neo4j.org/content/repositories/releases/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom (1.9)[0m
-[0m[[0mdebug[0m] [0mdownloading http://m2.neo4j.org/content/repositories/releases/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom ...[0m
-[0m[[0mdebug[0m] [0m	Neo4j Scala Repo: downloading http://m2.neo4j.org/content/repositories/releases/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom[0m
-[0m[[0mdebug[0m] [0m	Neo4j Scala Repo: downloading http://m2.neo4j.org/content/repositories/releases/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://m2.neo4j.org/content/repositories/releases/org/neo4j/neo4j-rest-graphdb/1.9/neo4j-rest-graphdb-1.9.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.neo4j#neo4j-rest-graphdb;1.9!neo4j-rest-graphdb.pom(pom.original) (2116ms)[0m
-[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-rest-graphdb;1.9 in Neo4j Scala Repo[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#neo4j-rest-graphdb;1.9[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#neo4j-rest-graphdb;1.9[0m
+[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-rest-graphdb;1.9 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-rest-graphdb;1.9 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-rest-graphdb;1.9->org.codehaus.jackson#jackson-mapper-asl;1.9.7 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.codehaus.jackson#jackson-mapper-asl;1.9.7 ...[0m
@@ -2801,21 +2658,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-cypher;1.9.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.neo4j#neo4j-cypher;1.9.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#neo4j-cypher;1.9.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.neo4j/neo4j-cypher/1.9.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.neo4j#neo4j-cypher;1.9.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/neo4j/neo4j-cypher/1.9.4/neo4j-cypher-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.neo4j#neo4j-cypher;1.9.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/neo4j/neo4j-cypher/1.9.4/neo4j-cypher-1.9.4.pom (1.9.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/neo4j/neo4j-cypher/1.9.4/neo4j-cypher-1.9.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-cypher/1.9.4/neo4j-cypher-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-cypher/1.9.4/neo4j-cypher-1.9.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/neo4j/neo4j-cypher/1.9.4/neo4j-cypher-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.neo4j#neo4j-cypher;1.9.4!neo4j-cypher.pom(pom.original) (1329ms)[0m
-[0m[[0minfo[0m] [0mResolving org.neo4j#parent;1.9.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#parent;1.9.4 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-cypher;1.9.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#neo4j-cypher;1.9.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#neo4j-cypher;1.9.4[0m
+[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-cypher;1.9.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-cypher;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-cypher;1.9.4->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-cypher;1.9.4->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
@@ -2828,42 +2673,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-cypher;1.9.4->org.neo4j#neo4j-graph-matching;1.9.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.neo4j#neo4j-graph-matching;1.9.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#neo4j-graph-matching;1.9.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.neo4j/neo4j-graph-matching/1.9.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.neo4j#neo4j-graph-matching;1.9.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-matching/1.9.4/neo4j-graph-matching-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.neo4j#neo4j-graph-matching;1.9.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-matching/1.9.4/neo4j-graph-matching-1.9.4.pom (1.9.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-matching/1.9.4/neo4j-graph-matching-1.9.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-matching/1.9.4/neo4j-graph-matching-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-matching/1.9.4/neo4j-graph-matching-1.9.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-matching/1.9.4/neo4j-graph-matching-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.neo4j#neo4j-graph-matching;1.9.4!neo4j-graph-matching.pom(pom.original) (1539ms)[0m
-[0m[[0minfo[0m] [0mResolving org.neo4j#parent;1.9.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#parent;1.9.4 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-graph-matching;1.9.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#neo4j-graph-matching;1.9.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#neo4j-graph-matching;1.9.4[0m
+[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-graph-matching;1.9.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-cypher;1.9.4->org.neo4j#neo4j-graph-matching;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-graph-matching;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-graph-matching;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-cypher;1.9.4->org.neo4j#neo4j-graph-algo;1.9.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.neo4j#neo4j-graph-algo;1.9.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#neo4j-graph-algo;1.9.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.neo4j/neo4j-graph-algo/1.9.4/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.neo4j#neo4j-graph-algo;1.9.4[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-algo/1.9.4/neo4j-graph-algo-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.neo4j#neo4j-graph-algo;1.9.4[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-algo/1.9.4/neo4j-graph-algo-1.9.4.pom (1.9.4)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-algo/1.9.4/neo4j-graph-algo-1.9.4.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-algo/1.9.4/neo4j-graph-algo-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-algo/1.9.4/neo4j-graph-algo-1.9.4.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/neo4j/neo4j-graph-algo/1.9.4/neo4j-graph-algo-1.9.4.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.neo4j#neo4j-graph-algo;1.9.4!neo4j-graph-algo.pom(pom.original) (1209ms)[0m
-[0m[[0minfo[0m] [0mResolving org.neo4j#parent;1.9.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#parent;1.9.4 {}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#parent;1.9.4[0m
-[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-graph-algo;1.9.4 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.neo4j#neo4j-graph-algo;1.9.4[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.neo4j#neo4j-graph-algo;1.9.4[0m
+[0m[[0mdebug[0m] [0m	found org.neo4j#neo4j-graph-algo;1.9.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-cypher;1.9.4->org.neo4j#neo4j-graph-algo;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-graph-algo;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-graph-algo;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->compile(*)][0m
@@ -4066,28 +3887,36 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.apache.spark#spark-core_2.10;0.9.0-incubating [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->compile][0m
@@ -4339,6 +4168,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze-natives_2.10;0.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->compile][0m
@@ -4354,11 +4187,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@409468ca[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@4f6bc6e5[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -4533,8 +4364,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@7260c384[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -5761,28 +5591,36 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.apache.spark#spark-core_2.10;0.9.0-incubating [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->compile][0m
@@ -6034,6 +5872,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze-natives_2.10;0.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->compile][0m
@@ -6049,11 +5891,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@5a874bd3[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@68833813[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -6228,8 +6068,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@4e433359[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -6308,19 +6147,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.1.4->org.scala-lang#scala-library;2.11.0 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.11.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.scala-lang/scala-library/2.11.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-library;2.11.0[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.0/scala-library-2.11.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-library;2.11.0[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.0/scala-library-2.11.0.pom (2.11.0)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.0/scala-library-2.11.0.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.0/scala-library-2.11.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.0/scala-library-2.11.0.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.0/scala-library-2.11.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.0!scala-library.pom(pom.original) (1852ms)[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.scala-lang/scala-library/2.11.0/jars/scala-library.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.0/scala-library-2.11.0.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.0 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.0[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.0[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.0] org.scala-lang#scala-library;2.11.0[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.1.4->org.scala-lang#scala-library;2.11.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.1.4->org.scala-lang#scala-library;2.11.0 [compile->default(compile)][0m
@@ -6334,19 +6163,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.1.4->org.scala-lang#scala-reflect;2.11.0 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.scala-lang/scala-reflect/2.11.0/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-reflect;2.11.0[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.0/scala-reflect-2.11.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-reflect;2.11.0[0m
-[0m[[0mdebug[0m] [0m		=> http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.0/scala-reflect-2.11.0.pom (2.11.0)[0m
-[0m[[0mdebug[0m] [0mdownloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.0/scala-reflect-2.11.0.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.0/scala-reflect-2.11.0.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.0/scala-reflect-2.11.0.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.0/scala-reflect-2.11.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.0!scala-reflect.pom(pom.original) (1404ms)[0m
-[0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/org.scala-lang/scala-reflect/2.11.0/jars/scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.0/scala-reflect-2.11.0.jar[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.0 in public[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.0[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-reflect;2.11.0[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.0 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.0] org.scala-lang#scala-reflect;2.11.0[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.1.4->org.scala-lang#scala-reflect;2.11.0 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.0->org.scala-lang#scala-library;2.11.0 [compile->master(*)][0m
@@ -7548,28 +7367,36 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.apache.spark#spark-core_2.10;0.9.0-incubating [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->compile][0m
@@ -7821,6 +7648,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze-natives_2.10;0.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->compile][0m
@@ -7836,11 +7667,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@7d91f64b[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@79c0f654[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -8015,8 +7844,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@1d05c9a1[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -9245,28 +9073,36 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.apache.spark#spark-core_2.10;0.9.0-incubating [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->compile][0m
@@ -9518,6 +9354,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze-natives_2.10;0.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->compile][0m
@@ -9533,11 +9373,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@1b343e2f[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@2de8d9d[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -9712,8 +9550,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@5f81a4ab[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -10942,28 +10779,36 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.codahale.metrics#metrics-graphite;3.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.apache.spark#spark-core_2.10;0.9.0-incubating [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.0 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;1.0.0->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.scala-lang#scala-library;2.10.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.slick#slick_2.10;2.0.1->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.typesafe.slick#slick_2.10;2.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->com.h2database#h2;1.3.166 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.6.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.slf4j#slf4j-nop;1.6.4->org.slf4j#slf4j-api;1.7.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.slf4j#slf4j-nop;1.6.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze_2.10;0.7 [compile->compile][0m
@@ -11215,6 +11060,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.fommil.netlib#netlib-native_system-win-i686;1.1->com.github.fommil.netlib#native_system-java;1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scalanlp#breeze-natives_2.10;0.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.xerial#sqlite-jdbc;3.7.2 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->eu.fakod#neo4j-scala_2.10;0.3.0 [compile->compile][0m
@@ -11230,11 +11079,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@20f5517f[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@49b979c0[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -11409,8 +11256,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@1f57a7ec[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -11572,10 +11418,12 @@
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.3!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.spark#spark-core_2.10;0.9.0-incubating!spark-core_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.slick#slick_2.10;1.0.0!slick_2.10.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.slick#slick_2.10;2.0.1!slick_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.h2database#h2;1.3.166!h2.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.slf4j#slf4j-nop;1.6.4!slf4j-nop.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalanlp#breeze_2.10;0.7!breeze_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalanlp#breeze-natives_2.10;0.7!breeze-natives_2.10.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.xerial#sqlite-jdbc;3.7.2!sqlite-jdbc.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] eu.fakod#neo4j-scala_2.10;0.3.0!neo4j-scala_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.hadoop#hadoop-client;1.0.4!hadoop-client.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] net.java.dev.jets3t#jets3t;0.7.1!jets3t.jar[0m
@@ -11705,7 +11553,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.3!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 94700ms :: artifacts dl 90ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 97953ms :: artifacts dl 165ms[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
@@ -11719,5 +11567,5 @@
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (94700ms resolve - 90ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (97953ms resolve - 165ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

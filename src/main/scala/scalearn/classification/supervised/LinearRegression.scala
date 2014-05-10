@@ -5,7 +5,7 @@ import scala.math._
 
 trait LinearRegression extends Descriptive{
 
-   //最急降下法
+   //最急降下法; 損失関数の推定最小値を求めたりするのに使える。
    def BatchGradientDescent(
        x:Vector[Double],
        y:Vector[Double],

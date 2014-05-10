@@ -4,14 +4,17 @@ import org.atilika.kuromoji._
 import scala.collection.convert.WrapAsScala._
 import scala.io.Source
 
-object  JP{
+object JP{
 
-    def mkToken(content:String):Seq[Token] = 
+    def mkToken(
+        content: String,
+        condition: Token => Boolean = { (x:Token) => x.getBaseForm != null }
+    ): Seq[Token] = 
         Tokenizer
             .builder()
             .build()
             .tokenize(content)
-            .filter( (x:Token) => x.getBaseForm != null )
+            .filter(condition)
 
     def mkTokenF(path:String):Stream[Token] = {
         val file = Source.fromFile(path)

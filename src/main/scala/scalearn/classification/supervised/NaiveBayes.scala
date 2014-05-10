@@ -17,30 +17,23 @@ file_paths & docs are mutable !! Be careful. they are subject to side effect.
 **/
 
 case class NaiveBayes( 
-	file_paths :ListBuffer[(String,String)] , 
-	cache_it :Boolean = false ,
-	spark_context :SparkContext = SparkInstance.default ) extends Serializable 
+    docs: ListBuffer[(String ,RDD[(String,Int)])] ) extends Serializable 
 {
 	
-	val docs :ListBuffer[(String ,RDD[(String,Int)])] = 
-	    file_paths.map( class_path => 
-	        ( class_path._1 , read.document( class_path._2 , cache_it , spark_context) ) 
-            )
-	
-	def wholeClass :Map[String,ListBuffer[(String,RDD[(String,Int)])]] = docs.groupBy(elt=>elt._1)
+	def wholeClass: Map[String,ListBuffer[(String,RDD[(String,Int)])]] = docs.groupBy(elt=>elt._1)
 	//全てのクラスとドキュメントの集合：Map( 各クラス-> Vector( ( 各クラス,ドキュメントの集合 ) ) )
 	
-	def allClassNames :List[String] = wholeClass.map(elt=>elt._1).toList
+	def allClassNames: List[String] = wholeClass.map(elt=>elt._1).toList
 	//全classのリスト作成
 	
-	def eachNumDocs :Map[String,Int] = wholeClass.map(elt=>(elt._1,elt._2.length))
+	def eachNumDocs: Map[String,Int] = wholeClass.map(elt=>(elt._1,elt._2.length))
 	//each == at each class
     //Nc：各クラスに置けるdocument数、のMap : Map(class->number of docs)
 	
-	def sumNumDocs :Int = docs.size
+	def sumNumDocs: Int = docs.size
 	//ΣNc：総document数
 	
-	def eachNumDocsAtWord(word:String , class_name:String ):Int = {
+	def eachNumDocsAtWord(word: String, class_name: String ):Int = {
 	
 	    var doc_count = 0
 	    
@@ -54,7 +47,7 @@ case class NaiveBayes(
 	}
 	//N(w,c)：各クラスに置ける特定のwordが出現するdocument数
 	
-	def eachProbWord(word:String , class_name:String , alpha:Int = 2):Double = {
+	def eachProbWord(word: String, class_name: String, alpha: Int = 2): Double = {
 		
 	    val Nwc = eachNumDocsAtWord(word , class_name).toDouble
 	    val Nc = eachNumDocs(class_name).toDouble
@@ -64,7 +57,7 @@ case class NaiveBayes(
 	//log(Pw,c)
 	//alpha is the parameter to decide how much we gonna make the data flat
 	
-	def eachProbClass(class_name:String):Double = {
+	def eachProbClass(class_name: String): Double = {
 		
 	    val Nc = eachNumDocs(class_name).toDouble
 	    
@@ -75,14 +68,13 @@ case class NaiveBayes(
 	val numClass :Int = wholeClass.size
 	//|C|：クラスの種類数
 
-	def classify(doc_path:String , alpha:Int = 2 ):(Double,String) = {
+	def classify(document: RDD[(String,Int)], alpha: Int = 2 ):(Double,String) = {
 	
-	    val new_rdd = read.document(doc_path)
-	    val array_word_freq :Array[(String,Int)] = new_rdd.collect
+	    val array_word_freq: Array[(String,Int)] = document.collect
 	    
-	    val probPerClass :List[(Double,String)] = 
+	    val probPerClass: List[(Double,String)] = 
 	        allClassNames.map{ class_name =>
-	            val each_prob :Array[Double] =
+	            val each_prob: Array[Double] =
 	                array_word_freq.map { word_freq =>
 	                    eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2
 	                    }
@@ -92,11 +84,9 @@ case class NaiveBayes(
 	            
 	    println("probability of each class : " + probPerClass)
 	    
-	    val estimate_class :(Double,String) = probPerClass.max
-	    
-	    file_paths += Pair(estimate_class._2,doc_path)
-	    
-	    docs += Pair(estimate_class._2,new_rdd)
+	    val estimate_class: (Double,String) = probPerClass.max
+	    	    
+	    docs += Pair(estimate_class._2,document)
 	    
 	    estimate_class
 	    
@@ -115,23 +105,23 @@ case class NaiveBayes(
 object DoParallelNaive extends App{
 
   	val file_paths = 
-  		ListBuffer( ("plus","resource/doc1.txt"),
-  			    ("plus","resource/doc2.txt"),
-  			    ("plus","resource/doc3.txt"),
-  			    ("minus","resource/doc4.txt"),
-  			    ("minus","resource/doc5.txt"),
-  			    ("minus","resource/doc6.txt")
+  		ListBuffer( 
+            ("plus","resource/doc1.txt"),
+            ("plus","resource/doc2.txt"),
+  		    ("plus","resource/doc3.txt"),
+  		    ("minus","resource/doc4.txt"),
+  		    ("minus","resource/doc5.txt"),
+  		    ("minus","resource/doc6.txt")
   			  )
+        
+    val docs = 
+        file_paths
+        .map( class_path => ( class_path._1 , read.document(class_path._2) ) ) 
   	
-  	val nb = NaiveBayes(file_paths)
+  	val nb = NaiveBayes(docs)
+             
+    val new_doc = read.document("resource/examine.txt")
   	
-  	nb.classify("resource/examine.txt")
-  	
-  	file_paths.foreach(println)
-  	
-  	nb.docs.foreach(println)
-  	
-  	nb.classify("resource/examine.txt")
-    
-    
+    nb.classify(new_doc)
+  	    
 }

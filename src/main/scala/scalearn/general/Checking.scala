@@ -2,7 +2,7 @@ package scalearn.general
     
 object Checking{
             
-    def requireDouble(subject:Double,criteria:Double,description:String) = 
+    def requireDouble(subject: Double, criteria: Double, description: String) = 
         
         require( 
             subject <= criteria + 0.00001 

@@ -53,7 +53,7 @@ object read {
 	
     def document( 
     	path: String ,
-    	cache_it: Boolean = true , 
+    	cache_it: Boolean = false , 
     	spark_context: SparkContext = SparkInstance.default
     	): RDD[(String,Int)] = {
     	

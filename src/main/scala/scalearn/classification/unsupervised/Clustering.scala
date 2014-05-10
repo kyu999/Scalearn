@@ -12,7 +12,7 @@ object Clustering {
 	    numberOfPrototype:Int,
 	    vectors:ArrayBuffer[Vector[Double]],
 	    max_iteration:Int = 100 
-	    ):IndexedSeq[VectorCluster] = {
+    ): IndexedSeq[VectorCluster] = {
 	    	
 	   val size = vectors.length
 	   
@@ -26,7 +26,8 @@ object Clustering {
 	           vectors.remove(pop_place)
 	           VectorCluster(ArrayBuffer(pop_value))
 	           
-	           }
+	       }
+        
 	   var previous_clustered:IndexedSeq[VectorCluster] = reclustering( vectors,initial_clusters )
 	   
 	   var after_clustered:IndexedSeq[VectorCluster] = 
