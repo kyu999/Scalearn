@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/Tsubaki/Documents/Scala/Scalearn/}scalearn...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/Tsubaki/Documents/Scalearn/}scalearn...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: Kyu#scalearn_2.10;0.01[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for Kyu#scalearn_2.10;0.01 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e55a58f[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@60e07ad7[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -1895,7 +1895,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-osx-x86_64/1.1/netlib-native_ref-osx-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-osx-x86_64;1.1!netlib-native_ref-osx-x86_64.pom(pom.original) (2913ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-osx-x86_64;1.1!netlib-native_ref-osx-x86_64.pom(pom.original) (1549ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -1916,7 +1916,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-java/1.1/native_ref-java-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref-java;1.1!native_ref-java.pom(pom.original) (1818ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref-java;1.1!native_ref-java.pom(pom.original) (1153ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -1948,7 +1948,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-x86_64/1.1/netlib-native_ref-linux-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-x86_64;1.1!netlib-native_ref-linux-x86_64.pom(pom.original) (2659ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-x86_64;1.1!netlib-native_ref-linux-x86_64.pom(pom.original) (1978ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/native_ref-xbuilds/1.1/ivys/ivy.xml[0m
@@ -1960,7 +1960,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-xbuilds/1.1/native_ref-xbuilds-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-xbuilds/1.1/native_ref-xbuilds-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_ref-xbuilds/1.1/native_ref-xbuilds-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref-xbuilds;1.1!native_ref-xbuilds.pom(pom.original) (2058ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_ref-xbuilds;1.1!native_ref-xbuilds.pom(pom.original) (1090ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -1994,7 +1994,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-i686/1.1/netlib-native_ref-linux-i686-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-i686;1.1!netlib-native_ref-linux-i686.pom(pom.original) (2795ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-i686;1.1!netlib-native_ref-linux-i686.pom(pom.original) (1193ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref-xbuilds;1.1[0m
@@ -2017,7 +2017,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-x86_64/1.1/netlib-native_ref-win-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-win-x86_64;1.1!netlib-native_ref-win-x86_64.pom(pom.original) (3449ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-win-x86_64;1.1!netlib-native_ref-win-x86_64.pom(pom.original) (1136ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -2040,7 +2040,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-win-i686/1.1/netlib-native_ref-win-i686-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-win-i686;1.1!netlib-native_ref-win-i686.pom(pom.original) (3382ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-win-i686;1.1!netlib-native_ref-win-i686.pom(pom.original) (1079ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref;1.1[0m
@@ -2063,7 +2063,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_ref-linux-armhf/1.1/netlib-native_ref-linux-armhf-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-armhf;1.1!netlib-native_ref-linux-armhf.pom(pom.original) (3575ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_ref-linux-armhf;1.1!netlib-native_ref-linux-armhf.pom(pom.original) (1577ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_ref-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_ref-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_ref-xbuilds;1.1[0m
@@ -2086,7 +2086,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-osx-x86_64/1.1/netlib-native_system-osx-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-osx-x86_64;1.1!netlib-native_system-osx-x86_64.pom(pom.original) (3942ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-osx-x86_64;1.1!netlib-native_system-osx-x86_64.pom(pom.original) (1116ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2107,7 +2107,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-java/1.1/native_system-java-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system-java;1.1!native_system-java.pom(pom.original) (4306ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system-java;1.1!native_system-java.pom(pom.original) (1070ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2132,7 +2132,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-x86_64/1.1/netlib-native_system-linux-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-x86_64;1.1!netlib-native_system-linux-x86_64.pom(pom.original) (3057ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-x86_64;1.1!netlib-native_system-linux-x86_64.pom(pom.original) (1204ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0m		tried /Users/Tsubaki/.ivy2/local/com.github.fommil.netlib/native_system-xbuilds/1.1/ivys/ivy.xml[0m
@@ -2144,7 +2144,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-xbuilds/1.1/native_system-xbuilds-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-xbuilds/1.1/native_system-xbuilds-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/native_system-xbuilds/1.1/native_system-xbuilds-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system-xbuilds;1.1!native_system-xbuilds.pom(pom.original) (3970ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#native_system-xbuilds;1.1!native_system-xbuilds.pom(pom.original) (1224ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2178,7 +2178,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-i686/1.1/netlib-native_system-linux-i686-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-i686;1.1!netlib-native_system-linux-i686.pom(pom.original) (1344ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-i686;1.1!netlib-native_system-linux-i686.pom(pom.original) (1110ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system-xbuilds;1.1[0m
@@ -2201,7 +2201,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-linux-armhf/1.1/netlib-native_system-linux-armhf-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-armhf;1.1!netlib-native_system-linux-armhf.pom(pom.original) (1589ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-linux-armhf;1.1!netlib-native_system-linux-armhf.pom(pom.original) (1224ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system-xbuilds;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system-xbuilds;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system-xbuilds;1.1[0m
@@ -2224,7 +2224,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-x86_64/1.1/netlib-native_system-win-x86_64-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-x86_64/1.1/netlib-native_system-win-x86_64-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-x86_64/1.1/netlib-native_system-win-x86_64-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-win-x86_64;1.1!netlib-native_system-win-x86_64.pom(pom.original) (1338ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-win-x86_64;1.1!netlib-native_system-win-x86_64.pom(pom.original) (1078ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2247,7 +2247,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/fommil/netlib/netlib-native_system-win-i686/1.1/netlib-native_system-win-i686-1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-win-i686;1.1!netlib-native_system-win-i686.pom(pom.original) (1492ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.fommil.netlib#netlib-native_system-win-i686;1.1!netlib-native_system-win-i686.pom(pom.original) (1163ms)[0m
 [0m[[0minfo[0m] [0mResolving com.github.fommil.netlib#native_system;1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.github.fommil.netlib#native_system;1.1 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.github.fommil.netlib#native_system;1.1[0m
@@ -2375,20 +2375,20 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1!geronimo-jta_1.1_spec.pom(pom.original) (1907ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1!geronimo-jta_1.1_spec.pom(pom.original) (1390ms)[0m
 [0m[[0minfo[0m] [0mResolving org.apache.geronimo.specs#specs;1.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.geronimo.specs#specs;1.4 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.geronimo.specs#specs;1.4[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.apache.geronimo.specs#specs;1.4[0m
 [0m[[0mdebug[0m] [0m	found org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 in public[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@76c8ea1a[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@410dd09[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@818de3[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@6f1f7bf4[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@1fef0b44[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@2b4ee401[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.neo4j#neo4j-lucene-index;1.9.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.neo4j#neo4j-lucene-index;1.9.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -4187,9 +4187,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@409468ca[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@4dea0aa2[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@4f6bc6e5[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@406039a4[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -4364,7 +4364,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@7260c384[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@cd4cdd5[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -5891,9 +5891,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@5a874bd3[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@12f794ce[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@68833813[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@3c4a6a1c[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -6068,7 +6068,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@4e433359[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@195695d8[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -7667,9 +7667,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@7d91f64b[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@14be60b[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@79c0f654[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@1debdcd7[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -7844,7 +7844,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@1d05c9a1[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@472ae739[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -9373,9 +9373,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@1b343e2f[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@4fbf07d6[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@2de8d9d[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@69b9b81[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -9550,7 +9550,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@5f81a4ab[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@7fc73be6[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -11079,9 +11079,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: junit#junit;4.7 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.11 {test=[runtime(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@20f5517f[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@816d9ce[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@49b979c0[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@14356788[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->master(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [compile->master(*)][0m
@@ -11256,7 +11256,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-kernel;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-kernel;1.9.4->org.apache.geronimo.specs#geronimo-jta_1.1_spec;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@5a147bc1 => sbt.ivyint.MergedDescriptors@1f57a7ec[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@7f575ec => sbt.ivyint.MergedDescriptors@1f0b33ad[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies eu.fakod#neo4j-scala_2.10;0.3.0->org.neo4j#neo4j-lucene-index;1.9.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.neo4j#neo4j-lucene-index;1.9.4->org.neo4j#neo4j-kernel;1.9.4 [runtime->runtime(*)][0m
@@ -11414,7 +11414,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [scala-tool->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies Kyu#scalearn_2.10;0.01->org.scala-lang#scala-library;2.10.3 [scala-tool->optional(default)][0m
-[0m[[0mdebug[0m] [0m	resolved ivy file produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/Kyu/scalearn_2.10/0.01/resolved.xml.xml[0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/Kyu/scalearn_2.10/0.01/resolved.xml.xml[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.3!scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.spark#spark-core_2.10;0.9.0-incubating!spark-core_2.10.jar[0m
@@ -11553,19 +11553,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.3!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 97953ms :: artifacts dl 165ms[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 provided produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 optional produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile-internal produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime-internal produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test-internal produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 plugin produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 sources produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/Tsubaki/Documents/Scala/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (97953ms resolve - 165ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 51517ms :: artifacts dl 123ms[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 provided produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 optional produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 compile-internal produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 runtime-internal produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 test-internal produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 plugin produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 sources produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 docs produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 pom produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for Kyu#scalearn_2.10;0.01 scala-tool produced in /Users/Tsubaki/Documents/Scalearn/target/resolution-cache/reports/Kyu-scalearn_2.10-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (51517ms resolve - 123ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

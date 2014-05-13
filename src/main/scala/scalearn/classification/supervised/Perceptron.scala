@@ -16,12 +16,12 @@ case class Perceptron(){
     
     def classify(
         subject: DenseVector[Double], 
-        studyWeight: List[(DenseVector[Double],className)]    //重みベクトル群
+        studyWeights: List[(DenseVector[Double],className)] //重みベクトル群
     ): (Double,className) = {  
         
         //識別関数群    
         val discriminants: List[(Double,className)] = 
-            studyWeight
+            studyWeights
                 .map( vector_class => 
                      ( norm(vector_class._1 :* subject) , vector_class._2 )
                     ) 
