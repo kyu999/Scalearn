@@ -11,20 +11,22 @@ case class KNN(trainData: Vector[(String , Vector[Double])] ){
                  
         val neighbors = 
             trainData.map{ class_vector => 
-            (class_vector._1,Tools.euclidean(subject, class_vector._2)) } 
-                 .sortBy( class_vector => class_vector._2 ) 
-                 .reverse
-                 .take(numberOfMajority)
+            (class_vector._1 , 
+             Tools.euclidean(subject, class_vector._2)
+             ) } 
+                     .sortBy( class_vector => class_vector._2 ) 
+                     .reverse
+                     .take(numberOfMajority)
                      
         println("neighbors : "+neighbors)
                      
-        val majority = 
+        val mostMajority = 
             neighbors    
                  .groupBy(x=>x._1)
                  .map(elt=>(elt._2.length,elt._1))
                  .max
                      
-        majority
+        mostMajority
         
     }
 
