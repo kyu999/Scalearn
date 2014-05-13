@@ -1,6 +1,6 @@
 package scalearn.statistics
 
-object Tools
+object Stats
     extends Descriptive 
     with Inference 
     with TimeSeries 

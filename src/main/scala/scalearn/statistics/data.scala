@@ -16,24 +16,24 @@ case class data(raw:Vector[Double]){
 
     val mean = sum/size
     
-    lazy val dv = Tools.deviation(raw,mean)
+    lazy val dv = Stats.deviation(raw,mean)
 	
     lazy val squaredsum = raw.map(pow(_,2)).sum
 	
-    val dvsquared = raw.map(Tools.each_devi_squared(mean))
+    val dvsquared = raw.map(Stats.each_devi_squared(mean))
 	
     val dvsquaredsum = dvsquared.sum
 
-    val vari = Tools.unbiased_variance(dvsquaredsum,size)
+    val vari = Stats.unbiased_variance(dvsquaredsum,size)
     //不偏分散：標本から行う、母分散の推定値
 
-    lazy val samplevari = Tools.biased_variance(dvsquaredsum,size)
+    lazy val samplevari = Stats.biased_variance(dvsquaredsum,size)
     //標本自体の分散。母分散の推定値ではない。
 
     val sd = sqrt(vari)
     //データを標本と見なし不偏分散を用いて算出した母標準偏差推定値。標本自体の標準偏差が必要ならsamplesdを使うべし
     
-    lazy val samplesd = Tools.samplestdevi(dvsquaredsum,size)
+    lazy val samplesd = Stats.samplestdevi(dvsquaredsum,size)
     //標本データ自体の標準偏差。母集団推定をしない場合に用いる
     
     
@@ -42,26 +42,26 @@ case class data(raw:Vector[Double]){
     
     lazy val timemean = time.sum/size
     
-    lazy val timedv = Tools.deviation(time,timemean)
+    lazy val timedv = Stats.deviation(time,timemean)
     
-    lazy val timedvsquared = Tools.devi_squared(timedv)
+    lazy val timedvsquared = Stats.devi_squared(timedv)
     
     lazy val timedvsquaredsum = timedvsquared.sum
     
-    lazy val timesd = Tools.stdevi(timedvsquaredsum,size)
+    lazy val timesd = Stats.stdevi(timedvsquaredsum,size)
     
     lazy val timezipdv = timedv.zip(dv)
     
-    lazy val timecovari = Tools.covariance(timezipdv)
+    lazy val timecovari = Stats.covariance(timezipdv)
     
-    lazy val timepear = Tools.pearson(timecovari,timesd,sd)
+    lazy val timepear = Stats.pearson(timecovari,timesd,sd)
       
     
-    lazy val reg:(Double,Double) = Tools.regression(timepear,timesd,sd,timemean,mean)	 //x軸が時間軸のケース。
+    lazy val reg:(Double,Double) = Stats.regression(timepear,timesd,sd,timemean,mean)	 //x軸が時間軸のケース。
     
-    lazy val regline:Double=>Double = Tools.regressionline(reg._1,reg._2)
+    lazy val regline:Double=>Double = Stats.regressionline(reg._1,reg._2)
         
-    def resi:data = data(Tools.residual(time,raw,regline))
+    def resi:data = data(Stats.residual(time,raw,regline))
 
     
     //Operation-------------------------------------------

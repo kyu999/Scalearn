@@ -3,7 +3,7 @@ package scalearn.classification.unsupervised
 import scalearn.preprocessing._
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random._
-import scalearn.statistics.Tools
+import scalearn.statistics.Stats
 
 
 object Clustering {
@@ -75,11 +75,11 @@ object Clustering {
 		    var inserting_place = 0
 		    
 		    var maxsim:(VectorCluster,Double) = 
-		        (clusters.head , Tools.pearRaw(clusters.head.center,vect))
+		        (clusters.head , Stats.pearRaw(clusters.head.center,vect))
 		    
 		    clusters.foreach{ cluster =>
 		        val sim:(VectorCluster,Double) = 
-		            (cluster , Tools.pearRaw(cluster.center,vect))
+		            (cluster , Stats.pearRaw(cluster.center,vect))
 		        
 		        if(sim._2 > maxsim._2){
 		            inserting_place = cluster_index
