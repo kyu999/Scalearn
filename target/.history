@@ -361,3 +361,12 @@ run
 ~compile
 console
 ~compile
+console
+import scalearn.classification.supervised._
+console
+~compile
+console
+~compile
+console
+~compile
+console

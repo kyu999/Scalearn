@@ -9,22 +9,35 @@ import scalearn.statistics.Converter
 import org.atilika.kuromoji._
 import scalearn.preprocessing.tokenfactory.JP
 import scalearn.parallel.SparkInstance
+import scalearn.general.ImplicitConverter._
 
 import org.apache.spark.rdd._
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
+    
 
 
 
 object read {
+    
+    type Closable = { def close():Unit }
+
+    def using[A <: Closable,B](resource: A)(f: A => B) = 
+        
+        try{
+          f(resource)
+        }finally{
+          resource.close
+        }
+    
   
-    def retrieving(path: String,header: Boolean): Vector[String]={
+    def retrieving(path: String): Iterator[String]={
       
-      val source=Source.fromFile(path)
+      val source = Source.fromFile(path)
       
       try{
       
-        source.getLines.map(_.toString).toVector
+        source.getLines
       
       }finally{
       
@@ -33,23 +46,23 @@ object read {
       } 
     }    
     
+    
+    
     def csv(path: String)(header: Boolean) = {
     
-        val resource=retrieving(path,header).map(_.split(","))
+        val lines: Iterator[String] = retrieving(path)
         
         if(header){
         
-            val head = resource.head
-            val content = resource.tail.map(_.map(matching(_)).toVector)
-            content
+            val head = lines.next.split(",")
             
-        }else{
+            val body = lines.map(_.split(","))
+            
+            (head,body)
+            
+        }else lines.map(_.split(","))
         
-            resource.tail.map(_.map(a=>matching(a)).toVector)
-            
-             }
-            
-        }
+    }
 	
     def document( 
     	path: String ,
@@ -77,16 +90,7 @@ object read {
 	
 	//cannot use like this ; rdds("document.txt",MySparkContext)
 	//specify the parameter instead ; rdds("document.txt",spark_context = MySparkContext)	
-	
-    def matching(in: String)={
-        try{
-            in.toDouble
-        }catch{
-            case e: NumberFormatException => in  
-	  }
-	}
-	
-	
+		
 }
 
 
