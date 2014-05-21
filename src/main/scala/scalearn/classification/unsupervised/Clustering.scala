@@ -28,7 +28,8 @@ object Clustering {
 	           
 	       }
         
-	   var previous_clustered:IndexedSeq[VectorCluster] = reclustering( vectors,initial_clusters )
+	   var previous_clustered:IndexedSeq[VectorCluster] = 
+           reclustering( vectors,initial_clusters )
 	   
 	   var after_clustered:IndexedSeq[VectorCluster] = 
 	       reclustering(
@@ -49,8 +50,7 @@ object Clustering {
 	   	after_clustered = 
 	   	    reclustering(
 	   	    	vectors,
-	   	    	previous_clustered
-	   	    	    .map( elt => VectorCluster(ArrayBuffer(elt.center)) )
+	   	    	previous_clustered.map( elt => VectorCluster(ArrayBuffer(elt.center)))
 	   	    	    )
 	   	    	   
 	   	current_iteration += 1
@@ -67,7 +67,7 @@ object Clustering {
 	    clusters:IndexedSeq[VectorCluster]
 	    ) = {
 		
-		//残りの全てのvectorと各clusterとの類似度を求めて最も類似しているclusterにvectorを含める
+    //残りの全てのvectorと各clusterとの類似度を求めて最も類似しているclusterにvectorを含める
 		
 		vectors.foreach{ vect =>
 		    
@@ -78,7 +78,7 @@ object Clustering {
 		        (clusters.head , Stats.pearRaw(clusters.head.center,vect))
 		    
 		    clusters.foreach{ cluster =>
-		        val sim:(VectorCluster,Double) = 
+		        val sim: (VectorCluster,Double) = 
 		            (cluster , Stats.pearRaw(cluster.center,vect))
 		        
 		        if(sim._2 > maxsim._2){
@@ -95,7 +95,7 @@ object Clustering {
 		    
 		    } 
 		
-		clusters
+        clusters
 		
 		}
   

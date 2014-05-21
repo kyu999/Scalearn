@@ -37,13 +37,14 @@ case class NaiveBayes(
 	
 	    var doc_count = 0
 	    
-	    wholeClass(class_name).foreach{ 
-	        class_rdd =>  // == (class,rdd)
+	    wholeClass(class_name).foreach{ class_rdd =>  // == (class,rdd)
+            
 			val filtered = class_rdd._2.filter{ word_occur => word_occur._1 == word }
 				
 			if (filtered.count != 0) doc_count += 1
 		  }
-		  doc_count
+		  
+        doc_count
 	}
 	//N(w,c)：各クラスに置ける特定のwordが出現するdocument数
 	
@@ -76,10 +77,9 @@ case class NaiveBayes(
 	        allClassNames.map{ class_name =>
 	            val each_prob: Array[Double] =
 	                array_word_freq.map { word_freq =>
-	                    eachProbWord(word_freq._1 , class_name , alpha) * word_freq._2
-	                    }
+	                    eachProbWord(word_freq._1, class_name, alpha) * word_freq._2
+	                }
 	            ( each_prob.sum + eachProbClass(class_name) , class_name )
-	            
 	            }
 	            
 	    println("probability of each class : " + probPerClass)

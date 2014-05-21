@@ -2,31 +2,44 @@ package scalearn.math
 
 import scalearn.statistics._
 
-class m(in:Vector[Vector[Double]]) extends Matrix{
+case class m(raw:Vector[Vector[Double]]) extends Matrix{
 
-    val width=in(0).length
+    val width = raw(0).length
 	//コンストラクタ
-    in.foreach(a=> if(a.length != width) throw new Exception("not arranged") )
+        
+    raw.foreach(a=> if(a.length != width) 
+               throw new Exception("not arranged") )
     
-//Entity
-    val raw = in
-    val height = in.length
-    val helperT:Vector[Vector[Double]] = (0 to width-1).map{a=>in.map(b=>b(a))}.toVector
+        
+    val height = raw.length
+        
+    val helperT: Vector[Vector[Double]] = 
+        (0 to width-1)
+          .map{ a=> raw.map( b => b(a)) }
+          .toVector
+              
+    val checkScale = 
+     { component: m => 
+        (width != component.width) || (height != component.height) }
 
 //Operation
-    def +(component:m) =
-      	if( (width != component.width) || (height != component.height) ) 
-            throw new Exception("not formatted") 
-        else new m(add(in,component.raw))
+    def +(component: m) =
+        
+      	if(checkScale(component)) throw new Exception("not formatted") 
+        
+        else new m(add(raw,component.raw))
     
-    def -(component:m) =
-        if( (width != component.width) || (height != component.height) ) 
-            throw new Exception("not formatted") 
-        else new m(subtract(in,component.raw))
+    def -(component: m) =
+        
+        if(checkScale(component)) throw new Exception("not formatted")
+        
+        else new m(subtract(raw,component.raw))
     
-    def *(component:m) =
+    def *(component: m) =
+        
       if( width != component.height) throw new Exception("not formatted")
-      else new m(multiply(in,component.helperT))
+        
+      else new m(multiply(raw,component.helperT))
     //行列の積
     
     def **(component:Int) = new m(raw.map(a=>a.map(b=>b*component)))
@@ -37,5 +50,5 @@ class m(in:Vector[Vector[Double]]) extends Matrix{
 }
 
 object m{
-    def apply(in:Vector[Double]*) = new m(in.toVector)
+    def apply(raw: Vector[Double]*) = new m(raw.toVector)
 }

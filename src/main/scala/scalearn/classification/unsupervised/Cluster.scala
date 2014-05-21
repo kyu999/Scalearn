@@ -14,7 +14,7 @@ trait Cluster{
 	
 	def ++(that:VectorCluster) = new VectorCluster( vectors ++ that.vectors)
 	
-	def center:Vector[Double] = { 
+	def center: Vector[Double] = { 
 	  
 	  var result: ArrayBuffer[Double] = ArrayBuffer()
 	  

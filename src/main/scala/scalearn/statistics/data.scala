@@ -7,8 +7,8 @@ case class data(raw:Vector[Double]){
 
 //Descriptive　※データを標本として捉えている
   
-    var name:String = "data"		       
-    	//mutable   
+    var name = "data"		       
+    //mutable   
     
     val size = raw.length
     
@@ -87,3 +87,9 @@ case class data(raw:Vector[Double]){
 	}
 }
  
+
+object data{
+    
+    def apply(raw: Double*): data = data(raw.toVector)
+        
+}
