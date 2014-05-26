@@ -18,17 +18,17 @@ trait Association[I]{
       }
     
     
-    def uniqueFlatten(candidates: Vector[Set[I]]): Vector[I] = candidates.flatten.toSet.toVector        
+    def uniqueFlatten(candidates: Vector[Set[I]]): Vector[I] = candidates.flatten.distinct        
+        
         
     def regenerate(candidates: Vector[Set[I]], size: Int): Vector[Set[I]] = { 
         val flatted = uniqueFlatten(candidates)
-          
+
         flatted.combinations(size).toVector.map(items => items.toSet)
       }
         
     
-    def findRules(minimumSupport: Double, minimumConfidence: Double, 
-                  buskets: Vector[Set[I]]): Vector[Set[I]]  = {
+    def supportFilter(buskets: Vector[Set[I]], minimumSupport: Double): Vector[Set[I]]  = {
                           
       val filtering = { candidates: Vector[Set[I]] =>  
             
@@ -50,19 +50,23 @@ trait Association[I]{
           
       var result = post_candidates
           
-      def terminate = { satisfySupport = false ; result = post_candidates } //mutable
-
       while(satisfySupport){
  
           println("---- pre_candidates ----") ; pre_candidates.foreach(println)
           println("---- post_candidates ----") ;  post_candidates.foreach(println)
           
-          if(pre_candidates.isEmpty) terminate
+          if(post_candidates.isEmpty) { 
+              satisfySupport = false 
+              result = pre_candidates 
+          } //if pre is empty => post also empty
               
           else {
               pre_candidates = regenerate(post_candidates, size)
                   
-              if(pre_candidates.isEmpty) terminate
+              if(pre_candidates.isEmpty) { 
+                  satisfySupport = false 
+                  result = post_candidates 
+              }
               
               else post_candidates = filtering(pre_candidates)
                     
@@ -72,6 +76,25 @@ trait Association[I]{
 
       result
                 
+    }
+    
+    
+    
+    def findCausality(buskets: Vector[Set[I]], candidates: Vector[Set[I]], 
+                      minimumConfidence: Double): Vector[Set[I]] = 
+      candidates.map{ items => 
+         val candidateSupport = counting(buskets, items)
+         items.filter{ item => 
+            val confidence = candidateSupport / counting(buskets, Set(item)) 
+            println("confidence of [ " + item + " -> " + items + " ] => " + confidence)
+            confidence >= minimumConfidence }
+                    }
+
+                     
+    def findRules(buskets: Vector[Set[I]], minimumSupport: Double, minimumConfidence: Double) = {
+      val candidates = supportFilter(buskets, minimumSupport)
+      val rules = findCausality(buskets, candidates, minimumConfidence)
+      rules
     }
     
 }
@@ -131,7 +154,7 @@ object TestAssociation extends App{
           Set("apple", "mango", "orange", "guava")
     )
         
-    StringAssociation.findRules(0.7, 0.7, sample)
+    println(StringAssociation.findRules(sample, 0.7, 0.7))
         
     val items = 
        Vector(
@@ -140,7 +163,7 @@ object TestAssociation extends App{
         Set(item("banana", 130), item("orange", 60), item("guava", 20)),
         Set(item("banana", 150), item("orange", 40)) )
         
-    ItemAssociation.findRules(0.3,0.4, items) 
+    println(ItemAssociation.findRules(items, 0.3,0.4))
         
         
     val personalities = 
@@ -152,7 +175,7 @@ object TestAssociation extends App{
         Set("curward", "weak","mean", "brave")
     )
         
-    StringAssociation.findRules(0.3, 0.5, personalities) // get idealed result
+    println(StringAssociation.findRules(personalities, 0.3, 0.5)) // get idealed result
 //  StringAssociation.findRules(0.5, 0.5, personalities) <- in this case, get opposite result, yet it isn't bug. just reasonable result; rule == weak & brave. accordingly, we need to select minimum support carefully. Also, it means this algorithm doesn't fit the goals like we wanna find strong relaitonship between two variables though each of them does not occur often. Of course, if the minimum support is too low to detect patterns, we couldn't distinguish coincidences from facts
     
 
