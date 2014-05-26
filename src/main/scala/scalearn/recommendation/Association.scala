@@ -81,20 +81,27 @@ trait Association[I]{
     
     
     def findCausality(buskets: Vector[Set[I]], candidates: Vector[Set[I]], 
-                      minimumConfidence: Double): Vector[Set[I]] = 
-      candidates.map{ items => 
+                      minimumConfidence: Double): Unit = 
+        
+      candidates.foreach{ items => 
+          
          val candidateSupport = counting(buskets, items)
+         
+         println("Confidence of Rule :  ")
+          
          items.filter{ item => 
+             
             val confidence = candidateSupport / counting(buskets, Set(item)) 
-            println("confidence of [ " + item + " -> " + items + " ] => " + confidence)
+             
+            println(item + " -> " + items + " => " + confidence)
+            
             confidence >= minimumConfidence }
-                    }
+        }
 
                      
-    def findRules(buskets: Vector[Set[I]], minimumSupport: Double, minimumConfidence: Double) = {
+    def findRules(buskets: Vector[Set[I]], minimumSupport: Double, minimumConfidence: Double): Unit = {
       val candidates = supportFilter(buskets, minimumSupport)
-      val rules = findCausality(buskets, candidates, minimumConfidence)
-      rules
+      findCausality(buskets, candidates, minimumConfidence)
     }
     
 }
@@ -154,7 +161,7 @@ object TestAssociation extends App{
           Set("apple", "mango", "orange", "guava")
     )
         
-    println(StringAssociation.findRules(sample, 0.7, 0.7))
+    StringAssociation.findRules(sample, 0.7, 0.7)
         
     val items = 
        Vector(
@@ -163,7 +170,7 @@ object TestAssociation extends App{
         Set(item("banana", 130), item("orange", 60), item("guava", 20)),
         Set(item("banana", 150), item("orange", 40)) )
         
-    println(ItemAssociation.findRules(items, 0.3,0.4))
+    ItemAssociation.findRules(items, 0.3,0.4)
         
         
     val personalities = 
@@ -175,7 +182,7 @@ object TestAssociation extends App{
         Set("curward", "weak","mean", "brave")
     )
         
-    println(StringAssociation.findRules(personalities, 0.3, 0.5)) // get idealed result
+    StringAssociation.findRules(personalities, 0.3, 0.5) // get idealed result
 //  StringAssociation.findRules(0.5, 0.5, personalities) <- in this case, get opposite result, yet it isn't bug. just reasonable result; rule == weak & brave. accordingly, we need to select minimum support carefully. Also, it means this algorithm doesn't fit the goals like we wanna find strong relaitonship between two variables though each of them does not occur often. Of course, if the minimum support is too low to detect patterns, we couldn't distinguish coincidences from facts
     
 
