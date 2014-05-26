@@ -21,7 +21,7 @@ trait Association[I]{
     def uniqueFlatten(candidates: Vector[Set[I]]) = candidates.flatten.toSet.toVector        
         
     def findRules(minimumSupport: Double, minimumConfidence: Double, 
-                     buskets: Vector[Set[I]]) = {
+                  buskets: Vector[Set[I]]) = {
                           
       val filtering = { candidates: Vector[Set[I]] =>  
             
@@ -151,7 +151,7 @@ object TestAssociation extends App{
         Set("curward", "weak","mean", "brave")
     )
         
-    StringAssociation.findRules(0.1, 0.5, personalities) // get idealed result
+    StringAssociation.findRules(0.3, 0.5, personalities) // get idealed result
 //  StringAssociation.findRules(0.5, 0.5, personalities) <- in this case, get opposite result, yet it isn't bug. just reasonable result; rule == weak & brave. accordingly, we need to select minimum support carefully. Also, it means this algorithm doesn't fit the goals like we wanna find strong relaitonship between two variables though each of them does not occur often. Of course, if the minimum support is too low to detect patterns, we couldn't distinguish coincidences from facts
     
 
