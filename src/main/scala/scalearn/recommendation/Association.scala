@@ -15,6 +15,7 @@ object Association{
           Set("apple","guava", "orange"), 
           Set("apple","guava", "orange")
     )
+        
 
     def counting[I](buskets: Vector[Set[I]], items: Set[I]): Double = {
                   
@@ -29,18 +30,15 @@ object Association{
       frequency / buskets.length
           
       }
+    
         
     def findRules[I](minimumSupport: Double, minimumConfidence: Double, 
                      buskets: Vector[Set[I]]) = {
-        
-      val findSupports = { candidates: Vector[Set[I]] =>  
-            candidates.map{ item => 
-             ( counting[I](buskets, item) , item ) }
-        }
-        
+                
       val filtering = { candidates: Vector[Set[I]] =>  
             
-         val supports = findSupports(candidates)
+         val supports = candidates.map{ items => 
+             ( counting[I](buskets, items) , items ) }
             
          supports
            .filter( prob_item => prob_item._1 >= minimumSupport)
@@ -53,11 +51,9 @@ object Association{
         flatted.combinations(size).toVector.map(elt=>elt.toSet)
       }
           
+      var pre_candidates: Vector[Set[I]] = buskets.flatten.toSet.toVector.map{ item: I => Set(item) }
         
-      var pre_candidates: Vector[Set[I]] = 
-          buskets.flatten.toSet.toVector.map{ item: I => Set(item) }
-        
-      var post_candidates: Vector[Set[I]] = filtering(pre_candidates)
+      var post_candidates = filtering(pre_candidates)
           
       var satisfySupport = if(post_candidates.isEmpty) false else true
         
@@ -65,26 +61,20 @@ object Association{
           
       var result = post_candidates
           
-      //either items satisfy minimumSupport
+      def terminate = { satisfySupport = false ; result = post_candidates } //mutable
+
       while(satisfySupport){
  
-          if(pre_candidates.isEmpty) {
-              satisfySupport = false 
-              result = post_candidates
-          }
+          if(pre_candidates.isEmpty) terminate
               
           else {
               pre_candidates = addKinds(post_candidates, size)
                   
-              if(pre_candidates.isEmpty) {
-                  satisfySupport = false
-                  result = post_candidates
-              }
+              if(pre_candidates.isEmpty) terminate
               
               else post_candidates = filtering(pre_candidates)
                     
-              size += 1
-              
+              size += 1 
           }
       }
 
