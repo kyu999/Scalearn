@@ -18,9 +18,9 @@ trait Association[I]{
       }
     
     
-    def uniqueFlatten(candidates: Vector[Set[I]]) = candidates.flatten.toSet.toVector        
+    def uniqueFlatten(candidates: Vector[Set[I]]): Vector[I] = candidates.flatten.toSet.toVector        
         
-    def regenerate(candidates: Vector[Set[I]], size: Int) = { 
+    def regenerate(candidates: Vector[Set[I]], size: Int): Vector[Set[I]] = { 
         val flatted = uniqueFlatten(candidates)
           
         flatted.combinations(size).toVector.map(items => items.toSet)
@@ -28,7 +28,7 @@ trait Association[I]{
         
     
     def findRules(minimumSupport: Double, minimumConfidence: Double, 
-                  buskets: Vector[Set[I]]) = {
+                  buskets: Vector[Set[I]]): Vector[Set[I]]  = {
                           
       val filtering = { candidates: Vector[Set[I]] =>  
             
