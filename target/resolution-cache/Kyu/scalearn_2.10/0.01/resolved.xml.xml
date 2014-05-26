@@ -4,7 +4,7 @@
 		module="scalearn_2.10"
 		revision="0.01"
 		status="integration"
-		publication="20140526220405"
+		publication="20140527004858"
 	>
 		<description>
 		Scalearn
@@ -42,6 +42,5 @@
 		<dependency org="org.scalanlp" name="breeze_2.10" rev="0.7" conf="compile->default(compile)"/>
 		<dependency org="org.scalanlp" name="breeze-natives_2.10" rev="0.7" conf="compile->default(compile)"/>
 		<dependency org="org.xerial" name="sqlite-jdbc" rev="3.7.2" conf="compile->default(compile)"/>
-		<dependency org="eu.fakod" name="neo4j-scala_2.10" rev="0.3.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

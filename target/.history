@@ -393,3 +393,9 @@ compile
 run
 ~compile
 run
+reload
+update
+clean
+run
+clean
+run

@@ -20,6 +20,13 @@ trait Association[I]{
     
     def uniqueFlatten(candidates: Vector[Set[I]]) = candidates.flatten.toSet.toVector        
         
+    def addKinds(candidates: Vector[Set[I]], size: Int) = { 
+        val flatted = uniqueFlatten(candidates)
+          
+        flatted.combinations(size).toVector.map(items => items.toSet)
+      }
+        
+    
     def findRules(minimumSupport: Double, minimumConfidence: Double, 
                   buskets: Vector[Set[I]]) = {
                           
@@ -32,13 +39,7 @@ trait Association[I]{
            .filter( prob_item => prob_item._1 >= minimumSupport)
            .map( prob_item => prob_item._2 ) 
        }
-        
-      val addKinds = { (candidates: Vector[Set[I]], size: Int) => 
-        val flatted = uniqueFlatten(candidates)
-          
-        flatted.combinations(size).toVector.map(items => items.toSet)
-      }
-          
+                  
       var pre_candidates: Vector[Set[I]] = uniqueFlatten(buskets).map{ item: I => Set(item) }
         
       var post_candidates = filtering(pre_candidates)
