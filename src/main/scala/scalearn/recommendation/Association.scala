@@ -20,7 +20,7 @@ trait Association[I]{
     
     def uniqueFlatten(candidates: Vector[Set[I]]) = candidates.flatten.toSet.toVector        
         
-    def addKinds(candidates: Vector[Set[I]], size: Int) = { 
+    def regenerate(candidates: Vector[Set[I]], size: Int) = { 
         val flatted = uniqueFlatten(candidates)
           
         flatted.combinations(size).toVector.map(items => items.toSet)
@@ -60,7 +60,7 @@ trait Association[I]{
           if(pre_candidates.isEmpty) terminate
               
           else {
-              pre_candidates = addKinds(post_candidates, size)
+              pre_candidates = regenerate(post_candidates, size)
                   
               if(pre_candidates.isEmpty) terminate
               
