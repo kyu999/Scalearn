@@ -27,6 +27,7 @@ trait Association[I]{
         flatted.combinations(size).toVector.map(items => items.toSet)
       }
         
+    
     //support(X) == probability of X occur
     def filterBySupport(buskets: Vector[Set[I]], minimumSupport: Double): Vector[Set[I]]  = {
                           
@@ -40,44 +41,34 @@ trait Association[I]{
            .map( prob_item => prob_item._2 ) 
        }
                   
-      var pre_candidates: Vector[Set[I]] = uniqueFlatten(buskets).map{ item: I => Set(item) }
+      def iterate(candidates: Vector[Set[I]], size: Int): Vector[Set[I]] = {
         
-      var post_candidates = filtering(pre_candidates)
+        println("---- candidates ----") ; candidates.foreach(println)
           
-      var satisfySupport = if(post_candidates.isEmpty) false else true
-        
-      var size = 2
+        val next_candidates = regenerate(candidates, size)
+            
+        println("---- next_candidates ----") ; next_candidates.foreach(println)        
           
-      var result = post_candidates
-                    
-      while(satisfySupport){
- 
-          println("---- pre_candidates ----") ; pre_candidates.foreach(println)
-          println("---- post_candidates ----") ;  post_candidates.foreach(println)
-          
-          if(post_candidates.isEmpty) { 
-              satisfySupport = false 
-              result = pre_candidates 
-          } //if pre is empty => post also empty
+        if(next_candidates.isEmpty) candidates
+            
+        else{
+            
+          val filtered = filtering(next_candidates)
               
-          else {
-              pre_candidates = regenerate(post_candidates, size)
-                  
-              if(pre_candidates.isEmpty) { 
-                  satisfySupport = false 
-                  result = post_candidates 
-              }
+          if(filtered.isEmpty) next_candidates
               
-              else post_candidates = filtering(pre_candidates)
-                    
-              size += 1 
-          }
+          else iterate(filtered, size+1 )
+              
+        }
+      
       }
-
-      result
-                
+          
+      val pre_candidates: Vector[Set[I]] = filtering( uniqueFlatten(buskets).map{ item: I => Set(item) } )
+        
+      iterate(pre_candidates, 2)
+          
     }
-    
+
     
 //confidence(X->Y) == support(X&&Y) / support(X) == degree of credit about result
     def filterByConfidence(buskets: Vector[Set[I]], candidates: Vector[Set[I]], 
@@ -168,7 +159,7 @@ object TestAssociation extends App{
           Set("apple", "mango", "orange", "guava")
     )
         
-    StringAssociation.findRules(sample, 0.7, 0.7)
+    println("result : " + StringAssociation.findRules(sample, 0.7, 0.7))
         
     val items = 
        Vector(
@@ -177,7 +168,7 @@ object TestAssociation extends App{
         Set(item("banana", 130), item("orange", 60), item("guava", 20)),
         Set(item("banana", 150), item("orange", 40)) )
         
-    ItemAssociation.findRules(items, 0.3,0.4)
+//    ItemAssociation.findRules(items, 0.3,0.4)
         
         
     val personalities = 
@@ -214,5 +205,45 @@ Set(weak, brave)
 
 
 */
+        
+/*     
+      var pre_candidates: Vector[Set[I]] = uniqueFlatten(buskets).map{ item: I => Set(item) }
+        
+      var post_candidates = filtering(pre_candidates)
+          
+      var satisfySupport = if(post_candidates.isEmpty) false else true
+        
+      var size = 2
+          
+      var result = post_candidates
+                    
+      while(satisfySupport){
+ 
+          println("---- pre_candidates ----") ; pre_candidates.foreach(println)
+          println("---- post_candidates ----") ;  post_candidates.foreach(println)
+          
+          if(post_candidates.isEmpty) { 
+              satisfySupport = false 
+              result = pre_candidates 
+          } //if pre is empty => post also empty
+              
+          else {
+              pre_candidates = regenerate(post_candidates, size)
+                  
+              if(pre_candidates.isEmpty) { 
+                  satisfySupport = false 
+                  result = post_candidates 
+              }
+              
+              else post_candidates = filtering(pre_candidates)
+                    
+              size += 1 
+          }
+      }
+
+      result
+                
+    }
+*/            
     
 }
