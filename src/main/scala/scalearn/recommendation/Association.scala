@@ -28,7 +28,7 @@ trait Association[I]{
       }
         
     
-    def supportFilter(buskets: Vector[Set[I]], minimumSupport: Double): Vector[Set[I]]  = {
+    def filterSupport(buskets: Vector[Set[I]], minimumSupport: Double): Vector[Set[I]]  = {
                           
       val filtering = { candidates: Vector[Set[I]] =>  
             
@@ -49,7 +49,7 @@ trait Association[I]{
       var size = 2
           
       var result = post_candidates
-          
+                    
       while(satisfySupport){
  
           println("---- pre_candidates ----") ; pre_candidates.foreach(println)
@@ -80,28 +80,35 @@ trait Association[I]{
     
     
     
-    def findCausality(buskets: Vector[Set[I]], candidates: Vector[Set[I]], 
-                      minimumConfidence: Double): Unit = 
+    def filterConfidence(buskets: Vector[Set[I]], candidates: Vector[Set[I]], 
+                      minimumConfidence: Double): Vector[Set[(I, Set[I], Double)]]  = 
         
-      candidates.foreach{ items => 
+      candidates.map{ items => 
           
          val candidateSupport = counting(buskets, items)
          
-         println("Confidence of Rule :  ")
+         println("Confidence of Rules : ")
           
-         items.filter{ item => 
+         items
+           .map{ item => 
              
-            val confidence = candidateSupport / counting(buskets, Set(item)) 
+              val confidence = candidateSupport / counting(buskets, Set(item)) 
              
-            println(item + " -> " + items + " => " + confidence)
+              (item, items, confidence) 
+           }
+           .filter{ rule => 
+                          
+              println(rule._1 + " -> " + rule._2 + " :=> " + rule._3)
             
-            confidence >= minimumConfidence }
+              rule._3 >= minimumConfidence 
+           }
         }
 
                      
-    def findRules(buskets: Vector[Set[I]], minimumSupport: Double, minimumConfidence: Double): Unit = {
-      val candidates = supportFilter(buskets, minimumSupport)
-      findCausality(buskets, candidates, minimumConfidence)
+    def findRules(buskets: Vector[Set[I]], minimumSupport: Double, minimumConfidence: Double): Vector[Set[(I, Set[I], Double)]]  = {
+      val candidates = filterSupport(buskets, minimumSupport)
+      val rules = filterConfidence(buskets, candidates, minimumConfidence)
+      rules
     }
     
 }
@@ -118,7 +125,7 @@ object StringAssociation extends Association[String]
 case class item(name: String, price: Double)
 object ItemAssociation extends Association[item]
 
-ただこの場合、同じ商品のだけど名前が違うインスタンを異なるものとして捉えるためequals methodをoverrideする必要がある。
+ただこの場合、同じ商品のだけど価格が違うインスタンスを異なるものとして捉えるためequals methodをoverrideする必要がある。
 */
     
 case class item(name: String, price: Double){ 
@@ -182,8 +189,8 @@ object TestAssociation extends App{
         Set("curward", "weak","mean", "brave")
     )
         
-    StringAssociation.findRules(personalities, 0.3, 0.5) // get idealed result
-//  StringAssociation.findRules(0.5, 0.5, personalities) <- in this case, get opposite result, yet it isn't bug. just reasonable result; rule == weak & brave. accordingly, we need to select minimum support carefully. Also, it means this algorithm doesn't fit the goals like we wanna find strong relaitonship between two variables though each of them does not occur often. Of course, if the minimum support is too low to detect patterns, we couldn't distinguish coincidences from facts
+    println("result : " + StringAssociation.findRules(personalities, 0.5, 0.5)) // get idealed result
+//  StringAssociation.findRules(0.5, 0.5, personalities) <- in this case, get opposite result, yet it isn't bug. just reasonable result; rule == weak & brave. accordingly, we need to select minimum support carefully. Therefore, need to filter again by confidence.  Also, it means this algorithm doesn't fit the goals like we wanna find strong relaitonship between two variables though each of them does not occur often. Of course, if the minimum support is too low to detect patterns, we couldn't distinguish coincidences from facts.
     
 
     /*
