@@ -27,8 +27,8 @@ trait Association[I]{
         flatted.combinations(size).toVector.map(items => items.toSet)
       }
         
-    
-    def filterSupport(buskets: Vector[Set[I]], minimumSupport: Double): Vector[Set[I]]  = {
+    //support(X) == probability of X occur
+    def filterBySupport(buskets: Vector[Set[I]], minimumSupport: Double): Vector[Set[I]]  = {
                           
       val filtering = { candidates: Vector[Set[I]] =>  
             
@@ -79,8 +79,8 @@ trait Association[I]{
     }
     
     
-    
-    def filterConfidence(buskets: Vector[Set[I]], candidates: Vector[Set[I]], 
+//confidence(X->Y) == support(X&&Y) / support(X) == degree of credit about result
+    def filterByConfidence(buskets: Vector[Set[I]], candidates: Vector[Set[I]], 
                       minimumConfidence: Double): Vector[Set[(I, Set[I], Double)]]  = 
         
       candidates.map{ items => 
@@ -106,8 +106,8 @@ trait Association[I]{
 
                      
     def findRules(buskets: Vector[Set[I]], minimumSupport: Double, minimumConfidence: Double): Vector[Set[(I, Set[I], Double)]]  = {
-      val candidates = filterSupport(buskets, minimumSupport)
-      val rules = filterConfidence(buskets, candidates, minimumConfidence)
+      val candidates = filterBySupport(buskets, minimumSupport)
+      val rules = filterByConfidence(buskets, candidates, minimumConfidence)
       rules
     }
     
