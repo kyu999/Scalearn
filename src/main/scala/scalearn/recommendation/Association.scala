@@ -41,7 +41,7 @@ trait Association[I]{
            .map( prob_item => prob_item._2 ) 
        }
                   
-      def iterate(candidates: Vector[Set[I]], size: Int): Vector[Set[I]] = {
+      def search(candidates: Vector[Set[I]], size: Int): Vector[Set[I]] = {
         
         println("---- candidates ----") ; candidates.foreach(println)
           
@@ -57,7 +57,7 @@ trait Association[I]{
               
           if(filtered.isEmpty) next_candidates
               
-          else iterate(filtered, size+1 )
+          else search(filtered, size + 1 )
               
         }
       
@@ -65,7 +65,7 @@ trait Association[I]{
           
       val pre_candidates: Vector[Set[I]] = filtering( uniqueFlatten(buskets).map{ item: I => Set(item) } )
         
-      iterate(pre_candidates, 2)
+      search(pre_candidates, 2)
           
     }
 
