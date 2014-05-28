@@ -29,7 +29,7 @@ trait Association[I]{
         
     
     //support(X) == probability of X occur
-    def filterBySupport(buskets: Vector[Set[I]], minimumSupport: Double): Vector[Set[I]]  = {
+    def filterBySupport(buskets: Vector[Set[I]], minimumSupport: Double, maxSize: Int): Vector[Set[I]]  = {
                           
       val filtering = { candidates: Vector[Set[I]] =>  
             
@@ -42,14 +42,14 @@ trait Association[I]{
        }
                   
       def search(candidates: Vector[Set[I]], size: Int): Vector[Set[I]] = {
-        
+                    
         println("---- candidates ----") ; candidates.foreach(println)
           
         val next_candidates = regenerate(candidates, size)
             
         println("---- next_candidates ----") ; next_candidates.foreach(println)        
           
-        if(next_candidates.isEmpty) candidates
+        if(next_candidates.isEmpty || size >= maxSize) candidates
             
         else{
             
@@ -70,35 +70,49 @@ trait Association[I]{
     }
 
     
+    def showRule(rule: (I, Set[I], Double)) = println(rule._1 + " -> " + rule._2 + " :=> " + rule._3)
+        
+        
 //confidence(X->Y) == support(X&&Y) / support(X) == degree of credit about result
     def filterByConfidence(buskets: Vector[Set[I]], candidates: Vector[Set[I]], 
-                      minimumConfidence: Double): Vector[Set[(I, Set[I], Double)]]  = 
-        
-      candidates.map{ items => 
-          
-         val candidateSupport = counting(buskets, items)
+                      minimumConfidence: Double): Vector[(I, Set[I], Double)]  = {
          
-         println("Confidence of Rules : ")
+      println("\nConfidence of Rules : \n")
+        
+      candidates
+        .map{ items => 
           
-         items
-           .map{ item => 
+          val candidateSupport = counting(buskets, items)
+                   
+          items
+            .map{ item => 
              
               val confidence = candidateSupport / counting(buskets, Set(item)) 
              
               (item, items, confidence) 
-           }
-           .filter{ rule => 
+            }
+            .filter{ rule => 
                           
-              println(rule._1 + " -> " + rule._2 + " :=> " + rule._3)
+              showRule(rule)
             
               rule._3 >= minimumConfidence 
            }
         }
+        .filterNot( rule => rule.isEmpty)
+        .flatten
+        
+    }
 
                      
-    def findRules(buskets: Vector[Set[I]], minimumSupport: Double, minimumConfidence: Double): Vector[Set[(I, Set[I], Double)]]  = {
-      val candidates = filterBySupport(buskets, minimumSupport)
+    def findRules(buskets: Vector[Set[I]], minimumSupport: Double, minimumConfidence: Double,
+                  maxSize: Int = 5): Vector[(I, Set[I], Double)]  = {
+      
+      val candidates = filterBySupport(buskets, minimumSupport, maxSize)
+      
       val rules = filterByConfidence(buskets, candidates, minimumConfidence)
+      
+      println("\nReliable Rules :\n") ; rules.foreach( rule => showRule(rule) ) 
+      
       rules
     }
     
@@ -150,16 +164,40 @@ object TestAssociation extends App{
           Set("apple","guava", "orange"), 
           Set("apple","guava", "orange"), 
           Set("strawberry"), 
+          Set("banana", "apple"), 
+          Set("apple", "guava", "orange"), 
+          Set("banana", "orange", "guava"), 
+          Set("banana", "orange"), 
+          Set("apple","guava"), 
+          Set("apple","guava", "orange"), 
+          Set("apple","guava", "orange"), 
+          Set("strawberry"), 
+          Set("banana", "apple"), 
+          Set("apple", "guava", "orange"), 
+          Set("banana", "orange", "guava"), 
+          Set("banana", "orange"), 
+          Set("apple","guava"), 
+          Set("apple","guava", "orange"), 
+          Set("apple","guava", "orange"), 
+          Set("strawberry"), 
+          Set("banana", "apple"), 
+          Set("apple", "guava", "orange"), 
+          Set("banana", "orange", "guava"), 
+          Set("banana", "orange"), 
+          Set("apple","guava"), 
+          Set("apple","guava", "orange"), 
+          Set("apple","guava", "orange"), 
+          Set("strawberry"), 
           Set("apple", "mango", "orange", "guava"),
           Set("apple", "mango", "orange", "guava"),
           Set("apple", "mango", "orange", "guava"),
           Set("apple", "mango", "orange", "guava"),
-          Set("apple", "mango", "orange", "guava"),
-          Set("apple", "mango", "orange", "guava"),
-          Set("apple", "mango", "orange", "guava")
+          Set("apple", "mango"),
+          Set("apple", "mango"),
+          Set("apple", "mango")
     )
         
-    println("result : " + StringAssociation.findRules(sample, 0.7, 0.7))
+    StringAssociation.findRules(sample, 0.6, 0.7)
         
     val items = 
        Vector(
