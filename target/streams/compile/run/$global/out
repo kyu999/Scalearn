@@ -1,9 +1,11 @@
 [0m[[0minfo[0m] [0mRunning scalearn.recommendation.TestAssociation [0m
+[0m[[0mdebug[0m] [0mStarting sandboxed run...[0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/Documents/Scalearn/target/scala-2.10/classes[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/Documents/Scalearn/lib/kuromoji-0.7.7.jar[0m
-[0m[[0mdebug[0m] [0m	/Users/kyu/.sbt/boot/scala-2.10.3/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.3.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.scalatest/scalatest_2.10/jars/scalatest_2.10-2.0.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-0.9.0-incubating.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.hadoop/hadoop-client/jars/hadoop-client-1.0.4.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.apache.hadoop/hadoop-core/jars/hadoop-core-1.0.4.jar[0m
@@ -88,7 +90,7 @@
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.slf4j/slf4j-nop/jars/slf4j-nop-1.6.4.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.scalanlp/breeze_2.10/jars/breeze_2.10-0.7.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.scalanlp/breeze-macros_2.10/jars/breeze-macros_2.10-0.3.jar[0m
-[0m[[0mdebug[0m] [0m	/Users/kyu/.sbt/boot/scala-2.10.3/lib/scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.3.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.github.fommil.netlib/core/jars/core-1.1.2.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/net.sourceforge.f2j/arpack_combined_all/jars/arpack_combined_all-0.1.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/net.sf.opencsv/opencsv/jars/opencsv-2.3.jar[0m
@@ -115,8 +117,8 @@
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-win-x86_64/jars/netlib-native_system-win-x86_64-1.1-natives.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/com.github.fommil.netlib/netlib-native_system-win-i686/jars/netlib-native_system-win-i686-1.1-natives.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/kyu/.ivy2/cache/org.xerial/sqlite-jdbc/jars/sqlite-jdbc-3.7.2.jar[0m
-[0m[[0mdebug[0m] [0mWaiting for thread run-main-26 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread run-main-26 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main to exit[0m
+[0m[[0mdebug[0m] [0m	Thread run-main exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m

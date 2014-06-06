@@ -7,7 +7,7 @@ version := "0.01"
 scalaVersion := "2.10.3"
 
 libraryDependencies ++= Seq(
-  "org.scalatest" % "scalatest_2.11" % "2.1.4" % "test",
+  "org.scalatest" %% "scalatest" % "2.0",
   "org.apache.spark" % "spark-core_2.10" % "0.9.0-incubating",
   "com.typesafe.slick" %% "slick" % "2.0.1",
   "com.h2database" % "h2" % "1.3.166",
@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   "org.scalanlp" % "breeze-natives_2.10" % "0.7",
   "org.xerial" % "sqlite-jdbc" % "3.7.2")
 
-scalacOptions ++= Seq("-unchecked", "-deprecation")
+//scalacOptions ++= Seq("-unchecked", "-deprecation")
     
 resolvers += Resolver.sonatypeRepo("snapshots")
 

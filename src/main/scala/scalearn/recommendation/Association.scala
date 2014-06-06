@@ -84,21 +84,18 @@ trait Association[I]{
           
           val candidateSupport = counting(buskets, items)
                    
-          items
-            .map{ item => 
+          items.map{ item => 
              
-              val confidence = candidateSupport / counting(buskets, Set(item)) 
+                   val confidence = candidateSupport / counting(buskets, Set(item)) 
              
-              (item, items, confidence) 
-            }
-            .filter{ rule => 
-                          
-              showRule(rule)
+                   (item, items, confidence) 
+               }
+               .filter{ rule => showRule(rule)
             
-              rule._3 >= minimumConfidence 
-           }
+                   rule._3 >= minimumConfidence 
+                }
         }
-        .filterNot( rule => rule.isEmpty)
+        .filterNot( rule => rule.isEmpty)   
         .flatten
         
     }
