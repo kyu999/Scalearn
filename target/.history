@@ -468,3 +468,12 @@ assembly
 *:assembly
 clean
 run
+package
+realoda
+reload
+update
+compile
+~compile
+package
+~compile
+package
