@@ -477,3 +477,6 @@ compile
 package
 ~compile
 package
+console
+~compile
+package

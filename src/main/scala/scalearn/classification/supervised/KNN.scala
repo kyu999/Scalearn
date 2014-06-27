@@ -6,7 +6,7 @@ case class KNN(trainData: Vector[(String , Vector[Double])] ){
 
     type className = String
         
-    def getNeighbors(subject: Vector[Double], numberOfNeighbors: Int) = 
+    def getNeighbors(subject: Vector[Double], numberOfNeighbors: Int): Map[Int, String] = 
           trainData
             .map{ data => (data._1 , Stats.euclidean(subject, data._2)) } 
             .toVector
